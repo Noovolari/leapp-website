@@ -6,22 +6,22 @@ layout: null
 <rss version="2.0">
   <channel>
     <title>{{ site.title }}</title>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.url | prepend: site.url }}" rel="self" type="application/rss+xml" />
+    <link>{{ site.url }}{{site.baseurl}}</link>
+    <atom:link href="{{ page.url | prepend: site.baseurl }}" rel="self" type="application/rss+xml" />
     <description>{{ site.description }}</description>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     {% for post in site.posts %}
     <item>
       <title>{{ post.title }}</title>
       <link>
-        {{ post.url | prepend: site.url }}
+        {{ post.url | prepend: site.baseurl }}
       </link>
       <description>
         {{ post.content | escape | truncate: '400' }}
       </description>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <guid>
-        {{ post.url | prepend: site.url }}
+        {{ post.url | prepend: site.baseurl }}
       </guid>
     </item>
     {% endfor %}

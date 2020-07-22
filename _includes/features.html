@@ -6,7 +6,7 @@
                 {% capture c %}{% cycle '', 'reverse' %}{% endcapture %}
                 <div class="feature {{c}}">
                     <div class="video">
-                        <video {% if item.controls == true %}controls="controls"{% endif %} {% if item.autoplay == true %}autoplay="autoplay"{% endif %} {% if item.muted == true %}muted="muted"{% endif %} loop="loop"><source src="{{site.url}}/assets/videos/{{item.video}}" type="video/mp4" /></video>
+                        <video {% if item.controls == true %}controls="controls"{% endif %} {% if item.autoplay == true %}autoplay="autoplay"{% endif %} {% if item.muted == true %}muted="muted"{% endif %} loop="loop"><source src="{{site.url}}{{site.baseurl}}/assets/videos/{{item.video}}" type="video/mp4" /></video>
                     </div>
                     <div class="content">
                         <h3>{{ item.title }}</h3>

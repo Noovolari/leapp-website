@@ -13,7 +13,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Configuration
-baseurl: 'leapp' # the subpath of your site, e.g. /blog
+baseurl: '/leapp' # the subpath of your site, e.g. /blog
 url: '' # for github pages leave it like this
 
 # Navbar title
