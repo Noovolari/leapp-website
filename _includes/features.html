@@ -1,0 +1,21 @@
+<section id="features">
+    <div class="container">
+        <h2>{{site.data.features.title}}</h2>
+        <div class="features-holder">
+            {% for item in site.data.features.features %}
+                {% capture c %}{% cycle '', 'reverse' %}{% endcapture %}
+                <div class="feature {{c}}">
+                    <div class="video">
+                        <video {% if item.controls == true %}controls="controls"{% endif %} {% if item.autoplay == true %}autoplay="autoplay"{% endif %} {% if item.muted == true %}muted="muted"{% endif %} loop="loop"><source src="{{site.url}}/assets/videos/{{item.video}}" type="video/mp4" /></video>
+                    </div>
+                    <div class="content">
+                        <h3>{{ item.title }}</h3>
+                        {% capture p %}{% include {{item.content}} %}{% endcapture %}
+                        {{ p | markdownify }}
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

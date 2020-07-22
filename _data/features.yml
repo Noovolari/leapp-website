@@ -1,0 +1,36 @@
+title: ''
+features:
+  - title: Mirrored Fields
+    content: features/feature1.markdown
+    video: video1.mp4
+    autoplay: false
+    controls: true
+    muted: false
+
+  - title: Customizable Power
+    content: features/feature2.markdown
+    video: video2.mp4
+    autoplay: false
+    controls: true
+    muted: false
+
+  - title: Awesome Yourself Inspector
+    content: features/feature3.markdown
+    video: video3.mp4
+    autoplay: false
+    controls: true
+    muted: false
+
+  - title: Extensive Built-in Power Battery
+    content: features/feature4.markdown
+    video: video4.mp4
+    autoplay: false
+    controls: true
+    muted: false
+
+  - title: Test-Click Recipe
+    content: features/feature5.markdown
+    video: video5.mp4
+    autoplay: false
+    controls: true
+    muted: false

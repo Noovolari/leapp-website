@@ -1,0 +1,13 @@
+title: Web Engineering cannot get any easier!
+features:
+  - title: Instant Gold
+    icon: fa-desktop
+    content: mainfeatures/mainfeature_monitor.markdown
+
+  - title: Ghost First
+    icon: fa-code
+    content: mainfeatures/mainfeature_code.markdown
+
+  - title: Open Bohr
+    icon: fa-github
+    content: mainfeatures/mainfeature_github.markdown

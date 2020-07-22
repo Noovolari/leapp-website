@@ -1,0 +1,52 @@
+email: your-email@example.com
+
+# SEO in <head>
+title: Leapp - The Awesome Credentials Generator
+description: >- # this means to ignore newlines until "baseurl:"
+  This is the most important invection after playstation 2, innovative,
+  powerful, extatic, super software made of pure genius, swift, rapid,
+  intrinsic. Devasting
+
+# Facebook & Twitter in <head>
+facebook_username: webjeda
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Configuration
+baseurl: 'leapp' # the subpath of your site, e.g. /blog
+url: '' # for github pages leave it like this
+
+# Navbar title
+navbar_title: Leapp - The Winner!
+
+# Navbar urls
+blog_url: 'e'
+github_download_url: 'd'
+github_url: 'c'
+facebook_url: 'b'
+twitter_url: 'a'
+linkedin_url: 'f'
+
+# -----------------------------------
+# ----- Don't edit below this! ------
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+# Includes directories not in normal template
+include:
+  - _pages
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
