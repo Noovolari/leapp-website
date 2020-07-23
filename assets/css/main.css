@@ -4,8 +4,7 @@ blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
 body {
-  font: 400 16px/1.5 -apple-system, "Open Sans", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #111; background-color: #fdfdfd;
+  font: 400 16px/1.5 -apple-system, "Open Sans", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: #111; background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
   display: flex; min-height: 100vh; flex-direction: column;
 }
@@ -33,7 +32,7 @@ li > ul, li > ol { margin-bottom: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 /** Links */
-a { color: #fd2d55; text-decoration: none; }
+a { color: #fd2d55; text-decoration: none; cursor: pointer; }
 a:visited { color: #b30f0f; }
 a:hover { color: #f34040; }
 
@@ -123,3 +122,17 @@ footer ul li a i { flex-shrink: 0; font-size: 24px; }
 footer .footer-cta { background-size: cover; background-position: center; margin-bottom: 3rem; padding: 40px; }
 footer .footer-cta h2 { float: left; color: #ffffff; padding: 13px 0 0; }
 footer .footer-cta a { float: right; }
+
+/** Documentation */
+#docs { margin-top: 87px; margin-bottom: 6rem; display: flex; flex-direction: row; }
+#docs .sidebar { width: 33.37%; padding: 40px; }
+#docs .sidebar ul { list-style: none; }
+#docs .sidebar ul li { margin: 10px 0; }
+#docs .sidebar ul li a { color: #828282; transition: color 0.3s ease; }
+#docs .sidebar ul li a:hover { color: #eeeeff; }
+#docs .sidebar ul li i { display: inline-block; margin-right: 10px; color: #fd2d55; }
+#docs .sidebar ul.first-level li h3 { color: #fd2d55; margin: 0; }
+#docs .sidebar ul.second-level li { margin-left: 20px; }
+#docs .sidebar ul.second-level i { font-size: 5px; position: relative; bottom: 4px; }
+#docs .actual { width: 66.63%; padding: 40px; }
+#docs .actual h1, #docs .actual h2, #docs .actual h3, #docs .actual h4 { color: #fd2d55; }

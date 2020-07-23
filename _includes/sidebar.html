@@ -1,0 +1,27 @@
+<ul class="first-level">
+    {% assign categories = site.pages | map: 'category' | join: ',' | split: ',' | uniq %}
+    {% for category in categories %}
+        <li><h3>{{category}}</h3></li>
+        {% assign pages = site.pages | where: 'category', category %}
+        {% for item in pages %}
+            {% if item.permalink contains '/documentation' %}
+                {% if item.parent == nil %}
+                <li>
+                    <i class="fa fa-chevron-right"></i><a href="{{site.url}}{{site.baseurl}}{{item.permalink}}">{{item.title}}</a>
+                    <ul class="second-level">
+                        {% for subitem in site.pages %}
+                            {% if item.permalink contains '/documentation' %}
+                                {% if subitem.parent == item.title %}
+                                    <li>
+                                        <i class="fa fa-circle"></i><a href="{{site.url}}{{site.baseurl}}{{subitem.permalink}}">{{subitem.title}}</a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>

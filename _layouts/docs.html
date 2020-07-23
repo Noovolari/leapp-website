@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    {% include header.html %}
+    <body>
+        {% include navbar.html %}
+        <div id="docs">
+            <div class="sidebar">
+                {% include sidebar.html %}
+            </div>
+            <div class="actual">
+                <div class="breadcrumbs">
+                    {% assign breadcrumbs = page.permalink | split: '/' %}
+                    {% assign link = site.url | append: site.baseurl %}
+                    {% for breadcrumb in breadcrumbs %}
+                    {% assign link = link | append: breadcrumb | append: '/' %}
+                    <a href="{{link}}">{{breadcrumb}}</a><span> / </span>
+                    {% endfor %}
+                </div>
+                {{content}}
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>
