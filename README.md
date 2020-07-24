@@ -10,7 +10,7 @@ Leapp's website is made in [Jekyll](https://jekyllrb.com/), a simple yet powerfu
 
 Let's see how the project's folder structure is defined:
 
-![./leapp/assets/README/Screenshot_2020-07-23_at_11.47.24.png](./leapp/assets/README/Screenshot_2020-07-23_at_11.47.24.png)
+![assets/README/Screenshot_2020-07-23_at_11.47.24.png](assets/README/Screenshot_2020-07-23_at_11.47.24.png)
 
 Now you'll be guide through every folder to understand what is its purpose.
 
@@ -18,7 +18,7 @@ Now you'll be guide through every folder to understand what is its purpose.
 
 In this folder we put **.yml** files which contain data injected dynamically in the site pages to organize useful information and make it simple for developers and non-developers to adjust them on need. An example is given by the file **features.yml** which contains data to describe content inside the `partial` **features.html** inside **_includes. You'll see later** what is a **partial** and how it can be used. 
 
-![./leapp/assets/README/Screenshot_2020-07-23_at_12.00.54.png](./leapp/assets/README/Screenshot_2020-07-23_at_12.00.54.png)
+![assets/README/Screenshot_2020-07-23_at_12.00.54.png](assets/README/Screenshot_2020-07-23_at_12.00.54.png)
 
 As you can see the data is structured as a **.yml** file in which we have the page `title` and a set of  `features`  here, you can define every kind of variables that will be recovered and shown int the template we decide to include the file in.
 
@@ -132,7 +132,7 @@ It shares the **header, footer and navbar** as any other layout, it also define 
 
 **Pages are the core of the structure as they present the end content**. They are written in markdown and contains information about where the content will be presented as well as **other important SEO information**.
 
-![./leapp/assets/README/Screenshot_2020-07-23_at_12.42.46.png](./leapp/assets/README/Screenshot_2020-07-23_at_12.42.46.png)
+![assets/README/Screenshot_2020-07-23_at_12.42.46.png](assets/README/Screenshot_2020-07-23_at_12.42.46.png)
 
 **index.markdown** is used a simple anchor to the main page as its content is managed via the **_data** subfolder as we have seen before. 
 
@@ -158,11 +158,11 @@ In the **_pages** section we also have the **documentation** section. This area 
 
 Documentation is defined with a file structure that is simple to understand and reflects directly in the menu defined in the sidebar.html **microtemplate**. You can see it in the image below:
 
-![./leapp/assets/README/Screenshot_2020-07-23_at_12.42.46.png](./leapp/assets/README/Screenshot_2020-07-23_at_12.42.46.png)
+![assets/README/Screenshot_2020-07-23_at_12.42.46.png](assets/README/Screenshot_2020-07-23_at_12.42.46.png)
 
 Every markdown file is named with a **consecutive number** followed by 1 or 3 _ (underscore), this way you can clearly see how the menu will be translated in the actual site. Inside every file we have the following properties:
 
-![./leapp/assets/README/Screenshot_2020-07-23_at_14.30.02.png](./leapp/assets/README/Screenshot_2020-07-23_at_14.30.02.png)
+![assets/README/Screenshot_2020-07-23_at_14.30.02.png](assets/README/Screenshot_2020-07-23_at_14.30.02.png)
 
 As always the important part here is mainly represented by the properties described on the top of the file:
 
@@ -200,7 +200,7 @@ Then you can put your markdown content.
 
 ### _site
 
-Is managed directly by Jekyll and contains the staticised site
+Is managed directly by Jekyll and contains the staticised site. Don't modify it as it changes directly reflecting your modifications.
 
 ### assets
 
@@ -212,17 +212,33 @@ Example:
 
 `<img src="{{site.url}}{{site.baseurl}}/assets/img/my_image.png" alt="my_image_alt" title="my_image_title" />`
 
+Our site supports both css and scss: in case you want to use scss you can take advantage of the **partials** directory inside css to store your sass in order to include them in the **main.css**
+
 ### _config.yml
 
-Contains some basic configurations to define some global site properties, like twitter or facebook accounts, global title and description and so on. You can normally see it and modify properties as you see fit.
+Contains some basic configurations to define some global site properties, like twitter or facebook accounts, global title and description and so on. You can normally see it and modify properties as you see fit. You can see the actual values of **_config.yml** here: 
+
+For enabling sass and css minification refer to these properties:
+
+```yaml
+sass:
+  sass_dir: assets/css/partials
+  style: compressed
+```
+
+You can see the complete **_config.yml** structure ****[here](https://github.com/Noovolari/leapp/blob/master/_config.yml)
 
 ## How to contribute to documentation directly without installing anything
 
 Contributing for documentation can be done directly from github like shown here: [https://github.com/Noovolari/leapp/edit/master/_pages/docs/000_documentation.markdown](https://github.com/Noovolari/leapp/edit/master/_pages/docs/000_documentation.markdown). Generally speaking you can go directly to the site github page: [https://github.com/Noovolari/leapp](https://github.com/Noovolari/leapp)
 
-This is by far the simplest way to edit already existing documentation as you have direct access to it without installing anything. This allows you to access every file directly form github which is the simpliest way to apply updates. However to make more advanced customization expecially on specific pages of the sites the next session is clearly a more appropriate approach.
+This is by far the simplest way to edit already existing documentation as you have direct access to it without installing anything. 
 
-## How to install Jekyll and this project for local development
+This allows you to access every file directly form github which is the simpliest way to apply updates. However to make more advanced customization expecially on specific pages of the sites the next session is clearly a more appropriate approach.
+
+Every time you edit a file online or create a new one: a pull-request is prepared directly for you
+
+## How to install Jekyll and this project for local development as a team contributor
 
 - clone the project from our repository using a software like [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/) or via bash using this guide: [https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or if you know it just using: `git clone [https://github.com/YOUR-USERNAME/YOUR-REPOSITORY](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)` or if you have a copy of the project already you can use: `git checkout master` in a folder of your choice which will contains the project.
 - Verify that you have at least **ruby 2.6.3** installed on your machine. You can either install ruby globally or via ruby env. to keep things cleaner, please use `ruby -v` in your folder of choice to verify your ruby version. If you don't have ruby installed follow this guide: [https://www.ruby-lang.org/it/documentation/installation/](https://www.ruby-lang.org/it/documentation/installation/) which contains useful information on how to install it for different type of OS. **For Mac users** which is our main development platform we suggests using [rbenv](https://www.ruby-lang.org/it/documentation/installation/#rbenv) or [RVM](https://www.ruby-lang.org/it/documentation/installation/#rvm).
@@ -238,30 +254,60 @@ $ bundle exec jekyll serve
 
 If everything is ok you'll se something like this in your terminal at the end of all the operations:
 
-![./leapp/assets/README/Screenshot_2020-07-23_at_15.47.57.png](./leapp/assets/README/Screenshot_2020-07-23_at_15.47.57.png)
+![assets/README/Screenshot_2020-07-23_at_15.47.57.png](assets/README/Screenshot_2020-07-23_at_15.47.57.png)
 
 As you can see the terminal is pointing you to a local ip address (**127.0.0.1:4000/leapp/**) which is used to show the site. Everytime you make an update to the site, this is reflected here. Also the content of **_site** changes accordingly (as specified before, containing the built version of the site). 
 
 If for some reasons you don't see the update. Press CTRL+C in the terminal and then type **bundle exec jekyll serve** again to regenerate the site (the process is quite fast)
 
-## How to contribute by installing the project locally
+## How to push new changes
 
 To do that you have to install the project locally as described in the previous step. By doing that you have complete controls on the files. Remember **if you're adding a new markdown file for the documentation, refer to the naming convention to assure that it's position in the sidebar's menu is correct.**
-
-## How to push and validate your modifications
-
-After you've done all your modifications and have seen them on your local address (127.0.0.1:4000/leapp) it is time to make them available online. To do that you have to push your update online on the **master branch. You can either use your git tool of choice** or **terminal**. 
-
-### Tool deploy
-
-If you're using a tool like Sourcetree just remember to push the whole solution online in the master branch. 
-
-### Terminal deploy
-
-If you're using a terminal issue the following commands:
 
 ```bash
 $ git add .
 $ git commit -m "<ADD_YOUR_COMMIT_MESSAGE_HERE>" // use it to describe what you're update was about
 $ git push origin master
 ```
+
+## How to make changes to the project locally without being a team member
+
+Sometimes using git online helper for making changes is not enough especially if you want to contribute to the site's structure and so on. for that is better to download the project locally by making a fork. Add your changes and then request a pull-request.
+
+### Prerequisites
+
+Access to **your** github and then navigate to **our** project [url](https://github.com/Noovolari/leapp)
+
+- Fork the project by click the fork icon on the top right corner of the project page
+
+![assets/README/Screenshot_2020-07-24_at_12.43.44.png](assets/README/Screenshot_2020-07-24_at_12.43.44.png)
+
+- Now the project is forked on your repository and already cloned.
+- Apply your modifications.
+- Push the changes on **your** origin.
+
+```bash
+$ git add .
+$ git commit -m "<ADD_YOUR_COMMIT_MESSAGE_HERE>" // use it to describe what you're update was about
+$ git push origin master
+```
+
+- Go to **pull request tab in your project fork!**
+
+![assets/README/Screenshot_2020-07-24_at_12.34.29.png](assets/README/Screenshot_2020-07-24_at_12.34.29.png)
+
+- Create a new pull request
+
+![assets/README/Screenshot_2020-07-24_at_12.36.25.png](assets/README/Screenshot_2020-07-24_at_12.36.25.png)
+
+- You will see the changes proposed by your commit. You can also verify that the base repository is Noovolari/leapp and head repository is yours.
+
+- You just need to click create pull request:
+
+![assets/README/Screenshot_2020-07-24_at_12.51.27.png](assets/README/Screenshot_2020-07-24_at_12.51.27.png)
+
+- Insert details about your request and finalize creation.
+
+## Jekyll Documentation
+
+[Configuration Options](https://jekyllrb.com/docs/configuration/options/)
