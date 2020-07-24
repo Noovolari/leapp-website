@@ -1,3 +1,9 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "variables";
+
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
@@ -32,9 +38,9 @@ li > ul, li > ol { margin-bottom: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 /** Links */
-a { color: #fd2d55; text-decoration: none; cursor: pointer; }
-a:visited { color: #b30f0f; }
-a:hover { color: #f34040; }
+a { color: $blue; text-decoration: none; cursor: pointer; }
+a:visited { color: $blue; }
+a:hover { color: $blue; }
 
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
@@ -54,26 +60,29 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 /** Buttons */
 .btn, .btn-outline-primary { border-radius: .3125rem; transition: all 0.3s ease; cursor: pointer; }
-.btn { color: #ffffff; background: #fd2d55; border: 2px solid #ffffff; }
+.btn { color: #ffffff; background: $blue; border: 2px solid #ffffff; }
 .btn-lg { padding: .875rem 2.25rem; font-size: 1.25rem; line-height: 1.5;  }
-.btn-outline-primary { color: #fd2d55; border: 2px solid #fd2d55; }
-.btn-outline-primary:hover { color: #fff; background-color: #fd2d55; border-color: #fd2d55; }
-.btn-secondary { color: #fd2d55; background: #ffffff; }
-.btn-secondary:hover { color: #fd2d55; opacity: 0.9; }
+.btn-outline-primary { color: $blue; border: 2px solid $blue; }
+.btn-outline-primary:hover { color: #fff; background-color: $blue; border-color: $blue; }
+.btn-secondary { color: $blue; background: #ffffff; }
+.btn-secondary:hover { color: $blue; opacity: 0.9; }
 
 /** Site header */
-nav { border-bottom: 1px solid #747474; position: fixed; background: #111; color: #fff; z-index: 999; }
+nav { border-bottom: 1px solid #747474; position: fixed; background: $light-blue; color: #fff; z-index: 999; }
 nav div * { display: inline-block; }
 nav > div { min-height: 87px; padding: 0 5px; display:flex; flex-direction: row; justify-content: space-between; align-items: center; }
 nav img.navbar-img { max-width: 64px; }
 nav ul li { margin: 0 10px; }
 nav a, nav i { font-weight: bold; font-size: 16px; color: #e8e8e8; transition: all 0.2s ease; }
-nav i { font-size: 32px; color: #f34040; position: relative; top: 8px; }
+nav i { font-size: 32px; color: $blue; position: relative; top: 8px; }
 nav a:hover { color: #828282; }
-nav i:hover { color: #b30f0f; }
+nav i:hover { color: $blue; }
 
 /** Hero unit */
-#hero-unit { background: #111111; margin-top: 87px; margin-bottom: 15rem; }
+#hero-unit { 
+    background-image: radial-gradient( circle at 50% 0,#3a416f,#21243d );
+    background-image: radial-gradient( circle at 50% 0,#3a416f,#21243d );
+    margin-top: 87px; margin-bottom: 15rem; }
 #hero-unit > div { text-align: center; height: 600px; padding-top: 8rem; }
 #hero-unit svg { background: 0 0!important; height: 6vw; fill: #fdfdfd; }
 #hero-unit h1 { color: #ffffff; font-weight: 600; font-size: 4.5rem; margin-bottom: 1.5rem; line-height: 1; letter-spacing: -.03em; }
@@ -86,7 +95,7 @@ nav i:hover { color: #b30f0f; }
 #main-features { text-align: center; margin: 6rem 0; }
 #main-features .card-holder { display: flex; flex-direction: row; justify-content: space-between; }
 #main-features .card-holder .card { text-align: center; width: 30%; }
-#main-features i { background: rgba(253,45,85,.1)!important; color: #fd2d55; font-size: 25px; width: 64px; height: 25px; border-radius: 50%; text-align: center; padding: 20px 0; }
+#main-features i { background: rgba(253,45,85,.1)!important; color: $blue; font-size: 25px; width: 64px; height: 25px; border-radius: 50%; text-align: center; padding: 20px 0; }
 #main-features h2 { margin: 1rem 0 3rem; font-weight: 400; line-height: 1.2; font-size: 2.5rem; }
 #main-features h3 { margin: 1rem; font-weight: 600; line-height: 1.2; font-size: 1.5rem; }
 #main-features p { font-size: 1.25rem; font-weight: 400; color: #828282; }
@@ -130,9 +139,9 @@ footer .footer-cta a { float: right; }
 #docs .sidebar ul li { margin: 10px 0; }
 #docs .sidebar ul li a { color: #828282; transition: color 0.3s ease; }
 #docs .sidebar ul li a:hover { color: #eeeeff; }
-#docs .sidebar ul li i { display: inline-block; margin-right: 10px; color: #fd2d55; }
-#docs .sidebar ul.first-level li h3 { color: #fd2d55; margin: 0; }
+#docs .sidebar ul li i { display: inline-block; margin-right: 10px; color: $blue; }
+#docs .sidebar ul.first-level li h3 { color: $blue; margin: 0; }
 #docs .sidebar ul.second-level li { margin-left: 20px; }
 #docs .sidebar ul.second-level i { font-size: 5px; position: relative; bottom: 4px; }
 #docs .actual { width: 66.63%; padding: 40px; }
-#docs .actual h1, #docs .actual h2, #docs .actual h3, #docs .actual h4 { color: #fd2d55; }
+#docs .actual h1, #docs .actual h2, #docs .actual h3, #docs .actual h4 { color: $blue; }
