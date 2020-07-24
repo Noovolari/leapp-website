@@ -27,6 +27,10 @@ facebook_url: 'b'
 twitter_url: 'a'
 linkedin_url: 'f'
 
+sass:
+  sass_dir: assets/css/partials
+  style: compressed
+
 # -----------------------------------
 # ----- Don't edit below this! ------
 
