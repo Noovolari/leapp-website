@@ -10,7 +10,7 @@ blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
 body {
-  font: 400 16px/1.5 -apple-system, "Open Sans", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: #111; background-color: #fdfdfd;
+  font: 400 16px/1.5 -apple-system, "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: #111; background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
   display: flex; min-height: 100vh; flex-direction: column;
 }
@@ -79,7 +79,7 @@ nav a:hover { color: #828282; }
 nav i:hover { color: $blue; }
 
 /** Hero unit */
-#hero-unit { 
+#hero-unit {
     background-image: radial-gradient( circle at 50% 0,#3a416f,#21243d );
     background-image: radial-gradient( circle at 50% 0,#3a416f,#21243d );
     margin-top: 87px; margin-bottom: 15rem; }
