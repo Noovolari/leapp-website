@@ -1,1 +1,1 @@
-Use your already-familiar spaceship from the browser. No additional costs here!
+Credentials are your keys to the Cloud, secure them seamlessly

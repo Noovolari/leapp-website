@@ -1,2 +1,2 @@
-Lets improve it together!  
-Your contributions are welcome [here](https://#).
+The client core is open-source and extensible and will 
+always be! [Contribute Here!](https://github.com/Noovolari/leapp){:target="_blank"}

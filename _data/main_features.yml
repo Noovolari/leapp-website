@@ -1,13 +1,13 @@
-title: Web Engineering cannot get any easier!
+title: If it's ON, you are IN!
 features:
-  - title: Instant Gold
-    icon: fa-desktop
+  - title: Fast
+    icon: fa-bolt
     content: mainfeatures/mainfeature_monitor.markdown
 
-  - title: Ghost First
-    icon: fa-code
+  - title: Secure
+    icon: fa-lock
     content: mainfeatures/mainfeature_code.markdown
 
-  - title: Open Bohr
+  - title: Open-source
     icon: fa-github
     content: mainfeatures/mainfeature_github.markdown
