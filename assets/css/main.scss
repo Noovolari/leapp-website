@@ -100,14 +100,23 @@ nav i:hover { color: $blue; }
 #main-features p { font-size: 18px; font-weight: 400; color: $text_color;padding: 0 12%;}
 
 /** Waved Quote */
-#quote {position: relative; display: flex; flex-wrap: nowrap; justify-content:center; margin-bottom: -14%}
+#quote {position: relative; display: flex; flex-wrap: nowrap; justify-content:center; margin-bottom: -200px}
+#quote .icon {    position: absolute;    background: $turchese;
+  color: white;
+  font-size: 25px;
+  width: 68px;
+  height: 58px;
+  text-align: center;
+  padding-top: 10px;}
+#quote .icon.open { top: -34px; left: 50px;}
+#quote .icon.close {bottom:-34px; right: 50px}
 #quote .center { background: white; min-height: 100px; box-shadow: 0 0 50px -4px rgba(0,0,0,0.15);}
 #quote .quote-holder { padding: 5% 10%; text-align: center; }
 #quote .quote-holder h2 { font-size: 3.5rem; font-weight: 400; letter-spacing: -.03em; line-height: 1.1; }
 #quote .quote-holder p { font-size: 2rem; }
 
 /** Features */
-#features {padding-top: 14%; background: $background-blue}
+#features {padding-top: 200px; background: $background-blue}
 #features .features-holder .feature { margin: 80px 0; display: flex; flex-direction: row; }
 #features .features-holder video { width: 100%;}
 #features .features-holder .video { width: calc(66.67% - 40px); padding: 0 20px; display: flex; }

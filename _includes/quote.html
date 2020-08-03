@@ -1,8 +1,14 @@
 <section id="quote" class="container" >
+    <div class="icon open">
+        <img src="{{site.url}}{{site.baseurl}}/assets/img/quote-icon.png">
+    </div>
     <div class="center">
-            <div class="quote-holder">
-                {% capture q %}{% include quote/quote.markdown %}{% endcapture %}
-                {{ q | markdownify }}
-            </div>
+        <div class="quote-holder">
+            {% capture q %}{% include quote/quote.markdown %}{% endcapture %}
+            {{ q | markdownify }}
+        </div>
+    </div>
+    <div class="icon close">
+        <img src="{{site.url}}{{site.baseurl}}/assets/img/quote-icon-close.png">
     </div>
 </section>
