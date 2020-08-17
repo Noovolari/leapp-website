@@ -8,9 +8,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   intrinsic. Devasting
 
 # Facebook & Twitter in <head>
-facebook_username: webjeda
-twitter_username: jekyllrb
-github_username:  jekyll
+facebook_username: a
+twitter_username: a
+github_username:  a
 
 # Configuration
 baseurl: '/leapp-website' # the subpath of your site, e.g. /blog
@@ -21,7 +21,8 @@ navbar_title: Leapp
 
 # Navbar urls
 blog_url: 'e'
-github_download_url: 'd'
+github_download_url: 'https://github.com/Noovolari/leapp/releases/latest'
+github_roadmap_url: 'https://github.com/Noovolari/leapp/projects/1'
 github_url: 'https://github.com/Noovolari/leapp'
 facebook_url: 'b'
 twitter_url: 'a'

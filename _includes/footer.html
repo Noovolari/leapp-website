@@ -1,17 +1,20 @@
 <footer>
     <div class="container">
-        <div class="rounded footer-cta" style="background-image: url('{{site.url}}{{site.baseurl}}/assets/img/{{site.data.footer.cta_image}}');">
+        <div class="rounded footer-cta">
             <h2>{{site.data.footer.cta_text}}</h2>
             <a href="{{site.data.footer.cta_link}}" title="{{site.data.footer.cta_title}}" class="btn btn-secondary btn-lg">{{site.data.footer.cta_button_text}}</a>
             <div class="clearfix"></div>
         </div>
+
+        <hr>
         <ul>
-            <li><a href="{{site.twitter_url}}"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="{{site.facebook_url}}"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="{{site.linkedin_url}}"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="{{site.github_url}}"><i class="fab fa-github"></i></a></li>
+            <li><span>©2020 Leapp, All rights reserved.</span></li>
+            <li>
+                <a href="{{site.data.footer.privacy_url}}" target="_blank">Privacy Policy</a>
+                <a href="{{site.data.footer.toc_url}}" target="_blank">Terms and Conditions</a>
+                <a href="{{site.github_url}}"><i class="fab fa-github"></i></a>
+            </li>
         </ul>
-        <span>©2020 Leapp, All rights reserved and subject to the <a href="{{site.data.footer.privacy_url}}" target="_blank">Privacy Policy</a> and <a href="{{site.data.footer.toc_url}}" target="_blank">Terms and Conditions</a>.</span>
     </div>
 </footer>
 <script async src="https://kit.fontawesome.com/6650e02fbc.js" crossorigin="anonymous"></script>

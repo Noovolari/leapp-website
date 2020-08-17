@@ -1,5 +1,5 @@
-## It's really clear that the most precious resource we all have is Time.
+## My *favorite* things in life don’t cost any money. It’s really clear that the most *precious* resource we all have is *time*.
 
-## - Steve Jobs
 
-So let's use it wisely. 😎
+
+![sign]({{site.url}}{{site.baseurl}}/assets/img/sign.png)
