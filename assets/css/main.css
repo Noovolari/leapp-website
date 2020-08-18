@@ -1,0 +1,43 @@
+/*
+Error: Invalid CSS after "...ort "variables"": expected "{", was ";"
+        on line 5 of main.scss
+
+1: ---
+2: # Front matter comment to ensure Jekyll properly reads file.
+3: ---
+4: 
+5: @import "variables";
+6: 
+7: /** Reset some basic elements *\/
+8: body, h1, h2, h3, h4, h5, h6, p,
+9: blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
+10: 
+
+Backtrace:
+main.scss:5
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/bin/sass:23:in `load'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/bin/sass:23:in `<main>'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/andreacavagna/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:24:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ort \"variables\"\": expected \"{\", was \";\"\A         on line 5 of main.scss\A \A 1: ---\A 2: # Front matter comment to ensure Jekyll properly reads file.\A 3: ---\A 4: \A 5: @import \"variables\";\A 6: \A 7: /** Reset some basic elements */\A 8: body, h1, h2, h3, h4, h5, h6, p,\A 9: blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }\A 10: "; }
