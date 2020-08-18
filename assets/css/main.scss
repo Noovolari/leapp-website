@@ -78,6 +78,7 @@ nav a, nav a:visited { font-size: 24px; color: $white; }
 nav i { font-size: 38px; color: $blue; position: relative; top: 8px; }
 nav a:hover { color: $blue; }
 
+.navbar-img-mobile { display: none; }
 .navbar-social, .download-now { color: $white; background: $blue; height: 53px; display: inline-block; }
 .download-now, .download-now:visited { border-radius: 5px; color: $light-blue; padding: 0 10px; display: flex; align-items: center; }
 .download-now:hover { color: $white; }
@@ -157,3 +158,56 @@ footer hr { display: block; height: 1px; background: $light-blue; border: 0; mar
 #docs .sidebar ul.second-level i { font-size: 5px; position: relative; bottom: 4px; }
 #docs .actual { width: 66.63%; padding: 40px; }
 #docs .actual h1, #docs .actual h2, #docs .actual h3, #docs .actual h4 { color: $blue; }
+
+/** @media queries **/
+@media all and (max-width: 1080px) {
+
+  #features .features-holder .feature, #features .features-holder .feature.reverse { margin: 200px 0; }
+  #features .features-holder .video { width: calc(50% - 40px); }
+  #features .features-holder .content { width: calc(50% - 40px); }
+  footer .footer-cta { width: 83%; margin: 0 auto 3rem auto; }
+  footer ul { margin: 0 auto; width: 83%; }
+}
+
+@media all and (max-width: 800px) {
+
+  nav a, nav a:visited { font-size: 22px; }
+  #hero-unit h1 { margin-left: 20px; margin-right: 20px; }
+  #features .features-holder .feature, #features .features-holder .feature.reverse { display: block; }
+  #features .features-holder .feature .video { width: 83%; padding: 0; margin: 0 auto; }
+  #features .features-holder .feature .content, #features .features-holder .feature.reverse .content { width: 83%; padding: 0; margin: 40px auto 0; text-align: center; }
+  footer .footer-cta { margin: 0 auto 3rem auto; width: calc(83% - 80px); }
+  footer .footer-cta h2 { float: none; font-size: 30px; }
+  footer .footer-cta a { float: none; }
+  footer ul { display: initial; width: 83%; margin: 0 auto; }
+  footer ul li:first-child { display: initial; padding: 10px 0; }
+}
+
+@media all and (max-width: 700px) {
+
+  .navbar-img-mobile { display: inline-block; max-height: 80px; }
+  .navbar-img { display: none; }
+  #hero-unit h1 { font-size: 65px; }
+  #main-features { margin: 0 0 10rem 0; }
+  #main-features .card-holder { flex-direction: column; justify-content: space-between; }
+  #main-features .card-holder .card { text-align: center; width: 83%; margin: 10px auto; }
+}
+
+@media all and (max-width: 600px) {
+  nav a, nav a:visited { font-size: 18px; }
+}
+
+@media all and (max-width: 530px) {
+
+  #hero-unit h1 { font-size: 50px; }
+  #main-features .card-holder { flex-direction: column; justify-content: space-between; }
+  #main-features .card-holder .card { text-align: center; width: 83%; margin: 10px auto; }
+}
+
+@media all and (max-width: 530px) {
+  nav ul li { margin: 0 5px; }
+  .btn-lg { font-size: 16px; }
+  #main-features h2 { margin: 2.5rem 40px 5rem; }
+  #quote .quote-holder h2 { font-size: 2rem; margin-top: 30px; }
+  footer ul li a, footer ul li i, footer ul li span { font-size: 15px; }
+}
