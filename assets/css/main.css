@@ -179,7 +179,8 @@ nav a, nav i {
   cursor: pointer; }
 
 nav a, nav a:visited {
-  font-size: 24px;
+  font-size: 19px;
+  font-weight: 300;
   color: #FFFFFF; }
 
 nav i {
@@ -344,7 +345,7 @@ nav a:hover {
   text-align: center; }
 
 #quote .quote-holder h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.3; }
@@ -365,7 +366,7 @@ nav a:hover {
   background: #080B38; }
 
 #features .features-holder .feature {
-  margin: 300px 0;
+  margin: 120px 0;
   display: flex;
   flex-direction: row;
   align-items: center; }
@@ -396,7 +397,7 @@ nav a:hover {
 
 #features .features-holder h3 {
   margin-bottom: 1rem;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 1.2;
   color: #73E0CF; }

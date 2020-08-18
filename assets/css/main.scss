@@ -70,7 +70,7 @@ nav > div { min-height: 87px; padding: 0 5px; display:flex; flex-direction: row;
 nav img.navbar-img { height: 80px; }
 nav ul li { margin: 0 15px; }
 nav a, nav i { transition: all 0.2s ease; cursor: pointer; }
-nav a, nav a:visited { font-size: 24px; color: $white; }
+nav a, nav a:visited { font-size: 19px; font-weight: 300; color: $white; }
 nav i { font-size: 38px; color: $blue; position: relative; top: 8px; }
 nav a:hover { color: $blue; }
 
@@ -107,20 +107,20 @@ nav a:hover { color: $blue; }
 #quote .icon.close {bottom:-34px; right: 50px}
 #quote .center { background: white; min-height: 100px; box-shadow: 0 0 50px -4px rgba(0,0,0,0.15);}
 #quote .quote-holder { padding: 5% 10%; text-align: center; }
-#quote .quote-holder h2 { font-size: 3.5rem; font-weight: 400; letter-spacing: 0.01em; line-height: 1.3; }
+#quote .quote-holder h2 { font-size: 2.5rem; font-weight: 400; letter-spacing: 0.01em; line-height: 1.3; }
 #quote .quote-holder p { font-size: 2rem; }
 #quote .quote-holder img { margin-top: 30px; }
 #quote .quote-holder em { color: $blue; font-style: normal; }
 
 /** Features */
 #features { padding-top: 300px; background: $background-blue; }
-#features .features-holder .feature { margin: 300px 0; display: flex; flex-direction: row; align-items: center; }
+#features .features-holder .feature { margin: 120px 0; display: flex; flex-direction: row; align-items: center; }
 #features .features-holder video { width: 100%;}
 #features .features-holder .video { width: calc(66.67% - 40px); padding: 0 20px; display: flex; }
 #features .features-holder .content { width: calc(33.33% - 40px); text-align: left; padding: 0 20px; display: flex; flex-direction: column; justify-content: center; }
 #features .features-holder .feature.reverse { display: flex; flex-direction: row-reverse; align-items: center; }
 #features .features-holder .feature.reverse .content { text-align: right; }
-#features .features-holder h3 { margin-bottom: 1rem; font-size: 35px; font-weight: 600; line-height: 1.2; color: $blue; }
+#features .features-holder h3 { margin-bottom: 1rem; font-size: 30px; font-weight: 600; line-height: 1.2; color: $blue; }
 #features .features-holder p { font-size: 22px; font-weight: 400; margin-top: 0; margin-bottom: 1rem; color: $white; }
 #features .features-holder p em { font-style: normal; color: $blue; }
 #features .features-holder p a { text-decoration: underline; color: $white; }
