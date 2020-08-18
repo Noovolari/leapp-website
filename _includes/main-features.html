@@ -4,7 +4,7 @@
         <div class="card-holder">
             {% for item in site.data.main_features.features %}
             <div class="card">
-                <i class="fa fab {{ item.icon }}"></i>
+                <i class="fa fal fab far {{ item.icon }}"></i>
                 <h3>{{ item.title }}</h3>
                 {% capture p %}{% include {{item.content}} %}{% endcapture %}
                 {{ p | markdownify }}

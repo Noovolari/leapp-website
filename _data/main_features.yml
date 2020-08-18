@@ -5,7 +5,7 @@ features:
     content: mainfeatures/mainfeature_monitor.markdown
 
   - title: Secure
-    icon: fa-lock
+    icon: fa-lock-alt
     content: mainfeatures/mainfeature_code.markdown
 
   - title: Open-source
