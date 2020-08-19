@@ -13,7 +13,7 @@ twitter_username: a
 github_username:  a
 
 # Configuration
-baseurl: '/' # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 url: '' # for github pages leave it like this
 
 # Navbar title
@@ -29,7 +29,7 @@ twitter_url: 'a'
 linkedin_url: 'f'
 
 sass:
-  sass_dir: assets/css/partials
+  sass_dir: assets/css
   style: compressed
 
 # -----------------------------------
