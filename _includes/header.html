@@ -1,5 +1,5 @@
 <head>
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }}</title>
     <meta charset="UTF-8">
     <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +8,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{site.baseurl}}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}{{site.baseurl}}/assets/img/thumbs/{{ page.image }}" />
+    <meta property="og:image" content="{{ site.url }}{{site.baseurl}}/assets/img/{{ page.image }}" />
     <meta property="og:site_name" content="{{site.title}}">
     <meta property="article:publisher" content="https://www.facebook.com/{{site.facebook_username}}" />
     <meta property="article:author" content="https://www.facebook.com/{{site.facebook_username}}" />
@@ -18,6 +18,7 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}">
+    <meta property="twitter:image" content="{{ site.url }}{{site.baseurl}}/assets/img/{{ page.image }}" />
     <meta name="twitter:site" content="@{{site.twitter_username}}" />
     <meta name="twitter:creator" content="@{{site.twitter_username}}">
     <meta name="twitter:card" content="summary">
