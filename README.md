@@ -64,13 +64,13 @@ In this folder you can see all the **microtemplates** used for organising code a
             <h4>{{site.navbar_title}}</h4>
         </div>
         <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="{{site.blog_url}}">Blog</a></li>
-            <li><a href="/documentation">Docs</a></li>
-            <li><a href="{{site.github_download_url}}">Download</a></li>
-            <li><a href="{{site.twitter_url}}"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="{{site.facebook_url}}"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="{{site.github_url}}"><i class="fab fa-github"></i></a></li>
+            <li><a title="Features" href="#features">Features</a></li>
+            <li><a title="Blog" href="{{site.blog_url}}">Blog</a></li>
+            <li><a title="Docs" href="/documentation">Docs</a></li>
+            <li><a title="Downlad" href="{{site.github_download_url}}">Download</a></li>
+            <li><a title="Twitter" href="{{site.twitter_url}}"><i class="fab fa-twitter"></i></a></li>
+            <li><a title="Facebook" href="{{site.facebook_url}}"><i class="fab fa-facebook"></i></a></li>
+            <li><a title="Github" href="{{site.github_url}}"><i class="fab fa-github"></i></a></li>
         </ul>
     </div>
 </nav>
@@ -115,7 +115,7 @@ Also the documentation page:
                     {% assign link = site.url | append: site.baseurl %}
                     {% for breadcrumb in breadcrumbs %}
                     {% assign link = link | append: breadcrumb | append: '/' %}
-                    <a href="{{link}}">{{breadcrumb}}</a><span> / </span>
+                    <a href="{{link}}" title="{{link}}">{{breadcrumb}}</a><span> / </span>
                     {% endfor %}
                 </div>
                 {{content}}
