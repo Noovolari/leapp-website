@@ -7,13 +7,13 @@
             {% if item.permalink contains '/documentation' %}
                 {% if item.parent == nil %}
                 <li>
-                    <i class="fa fa-chevron-right"></i><a href="{{site.url}}{{site.baseurl}}{{item.permalink}}">{{item.title}}</a>
+                    <i class="fa fa-chevron-right"></i><a title="{{item.title}}" href="{{site.url}}{{site.baseurl}}{{item.permalink}}">{{item.title}}</a>
                     <ul class="second-level">
                         {% for subitem in site.pages %}
                             {% if item.permalink contains '/documentation' %}
                                 {% if subitem.parent == item.title %}
                                     <li>
-                                        <i class="fa fa-circle"></i><a href="{{site.url}}{{site.baseurl}}{{subitem.permalink}}">{{subitem.title}}</a>
+                                        <i class="fa fa-circle"></i><a title="{{subitem.title}}" href="{{site.url}}{{site.baseurl}}{{subitem.permalink}}">{{subitem.title}}</a>
                                     </li>
                                 {% endif %}
                             {% endif %}
