@@ -133,6 +133,7 @@ footer a { color: rgba(255,255,255,.7); transition: color 0.3s ease; display: in
 footer a:hover { color: #ffffff; }
 footer ul li a, footer ul li i, footer ul li span { padding: .5rem 0; font-size: 20px; color: $light-blue; }
 footer ul li i { font-size: 24px; }
+footer ul li a:visited {color: $light-blue;}
 footer ul li a i { flex-shrink: 0; background: #080b38; color: white; width: 40px; }
 footer ul li:first-child { display: flex; align-self: flex-start; padding: 10px 0; }
 footer .footer-cta { background: $light-blue; margin-bottom: 3rem; padding: 40px; }
