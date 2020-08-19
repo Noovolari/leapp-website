@@ -7,8 +7,8 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:url" content="{{ site.url }}{{site.baseurl}}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}{{site.baseurl}}/assets/img/{{ page.image }}" />
+    <meta property="og:url" content="{{ site.url | absolute_url}}{{site.baseurl}}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url | absolute_url}}{{site.baseurl}}/assets/img/{{ page.image }}" />
     <meta property="og:site_name" content="{{site.title}}">
     <meta property="article:publisher" content="https://www.facebook.com/{{site.facebook_username}}" />
     <meta property="article:author" content="https://www.facebook.com/{{site.facebook_username}}" />
@@ -18,18 +18,18 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}">
-    <meta property="twitter:image" content="{{ site.url }}{{site.baseurl}}/assets/img/{{ page.image }}" />
+    <meta property="twitter:image" content="{{ site.url | absolute_url}}{{site.baseurl}}/assets/img/{{ page.image }}" />
     <meta name="twitter:site" content="@{{site.twitter_username}}" />
     <meta name="twitter:creator" content="@{{site.twitter_username}}">
     <meta name="twitter:card" content="summary">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ site.url }}{{site.baseurl}}/assets/img/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon-precomposed" href="{{ site.url }}{{site.baseurl}}/assets/img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ site.url }}{{site.baseurl}}/assets/img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}{{site.baseurl}}/assets/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}{{site.baseurl}}/assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="shortcut icon" href="{{ site.url | absolute_url}}{{site.baseurl}}/assets/img/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="{{ site.url | absolute_url}}{{site.baseurl}}/assets/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ site.url | absolute_url}}{{site.baseurl}}/assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url | absolute_url }}{{site.baseurl}}/assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url | absolute_url }}{{site.baseurl}}/assets/img/favicons/apple-touch-icon-152x152.png">
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}{{site.baseurl}}/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url | absolute_url }}{{site.baseurl}}/assets/css/main.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <!-- Google Tag Manager -->

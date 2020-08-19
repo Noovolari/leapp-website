@@ -60,7 +60,7 @@ In this folder you can see all the **microtemplates** used for organising code a
 <nav>
     <div class="container">
         <div>
-            <img src="{{ site.url }}{{site.baseurl}}/assets/img/logo.png" alt="logo of Leapp" title="logo of Leapp" class="navbar-img" />
+            <img src="{{ site.url | absolute_url}}{{site.baseurl}}/assets/img/logo.png" alt="logo of Leapp" title="logo of Leapp" class="navbar-img" />
             <h4>{{site.navbar_title}}</h4>
         </div>
         <ul>
@@ -206,7 +206,7 @@ Is managed directly by Jekyll and contains the staticised site. Don't modify it 
 
 Contains **css, images, and any other media** of the site we want to include in the pages. To include an assets you ave to use the following syntax to **represent the url** of the resource (you have to manually add resources to the folder too):
 
-`{{site.url}}{{site.baseurl}}/assets/<any-other-folder-if-present>/<name-of-the-file-with-extension>`
+`{{site.url | absolute_url}}{{site.baseurl}}/assets/<any-other-folder-if-present>/<name-of-the-file-with-extension>`
 
 Example:
 
