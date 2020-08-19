@@ -160,7 +160,7 @@ footer hr { display: block; height: 1px; background: $light-blue; border: 0; mar
 #docs .actual h1, #docs .actual h2, #docs .actual h3, #docs .actual h4 { color: $blue; }
 
 /** @media queries **/
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1440px) {
   nav { height: 87px; }
   nav img { max-height: 60px; }
   #hero-unit h1 { font-size: 65px; }
