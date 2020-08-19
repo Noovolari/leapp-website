@@ -13,7 +13,7 @@ twitter_username: a
 github_username:  a
 
 # Configuration
-baseurl: '/leapp-website' # the subpath of your site, e.g. /blog
+baseurl: '/' # the subpath of your site, e.g. /blog
 url: '' # for github pages leave it like this
 
 # Navbar title
