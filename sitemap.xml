@@ -10,7 +10,7 @@ search: exclude
     <loc>{{ site.url | absolute_url }}</loc>
     <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.91</priority>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
