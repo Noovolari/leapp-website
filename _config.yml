@@ -14,7 +14,7 @@ github_username:  a
 
 # Configuration
 baseurl: '' # the subpath of your site, e.g. /blog
-url: '/' # for github pages leave it like this
+url: '' # for github pages leave it like this
 
 # Navbar title
 navbar_title: Leapp
