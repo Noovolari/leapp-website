@@ -21,7 +21,7 @@ features:
     controls: false
     muted: true
 
-  - title: AUTOMATIC CREDENTIALS MANAGEMENT
+  - title: STRAIGHT PROGRAMMATIC ACCESS VIA SSO
     content: features/feature4.markdown
     video: Leapp-Federated.mp4
     autoplay: true
