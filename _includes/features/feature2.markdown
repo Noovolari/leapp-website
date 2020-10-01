@@ -1,1 +1,1 @@
-Store your AWS IAM User's **Access Keys** in your **System Vault** through Leapp. Leapp automatically manages **Access Key ID** and **Secret Access Key** in your AWS credentials file for the duration of the session.
+Store your AWS IAM User's *Access Keys* in your *System Vault* through Leapp. Leapp automatically manages *Access Key ID* and *Secret Access Key* in your AWS credentials file for the duration of the session.
