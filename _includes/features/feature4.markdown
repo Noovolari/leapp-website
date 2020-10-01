@@ -1,2 +1,1 @@
-Move freely across your *multi-cloud environment* as *Leapp* automatically manages your access credentials for you. 
-It handles *temporary keys generation*, rotation, and auto-renew to comply with security best-practice!
+Leverage your company identity to access your environment through federated single sign-on. No more credentials management. Leapp allows you to get to your cloud resources with your company email{:target="_blank"}{:title="Federation Setup"} and password. Click here{:target="_blank"}{:title="Roadmap"} to know what are the supported use cases for now.
