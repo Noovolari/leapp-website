@@ -1,5 +1,1 @@
-Leverage your company identity to access your *environment* through federated single sign-on.
-*No more credentials management*.
-Leapp allows you to get to your cloud resources with your company 
-[email](https://github.com/Noovolari/leapp/blob/master/.github/tutorials/G_SUITE_FEDERATION_SETUP.md){:target="_blank"}{:title="Federation Setup"} and password.
-[Click here](https://github.com/Noovolari/leapp#what-does-it-support-now){:target="_blank"}{:title="Roadmap"} to know what are the *supported use cases* for now.
+Store your AWS IAM User's **Access Keys** in your **System Vault** through Leapp. Leapp automatically manages **Access Key ID** and **Secret Access Key** in your AWS credentials file for the duration of the session.
