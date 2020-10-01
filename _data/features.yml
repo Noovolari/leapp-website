@@ -7,9 +7,9 @@ features:
     controls: false
     muted: true
 
-  - title: STRAIGHT PROGRAMMATIC ACCESS VIA SSO
+  - title: PLAIN CREDENTIALS ACCESS
     content: features/feature2.markdown
-    video: Leapp-SSO.mp4
+    video: Leapp-Plain.mp4
     autoplay: true
     controls: false
     muted: true
