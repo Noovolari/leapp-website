@@ -7,7 +7,7 @@ features:
     controls: false
     muted: true
 
-  - title: PLAIN CREDENTIALS ACCESS
+  - title: ACCESS AND SECRET KEY FINALLY SECURED
     content: features/feature2.markdown
     video: Leapp-Plain.mp4
     autoplay: true
