@@ -144,6 +144,7 @@ footer .footer-cta h2 { float: left; color: $blue; padding: 13px 0 0; font-size:
 footer .footer-cta a { float: right; font-size: 24px; margin-top: 10px; border-radius: 5px; background: $blue; color: $white; border: none; }
 footer .footer-cta a:hover { color: $white; }
 footer hr { display: block; height: 1px; background: $light-blue; border: 0; margin-bottom: 10px; }
+.footer-besharp { position: relative; top: 5px; margin-left: 10px; height: 28px!important; }
 
 /** Documentation */
 #docs { margin-top: 87px; margin-bottom: 6rem; display: flex; flex-direction: row; }
@@ -180,6 +181,7 @@ footer hr { display: block; height: 1px; background: $light-blue; border: 0; mar
 
 @media all and (max-width: 800px) {
 
+  .powered-by-header { display: none; }
   nav a, nav a:visited { font-size: 22px; }
   #hero-unit h1 { margin-left: 20px; margin-right: 20px; }
   #features .features-holder .feature, #features .features-holder .feature.reverse { display: block; }
@@ -190,6 +192,11 @@ footer hr { display: block; height: 1px; background: $light-blue; border: 0; mar
   footer .footer-cta a { float: none; }
   footer ul { display: initial; width: 83%; margin: 0 auto; }
   footer ul li:first-child { display: initial; padding: 10px 0; }
+  .footer-besharp { top: 0; }
+}
+
+@media all and (max-width: 760px) {
+
 }
 
 @media all and (max-width: 700px) {
