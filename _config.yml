@@ -3,9 +3,9 @@ email: your-email@example.com
 # SEO in <head>
 title: Leapp - One step away from your Cloud
 description: >- # this means to ignore newlines until "baseurl:"
-Leapp is the tool to access your cloud; 
-It securely stores your access information and generates temporary credential sets to access AWS and Azure Cloud environments.
-It manage AWS Single Sign-On and access to EC2 instances through SSM
+  Leapp is the tool to access your cloud; 
+  It securely stores your access information and generates temporary credential sets to access AWS and Azure Cloud environments.
+  It manage AWS Single Sign-On and access to EC2 instances through SSM
 
 # Facebook & Twitter in <head>
 facebook_username: a
