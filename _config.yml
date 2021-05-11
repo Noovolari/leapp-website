@@ -3,9 +3,9 @@ email: your-email@example.com
 # SEO in <head>
 title: Leapp - One step away from your Cloud
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the most important invection after playstation 2, innovative,
-  powerful, extatic, super software made of pure genius, swift, rapid,
-  intrinsic. Devasting
+  Leapp is the tool to access your cloud; 
+  It securely stores your access information and generates temporary credential sets to access AWS and Azure Cloud environments.
+  It manage AWS Single Sign-On and access to EC2 instances through SSM
 
 # Facebook & Twitter in <head>
 facebook_username: a
@@ -22,7 +22,7 @@ navbar_title: Leapp
 # Navbar urls
 blog_url: 'e'
 github_download_url: 'https://github.com/Noovolari/leapp/releases/latest'
-github_roadmap_url: 'https://github.com/Noovolari/leapp/projects/1'
+github_roadmap_url: 'https://github.com/Noovolari/leapp/projects/4'
 github_url: 'https://github.com/Noovolari/leapp'
 facebook_url: 'b'
 twitter_url: 'a'
