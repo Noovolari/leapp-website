@@ -97,37 +97,6 @@ Layouts are used to define **how a page is shown** in the site: they are linked 
 
 You can see that we have described the entire page as **collection** **of** **microtemplates**, each one **pointing to a specific section** of the page each with **specific information** contained both in the **_include** area and in the **_data** area.
 
-Also the documentation page:
-
-```html
-<!DOCTYPE html>
-<html>
-    {% include header.html %}
-    <body>
-        {% include navbar.html %}
-        <div id="docs">
-            <div class="sidebar">
-                {% include sidebar.html %}
-            </div>
-            <div class="actual">
-                <div class="breadcrumbs">
-                    {% assign breadcrumbs = page.permalink | split: '/' %}
-                    {% assign link = site.url | append: site.baseurl %}
-                    {% for breadcrumb in breadcrumbs %}
-                    {% assign link = link | append: breadcrumb | append: '/' %}
-                    <a href="{{link}}" title="{{link}}">{{breadcrumb}}</a><span> / </span>
-                    {% endfor %}
-                </div>
-                {{content}}
-            </div>
-        </div>
-        {% include footer.html %}
-    </body>
-</html>
-```
-
-It shares the **header, footer and navbar** as any other layout, it also define how the `{{content}}` is presented.
-
 ### _pages
 
 **Pages are the core of the structure as they present the end content**. They are written in markdown and contains information about where the content will be presented as well as **other important SEO information**.
@@ -151,29 +120,6 @@ It doesn't contains any markdown **but 4 important properties you must know how 
 - **description:** the description of the page in the SEO meta.
 - **permalink:** defines the route of the page, that is very important as we have defined a custom directories' structure so you need to always specify the url in the permalink option.
 - **layout:** define the layout you want to use to present your content.
-
-### Documentation
-
-In the **_pages** section we also have the **documentation** section. This area is very simple as you just have to write a simple markdown file defining some properties to have it added automatically to the doc section.
-
-Documentation is defined with a file structure that is simple to understand and reflects directly in the menu defined in the sidebar.html **microtemplate**. You can see it in the image below:
-
-![assets/README/Screenshot_2020-07-23_at_12.42.46.png](assets/README/Screenshot_2020-07-23_at_12.42.46.png)
-
-Every markdown file is named with a **consecutive number** followed by 1 or 3 _ (underscore), this way you can clearly see how the menu will be translated in the actual site. Inside every file we have the following properties:
-
-![assets/README/Screenshot_2020-07-23_at_14.30.02.png](assets/README/Screenshot_2020-07-23_at_14.30.02.png)
-
-As always the important part here is mainly represented by the properties described on the top of the file:
-
-- **title**: contains the title of the page (as value also for SEO purposes)
-- **description**: contains the description of the page (as value also for SEO purposes)
-- **category**: this value represent a main category in the sidebar; this value can be unique or repeating, if repeating it means the page goes in the same category as others
-- **parent**: this value is the **title** of of a page **this page** is **child of** (this is also represented by having the name of the file with 3 _ (___) after the number triplet. This way we have the same disposition as in the real sidebar's menu. Look at the example for a simple suggestion
-- **layout**: docs. This is a fixed value but must be present
-- **permalink**: must contains **/documentation/** and the eventual parent slug, like in the example. Otherwise **/documentation/page-slug** is sufficient.
-
-After setting these properties you can freely add your markup for the page. You can follow this guide: [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/) for help in the syntax. You can also use an online tool such as [https://www.notion.so/](https://www.notion.so/) to write with a WYSIWYG editor and copy/paste directly to a markdown document.
 
 ### _posts
 
