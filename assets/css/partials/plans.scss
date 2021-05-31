@@ -1,0 +1,100 @@
+#plans {
+    background: $white;
+
+    @include breakpoint('md') {
+        padding: 40px 0;
+    }
+
+    #cards-wrapper {
+        @include breakpoint('md') {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        .card {
+            margin-top: 40px;
+            text-align: center;
+            padding: $global-padding-default;
+            @include box-shadow();
+            @include border-radius(5px);
+
+            @include breakpoint('md') {
+                width: 25%;
+            }
+
+            &.orange {
+                .card-type {
+                    background-color: $orange;
+                }
+                .card-option li::before {
+                    color: $orange;
+                }
+                .btn {
+                    background-color: $orange;
+                }
+            }
+
+            .card-type {
+                @include border-radius(10px);
+                font-size: 1.25rem;
+                font-weight: bold;
+                text-align: center;
+                position: relative;
+                top: -40px;
+                padding: 5px 20px;
+                display: inline-block;
+                background-color: $turquoise;
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+                border-bottom: 1px solid $grey-cc;
+                color: $grey-59;
+                line-height: 0.1em;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+
+                span {
+                    background: #fff;
+                    padding: 0 10px;
+                }
+            }
+
+            .card-subtitle {
+                margin-bottom: $global-padding-default;
+            }
+
+            ul.card-option {
+                list-style: none;
+                margin: auto;
+                
+                @include breakpoint('lg') {
+                    width: 60%;
+                    height: 170px;
+                }
+
+                li {
+                    text-align: left;                
+
+                    &::before {
+                        color: $turquoise;
+                        content: "\2022";
+                        font-weight: bold;  
+                        font-size: 1.25rem;
+                        display: inline-block;
+                        width: 1em; 
+                    }
+                }
+            }
+
+            .btn { 
+                color: $blue;
+                /* border: 1px solid $blue; */
+
+                i { margin-right: 5px; }
+            }
+        }
+    }
+
+}

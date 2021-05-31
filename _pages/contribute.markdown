@@ -1,6 +1,6 @@
 ---
-title: Leapp - The definitive Credential Manager
+title: Leapp - Contribute
 description: Leapp - The best general purpose Credential generator in the world
-permalink: /contributing
+permalink: /contribute
 layout: contribute
 ---

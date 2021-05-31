@@ -1,0 +1,29 @@
+title: Leapp Plans
+subtitle: Jump wherever you want in every Cloud with your SDK and by using the CLI with Leapp
+cards:
+  - card_type: Open Source
+    card_title: COMMUNITY
+    card_subtitle: Free to use, free to distribute
+    card_element:
+      - label: Golang-based Daemon
+      - label: Community Support
+      - label: Electron Desktop App
+      - label: Slack workspace
+      - label: Wiki
+    card_download_label: GitHub
+    card_download_url: 'https://github.com/Noovolari/leapp'
+    card_download_target: target="_blank" rel="noopener"
+    card_download_icon: fa-github
+
+  - card_type: Enterprise
+    card_title: BUSINESS
+    card_subtitle: For organizations and multiple teams
+    card_element:
+      - label: Fusce consectetur quam
+      - label: Est at ultricies vulputate
+      - label: Donec facilisis pulvinar
+      - label: Aculis pretium, nisi ante
+    card_download_label: Contact us
+    card_download_url: 'contacts.html'
+    card_download_target: 
+    card_download_icon: fa-edit

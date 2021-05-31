@@ -1,12 +1,32 @@
-<section id="hero-unit">
-    <div class="container">
-        <h1>{{site.data.herounit.title}}</h1>
+<section id="hero-unit" class="home">
+    <div class="container text-center">
         <h2>{{site.data.herounit.subtitle}}</h2>
-        <div class="hero-btn-holder">
-            <a title="Download Leapp" href="{{site.data.herounit.link}}" target="_blank" class="btn-lg btn-outline-primary tag-manager-download">{{site.data.herounit.button}}</a>
+        <h3>{{site.data.herounit.title}}</h3>
+
+        <div class="hero-unit-col-container">
+            <div class="col">
+                <div class="title">{{site.data.herounit.col_left_title}}</div>
+                <div class="subtitle">{{site.data.herounit.col_left_subtitle}}</div>
+
+                <select id="download-select" class="wide">
+                    <option value="#" data-display="Select">Select OS:</option>
+                    {% for os in site.data.download.download %}
+                        <option value="{{os.value}}">{{os.label}}</option>
+                    {% endfor %}
+                </select>
+
+                <a href="{{site.data.download.other_download_url}}" id="othd">{{site.data.download.other_download_label}}</a>
+            </div>
+            <div class="col">
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.herounit.image}}" alt="Leapp Main Window" width="350" height="489"/>
+            </div>
         </div>
-        <div class="fade-up">
+
+        <!-- <div class="hero-btn-holder">
+            <a title="Download Leapp" href="{{site.data.herounit.link}}" target="_blank" rel='noopener' class="btn-lg btn-outline-primary">{{site.data.herounit.button}}</a>
+        </div> -->
+        <!-- <div class="fade-up">
             <img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.herounit.image}}" alt="{{site.data.herounit.image_title}}" title="{{site.data.herounit.image_title}}" />
-        </div>
+        </div> -->
     </div>
 </section>

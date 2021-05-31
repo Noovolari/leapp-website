@@ -1,0 +1,42 @@
+/** Footer */
+footer { 
+    background: $black; 
+    color: $white;
+    text-align: center;
+
+    @include breakpoint('md') {
+        text-align: left;
+    }
+
+    ul { 
+        padding-left: 0; margin-bottom: 0; list-style: none; align-items: center; justify-content: space-between; 
+
+        @include breakpoint('md') {
+            display: flex;
+            flex-wrap: wrap; 
+        }
+        @include breakpoint('0','md') {
+            span { display: block; }
+        }
+        a:link, a:visited { color: $white; display: inline-block; margin: 0 0 0 20px; }    
+    }
+    
+    .footer-cta { 
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: $global-padding-default;
+
+        h2 { color: $turquoise; padding: 10px 0 0; font-size: 35px; }
+        a:link, a:visited { display: inline-block; background: $turquoise; color: $blue; margin: auto; border: 0; }
+        a:hover { color: $white; }
+
+        @include breakpoint('md') {
+            text-align: left;
+
+            h2 { float: left; }
+            a:link, a:visited { float: right; width: auto; }
+        }
+    }
+    hr { display: block; height: 1px; background: $turquoise; border: 0; margin: $global-padding-default 0; }
+    .footer-besharp { margin: 10px 0 10px; }
+}

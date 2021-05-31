@@ -1,0 +1,131 @@
+/** Hero unit */
+#hero-unit {
+    background: $blue;
+    padding-top: 60px;
+
+    @include breakpoint('md') {
+        padding-top: 130px;
+    }
+
+    &.home {
+        @include breakpoint('md') {
+            .hero-unit-col-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                height: 489px;
+            }
+        }
+    }
+
+    .hero-unit-col-container {
+        margin-top: 60px;
+
+        @include breakpoint('md') {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        .col {
+            color: $white;
+
+            @include breakpoint('md') {
+                width: 40%;
+                /* padding: $global-padding-default;
+                box-sizing: border-box; */
+            }
+
+            &.full {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+                margin-bottom: $global-padding-default;
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        #download-select {
+            display: none;
+        }
+
+        #othd {
+            display: block;
+            margin-bottom: $global-padding-default;
+        }
+
+        .hero-title {
+            @include breakpoint('md') {
+                font-size: 50px;
+            }
+            padding-bottom: $global-padding-default;
+            border-bottom: 1px solid $turquoise;
+            margin-bottom: $global-padding-default;
+        }
+
+        .hero-content {
+            font-size: 20px;
+        }
+    }
+
+    svg {
+        background: 0 0 !important;
+        height: 6vw;
+        fill: $grey-fd;
+    }
+
+    h2 {
+        color: $white;
+        line-height: 1.875rem;
+        margin: 0;
+
+        @include breakpoint('md') {
+            font-size: 40px;
+            line-height: 1rem;
+        }
+    }
+
+    h3 {
+        color: $white;
+
+        @include breakpoint('md') {
+            font-size: 50px;
+            margin: 0 0 1.5rem;
+            letter-spacing: -.03em;
+        }
+    }
+
+    .hero-btn-holder {
+        margin: 4.0rem 0;
+    }
+
+    .fade-up {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        animation-delay: 0.1s;
+        animation: fade-up 0.4s ease-in;
+        box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.64);
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            top: 100px;
+        }
+
+        to {
+            opacity: 1;
+            top: 0;
+        }
+    }
+
+}

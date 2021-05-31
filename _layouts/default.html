@@ -1,13 +1,19 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html>
     {% include header.html %}
     <body>
+        <h1>{{ page.title }}</h1>
         {% include tagmanagerscript.html %}
         {% include navbar.html %}
         {% include hero-unit.html %}
         {% include main-features.html %}
-        {% include quote.html %}
-        {% include features.html %}
+        {% include tweet.html %}
+        {% include features.html %} 
+        {% include plans.html %} 
         {% include footer.html %}
     </body>
 </html>

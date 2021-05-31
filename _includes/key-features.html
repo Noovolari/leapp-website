@@ -1,0 +1,27 @@
+<section id="key-features">
+    <div class="container">
+        <h2 class="section-title">{{site.data.key_features.title}}</h2>
+        {% if site.data.key_features.subtitle != null %}
+            <h3 class="mb-3">{{site.data.key_features.subtitle}}</h3>
+        {% endif %}
+        {% if site.data.key_features.features.size > 0 %}
+            <div class="key-block-wrapper">
+                {% for item in site.data.key_features.features %}
+                    {% if forloop.index == 5 %}
+                        <div class="key-block leapp">
+                            <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/logo.png" alt="Leapp" width="100" height="47"/></a>
+                        </div>
+                    {% endif %}
+                    <div class="key-block">
+                        <i class="fa {{item.icon}}"></i>
+                        <h4>{{ item.title }}</h4>
+                        <div class="content">{{item.content}}</div>
+                    </div>
+                    {% if forloop.index == 3 %}
+                        <div class="break"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>

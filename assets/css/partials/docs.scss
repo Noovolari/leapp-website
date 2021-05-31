@@ -1,0 +1,15 @@
+/** Documentation */
+#docs { 
+    margin-top: 87px; margin-bottom: 6rem; display: flex; flex-direction: row; 
+    .sidebar { width: 33.37%; padding: 40px; }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li { margin: 10px 0; }
+    .sidebar ul li a { color: #828282; transition: color 0.3s ease; }
+    .sidebar ul li a:hover { color: #eeeeff; }
+    .sidebar ul li i { display: inline-block; margin-right: 10px; color: $turquoise; }
+    .sidebar ul.first-level li h3 { color: $turquoise; margin: 0; }
+    .sidebar ul.second-level li { margin-left: 20px; }
+    .sidebar ul.second-level i { font-size: 5px; position: relative; bottom: 4px; }
+    .actual { width: 66.63%; padding: 40px; }
+    .actual h1, #docs .actual h2, #docs .actual h3, #docs .actual h4 { color: $turquoise; }
+}

@@ -1,0 +1,22 @@
+title: Key Features…
+subtitle: Leapp is a Cross-Platform Cloud access App, built on top of Electron.
+features:
+  - title: Initial Setup
+    icon: fa-cog
+    content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore"
+
+  - title: Troubleshooting
+    icon: fa-adjust
+    content: Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+
+  - title: Priority bug fixing
+    icon: fa-align-left
+    content: Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla 
+
+  - title: Customer
+    icon: fa-bolt
+    content: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+
+  - title: Training
+    icon: fa-question-circle
+    content: Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla

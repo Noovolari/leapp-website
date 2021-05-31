@@ -1,9 +1,10 @@
 # Footer
-toc_url: '#'
-privacy_url: '#'
+toc_url: 'terms.html'
+contacts_url: 'contacts.html'
+privacy_url: 'privacy.html'
 
 # Call to Action
 cta_text: “One step away from your Cloud”
 cta_button_text: Download Now
 cta_link: 'https://github.com/Noovolari/leapp/releases/latest'
-cta_title: 'a'
+cta_title: 'release'

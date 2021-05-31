@@ -1,0 +1,12 @@
+download:
+  - label: Windows
+    value: #
+
+  - label: Macosx
+    value: #
+
+  - label: Linux
+    value: #
+
+other_download_label: Other Download
+other_download_url: #

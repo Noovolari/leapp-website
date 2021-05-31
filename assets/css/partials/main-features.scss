@@ -1,0 +1,54 @@
+/** Macro Features */
+#main-features {
+    text-align: center;
+
+    .card-holder {
+        @include breakpoint('md') {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .card {
+            text-align: center;
+            padding-bottom: $global-padding-default;
+
+            @include breakpoint('md') {
+                width: 30%;
+            }
+            a {
+                color: $text_color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    i {
+        @include border-radius(10px);
+        background: $turquoise;
+        color: $white;
+        font-size: 25px;
+        width: 68px;
+        height: 68px;
+        text-align: center;
+        padding-top: 23px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    h3 {
+        margin: 1rem;
+        font-weight: 600;
+        
+        @include breakpoint('md') {
+            line-height: 1.2;
+            font-size: 25px;
+        }
+    }
+
+    p {
+        font-size: 19px;
+        font-weight: 300;
+        color: $text_color;
+        padding: 0 12%;
+    }
+}

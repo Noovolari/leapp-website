@@ -1,0 +1,18 @@
+/** Waved Quote */
+#quote {
+    position: relative; 
+    display: flex; 
+    flex-wrap: nowrap;
+    justify-content:center;
+    margin-bottom: -200px;
+
+    .icon { position: absolute; background: $turquoise-light; color: $white; font-size: 25px; width: 68px; height: 58px; text-align: center; padding-top: 10px; }
+    .icon.open { top: -34px; left: 50px;}
+    .icon.close {bottom:-34px; right: 50px}
+    .center { background: $white; min-height: 100px; box-shadow: 0 0 50px -4px rgba(0,0,0,0.15);}
+    .quote-holder { padding: 5% 10%; text-align: center; }
+    .quote-holder h2 { font-size: 2.5rem; font-weight: 400; letter-spacing: 0.01em; line-height: 1.3; }
+    .quote-holder p { font-size: 2rem; }
+    .quote-holder img { margin-top: 30px; }
+    .quote-holder em { color: $turquoise; font-style: normal; }
+}
