@@ -35,7 +35,8 @@
             _dd: function () {
 
                 this.elements.dd.niceSelect().on('change', function () {
-                    location.href = this.value;
+                    // location.href = this.value;
+                    window.open(this.value, '_blank');
                 });
 
             },

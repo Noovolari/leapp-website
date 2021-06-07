@@ -95,6 +95,18 @@
 
 }
 
+.g-recaptcha {
+    @include breakpoint('0','xs') {
+        div, 
+        iframe {
+            width: 230px !important;
+        }
+        > div {
+            border-right: 1px solid #ddd !important;
+        }
+    }
+}
+
 #g-recaptcha-response {
     display: block !important;
     position: absolute;

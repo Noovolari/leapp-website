@@ -1,12 +1,12 @@
 download:
   - label: Windows
-    value: #
+    value: https://github.com/Noovolari/leapp/releases/download/v0.5.3/Leapp-0.5.3-win.zip
 
   - label: Macosx
-    value: #
+    value: https://github.com/Noovolari/leapp/releases/download/v0.5.3/Leapp-0.5.3-mac.zip
 
   - label: Linux
-    value: #
+    value: https://github.com/Noovolari/leapp/releases/download/v0.5.3/Leapp_0.5.3_amd64.deb
 
 other_download_label: Other Download
-other_download_url: #
+other_download_url: https://github.com/Noovolari/leapp/releases/
