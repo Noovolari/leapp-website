@@ -15,6 +15,8 @@
 @import "partials/faq";
 @import "partials/get-started";
 @import "partials/form";
+@import "partials/slider";
+@import "partials/releases";
 // @import "partials/quote";
 // @import "partials/docs";
 @import "partials/plans";
@@ -27,11 +29,13 @@ blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 body {
     font: 400 16px/1.5 "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $blue;
     -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
-    display: flex; min-height: 100vh; flex-direction: column;    
+    min-height: 100vh; flex-direction: column;    
 }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
+
+.page-title { position: absolute; top: -9999px; }
 
 /** Containers and contained */
 section, .content { width: 100%; display: block; margin: 0; padding: 0; }

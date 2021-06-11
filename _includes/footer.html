@@ -31,6 +31,9 @@
 {% capture formValidate %}
   {% include js/vendor/jquery.validate.min.js %}
 {% endcapture %}
+{% capture marked %}
+  {% include js/vendor/marked.min.js %}
+{% endcapture %}
 {% capture main %}
   {% include js/main.js %}
 {% endcapture %}
@@ -38,4 +41,5 @@
 <script async>{{ niceselect }}</script>
 <script async>{{ slick }}</script>
 <script async>{{ formValidate }}</script>
+<script async>{{ marked }}</script>
 <script async>{{ main | uglify | strip }}</script>

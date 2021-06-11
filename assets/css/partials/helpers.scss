@@ -207,31 +207,27 @@
 }
 
 .d-flex {
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
+    @extend %flex;
 }
 
-.font-italic {
+.italic {
     font-style: italic !important;
 }
 
 .vertical-centered {
-    display: flex;
+    @extend %flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
 .vertical-centered-between {
-    display: flex;
+    @extend %flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
 .stretch {
-    display: flex;
+    @extend %flex;
     align-content: center;
 }

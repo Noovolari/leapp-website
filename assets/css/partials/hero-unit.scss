@@ -1,10 +1,10 @@
 /** Hero unit */
 #hero-unit {
     background: $blue;
-    padding-top: 60px;
+    padding-top: 130px;
 
     @include breakpoint('md') {
-        padding-top: 130px;
+        padding-top: 200px;
     }
 
     &.home {
@@ -20,7 +20,7 @@
     }
 
     .hero-unit-col-container {
-        margin-top: 60px;
+        /* margin-top: 60px; */
 
         @include breakpoint('md') {
             display: flex;
@@ -32,10 +32,11 @@
         .col {
             color: $white;
 
+            @include breakpoint('0','md') {
+                padding-bottom: $global-padding-default;
+            }
             @include breakpoint('md') {
                 width: 40%;
-                /* padding: $global-padding-default;
-                box-sizing: border-box; */
             }
 
             &.full {
@@ -82,7 +83,7 @@
         fill: $grey-fd;
     }
 
-    h2 {
+    h2.subtitle {
         color: $white;
         line-height: 1.875rem;
         margin: 0;
@@ -93,7 +94,7 @@
         }
     }
 
-    h3 {
+    h3.title {
         color: $white;
 
         @include breakpoint('md') {

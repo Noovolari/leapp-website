@@ -2,7 +2,7 @@
 #key-features {
 
     .key-block-wrapper {
-        display: flex;
+        @extend %flex;
         justify-content: space-between;
         align-content: flex-end;
         flex-wrap: wrap;

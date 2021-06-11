@@ -7,7 +7,7 @@
     background-color: $blue;
 
     #topbar {
-        display: flex;
+        @extend %flex;
         justify-content: center;
         align-items: center;
         align-content: center;

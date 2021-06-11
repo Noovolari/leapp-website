@@ -9,7 +9,7 @@ ul.accordion {
         margin-bottom: 10px;
         @include border-radius(5px);
         position: relative;
-        display: flex;
+        @extend %flex;
         justify-content: space-between;
         align-items: center;
 

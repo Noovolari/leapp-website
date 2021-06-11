@@ -25,6 +25,14 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, $opacity);
 }
 
+%flex {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+}
+
 %box {
     background-color: $white;
     margin-bottom: $global-padding-default;

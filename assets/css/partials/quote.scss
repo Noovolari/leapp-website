@@ -1,7 +1,7 @@
 /** Waved Quote */
 #quote {
     position: relative; 
-    display: flex; 
+    @extend %flex;
     flex-wrap: nowrap;
     justify-content:center;
     margin-bottom: -200px;
