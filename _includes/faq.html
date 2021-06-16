@@ -1,5 +1,5 @@
 <section id="faq" class="bg-grey">
-    <div class="container">
+    <div class="container small">
         <h2 class="section-title">{{site.data.faq.title}}</h2>
         {% if site.data.faq.subtitle != null %}
             <h3 class="mb-3">{{site.data.faq.subtitle}}</h3>
@@ -22,8 +22,10 @@
 
         <div class="faq-chat">
             <i class="fab fa-slack"></i>
-            Can’t find an answer in our Knowledge Base? <br>
-            Please chat with us if you have additional questions.
+            <div>
+                Can't find an answer in our Knowledge Base?<br/>
+                Please <a href="https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q" target="_blank" rel="noopener">chat with us</a> if you have additional questions.
+            </div>
         </div>
     </div>
 </section>

@@ -15,9 +15,12 @@
         padding: $global-padding-small;
         text-align: center;
 
+        img {
+            margin-right: 10px;
+            display: inline-block;
+        }
         .github {
             color: $white;
-            padding-left: $global-padding-small;
         }
     }
 
@@ -113,6 +116,17 @@
             font-size: 1.563rem;
             color: $turquoise;
             margin-right: 10px;
+        }
+
+        #new {
+            background-color: $turquoise;
+            color: $white;
+            @include border-radius(5px);
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 2px;
+            padding: 2px 5px;
         }
 
         @include breakpoint('0', 'md') {

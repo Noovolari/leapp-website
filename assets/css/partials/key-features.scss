@@ -3,13 +3,13 @@
 
     .key-block-wrapper {
         @extend %flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-content: flex-end;
         flex-wrap: wrap;
 
         .key-block {
             border: 1px solid $grey-cc;
-            padding: $global-padding-default;
+            padding: 30px $global-padding-mid;
             margin-bottom: $global-padding-default;
             @include border-radius(10px);
                 
@@ -18,13 +18,14 @@
                 @include box-shadow();
                 box-sizing: border-box;
                 margin: 0 5px 5px 5px;
-                width: 32%;
+                width: 30%;
             }
 
-            .fa {
+            .fa,
+            .far {
                 display: block;
                 color: $turquoise;
-                font-size: 30px;
+                font-size: 35px;
                 margin-bottom: $global-padding-default;
             }
 

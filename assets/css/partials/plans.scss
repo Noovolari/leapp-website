@@ -1,8 +1,15 @@
 #plans {
-    background: $white;
+    background-color: $white;
+    background-image: url("../img/back-plans.png");
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include breakpoint('md') {
         padding: 40px 0;
+    }
+
+    .title {
+        font-weight: 700;
     }
 
     #cards-wrapper {
@@ -13,14 +20,15 @@
         }
 
         .card {
+            background: $white;
             margin-top: 40px;
             text-align: center;
-            padding: $global-padding-default;
+            padding: $global-padding-default $global-padding-default $global-padding-mid $global-padding-default;
             @include box-shadow();
             @include border-radius(5px);
 
             @include breakpoint('md') {
-                width: 25%;
+                width: 30%;
             }
 
             &.orange {
@@ -62,7 +70,8 @@
             }
 
             .card-subtitle {
-                margin-bottom: $global-padding-default;
+                margin-bottom: $global-padding-mid;
+                font-weight: 700;
             }
 
             ul.card-option {
@@ -71,19 +80,22 @@
                 
                 @include breakpoint('lg') {
                     width: 60%;
-                    height: 170px;
+                    height: 210px;
                 }
 
                 li {
-                    text-align: left;                
+                    text-align: left;
+                    padding: 0 0 20px 20px;
+                    position: relative;
 
                     &::before {
                         color: $turquoise;
                         content: "\2022";
                         font-weight: bold;  
                         font-size: 1.25rem;
-                        display: inline-block;
-                        width: 1em; 
+                        line-height: 1.25rem;
+                        left: 0;
+                        position: absolute;
                     }
                 }
             }

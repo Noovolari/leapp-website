@@ -22,9 +22,6 @@
 {% capture jquery %}
   {% include js/vendor/jquery-3.5.1.min.js %}
 {% endcapture %}
-{% capture niceselect %}
-  {% include js/vendor/jquery.nice-select.min.js %}
-{% endcapture %}
 {% capture slick %}
   {% include js/vendor/slick.min.js %}
 {% endcapture %}
@@ -38,7 +35,6 @@
   {% include js/main.js %}
 {% endcapture %}
 <script async>{{ jquery }}</script>
-<script async>{{ niceselect }}</script>
 <script async>{{ slick }}</script>
 <script async>{{ formValidate }}</script>
 <script async>{{ marked }}</script>

@@ -9,17 +9,23 @@
                 hamburger: $("#hamburger"),
                 navigation: $("#navigation"),
                 accordion: $(".accordion"),
-                dd: $('#download-select'),
                 twSlider: $('#tweetSlider'),
                 navAnchor: $("#navigation .anchor"),
                 supportForm: $("#support-form"),
                 contactsForm: $("#contacts-form"),
-                releases: $("#releases-content")
+                releases: $("#releases-content"),
+                downloadWrapper: $("#download-wrapper"),
+                downloadAction: $("#download-action"),
+                downloadContent: $("#download-content"),
+                downloadLabel: $("#download-label"),
+                cfDistribution: "https://asset.noovolari.com"
             },
             init: function () {
 
                 this._hamburger();
-                this._dd();
+                if(this.elements.downloadAction.length != 0 ){
+                    this._download();
+                }
                 this._slick();
                 this._anchor();
                 this._accordion();
@@ -34,13 +40,46 @@
                     _self.elements.html.toggleClass("noscroll");
                 });
             },
-            _dd: function () {
+            _download: function() {
+                var _self = this;
 
-                this.elements.dd.niceSelect().on('change', function () {
-                    // location.href = this.value;
-                    window.open(this.value, '_blank');
+                $.ajax({
+                    url: _self.elements.cfDistribution + "/latest/latest.yml",
+                    success: function (response) {
+                        var version = response.split("\n")[0].substring(9);
+
+                        var content = "";
+                        var platform = navigator.platform.toLowerCase();
+                        var urlWin = _self.elements.cfDistribution + '/latest/Leapp-' + version + '-win.zip';
+                        var urlMac = _self.elements.cfDistribution + '/latest/Leapp-' + version + '-mac.zip';
+                        var urlLin = _self.elements.cfDistribution + '/latest/Leapp_' + version + '_amd64.deb';
+
+                        if (platform.indexOf('win') !== -1) {
+                            content = '<a href="' + urlWin + '" class="download">Download Windows</a>';
+                        }
+                        else if (platform.indexOf('mac') !== -1) {
+                            content += '<a href="' + urlMac + '" class="download">Download MacOs</a>';
+                        }
+                        else if (platform.indexOf('linux') !== -1) {
+                            content = '<a href="' + urlLin + '" class="download">Download Linux</a>';
+                        }
+                        else {
+                            content = '<a href="https://github.com/Noovolari/leapp/releases/">Download latest</a>';
+                        }
+
+                        _self.elements.downloadContent.find('a[data-os="mac"]').attr("href",urlMac);
+                        _self.elements.downloadContent.find('a[data-os="win"]').attr("href",urlWin);
+                        _self.elements.downloadContent.find('a[data-os="lin"]').attr("href",urlLin);
+    
+                        _self.elements.downloadLabel.html(content);
+
+                        _self.elements.downloadWrapper.fadeIn("fast", function() {
+                            _self.elements.downloadAction.on("click", function () {
+                                _self.elements.downloadContent.slideToggle('fast');
+                            });
+                        });
+                    }
                 });
-
             },
             _slick: function () {
                 this.elements.twSlider.slick({
@@ -92,13 +131,15 @@
                 }
             },
             _accordion: function () {
-                this.elements.accordion.on("click", ".accordion-cta", function () {
-                    var cta = $(this);
+                this.elements.accordion.on("click", ".accordion-header", function () {
+                    var cta = $(this).find(".accordion-cta");
                     cta.toggleClass("fa-plus").toggleClass("fa-minus");
                     cta.closest("li").find(".accordion-content").slideToggle(200, "linear");
                 });
             },
             _formValidate: function () {
+
+                var _self = this;
 
                 var el = document.getElementById('g-recaptcha-response');
                 if (el) {
@@ -139,7 +180,7 @@
                             element.before(error);
                         },
                         submitHandler: function () {
-                            form.addEventListener("submit", handleSubmit)
+                            submitForm(form);
                         }
                     });
                 }
@@ -172,33 +213,41 @@
                             element.before(error);
                         },
                         submitHandler: function () {
-                            form.addEventListener("submit", handleSubmit)
+                            console.log("contacts submitHandler");
+                            submitForm(form);
                         }
                     });
                 }
 
                 /* Formspree integration */
-                async function handleSubmit(event) {
-                    event.preventDefault();
-                    var status = document.getElementById("leapp-form-status");
-                    var data = new FormData(event.target);
-                    status.classList.remove("error");
-                    fetch(event.target.action, {
-                        method: form.method,
+                async function submitForm(fm) {
+                    var jqForm = $(fm);
+                    var method = jqForm.attr("method");
+                    var action = jqForm.attr("action");
+                    var status = $("#leapp-form-status");
+                    var data = new FormData(fm);
+                    var formPos = jqForm.position().top - $("#navbar-container").outerHeight();
+                    fetch(action, {
+                        method: method,
                         body: data,
                         headers: {
                             'Accept': 'application/json'
                         }
                     }).then(response => {
+                        _self._scrollTo(formPos);
+                        jqForm.fadeOut("fast");
                         form.reset();
                         grecaptcha.reset();
-                        status.innerHTML = "Thanks for your submission!";
+                        status.fadeIn("fast").html("Thanks for your submission!");
                     }).catch(error => {
-                        status.classList.add("mystyle");
-                        status.innerHTML = "<span class='error'> Oops! There was a problem submitting your form.</span>"
+                        _self._scrollTo(formPos);
+                        jqForm.fadeOut();
+                        form.reset();
+                        status.fadeIn("fast").html("<span class='error'> Oops! There was a problem submitting your form.</span>");
                     });
                     setTimeout(function () {
-                        status.innerHTML = "";
+                        status.fadeOut("fast").html("");
+                        jqForm.fadeIn("fast");
                     }, 5000);
                 }
 
@@ -206,11 +255,10 @@
             _releases: function () {
 
                 var _self = this;
-                var cfDistribution = "https://asset.noovolari.com";
 
                 $.ajax({
                     type: "GET",
-                    url: cfDistribution + "/CHANGELOG.md",
+                    url: _self.elements.cfDistribution + "/CHANGELOG.md",
                     success: function (response) {
 
                         var rawVersion = "0.0.0";
@@ -242,9 +290,9 @@
 
                             var generatedDownloadURL = body;
                             generatedDownloadURL += '<ul class="download-list">';
-                                generatedDownloadURL += '<li><a href="' + cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" class="download"><i class="fab fa-windows"></i> Download</a></li>';
-                                generatedDownloadURL += '<li><a href="' + cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" class="download"><i class="fab fa-apple"></i> Download</a></li>';
-                                generatedDownloadURL += '<li><a href="' + cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" class="download"><i class="fab fa-linux"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" class="download"><i class="fab fa-windows"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" class="download"><i class="fab fa-apple"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" class="download"><i class="fab fa-linux"></i> Download</a></li>';
                             generatedDownloadURL += '</ul>';
 
                             index++;

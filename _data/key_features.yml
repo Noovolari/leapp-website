@@ -1,22 +1,22 @@
-title: Key Features…
-subtitle: Leapp is a Cross-Platform Cloud access App, built on top of Electron.
+title: "Get enterprise support directly from Leapp’s team"
+subtitle: "The team is please to help you with an enterprise support plan including:"
 features:
   - title: Initial Setup
-    icon: fa-cog
-    content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore"
+    icon: fa fa-cog
+    content: "Get an initial assessment on your Cloud environment. Verify that your infrastructure is compliant with the full set of Leapp functionallities."
 
   - title: Troubleshooting
-    icon: fa-adjust
-    content: Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+    icon: fa fa-adjust
+    content: "Get help from the creators of Leapp via email, chat (private Slack channel), and phone/video (scheduled Meet calls)."
 
-  - title: Priority bug fixing
-    icon: fa-align-left
-    content: Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla 
+  - title: Prioritizing bug fixing
+    icon: fa fa-align-left
+    content: "We guarantee that we will start working on a fix within an agreed-upon time frame."
 
   - title: Customer
-    icon: fa-bolt
-    content: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+    icon: fa fa-bolt
+    content: "We ensure new features (improvements) implementation within an agreed-upon time frame."
 
   - title: Training
-    icon: fa-question-circle
-    content: Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+    icon: far fa-question-circle
+    content: "Get a Demo and Webinar for your team to get the best out of Leapp."

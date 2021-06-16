@@ -4,7 +4,7 @@
     padding-top: 130px;
 
     @include breakpoint('md') {
-        padding-top: 200px;
+        padding-top: 170px;
     }
 
     &.home {
@@ -14,7 +14,7 @@
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                height: 489px;
+                height: 450px;
             }
         }
     }
@@ -32,9 +32,10 @@
         .col {
             color: $white;
 
-            @include breakpoint('0','md') {
+            @include breakpoint('0', 'md') {
                 padding-bottom: $global-padding-default;
             }
+
             @include breakpoint('md') {
                 width: 40%;
             }
@@ -44,7 +45,13 @@
             }
 
             .title {
-                font-size: 2.5rem;
+                font-size: 25px;
+
+                @include breakpoint('md') {
+                    font-size: 50px;
+                }
+
+                font-weight: 700;
                 line-height: 2.5rem;
                 margin-bottom: $global-padding-default;
             }
@@ -67,6 +74,7 @@
             @include breakpoint('md') {
                 font-size: 50px;
             }
+
             padding-bottom: $global-padding-default;
             border-bottom: 1px solid $turquoise;
             margin-bottom: $global-padding-default;
@@ -89,7 +97,8 @@
         margin: 0;
 
         @include breakpoint('md') {
-            font-size: 40px;
+            font-size: 30px;
+            font-weight: 700;
             line-height: 1rem;
         }
     }
@@ -99,8 +108,7 @@
 
         @include breakpoint('md') {
             font-size: 50px;
-            margin: 0 0 1.5rem;
-            letter-spacing: -.03em;
+            font-weight: 700;
         }
     }
 
@@ -129,4 +137,111 @@
         }
     }
 
+}
+
+.other-download {
+    background: #25252B;
+    box-sizing: border-box;
+    @include border-radius(5px);
+    display: inline-block;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    text-align: center;
+    width: 300px;
+
+    @include breakpoint('0','md') {
+        margin-bottom: $global-padding-mid;
+    }
+}
+
+#download-wrapper {
+    display: none;
+
+    #download-container {
+        @extend %flex;
+        flex-wrap: wrap;
+        margin: $global-padding-mid 0 10px 0;
+        position: relative;
+    }
+
+    #download-label {
+        background: rgba(15, 66, 105, 1);
+        box-sizing: border-box;
+        color: $white;
+        margin-right: 2px;
+        width: 250px;
+        padding: 10px 20px;
+        @include border-radius(5px 0 0 5px);
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: rgba(15, 66, 105, 0.8);
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    #download-action {
+        background: rgba(15, 66, 105, 1);
+        box-sizing: border-box;
+        @include border-radius(0 5px 5px 0);
+        color: $white;
+        width: 50px;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: rgba(15, 66, 105, 0.8);
+        }
+    }
+
+    #download-content {
+        display: none;
+        background-color: $grey-f5;
+        border: 1px solid $grey-cc;
+        @include border-radius(5px);
+        color: $blue;
+        position: absolute;
+        top: 46px;
+        width: 100%;
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+
+            tr {
+                &.odd {
+                    background-color: $white;
+                }
+
+                td {
+                    padding: $global-padding-default;
+                    border-bottom: 1px solid $grey-cc;
+                    box-sizing: border-box;
+
+                    &:last-child {
+                        background-color: $grey-aa;
+                        text-align: center;
+                        width: 60px;
+
+                        a:link,
+                        a:visited {
+                            color: $blue;
+                        }
+                    }
+                }
+
+                &.last {
+                    td {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
 }

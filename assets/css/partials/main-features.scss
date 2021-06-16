@@ -36,12 +36,12 @@
     }
 
     h3 {
-        margin: 1rem;
-        font-weight: 600;
+        margin: 1.750rem;
+        font-weight: 700;
+        font-size: 1.750rem;
         
         @include breakpoint('md') {
             line-height: 1.2;
-            font-size: 25px;
         }
     }
 

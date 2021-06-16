@@ -1,44 +1,53 @@
-<p class="text-center mt-3 mb-3">Our support team is here to help you!</p>
+<p class="text-center mt-3 mb-1">Our support team is here to help you!</p>
 
-<form action="https://formspree.io/f/xqkwqljw" class="leapp-form" id="contacts-form" method="post">
-    <fieldset>
-        <legend>
-            <div class="intro">
-                <i class="fab fa-slack"></i>
-                <div>Join our stack</div>
-                If you want to discuss <strong class="turquoise">Leapp</strong>, 
-                feel free to <a href="#" rel="noopener">join our Slack</a>.<br>We are happy to discuss issues, use-cases, or anything related to cloud access management.
-                <div class="or">
-                    <span>OR</span>
-                </div>
-            </div>
+<div class="container small">
 
-            <p>Send us a message</p>
-        </legend>
-
-        <div class="field">
-            <label for="contacts_name" class="field-title"><span class="mandatory">*</span> Name</label>
-            <input type="text" name="contacts_name" id="contacts_name" placeholder="Yout name" required />
-        </div>
-
-        <div class="field">
-            <label for="contacts_email" class="field-title"><span class="mandatory">*</span> Email</label>
-            <input type="email" name="contacts_email" id="contacts_email" placeholder="Your email" required />
-        </div>
-
-        <div class="field">
-            <label for="contacts_company" class="field-title"><span class="mandatory">*</span> Message</label>
-            <textarea name="contacts_message" id="contacts_message" cols="30" rows="10" placeholder="Yout message" required></textarea>
-        </div>
-
-        <div class="g-recaptcha" data-sitekey="6LfX30oUAAAAAD8MVNC8OIpoq_rj_abqx2rGaXb7" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+    <div class="leapp-form-wrapper">
         
-        <div class="mt-2">
-            <span class="mandatory">*</span> Required fields. By signing up, you agree to the <a href="/privacy.html">Privacy Policy</a>.
-        </div>
-
-        <input type="submit" value="Submit" class="btn b-0 d-block m-auto mt-2" />
-
         <p id="leapp-form-status"></p>
-    </fieldset>
-</form>
+
+        <form action="https://formspree.io/f/xqkwqljw" class="leapp-form small" id="contacts-form" method="post">
+            <fieldset>
+                <legend>
+                    <div class="intro">
+                        <i class="fab fa-slack"></i>
+                        <p class="legend-label">Join our Slack</p>
+                        If you want to discuss <strong class="turquoise">Leapp</strong>, 
+                        feel free to <a href="https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q" target="_blank" rel="noopener">join our Slack</a>.<br>We are happy to discuss issues, use-cases, or anything related to cloud access management.
+                        <div class="or">
+                            <span>OR</span>
+                        </div>
+                    </div>
+
+                    <p class="legend-label">Send us a message</p>
+                </legend>
+
+                <div class="field">
+                    <label for="contacts_name" class="field-title"><span class="mandatory">*</span> Name</label>
+                    <input type="text" name="contacts_name" id="contacts_name" placeholder="Your name" required />
+                </div>
+
+                <div class="field">
+                    <label for="contacts_email" class="field-title"><span class="mandatory">*</span> Email</label>
+                    <input type="email" name="contacts_email" id="contacts_email" placeholder="Your email" required />
+                </div>
+
+                <div class="field">
+                    <label for="contacts_company" class="field-title"><span class="mandatory">*</span> Message</label>
+                    <textarea name="contacts_message" id="contacts_message" cols="30" rows="5" placeholder="Your message" required></textarea>
+                </div>
+
+                <div class="g-recaptcha" data-sitekey="6LfX30oUAAAAAD8MVNC8OIpoq_rj_abqx2rGaXb7" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                
+                <div class="mt-2">
+                    <span class="mandatory">*</span> Required fields. By signing up, you agree to the <a href="/privacy.html">Privacy Policy</a>.
+                </div>
+
+                <input type="submit" value="Submit" class="btn b-0 d-block m-auto mt-2" />
+
+            </fieldset>
+        </form>
+
+    </div>
+
+</div>

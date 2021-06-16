@@ -13,79 +13,78 @@
             </div>
             <div class="col">
 
-                <form action="https://formspree.io/f/xqkwqljw" class="leapp-form" id="support-form" method="post">
-                    <fieldset>
-                        <legend class="d-none">Leapp support</legend>
+                <div class="leapp-form-wrapper">
 
-                        <div class="field">
-                            <label for="support_name" class="field-title"><span class="mandatory">*</span> Name</label>
-                            <input type="text" name="support_name" id="support_name" placeholder="Yout name" />
-                        </div>
+                    <p id="leapp-form-status"></p>
 
-                        <div class="field">
-                            <label for="support_email" class="field-title"><span class="mandatory">*</span> Email</label>
-                            <input type="email" name="support_email" id="support_email" placeholder="Your email" />
-                        </div>
+                    <form action="https://formspree.io/f/xqkwqljw" class="leapp-form" id="support-form" method="post">
+                        <fieldset>
+                            <legend class="d-none">Leapp support</legend>
 
-                        <div class="field">
-                            <label for="support_company" class="field-title"><span class="mandatory">*</span> Company</label>
-                            <input type="text" name="support_company" id="support_company" placeholder="Yout company" />
-                        </div>
+                            <div class="field">
+                                <label for="support_name" class="field-title"><span class="mandatory">*</span> Name</label>
+                                <input type="text" name="support_name" id="support_name" placeholder="Yout name" />
+                            </div>
 
-                        <div class="field-title">
-                            <span class="mandatory">*</span> Company size
-                        </div>
+                            <div class="field">
+                                <label for="support_email" class="field-title"><span class="mandatory">*</span> Email</label>
+                                <input type="email" name="support_email" id="support_email" placeholder="Your email" />
+                            </div>
 
-                        <div class="field m-0">
-                            <input type="radio" value="&lt; 50" name="support_size" id="support_size_1" required />
-                            <label for="support_size_1">&lt; 50</label>
-                        </div>
+                            <div class="field">
+                                <label for="support_company" class="field-title"><span class="mandatory">*</span> Company</label>
+                                <input type="text" name="support_company" id="support_company" placeholder="Yout company" />
+                            </div>
 
-                        <div class="field m-0">
-                            <input type="radio" value="50-100" name="support_size" id="support_size_2" />
-                            <label for="support_size_2">50 - 100</label>
-                        </div>
+                            <div class="field-title">
+                                <span class="mandatory">*</span> Company size
+                            </div>
 
-                        <div class="field">
-                            <input type="radio" value="&gt; 100" name="support_size" id="support_size_3" />
-                            <label for="support_size_3">&gt; 100</label>
-                        </div>
+                            <div class="field m-0">
+                                <input type="radio" value="&lt; 50" name="support_size" id="support_size_1" required />
+                                <label for="support_size_1">&lt; 50</label>
+                            </div>
 
-                        <div class="field-title">
-                            <span class="mandatory">*</span> Our works run on
-                        </div>
+                            <div class="field m-0">
+                                <input type="radio" value="50-100" name="support_size" id="support_size_2" />
+                                <label for="support_size_2">50 - 100</label>
+                            </div>
 
-                        <div class="field m-0">
-                            <input type="radio" value="AWS" name="support_cloud" id="support_cloud_1" required />
-                            <label for="support_cloud_1">AWS</label>
-                        </div>
+                            <div class="field">
+                                <input type="radio" value="&gt; 100" name="support_size" id="support_size_3" />
+                                <label for="support_size_3">&gt; 100</label>
+                            </div>
 
-                        <div class="field m-0">
-                            <input type="radio" value="Azure" name="support_cloud" id="support_cloud_2" />
-                            <label for="support_cloud_2">Azure</label>
-                        </div>
+                            <div class="field-title">
+                                <span class="mandatory">*</span> Our works run on
+                            </div>
 
-                        <div class="field m-0">
-                            <input type="radio" value="Google Cloud" name="support_cloud" id="support_cloud_3" />
-                            <label for="support_cloud_3">Google Cloud</label>
-                        </div>
+                            <div class="field m-0">
+                                <input type="checkbox" value="AWS" name="support_cloud" id="support_cloud_1" required />
+                                <label for="support_cloud_1">AWS</label>
+                            </div>
 
-                        <div class="field m-0">
-                            <input type="radio" value="Heroku" name="support_cloud" id="support_cloud_4" />
-                            <label for="support_cloud_4">Heroku</label>
-                        </div>
+                            <div class="field m-0">
+                                <input type="checkbox" value="Azure" name="support_cloud" id="support_cloud_2" />
+                                <label for="support_cloud_2">Azure</label>
+                            </div>
 
-                        <div class="g-recaptcha mt-1" data-sitekey="6LfX30oUAAAAAD8MVNC8OIpoq_rj_abqx2rGaXb7" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
-      
-                        <div class="mt-2">
-                            <span class="mandatory">*</span> Required fields. By signing up, you agree to the <a href="/privacy.html">Privacy Policy</a>.
-                        </div>
+                            <div class="field m-0">
+                                <input type="checkbox" value="Google Cloud" name="support_cloud" id="support_cloud_3" />
+                                <label for="support_cloud_3">Google Cloud</label>
+                            </div>
 
-                        <input type="submit" value="Submit" class="btn b-0 d-block m-auto mt-2" />
+                            <div class="g-recaptcha mt-1" data-sitekey="6LfX30oUAAAAAD8MVNC8OIpoq_rj_abqx2rGaXb7" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
 
-                        <p id="leapp-form-status"></p>
-                    </fieldset>
-                </form>
+                            <div class="mt-2">
+                                <span class="mandatory">*</span> Required fields. By signing up, you agree to the <a href="/privacy.html">Privacy Policy</a>.
+                            </div>
+
+                            <input type="submit" value="Submit" class="btn b-0 d-block m-auto mt-2" />
+
+                        </fieldset>
+                    </form>
+                </div>
 
             </div>
         </div>

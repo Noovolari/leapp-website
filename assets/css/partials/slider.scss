@@ -3,6 +3,10 @@
         font-weight: bold;
         @extend %flex;
         justify-content: space-between;
+
+        i {
+            font-size: 30px;
+        }
     }
     .subtitle {
         margin-bottom: 10px;
