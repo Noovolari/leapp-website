@@ -7,30 +7,16 @@ features:
     controls: false
     muted: true
 
-  - title: ACCESS AND SECRET KEY FINALLY SECURED
+  - title: UNIFY YOUR ACCESS STRATEGIES
     content: features/feature2.markdown
     video: Leapp-Plain.mp4
     autoplay: true
     controls: false
     muted: true
 
-  - title: CLEAN CREDENTIALS FILE
+  - title: SECURE YOUR CLOUD CREDENTIALS
     content: features/feature3.markdown
     video: Leapp-Clean.mp4
-    autoplay: true
-    controls: false
-    muted: true
-
-  - title: STRAIGHT PROGRAMMATIC ACCESS VIA SSO
-    content: features/feature4.markdown
-    video: Leapp-Federated.mp4
-    autoplay: true
-    controls: false
-    muted: true
-
-  - title: EASE FEDERATION WITH TRUSTER ACCOUNTS
-    content: features/feature5.markdown
-    video: Leapp-Truster.mp4
     autoplay: true
     controls: false
     muted: true

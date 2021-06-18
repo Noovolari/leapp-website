@@ -3,25 +3,23 @@ subtitle: "We offer community and enterprise support to accelerate the adoption 
 cards:
   - card_type: Open Source
     card_title: COMMUNITY
-    card_subtitle: Free to use, free to distribute
+    card_subtitle: For Cloud Developers
     card_element:
       - label: Fully free DevTool
       - label: Active Slack community
-      - label: Dev users, Dev creators
       - label: Easy-to-contribute project structure
     card_download_label: Check the Repo
     card_download_url: 'https://github.com/Noovolari/leapp'
     card_download_target: target="_blank" rel="noopener"
     card_download_icon: fa-github
 
-  - card_type: Enterprise
-    card_title: BUSINESS
-    card_subtitle: For organizations and teams
+  - card_type: Support
+    card_title: ENTERPRISE
+    card_subtitle: For organizations
     card_element:
       - label: Support from the Leapp’s creators
       - label: Initial Cloud assessment
       - label: Bug prioritization
-      - label: Custom features
     card_download_label: Visit support page
     card_download_url: 'contacts.html'
     card_download_target: 
