@@ -7,22 +7,29 @@ topics:
   - question: "What do you mean by ''Initial assessment''?"
     answer: "
     <p>The assessment consists of an in-depth review of your Cloud infrastructure to help your company's developers to take advantage of Leapp fully.</p>
-    <p>At the end of the assessment, you'll get a list of recommended remediations to make your infrastructure 100% Leapp compliant.</p>
+    <p>At the end of the assessment, you'll get a list of recommended improvements to make your infrastructure 100% Leapp compliant.</p>
     "
 
-  - question: "Are remediations included in my plan?"
+  - question: "Are these improvements included in my plan?"
     answer: "
-    <p>The support plan does NOT include remediations.</p>
-    <p>You can rely on our experts to implement remediations (2500$/day) or carry them out autonomously.</p>
+    <p>The support plan does NOT include improvements.</p>
+    <p>Your organization will be in charge of these tasks; Our team will be available for implementation if needed at a rate of 2500$/day.</p>
     "
 
   - question: "How long do I have to wait for Troubleshooting?"
     answer: "
-    <p>Response time may vary according to your Service-Level Agreement (SLA).</p>
+    <p>Response time matches the default Service-Level Agreement.</p>
+    <p>However, for specific needs, you can define a custom SLA in agreement with our team.</p>
     <p>Our team will handle your requests via Email, Chat, Slack private channel, or phone call.</p>
     "
 
-  - question: "Can you implement any feature the company requests?"
+  - question: "* Can you implement any feature the company requests?"
     answer: "
-    No. Note that feature prioritization only applies to features that are <strong>Small</strong> (features that can be built within some agreed-upon time frame, such as N business days), and <strong>Generic</strong> (features that are helpful to most Leapp users).
+    <p>It is not always possible to implement customer requests.
+acceptable requests must be: </p>
+    <ul>
+    <li><strong>Small</strong> features that can be built within some agreed-upon time frame, such as N business days </li>
+    <li><strong>Generic</strong> features that are helpful to most Leapp users.</li>
+    </ul>
+    <p>We can prioritize only in-roadmap features.</p>
     "

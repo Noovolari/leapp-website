@@ -1,22 +1,22 @@
-title: "Get enterprise support directly from Leapp’s team"
-subtitle: "The team is please to help you with an enterprise support plan including:"
+title: "Your enterprise support from Leapp’s team"
+subtitle: "We offer an enterprise support plan including:"
 features:
   - title: Initial Setup
-    icon: fa fa-cog
+    icon: fas fa-book
     content: "Get an initial assessment on your Cloud environment to verify that your access strategies are compliant with the full set of Leapp functionallities."
 
   - title: Troubleshooting
-    icon: fa fa-adjust
+    icon: fas fa-eye
     content: "Get help from the creators of Leapp via email, chat (private Slack channel), and phone/video (scheduled Meet calls)."
 
   - title: Prioritizing bug fixing
-    icon: fa fa-align-left
+    icon: fas fa-exclamation-circle
     content: "We guarantee that we will start working on a fix within an agreed-upon time frame."
 
-  - title: Customer
-    icon: fa fa-bolt
+  - title: Customer Features
+    icon: fas fa-tools
     content: "We ensure new features (improvements) implementation within an agreed-upon time frame."
 
   - title: Training
-    icon: far fa-question-circle
+    icon: fas fa-users-class
     content: "Get a Demo and Webinar for your team to get the best out of Leapp."

@@ -1,26 +1,26 @@
 title: Leapp Plans
 subtitle: "We offer community and enterprise support to accelerate the adoption of Leapp as a game-changer in Cloud Developers’ life."
 cards:
-  - card_type: Open Source
-    card_title: COMMUNITY
+  - card_type: Community
+    card_title: OPEN SOURCE
     card_subtitle: For Cloud Developers
     card_element:
       - label: Fully free DevTool
       - label: Active Slack community
-      - label: Easy-to-contribute project structure
+      - label: Easy-to-contribute
     card_download_label: Check the Repo
     card_download_url: 'https://github.com/Noovolari/leapp'
     card_download_target: target="_blank" rel="noopener"
     card_download_icon: fa-github
 
-  - card_type: Support
-    card_title: ENTERPRISE
+  - card_type: Enterprise
+    card_title: SUPPORT
     card_subtitle: For organizations
     card_element:
       - label: Support from the Leapp’s creators
       - label: Initial Cloud assessment
       - label: Bug prioritization
     card_download_label: Visit support page
-    card_download_url: 'contacts.html'
+    card_download_url: 'support.html'
     card_download_target: 
     card_download_icon: fa-edit
