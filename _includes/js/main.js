@@ -18,7 +18,8 @@
                 downloadAction: $("#download-action"),
                 downloadContent: $("#download-content"),
                 downloadLabel: $("#download-label"),
-                cfDistribution: "https://asset.noovolari.com"
+                cfDistribution: "https://asset.noovolari.com",
+                gitHubReleases: "https://github.com/Noovolari/leapp/releases/"
             },
             init: function () {
 
@@ -64,7 +65,7 @@
                             content = '<a href="' + urlLin + '" class="download">Download Linux</a>';
                         }
                         else {
-                            content = '<a href="https://github.com/Noovolari/leapp/releases/">Download latest</a>';
+                            content = '<a href="' + _self.elements.gitHubReleases + '">Download latest</a>';
                         }
 
                         _self.elements.downloadContent.find('a[data-os="mac"]').attr("href",urlMac);
@@ -213,7 +214,6 @@
                             element.before(error);
                         },
                         submitHandler: function () {
-                            console.log("contacts submitHandler");
                             submitForm(form);
                         }
                     });
@@ -263,41 +263,64 @@
 
                         var rawVersion = "0.0.0";
                         var index = 1;
+                        var versionNumber = 0;
+                        var hide = false;
 
                         var renderer = new marked.Renderer();
 
                         renderer.heading = function (text, level, raw) {
-                            var version = text.replace(/[\(\[].*?[\)\]]/g, '').replace("\">", "\">v");
-
-                            if (level == 1)
-                                return '<h1>Changelog</h1>';
-                            else if (text.indexOf("Feat") > -1 | text.indexOf("Bug") > -1)
-                                return '<h' + level + ' class="italic">' + version + '</h' + level + '>';
-                            else {
-                                var context = "",
-                                    prefix = "";
-                                rawVersion = raw.replace(/[\(\[].*?[\)\]]/g, '').trim();
-                                if (text.indexOf("href") == -1) {
-                                    context = " class='nolink'";
-                                    prefix = "v ";
+                            if(!hide){
+                                var version = text.replace(/[\(\[].*?[\)\]]/g, '').replace("\">", "\">v");
+                                
+                                versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
+                                
+                                if(versionNumber == 50){
+                                    hide = true;
                                 }
-                                return '<h' + level + context + '>' + prefix + version + '</h' + level + '>';
-
+                                if (level == 1)
+                                    return '<h1>Changelog</h1>';
+                                else if (text.indexOf("Feat") > -1 | text.indexOf("Bug") > -1)
+                                    return '<h' + level + ' class="italic">' + version + '</h' + level + '>';
+                                else {
+                                    var context = "",
+                                    prefix = "";
+                                    rawVersion = raw.replace(/[\(\[].*?[\)\]]/g, '').trim();
+                                    if (text.indexOf("href") == -1) {
+                                        context = " class='nolink'";
+                                        prefix = "v ";
+                                    }
+                                    return '<h' + level + context + '>' + prefix + version + '</h' + level + '>';
+                                }
                             }
+                            else {
+                                return "";
+                            }
+                            
                         };
                         renderer.list = function (body) {
-                            var folder = index == 1 ? "latest" : rawVersion.trim();
-
-                            var generatedDownloadURL = body;
-                            generatedDownloadURL += '<ul class="download-list">';
-                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" class="download"><i class="fab fa-windows"></i> Download</a></li>';
-                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" class="download"><i class="fab fa-apple"></i> Download</a></li>';
-                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" class="download"><i class="fab fa-linux"></i> Download</a></li>';
-                            generatedDownloadURL += '</ul>';
-
-                            index++;
-
-                            return generatedDownloadURL;
+                            if(!hide){
+                                var folder = index == 1 ? "latest" : rawVersion.trim();
+    
+                                versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
+    
+                                var generatedDownloadURL = body;
+                                generatedDownloadURL += '<ul class="download-list">';
+                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" class="download"><i class="fab fa-windows"></i> Download</a></li>';
+                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" class="download"><i class="fab fa-apple"></i> Download</a></li>';
+                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" class="download"><i class="fab fa-linux"></i> Download</a></li>';
+                                generatedDownloadURL += '</ul>';
+    
+                                index++;
+    
+                                var allVersion = "<a href='" + _self.elements.gitHubReleases + "' class='d-block mb-2' target='_blank' rel='noopener'>View all versions</a>";
+                                if( versionNumber == 51 )
+                                    return generatedDownloadURL + "" + allVersion;
+                                else 
+                                    return generatedDownloadURL;
+                            }
+                            else {
+                                return "";
+                            }
                         }
 
                         var responseMD = marked(response, {
