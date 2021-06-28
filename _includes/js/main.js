@@ -321,7 +321,7 @@
                             else {
                                 return "";
                             }
-                        }
+                        };
 
                         var responseMD = marked(response, {
                             renderer: renderer,
