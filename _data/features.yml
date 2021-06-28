@@ -2,21 +2,21 @@ title: If it's ON you are IN
 features:
   - title: SWITCH ACCOUNT IN A CLICK
     content: features/feature1.markdown
-    video: Leapp-Switch.mp4
+    video: LeappNamed.mov
     autoplay: true
     controls: false
     muted: true
 
   - title: UNIFY YOUR ACCESS STRATEGIES
     content: features/feature2.markdown
-    video: Leapp-Plain.mp4
+    video: Azure-Login.mov
     autoplay: true
     controls: false
     muted: true
 
   - title: SECURE YOUR CLOUD CREDENTIALS
     content: features/feature3.markdown
-    video: Leapp-Clean.mp4
+    video: LeappSecure.mov
     autoplay: true
     controls: false
     muted: true
