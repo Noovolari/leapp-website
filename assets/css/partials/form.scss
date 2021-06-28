@@ -1,0 +1,143 @@
+.leapp-form-wrapper {
+    padding: $global-padding-mid;
+    background-color: $white;
+    color: $blue;
+    @include border-radius(5px);
+
+    @include breakpoint('md') {
+        &.small {
+            padding: $global-padding-mid $global-padding-large;
+        }
+    }
+
+    #leapp-form-status {
+        display: none;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .leapp-form {
+
+        legend {
+            @include breakpoint('md') {
+                font-size: 25px;
+            }
+
+            text-align: center;
+            margin: $global-padding-default 0;
+
+            .legend-label {
+                margin-bottom: $global-padding-default;
+
+                @include breakpoint('md') {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        fieldset {
+            border: 0;
+            padding: 0;
+        }
+
+        .field {
+            margin-bottom: $global-padding-default;
+
+            .label {
+                border: 1px solid red;
+            }
+        }
+
+        .field-title {
+            @include breakpoint('md') {
+                font-size: 22px;
+            }
+
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .mandatory,
+        .error {
+            color: $mandatory;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            border: 1px solid $grey-cc;
+            background-color: $grey-fa;
+            @include border-radius(5px);
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+
+            &::placeholder {
+                color: $grey-cc;
+            }
+        }
+
+        .btn {
+            font-size: 20px;
+            padding: 10px $global-padding-default;
+        }
+
+        .intro {
+            text-align: center;
+            margin: $global-padding-default 0 $global-padding-mid;
+
+            .fab {
+                font-size: 25px;
+
+                @include breakpoint('md') {
+                    font-size: 50px;
+                }
+
+                margin-bottom: $global-padding-mid;
+            }
+
+            .or {
+                @include breakpoint('md') {
+                    font-size: 1.25rem;
+                }
+
+                border-bottom: 1px solid $grey-cc;
+                color: $grey-59;
+                line-height: 0.1em;
+                margin: $global-padding-large 0 0 0;
+                text-transform: uppercase;
+
+                span {
+                    background: #fff;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+    }
+}
+
+.g-recaptcha {
+    @include breakpoint('0', 'xs') {
+
+        div,
+        iframe {
+            width: 230px !important;
+        }
+
+        >div {
+            border-right: 1px solid #ddd !important;
+        }
+    }
+}
+
+#g-recaptcha-response {
+    display: block !important;
+    position: absolute;
+    margin: -50px 0 0 0 !important;
+    z-index: -999999;
+    opacity: 0;
+}

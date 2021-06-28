@@ -1,0 +1,16 @@
+#tweetSlider {
+    .title {
+        font-weight: bold;
+        @extend %flex;
+        justify-content: space-between;
+
+        i {
+            font-size: 30px;
+        }
+    }
+    .subtitle {
+        margin-bottom: 10px;
+        font-size: 13px;
+        color: $grey-aa;
+    }
+}

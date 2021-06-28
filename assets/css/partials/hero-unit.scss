@@ -1,0 +1,247 @@
+/** Hero unit */
+#hero-unit {
+    background: $blue;
+    padding-top: 130px;
+
+    @include breakpoint('md') {
+        padding-top: 170px;
+    }
+
+    &.home {
+        @include breakpoint('md') {
+            .hero-unit-col-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                height: 450px;
+            }
+        }
+    }
+
+    .hero-unit-col-container {
+        /* margin-top: 60px; */
+
+        @include breakpoint('md') {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        .col {
+            color: $white;
+
+            @include breakpoint('0', 'md') {
+                padding-bottom: $global-padding-default;
+            }
+
+            @include breakpoint('md') {
+                width: 40%;
+            }
+
+            &.full {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 25px;
+
+                @include breakpoint('md') {
+                    font-size: 50px;
+                }
+
+                font-weight: 700;
+                line-height: 2.5rem;
+                margin-bottom: $global-padding-default;
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        #download-select {
+            display: none;
+        }
+
+        #othd {
+            display: block;
+            margin-bottom: $global-padding-default;
+        }
+
+        .hero-title {
+            @include breakpoint('md') {
+                font-size: 50px;
+            }
+
+            padding-bottom: $global-padding-default;
+            border-bottom: 1px solid $turquoise;
+            margin-bottom: $global-padding-default;
+        }
+
+        .hero-content {
+            font-size: 20px;
+        }
+    }
+
+    svg {
+        background: 0 0 !important;
+        height: 6vw;
+        fill: $grey-fd;
+    }
+
+    h2.subtitle {
+        color: $white;
+        line-height: 1.875rem;
+        margin: 0;
+
+        @include breakpoint('md') {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1rem;
+        }
+    }
+
+    h3.title {
+        color: $white;
+
+        @include breakpoint('md') {
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+
+    .hero-btn-holder {
+        margin: 4.0rem 0;
+    }
+
+    .fade-up {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        animation-delay: 0.1s;
+        animation: fade-up 0.4s ease-in;
+        box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.64);
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            top: 100px;
+        }
+
+        to {
+            opacity: 1;
+            top: 0;
+        }
+    }
+
+}
+
+.other-download {
+    background: #25252B;
+    box-sizing: border-box;
+    @include border-radius(5px);
+    display: inline-block;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    text-align: center;
+    width: 300px;
+
+    @include breakpoint('0','md') {
+        margin-bottom: $global-padding-mid;
+    }
+}
+
+#download-wrapper {
+    display: none;
+
+    #download-container {
+        @extend %flex;
+        flex-wrap: wrap;
+        margin: $global-padding-mid 0 10px 0;
+        position: relative;
+    }
+
+    #download-label {
+        background: rgba(15, 66, 105, 1);
+        box-sizing: border-box;
+        color: $white;
+        margin-right: 2px;
+        width: 250px;
+        padding: 10px 20px;
+        @include border-radius(5px 0 0 5px);
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: rgba(15, 66, 105, 0.8);
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    #download-action {
+        background: rgba(15, 66, 105, 1);
+        box-sizing: border-box;
+        @include border-radius(0 5px 5px 0);
+        color: $white;
+        width: 50px;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: rgba(15, 66, 105, 0.8);
+        }
+    }
+
+    #download-content {
+        display: none;
+        background-color: $grey-f5;
+        border: 1px solid $grey-cc;
+        @include border-radius(5px);
+        color: $blue;
+        position: absolute;
+        top: 46px;
+        width: 100%;
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+
+            tr {
+                &.odd {
+                    background-color: $white;
+                }
+
+                td {
+                    padding: $global-padding-default;
+                    border-bottom: 1px solid $grey-cc;
+                    box-sizing: border-box;
+
+                    &:last-child {
+                        background-color: $grey-aa;
+                        text-align: center;
+                        width: 60px;
+
+                        a:link,
+                        a:visited {
+                            color: $blue;
+                        }
+                    }
+                }
+
+                &.last {
+                    td {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}

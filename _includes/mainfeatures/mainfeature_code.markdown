@@ -1,1 +1,1 @@
-Credentials are your keys to the Cloud, secure them seamlessly
+Automatic temporary Cloud credentials generation and rotation

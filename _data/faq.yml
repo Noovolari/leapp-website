@@ -1,0 +1,35 @@
+title: You may be thinking…
+subtitle: 
+topics:
+  - question: "How long does it take the initial assessment?"
+    answer: "We can usually finish the entire assessment project in two weeks."
+  
+  - question: "What do you mean by ''Initial assessment''?"
+    answer: "
+    <p>The assessment consists of an in-depth review of your Cloud infrastructure to help your company's developers to take advantage of Leapp fully.</p>
+    <p>At the end of the assessment, you'll get a list of recommended improvements to make your infrastructure 100% Leapp compliant.</p>
+    "
+
+  - question: "Are these improvements included in my plan?"
+    answer: "
+    <p>The support plan does NOT include improvements.</p>
+    <p>Your organization will be in charge of these tasks; Our team will be available for implementation if needed at a rate of 2500$/day.</p>
+    "
+
+  - question: "How long do I have to wait for Troubleshooting?"
+    answer: "
+    <p>Response time matches the default Service-Level Agreement.</p>
+    <p>However, for specific needs, you can define a custom SLA in agreement with our team.</p>
+    <p>Our team will handle your requests via Email, Chat, Slack private channel, or phone call.</p>
+    "
+
+  - question: "* Can you implement any feature the company requests?"
+    answer: "
+    <p>It is not always possible to implement customer requests.
+acceptable requests must be: </p>
+    <ul>
+    <li><strong>Small</strong> features that can be built within some agreed-upon time frame, such as N business days </li>
+    <li><strong>Generic</strong> features that are helpful to most Leapp users.</li>
+    </ul>
+    <p>We can prioritize only in-roadmap features.</p>
+    "

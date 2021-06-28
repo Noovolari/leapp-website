@@ -1,0 +1,139 @@
+/** Site header */
+#navbar-container {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid #575757;
+    background-color: $blue;
+
+    #topbar {
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: $black;
+        padding: $global-padding-small;
+        text-align: center;
+
+        img {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .github {
+            color: $white;
+        }
+    }
+
+    nav {
+        padding: $global-padding-default 0;
+
+        .container {
+            padding: 0 20px;
+
+            @include breakpoint('md') {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            color: $white;
+
+            @include breakpoint('0', 'md') {
+                float: left;
+            }
+
+            #logo {
+                display: block;
+                margin-right: 10px;
+
+                @include breakpoint('md') {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+
+        .separator {
+            margin-right: 10px;
+        }
+
+        #hamburger {
+            float: right;
+            padding-top: 10px;
+
+            @include breakpoint('md') {
+                display: none;
+            }
+        }
+
+        #navigation {
+            display: none;
+
+            @include breakpoint('md') {
+                display: flex;
+                align-items: center;
+                align-content: center;
+
+                li {
+                    margin: 0 15px;
+                }
+            }
+
+            @include breakpoint('0', 'md') {
+                margin-top: $global-padding-default;
+
+                li {
+                    padding: 10px 0;
+                    border-bottom: 1px solid $turquoise;
+
+                    &:last-child {
+                        border: 0;
+                    }
+                }
+            }
+        }
+
+        a:link,
+        a:visited {
+            font-size: 19px;
+            font-weight: 400;
+            color: $white;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: $turquoise;
+        }
+
+        i {
+            font-size: 1.563rem;
+            color: $turquoise;
+            margin-right: 10px;
+        }
+
+        #new {
+            background-color: $turquoise;
+            color: $white;
+            @include border-radius(5px);
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 2px;
+            padding: 2px 5px;
+        }
+
+        @include breakpoint('0', 'md') {
+            .powered-by-header {
+                display: none;
+            }
+        }
+    }
+
+}

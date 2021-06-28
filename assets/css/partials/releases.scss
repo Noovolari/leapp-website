@@ -1,0 +1,52 @@
+#releases-content {
+    min-height: 150px;
+
+    >p {
+        margin-bottom: $global-padding-large;
+    }
+
+    >img {
+        display: block;
+        margin: $global-padding-mid auto;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h3 a,
+    .nolink {
+        background-color: $orange;
+        box-sizing: border-box;
+        @include border-radius(10px);
+        color: $blue;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    .download-list {
+        list-style: none;
+        margin: $global-padding-default 0 $global-padding-mid 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 10px 10px 0;
+
+            a {
+                background-color: $turquoise;
+                @include border-radius(5px);
+                color: $blue;
+                display: inline-block;
+                font-size: 22px;
+                padding: 5px 15px;
+            }
+        }
+    }
+
+}

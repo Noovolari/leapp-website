@@ -1,0 +1,23 @@
+<section id="hero-unit">
+    <div class="container">
+
+        <div class="hero-unit-col-container">
+            <div class="col hero-content">
+                <h1 class="hero-title">{{page.hero_title}}</h1> 
+                {% if page.hero_content %}
+                    {% include {{ page.hero_content }} %}
+                {% endif %}
+            </div>
+            <div class="col">
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}"/>
+            </div>
+        </div>
+
+        <!-- <div class="hero-btn-holder">
+            <a title="Download Leapp" href="{{site.data.herounit.link}}" target="_blank" rel='noopener' class="btn-lg btn-outline-primary">{{site.data.herounit.button}}</a>
+        </div> -->
+        <!-- <div class="fade-up">
+            <img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.herounit.image}}" alt="{{site.data.herounit.image_title}}" title="{{site.data.herounit.image_title}}" />
+        </div> -->
+    </div>
+</section>

@@ -1,0 +1,47 @@
+/** Hero unit */
+#get-started {
+    background: $blue;
+
+    .col-container {
+        @include breakpoint('md') {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        .col {
+            color: $white;
+
+            @include breakpoint('md') {
+                width: 40%;
+                padding: $global-padding-default;
+                box-sizing: border-box;
+            }
+
+            .title {
+                margin-bottom: $global-padding-default;
+                @include breakpoint('md') {
+                    font-size: 50px;
+                }
+                font-weight: bold;
+
+                span {
+                    color: $turquoise;
+                }
+            }
+
+            .subtitle {
+                color: $turquoise;
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+
+            .content {
+                font-size: 20px;
+            }
+        }
+
+    }
+
+}

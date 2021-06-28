@@ -1,0 +1,113 @@
+#plans {
+    background-color: $white;
+    background-image: url("../img/back-plans.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include breakpoint('md') {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-weight: 700;
+    }
+
+    #cards-wrapper {
+        @include breakpoint('md') {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        .card {
+            background: $white;
+            margin-top: 40px;
+            text-align: center;
+            padding: $global-padding-default $global-padding-default $global-padding-mid $global-padding-default;
+            @include box-shadow();
+            @include border-radius(5px);
+
+            @include breakpoint('md') {
+                width: 30%;
+            }
+
+            &.orange {
+                .card-type {
+                    background-color: $orange;
+                }
+                .card-option li::before {
+                    color: $orange;
+                }
+                .btn {
+                    background-color: $orange;
+                }
+            }
+
+            .card-type {
+                @include border-radius(10px);
+                font-size: 1.25rem;
+                font-weight: bold;
+                text-align: center;
+                position: relative;
+                top: -40px;
+                padding: 5px 20px;
+                display: inline-block;
+                background-color: $turquoise;
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+                border-bottom: 1px solid $grey-cc;
+                color: $grey-59;
+                line-height: 0.1em;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+
+                span {
+                    background: #fff;
+                    padding: 0 10px;
+                }
+            }
+
+            .card-subtitle {
+                margin-bottom: $global-padding-mid;
+                font-weight: 700;
+            }
+
+            ul.card-option {
+                list-style: none;
+                margin: auto;
+                
+                @include breakpoint('lg') {
+                    width: 60%;
+                    height: 210px;
+                }
+
+                li {
+                    text-align: left;
+                    padding: 0 0 20px 20px;
+                    position: relative;
+
+                    &::before {
+                        color: $turquoise;
+                        content: "\2022";
+                        font-weight: bold;  
+                        font-size: 1.25rem;
+                        line-height: 1.25rem;
+                        left: 0;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .btn { 
+                color: $blue;
+                /* border: 1px solid $blue; */
+
+                i { margin-right: 5px; }
+            }
+        }
+    }
+
+}

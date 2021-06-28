@@ -1,6 +1,8 @@
-title: One step away from your Cloud
-subtitle: Jump into any Cloud account in a click
+title: We make Leapp
+subtitle: We are <span class='turquoise'>Noovolari</span>
 button: Download now for free!
 link: 'https://github.com/Noovolari/leapp/releases/latest'
-image: Leapp_Illustrazione_header.png
+image: main-window.png
 image_title: Leapp Illustrazione Header
+col_left_title: If it’s ON you are IN.
+col_left_subtitle: "<p>(Don’t) manage your Cloud credentials.<br/>There is much more to do on the Cloud!</p><p>Leapp is a Desktop DevTool that handles the</br> management and security of your cloud </br>credentials for you.</p>"
