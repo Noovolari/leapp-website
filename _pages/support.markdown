@@ -1,6 +1,6 @@
 ---
 title: Leapp - Support
-description: Leapp - The best general purpose Credential generator in the world
+description: Leapp grants to the users the generation of temporary credentials only for accessing the Cloud programmatically.
 permalink: /support
 layout: support
 hero_title: Enterprise Support

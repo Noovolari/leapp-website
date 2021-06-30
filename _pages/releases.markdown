@@ -1,6 +1,6 @@
 ---
 title: Leapp - Releases
-description: Leapp - The best general purpose Credential generator in the world
+description: Leapp grants to the users the generation of temporary credentials only for accessing the Cloud programmatically.
 permalink: /releases
 layout: page
 hero_title: Releases
