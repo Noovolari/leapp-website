@@ -235,3 +235,20 @@
     @extend %flex;
     align-content: center;
 }
+
+.mobile {
+    display: block;
+
+    @include breakpoint('md') {
+        display: none;
+    }
+}
+
+.desktop {
+    display: none;
+
+    @include breakpoint('md') {
+        display: block;
+    }
+
+}
