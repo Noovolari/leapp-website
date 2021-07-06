@@ -55,6 +55,7 @@
                         var urlWin = _self.elements.cfDistribution + '/latest/Leapp-' + version + '-win.zip';
                         var urlMac = _self.elements.cfDistribution + '/latest/Leapp-' + version + '-mac.zip';
                         var urlLin = _self.elements.cfDistribution + '/latest/Leapp_' + version + '_amd64.deb';
+                        var urlLinAppImage = _self.elements.cfDistribution + '/latest/Leapp-' + version + '.AppImage';
 
                         if (platform.indexOf('win') !== -1) {
                             content = '<a href="' + urlWin + '" class="download">Download Windows</a>';
@@ -72,7 +73,8 @@
                         _self.elements.downloadContent.find('a[data-os="mac"]').attr("href",urlMac);
                         _self.elements.downloadContent.find('a[data-os="win"]').attr("href",urlWin);
                         _self.elements.downloadContent.find('a[data-os="lin"]').attr("href",urlLin);
-    
+                        _self.elements.downloadContent.find('a[data-os="linAppImage"]').attr("href",urlLinAppImage);
+
                         _self.elements.downloadLabel.html(content);
 
                         _self.elements.downloadWrapper.fadeIn("fast", function() {
