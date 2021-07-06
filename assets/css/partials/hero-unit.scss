@@ -165,22 +165,21 @@
     }
 
     #download-label {
-        background: rgba(15, 66, 105, 1);
-        box-sizing: border-box;
-        color: $white;
-        margin-right: 2px;
-        width: 250px;
-        padding: 10px 20px;
-        @include border-radius(5px 0 0 5px);
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-            background: rgba(15, 66, 105, 0.8);
-        }
-
         a {
+            background: rgba(15, 66, 105, 1);
+            box-sizing: border-box;
             color: $white;
+            margin-right: 2px;
+            width: 250px;
+            padding: 10px 20px;
+            @include border-radius(5px 0 0 5px);
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover,
+            &:focus {
+                background: rgba(15, 66, 105, 0.8);
+            }
         }
     }
 
