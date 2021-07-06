@@ -45,6 +45,7 @@
                 var _self = this;
 
                 $.ajax({
+                    type: 'GET',
                     url: _self.elements.cfDistribution + "/latest/latest.yml",
                     success: function (response) {
                         var version = response.split("\n")[0].substring(9);
