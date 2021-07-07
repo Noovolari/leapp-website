@@ -342,7 +342,7 @@
 
                         _self.elements.releases.html(responseMD);
 
-                        // Hide first download list when more than one
+                        /* Hide first download list when more than one */
                         $(".release-wrapper").filter(
                             function () {
                                 return $(this).children(".download-list").length == 2;
