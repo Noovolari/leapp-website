@@ -280,10 +280,10 @@
                                 
                                 versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
                                 
-                                if(versionNumber == 50){
+                                if(versionNumber === 50){
                                     hide = true;
                                 }
-                                if (level == 1)
+                                if (level === 1)
                                     return '<h1>Changelog</h1>';
                                 else if (text.indexOf("Feat") > -1 | text.indexOf("Bug") > -1)
                                     return '<h' + level + ' class="italic">' + version + '</h' + level + '>';
@@ -291,7 +291,7 @@
                                     var context = "",
                                     prefix = "";
                                     rawVersion = raw.replace(/[\(\[].*?[\)\]]/g, '').trim();
-                                    if (text.indexOf("href") == -1) {
+                                    if (text.indexOf("href") === -1) {
                                         context = " class='nolink'";
                                         prefix = "v ";
                                     }
@@ -306,7 +306,7 @@
                         };
                         renderer.list = function (body) {
                             if(!hide){
-                                var folder = index == 1 ? "latest" : rawVersion.trim();
+                                var folder = index === 2 ? "latest" : rawVersion.trim();
     
                                 versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
     
