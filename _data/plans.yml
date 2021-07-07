@@ -21,6 +21,6 @@ cards:
       - label: Initial Cloud assessment
       - label: Bug prioritization
     card_download_label: Visit support page
-    card_download_url: 'support.html'
+    card_download_url: '/support'
     card_download_target: 
     card_download_icon: fa-edit

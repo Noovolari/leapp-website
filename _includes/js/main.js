@@ -31,7 +31,9 @@
                 this._anchor();
                 this._accordion();
                 this._formValidate();
-                this._releases();
+                if (this.elements.releases.length > 0) {
+                    this._releases();
+                }
 
             },
             _hamburger: function () {
@@ -266,6 +268,7 @@
 
                         var rawVersion = "0.0.0";
                         var index = 1;
+                        var downloadListCounter = 1;
                         var versionNumber = 0;
                         var hide = false;
 
@@ -292,7 +295,8 @@
                                         context = " class='nolink'";
                                         prefix = "v ";
                                     }
-                                    return '<h' + level + context + '>' + prefix + version + '</h' + level + '>';
+                                    downloadListCounter = 1;
+                                    return '</div><h' + level + context + '>' + prefix + version + '</h' + level + '><div class="release-wrapper" id="rw' + versionNumber + '">';
                                 }
                             }
                             else {
@@ -306,14 +310,19 @@
     
                                 versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
     
-                                var generatedDownloadURL = body;
+                                var generatedDownloadURL = '<ul class="default-list">' + body + '</ul>';
                                 generatedDownloadURL += '<ul class="download-list">';
                                     generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" class="download"><i class="fab fa-windows"></i> Download</a></li>';
                                     generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" class="download"><i class="fab fa-apple"></i> Download</a></li>';
                                     generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" class="download"><i class="fab fa-linux"></i> Download</a></li>';
                                 generatedDownloadURL += '</ul>';
     
+                                /* if (downloadListCounter > 1) {
+                                    console.log(body);
+                                } */
+
                                 index++;
+                                downloadListCounter++;
     
                                 var allVersion = "<a href='" + _self.elements.gitHubReleases + "' class='d-block mb-2' target='_blank' rel='noopener'>View all versions</a>";
                                 if( versionNumber == 51 )
@@ -332,6 +341,13 @@
                         });
 
                         _self.elements.releases.html(responseMD);
+
+                        // Hide first download list when more than one
+                        $(".release-wrapper").filter(
+                            function () {
+                                return $(this).children(".download-list").length == 2;
+                            })
+                        .find(".download-list").eq(0).hide();
                     }
                 });
             }
