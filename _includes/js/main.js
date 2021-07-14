@@ -312,7 +312,7 @@
                         };
                         renderer.list = function (body) {
                             if(!hide){
-                                //var folder = index === 1? "latest" : rawVersion.trim();
+                                /*var folder = index === 1? "latest" : rawVersion.trim();*/
                                 var folder = latestVersion === rawVersion ? "latest" : rawVersion.trim();
     
                                 versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
