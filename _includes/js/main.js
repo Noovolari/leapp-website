@@ -271,6 +271,7 @@
                         var downloadListCounter = 1;
                         var versionNumber = 0;
                         var hide = false;
+                        var latestVersion = 0;
 
                         var renderer = new marked.Renderer();
 
@@ -296,6 +297,11 @@
                                         prefix = "v ";
                                     }
                                     downloadListCounter = 1;
+
+                                    if(versionNumber === 0) {
+                                        latestVersion = rawVersion;
+                                    }
+
                                     return '</div><h' + level + context + '>' + prefix + version + '</h' + level + '><div class="release-wrapper" id="rw' + versionNumber + '">';
                                 }
                             }
@@ -306,7 +312,8 @@
                         };
                         renderer.list = function (body) {
                             if(!hide){
-                                var folder = index === 2 ? "latest" : rawVersion.trim();
+                                /*var folder = index === 1? "latest" : rawVersion.trim();*/
+                                var folder = latestVersion === rawVersion ? "latest" : rawVersion.trim();
     
                                 versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
     
@@ -345,9 +352,9 @@
                         /* Hide first download list when more than one */
                         $(".release-wrapper").filter(
                             function () {
-                                return $(this).children(".download-list").length == 2;
+                                return $(this).children(".download-list").length > 1;
                             })
-                        .find(".download-list").eq(0).hide();
+                        .children(".download-list:not(:last-of-type)").hide();
                     }
                 });
             }
