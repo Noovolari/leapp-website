@@ -8,6 +8,11 @@
     }
 
     &.home {
+        .hero-unit-col-container {
+            display: block;
+            text-align: center;
+        }
+
         @include breakpoint('md') {
             .hero-unit-col-container {
                 display: flex;
@@ -15,6 +20,7 @@
                 align-items: center;
                 align-content: center;
                 height: 450px;
+                text-align: initial;
             }
         }
     }
@@ -156,6 +162,15 @@
 
 #download-wrapper {
     display: none;
+
+    width: 302px;
+    margin: 0 auto;
+
+    @include breakpoint('md') {
+        width: initial;
+        margin: initial;
+    }
+
 
     #download-container {
         @extend %flex;
