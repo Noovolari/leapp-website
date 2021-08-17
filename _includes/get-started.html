@@ -1,8 +1,8 @@
 <section id="get-started">
     <div class="container">
 
-        <div class="col-container">
-            <div class="col content">
+        <div class="col-container mb-2 p-1">
+            <div class="col content full white">
                 <h1 class="title">{{site.data.get_started.title}}</h1>
                 {% if site.data.get_started.subtitle %}
                 <h2 class="subtitle">{{ site.data.get_started.subtitle }}</h2>
@@ -11,15 +11,20 @@
                 {{ site.data.get_started.content }}
                 {% endif %}
             </div>
-            <div class="col">
+        </div>
 
-                <div class="leapp-form-wrapper">
+        <div class="leapp-form-wrapper">
 
-                    <p id="leapp-form-status"></p>
+            <p id="leapp-form-status"></p>
 
-                    <form action="https://formspree.io/f/xqkwqljw" class="leapp-form" id="support-form" method="post">
-                        <fieldset>
-                            <legend class="d-none">Leapp support</legend>
+            <form action="https://formspree.io/f/xqkwqljw" class="leapp-form" id="support-form" method="post">
+                <fieldset>
+
+                    <legend class="d-none">Leapp support</legend>
+
+                    <div class="col-container">
+                        <div class="col pl-0">
+
 
                             <div class="field">
                                 <label for="support_name" class="field-title"><span class="mandatory">*</span> Name</label>
@@ -31,28 +36,36 @@
                                 <input type="email" name="support_email" id="support_email" placeholder="Your email" />
                             </div>
 
-                            <div class="field">
+                            <div class="field m-0">
                                 <label for="support_company" class="field-title"><span class="mandatory">*</span> Company</label>
                                 <input type="text" name="support_company" id="support_company" placeholder="Yout company" />
                             </div>
+
+                        </div>
+                        <div class="col pr-0">
 
                             <div class="field-title">
                                 <span class="mandatory">*</span> Company size
                             </div>
 
                             <div class="field m-0">
-                                <input type="radio" value="&lt; 50" name="support_size" id="support_size_1" required />
-                                <label for="support_size_1">&lt; 50</label>
+                                <input type="radio" value="&lt; 20 Devs OR &lt; 10 Accounts" name="support_size" id="support_size_1" required />
+                                <label for="support_size_1">&lt; 20 Devs OR &lt; 10 Accounts</label>
                             </div>
 
                             <div class="field m-0">
-                                <input type="radio" value="50-100" name="support_size" id="support_size_2" />
-                                <label for="support_size_2">50 - 100</label>
+                                <input type="radio" value="&lt; 50 Devs OR &lt; 20 Accounts" name="support_size" id="support_size_2" />
+                                <label for="support_size_2">&lt; 50 Devs OR &lt; 20 Accounts</label>
+                            </div>
+
+                            <div class="field m-0">
+                                <input type="radio" value="&lt; 100 Devs OR &lt; 50 Accounts" name="support_size" id="support_size_3" />
+                                <label for="support_size_3">&lt; 100 Devs OR &lt; 50 Accounts</label>
                             </div>
 
                             <div class="field">
-                                <input type="radio" value="&gt; 100" name="support_size" id="support_size_3" />
-                                <label for="support_size_3">&gt; 100</label>
+                                <input type="radio" value="more" name="support_size" id="support_size_4" />
+                                <label for="support_size_4">more</label>
                             </div>
 
                             <div class="field-title">
@@ -74,19 +87,33 @@
                                 <label for="support_cloud_3">Google Cloud</label>
                             </div>
 
-                            <div class="g-recaptcha mt-1" data-sitekey="6LfX30oUAAAAAD8MVNC8OIpoq_rj_abqx2rGaXb7" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                        </div>
 
-                            <div class="mt-2">
-                                <span class="mandatory">*</span> Required fields. By signing up, you agree to the <a href="/privacy.html">Privacy Policy</a>.
-                            </div>
+                    </div>
 
-                            <input type="submit" value="Submit" class="btn b-0 d-block m-auto mt-2" />
+                    <div class="or mb-2"></div>
 
-                        </fieldset>
-                    </form>
-                </div>
+                    <div class="field-title">
+                        <label for="support_description">Description</label>
+                    </div>
 
-            </div>
+                    <div class="field m-0">
+                        <textarea name="support_description" id="support_description" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <div class="g-recaptcha mt-1" data-sitekey="6LfX30oUAAAAAD8MVNC8OIpoq_rj_abqx2rGaXb7" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+
+                    <div class="mt-2">
+                        <span class="mandatory">*</span> Required fields. By signing up, you agree to the <a href="/privacy.html">Privacy Policy</a>.
+                    </div>
+
+                    <input type="submit" value="Submit" class="btn b-0 d-block" />
+
+
+                </fieldset>
+            </form>
+
         </div>
+
     </div>
 </section>

@@ -1,5 +1,12 @@
 title: If it's ON you are IN
 features:
+  - title: SECURE YOUR CLOUD CREDENTIALS
+    content: features/feature3.markdown
+    video: LeappSecure.mov
+    autoplay: true
+    controls: false
+    muted: true
+
   - title: SWITCH ACCOUNT IN A CLICK
     content: features/feature1.markdown
     video: LeappNamed.mov
@@ -10,13 +17,6 @@ features:
   - title: UNIFY YOUR ACCESS STRATEGIES
     content: features/feature2.markdown
     video: Azure-Login.mov
-    autoplay: true
-    controls: false
-    muted: true
-
-  - title: SECURE YOUR CLOUD CREDENTIALS
-    content: features/feature3.markdown
-    video: LeappSecure.mov
     autoplay: true
     controls: false
     muted: true

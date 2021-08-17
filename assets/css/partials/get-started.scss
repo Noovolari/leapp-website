@@ -2,29 +2,36 @@
 #get-started {
     background: $blue;
 
+    fieldset {
+        padding: 0;
+        border: 0;
+    }
+
     .col-container {
         @include breakpoint('md') {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            /* align-items: center; */
             align-content: center;
         }
 
         .col {
-            color: $white;
 
-            @include breakpoint('md') {
-                width: 40%;
-                padding: $global-padding-default;
-                box-sizing: border-box;
+            &:not(.full) {
+                @include breakpoint('md') {
+                    width: 49%;
+                    padding: $global-padding-default;
+                    box-sizing: border-box;
+                }
             }
 
             .title {
                 margin-bottom: $global-padding-default;
+                font-weight: bold;
+
                 @include breakpoint('md') {
                     font-size: 50px;
                 }
-                font-weight: bold;
 
                 span {
                     color: $turquoise;
