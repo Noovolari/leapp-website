@@ -367,7 +367,7 @@
                                 "releaseComp": "v" + vs,
                                 "os": os,
                                 "date": clickEventTime
-                            }
+                            };
 
                             $.ajax({
                                 type: "PUT",
