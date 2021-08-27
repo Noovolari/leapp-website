@@ -19,12 +19,13 @@
                 downloadContent: $("#download-content"),
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
-                gitHubReleases: "https://github.com/Noovolari/leapp/releases/"
+                gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
+                apiMetricsURL: "https://s3jm9wf1ke.execute-api.eu-west-1.amazonaws.com/leapp-update-download-metrics/miao"
             },
             init: function () {
 
                 this._hamburger();
-                if(this.elements.downloadAction.length != 0 ){
+                if (this.elements.downloadAction.length != 0) {
                     this._download();
                 }
                 this._slick();
@@ -43,7 +44,7 @@
                     _self.elements.html.toggleClass("noscroll");
                 });
             },
-            _download: function() {
+            _download: function () {
                 var _self = this;
 
                 $.ajax({
@@ -61,25 +62,22 @@
 
                         if (platform.indexOf('win') !== -1) {
                             content = '<a href="' + urlWin + '" class="download">Download Windows</a>';
-                        }
-                        else if (platform.indexOf('mac') !== -1) {
+                        } else if (platform.indexOf('mac') !== -1) {
                             content += '<a href="' + urlMac + '" class="download">Download MacOs</a>';
-                        }
-                        else if (platform.indexOf('linux') !== -1) {
+                        } else if (platform.indexOf('linux') !== -1) {
                             content = '<a href="' + urlLin + '" class="download">Download Linux</a>';
-                        }
-                        else {
+                        } else {
                             content = '<a href="' + _self.elements.gitHubReleases + '">Download latest</a>';
                         }
 
-                        _self.elements.downloadContent.find('a[data-os="mac"]').attr("href",urlMac);
-                        _self.elements.downloadContent.find('a[data-os="win"]').attr("href",urlWin);
-                        _self.elements.downloadContent.find('a[data-os="lin"]').attr("href",urlLin);
-                        _self.elements.downloadContent.find('a[data-os="linAppImage"]').attr("href",urlLinAppImage);
+                        _self.elements.downloadContent.find('a[data-os="mac"]').attr("href", urlMac);
+                        _self.elements.downloadContent.find('a[data-os="win"]').attr("href", urlWin);
+                        _self.elements.downloadContent.find('a[data-os="linux"]').attr("href", urlLin);
+                        _self.elements.downloadContent.find('a[data-os="linAppImage"]').attr("href", urlLinAppImage);
 
                         _self.elements.downloadLabel.html(content);
 
-                        _self.elements.downloadWrapper.fadeIn("fast", function() {
+                        _self.elements.downloadWrapper.fadeIn("fast", function () {
                             _self.elements.downloadAction.on("click", function () {
                                 _self.elements.downloadContent.slideToggle('fast');
                             });
@@ -276,12 +274,12 @@
                         var renderer = new marked.Renderer();
 
                         renderer.heading = function (text, level, raw) {
-                            if(!hide){
+                            if (!hide) {
                                 var version = text.replace(/[\(\[].*?[\)\]]/g, '').replace("\">", "\">v");
-                                
-                                versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
-                                
-                                if(versionNumber === 50){
+
+                                versionNumber = parseInt(rawVersion.replace(/\./g, '').trim());
+
+                                if (versionNumber === 50) {
                                     hide = true;
                                 }
                                 if (level === 1)
@@ -290,7 +288,7 @@
                                     return '<h' + level + ' class="italic">' + version + '</h' + level + '>';
                                 else {
                                     var context = "",
-                                    prefix = "";
+                                        prefix = "";
                                     rawVersion = raw.replace(/[\(\[].*?[\)\]]/g, '').trim();
                                     if (text.indexOf("href") === -1) {
                                         context = " class='nolink'";
@@ -298,46 +296,44 @@
                                     }
                                     downloadListCounter = 1;
 
-                                    if(versionNumber === 0) {
+                                    if (versionNumber === 0) {
                                         latestVersion = rawVersion;
                                     }
 
                                     return '</div><h' + level + context + '>' + prefix + version + '</h' + level + '><div class="release-wrapper" id="rw' + versionNumber + '">';
                                 }
-                            }
-                            else {
+                            } else {
                                 return "";
                             }
-                            
+
                         };
                         renderer.list = function (body) {
-                            if(!hide){
+                            if (!hide) {
                                 /*var folder = index === 1? "latest" : rawVersion.trim();*/
                                 var folder = latestVersion === rawVersion ? "latest" : rawVersion.trim();
-    
-                                versionNumber = parseInt(rawVersion.replace(/\./g,'').trim());
-    
+
+                                versionNumber = parseInt(rawVersion.replace(/\./g, '').trim());
+
                                 var generatedDownloadURL = '<ul class="default-list">' + body + '</ul>';
                                 generatedDownloadURL += '<ul class="download-list">';
-                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" class="download"><i class="fab fa-windows"></i> Download</a></li>';
-                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" class="download"><i class="fab fa-apple"></i> Download</a></li>';
-                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" class="download"><i class="fab fa-linux"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" data-os="win" data-version="' + rawVersion + '" class="download"><i class="fab fa-windows"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" data-os="mac" data-version="' + rawVersion + '" class="download"><i class="fab fa-apple"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" data-os="deb" data-version="' + rawVersion + '" class="download"><i class="fab fa-linux"></i> Download</a></li>';
                                 generatedDownloadURL += '</ul>';
-    
+
                                 /* if (downloadListCounter > 1) {
                                     console.log(body);
                                 } */
 
                                 index++;
                                 downloadListCounter++;
-    
+
                                 var allVersion = "<a href='" + _self.elements.gitHubReleases + "' class='d-block mb-2' target='_blank' rel='noopener'>View all versions</a>";
-                                if( versionNumber == 51 )
+                                if (versionNumber == 51)
                                     return generatedDownloadURL + "" + allVersion;
-                                else 
+                                else
                                     return generatedDownloadURL;
-                            }
-                            else {
+                            } else {
                                 return "";
                             }
                         };
@@ -351,10 +347,40 @@
 
                         /* Hide first download list when more than one */
                         $(".release-wrapper").filter(
-                            function () {
-                                return $(this).children(".download-list").length > 1;
-                            })
-                        .children(".download-list:not(:last-of-type)").hide();
+                                function () {
+                                    return $(this).children(".download-list").length > 1;
+                                })
+                            .children(".download-list:not(:last-of-type)").hide();
+
+                        /* Click metrics */
+                        $(".download-list li a").on("click", function (e) {
+                            /* e.preventDefault(); */
+                            var dl = $(this);
+                            var vs = dl.data("version");
+                            var os = dl.data("os")
+                            var clickEvent = new Date();
+                            var clickEventDay = clickEvent.getDate().toString().length === 1 ? "0" + clickEvent.getDate() : clickEvent.getDate();
+                            var clickEventMonth = (clickEvent.getMonth() + 1).toString().length === 1 ? "0" + (clickEvent.getMonth() + 1) : (clickEvent.getMonth() + 1);
+                            var clickEventTime = clickEvent.getFullYear() + "-" + clickEventMonth + "-" + clickEventDay;
+
+                            var metricsData = {
+                                "releaseComp": "v" + vs,
+                                "os": os,
+                                "date": clickEventTime
+                            }
+
+                            $.ajax({
+                                type: "PUT",
+                                url: _self.elements.apiMetricsURL,
+                                data: JSON.stringify(metricsData),
+                                contentType: "application/json",
+                                success: function() {},
+                                error: function(txt,status) {
+                                    console.log("S3 Metrics URL", txt);
+                                    console.log("S3 Metrics URL", status);
+                                }
+                            });
+                        });
                     }
                 });
             }
