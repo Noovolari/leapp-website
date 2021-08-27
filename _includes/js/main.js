@@ -357,7 +357,7 @@
                             /* e.preventDefault(); */
                             var dl = $(this);
                             var vs = dl.data("version");
-                            var os = dl.data("os")
+                            var os = dl.data("os");
                             var clickEvent = new Date();
                             var clickEventDay = clickEvent.getDate().toString().length === 1 ? "0" + clickEvent.getDate() : clickEvent.getDate();
                             var clickEventMonth = (clickEvent.getMonth() + 1).toString().length === 1 ? "0" + (clickEvent.getMonth() + 1) : (clickEvent.getMonth() + 1);
