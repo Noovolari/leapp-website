@@ -20,7 +20,7 @@
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
                 gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
-                apiMetricsURL: "https://s3jm9wf1ke.execute-api.eu-west-1.amazonaws.com/leapp-update-download-metrics/miao"
+                apiMetricsURL: "https://s3jm9wf1ke.execute-api.eu-west-1.amazonaws.com/leapp-update-download-metrics/"
             },
             init: function () {
 
