@@ -19,8 +19,7 @@
                 downloadContent: $("#download-content"),
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
-                gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
-                apiMetricsURL: "https://s3jm9wf1ke.execute-api.eu-west-1.amazonaws.com/leapp-update-download-metrics"
+                gitHubReleases: "https://github.com/Noovolari/leapp/releases/"
             },
             init: function () {
 
@@ -352,35 +351,6 @@
                                 })
                             .children(".download-list:not(:last-of-type)").hide();
 
-                        /* Click metrics */
-                        $(".download-list li a").on("click", function (e) {
-                            /* e.preventDefault(); */
-                            var dl = $(this);
-                            var vs = dl.data("version");
-                            var os = dl.data("os");
-                            var clickEvent = new Date();
-                            var clickEventDay = clickEvent.getDate().toString().length === 1 ? "0" + clickEvent.getDate() : clickEvent.getDate();
-                            var clickEventMonth = (clickEvent.getMonth() + 1).toString().length === 1 ? "0" + (clickEvent.getMonth() + 1) : (clickEvent.getMonth() + 1);
-                            var clickEventTime = clickEvent.getFullYear() + "-" + clickEventMonth + "-" + clickEventDay;
-
-                            var metricsData = {
-                                "releaseComp": "v" + vs,
-                                "os": os,
-                                "date": clickEventTime
-                            };
-
-                            $.ajax({
-                                type: "PUT",
-                                url: _self.elements.apiMetricsURL,
-                                data: JSON.stringify(metricsData),
-                                contentType: "application/json",
-                                success: function() {},
-                                error: function(txt,status) {
-                                    console.log("S3 Metrics URL", txt);
-                                    console.log("S3 Metrics URL", status);
-                                }
-                            });
-                        });
                     }
                 });
             }
