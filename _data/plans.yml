@@ -10,8 +10,24 @@ cards:
       - label: Easy-to-contribute
     card_download_label: Check the Repo
     card_download_url: 'https://github.com/Noovolari/leapp'
+    card_meta:
     card_download_target: target="_blank" rel="noopener"
     card_download_icon: fa-github
+    card_color: orange
+
+  - card_type: Pro
+    card_title: PRO
+    card_subtitle: For Cloud Developers
+    card_element:
+      - label: Mega DevTool
+      - label: Active Members only
+      - label: Easy-to-gnam
+    card_download_label: Stay Informed!
+    card_download_url: '#'
+    card_meta: data-bs-toggle="modal" data-bs-target="#PRO-modal"
+    card_download_target:
+    card_download_icon: fa-sign
+    card_color: purple
 
   - card_type: Enterprise
     card_title: SUPPORT
@@ -22,5 +38,7 @@ cards:
       - label: Bug prioritization
     card_download_label: Visit support page
     card_download_url: '/support'
+    card_meta:
     card_download_target: 
     card_download_icon: fa-edit
+    card_color:

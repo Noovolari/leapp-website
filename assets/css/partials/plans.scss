@@ -13,6 +13,8 @@
         font-weight: 700;
     }
 
+    .hidden { display: none; }
+
     #cards-wrapper {
         @include breakpoint('md') {
             display: flex;
@@ -41,6 +43,18 @@
                 }
                 .btn {
                     background-color: $orange;
+                }
+            }
+
+            &.purple {
+                .card-type {
+                    background-color: $purple;
+                }
+                .card-option li::before {
+                    color: $purple;
+                }
+                .btn {
+                    background-color: $purple;
                 }
             }
 

@@ -1,9 +1,11 @@
 (function () {
     "use strict";
 
+    window.leapp = window.leapp || {};
+
     $(function () {
 
-        var leapp = {
+        window.leapp = {
             elements: {
                 html: $("html"),
                 hamburger: $("#hamburger"),
@@ -19,7 +21,8 @@
                 downloadContent: $("#download-content"),
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
-                gitHubReleases: "https://github.com/Noovolari/leapp/releases/"
+                gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
+                mailchimpUrl: ""
             },
             init: function () {
 
@@ -35,6 +38,20 @@
                     this._releases();
                 }
 
+            },
+            sendToMailchimp: function (formId) {
+                var form = $(formId);
+                $.ajax({
+                    type: 'POST',
+                    url: form.attr("action"),
+                    data: form.serialize(),
+                    200: function(response) {
+                        alert("Data send with success reponse:\n" + response.toString());
+                    },
+                    500: function(response) {
+                        alert("There was an error submitting your form data");
+                    }
+                });
             },
             _hamburger: function () {
                 var _self = this;
@@ -356,8 +373,10 @@
             }
         };
 
-        leapp.init();
+        window.leapp.init();
 
     });
+
+
 
 })();
