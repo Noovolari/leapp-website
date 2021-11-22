@@ -1,0 +1,28 @@
+#sponsors {
+  background-color: $white;
+
+  @include breakpoint('md') {
+    padding: 40px 0;
+  }
+
+  .container-flex {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .sponsor-image {
+    border-radius: 50%;
+    height: 200px;
+  }
+
+  .sponsor-text {
+    font-weight: bold;
+    color: #444;
+    font-size: 16px;
+  }
+
+
+
+}

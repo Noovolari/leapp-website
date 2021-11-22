@@ -1,0 +1,6 @@
+company:
+  - name: Slalom
+    image: slalom-logo.png
+    url: "www.slalom.com"
+
+ciao: "bella"

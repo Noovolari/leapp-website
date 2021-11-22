@@ -356,7 +356,49 @@
             }
         };
 
+
+        $.ajax({
+            method: "POST",
+            url: "https://api.github.com/graphql",
+            contentType: "application/json",
+            headers: {
+                Authorization: "bearer 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"
+            },
+            data: JSON.stringify({
+                query: `{
+                      organization(login: "noovolari") {
+                        sponsors(first: 10) {
+                          nodes {
+                            ... on Organization {
+                              avatarUrl
+                              login
+                              url
+                            }
+                          }
+                        }
+                      }
+                    }`
+            }),
+            success: function (data) {
+                /*
+                console.log(data.data.organization.sponsors.nodes);
+                let html = "";
+                data.data.organization.sponsors.nodes.forEach((node) => {
+                    html += `<a href="${node.url}">
+                    <p class="sponsor-text text-center">${node.login}</p>
+                    <img class="sponsor-image" src="${node.avatarUrl}">
+                </a>`;
+                })
+                $('.sponsors-section').html(html)
+                */
+
+            }
+        })
+
+
+
         leapp.init();
+
 
     });
 
