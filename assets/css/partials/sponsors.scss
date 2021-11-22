@@ -7,14 +7,23 @@
 
   .container-flex {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
+    a {
+      flex: 1 0 20%;
+      margin: 30px;
+      text-align: center;
+    }
   }
 
   .sponsor-image {
-    border-radius: 50%;
-    height: 200px;
+    height: 70px;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0);
+    }
   }
 
   .sponsor-text {

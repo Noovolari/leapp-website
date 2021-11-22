@@ -1,13 +1,12 @@
 <div class="container-fluid" id="sponsors">
     <div class="container">
         <h2 class="section-title text-center">
-             <strong>Sponsors:</strong>
+             <strong>Used by:</strong>
         </h2>
     </div>
     <div class="container container-flex sponsors-section">
         {% for company in site.data.sponsors.company %}
-            <a href={{ company.url}}>
-                <p class="sponsor-text text-center">{{ company.name }}</p>
+            <a href={{company.url}}>
                 <img class="sponsor-image" src="{{site.baseurl}}/assets/img/trusted-by/{{ company.image }}">
             </a>
         {% endfor %}

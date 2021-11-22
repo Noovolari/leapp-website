@@ -1,6 +1,25 @@
 company:
+  - name: Cloud Academy
+    image: cloudacademy.png
+    url: "https://www.cloudacademy.com"
+  - name: Cloud Posse
+    image: cloudposse.png
+    url: "https://www.cloudposse.com"
+  - name: Merapar
+    image: merapar.png
+    url: "https://www.merapar.com"
+  - name: New Relic
+    image: newrelic.png
+    url: "https://www.newrelic.com"
+  - name: Nord Cloud
+    image: nordcloud.png
+    url: "https://www.nordcloud.com"
+  - name: RedBull
+    image: redbull.png
+    url: "https://www.redbull.com"
   - name: Slalom
     image: slalom-logo.png
-    url: "www.slalom.com"
-
-ciao: "bella"
+    url: "https://www.slalom.com"
+  - name: SpotOn
+    image: spoton.png
+    url: "https://www.spoton.com"
