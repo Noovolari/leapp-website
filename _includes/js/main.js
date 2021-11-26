@@ -2,7 +2,6 @@
     "use strict";
 
     $(function () {
-
         var leapp = {
             elements: {
                 html: $("html"),
