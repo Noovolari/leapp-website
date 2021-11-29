@@ -22,8 +22,8 @@ navbar_title: Leapp
 # Navbar urls
 blog_url: '#'
 github_download_url: 'https://github.com/Noovolari/leapp/releases/latest'
-github_roadmap_url: 'https://github.com/Noovolari/leapp/discussions/178'
-github_url: 'https://docs.leapp.cloud/roadmap'
+github_roadmap_url: 'https://docs.leapp.cloud/roadmap'
+github_url: 'https://github.com/Noovolari/leapp'
 facebook_url: '#'
 twitter_url: '#'
 linkedin_url: '#'
