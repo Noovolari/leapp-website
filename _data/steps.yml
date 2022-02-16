@@ -1,0 +1,25 @@
+title: 
+step:
+  - title: SETUP
+    content: "<p>How Leapp help you in solving your problem with the correct copyright.</p><p>How Leapp help you in solving your problem with the correct copyright.</p>"
+    video: 
+    autoplay: true
+    controls: false
+    muted: true
+    image: step1.png
+
+  - title: CONNECT
+    content: "<p>How Leapp help you in solving your problem with the correct copyright.</p><p>How Leapp help you in solving your problem with the correct copyright.</p>"
+    video: 
+    autoplay: true
+    controls: false
+    muted: true
+    image: step2.png
+
+  - title: OPERATE!
+    content: "<p>How Leapp help you in solving your problem with the correct copyright.</p><p>How Leapp help you in solving your problem with the correct copyright.</p>"
+    video: 
+    autoplay: true
+    controls: false
+    muted: true
+    image: step3.png

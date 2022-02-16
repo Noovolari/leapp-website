@@ -1,0 +1,36 @@
+<section id="steps" class="dark white">
+    <div class="container">
+        {% if site.data.steps.title != ""  %}
+            <h2 class="section-title white">{{site.data.steps.title}}</h2>
+        {% endif %}
+        <div class="steps-holder">
+            <div id="steps-navigation" class="mb-3">
+                <a href="#step1" class="active d-inline-block pr-2 fs-4">STEP 1</a>
+                <a href="#step2" class="d-inline-block pr-2 fs-4">STEP 2</a>
+                <a href="#step3" class="d-inline-block pr-2 fs-4">STEP 3</a>
+            </div>
+
+            {% for step in site.data.steps.step %}
+                {% capture c %}{% cycle 'reverse', '' %}{% endcapture %}
+                <div class="step space-beetween mb-3 {{c}}" id="step{{forloop.index}}">
+                    <div class="col asset">
+                        {% if step.video | strip_newlines != "" %}
+                            <div class="video">
+                                <video {% if step.controls == true %}controls="controls"{% endif %} {% if step.autoplay == true %}autoplay="autoplay"{% endif %} {% if step.muted == true %}muted="muted"{% endif %} loop="loop"><source src="{{site.url}}{{site.baseurl}}/assets/videos/{{step.video}}" type="video/mp4" /></video>
+                            </div>
+                        {% endif %}
+                        {% if step.image | strip_newlines != "" %}
+                            <div class="image">
+                                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.image}}" alt="Step {{forloop.index}}">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col content">
+                        <h2>{{ step.title }}</h2>
+                        {{step.content}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

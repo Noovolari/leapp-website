@@ -1,6 +1,6 @@
 /** Hero unit */
 #hero-unit {
-    background: $blue;
+    background: $violet;
     padding-top: 130px;
 
     @include breakpoint('md') {
@@ -15,11 +15,12 @@
 
         @include breakpoint('md') {
             .hero-unit-col-container {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                height: 450px;
+                height: 600px;
                 text-align: initial;
             }
         }
@@ -89,6 +90,13 @@
         .hero-content {
             font-size: 20px;
         }
+    }
+
+    #main-window {
+        position: absolute;
+        top: 0;
+        right: -350px;
+        width: auto;
     }
 
     svg {
@@ -219,7 +227,7 @@
         background-color: $grey-f5;
         border: 1px solid $grey-cc;
         @include border-radius(5px);
-        color: $blue;
+        color: $violet;
         position: absolute;
         top: 46px;
         width: 100%;
@@ -245,7 +253,7 @@
 
                         a:link,
                         a:visited {
-                            color: $blue;
+                            color: $violet;
                         }
                     }
                 }

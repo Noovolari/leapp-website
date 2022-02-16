@@ -19,7 +19,7 @@
         background-color: $orange;
         box-sizing: border-box;
         @include border-radius(10px);
-        color: $blue;
+        color: $violet;
         display: inline-block;
         font-size: 20px;
         font-weight: bold;
@@ -45,7 +45,7 @@
             a {
                 background-color: $turquoise;
                 @include border-radius(5px);
-                color: $blue;
+                color: $violet;
                 display: inline-block;
                 font-size: 22px;
                 padding: 5px 15px;

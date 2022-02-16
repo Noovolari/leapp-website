@@ -1,14 +1,33 @@
-title: "Improved workflows for <strong>Cloud developers</strong>"
+title: "WHY DEVELOPERS <img src='/assets/img/heart.png' class='d-inline-block'> LEAPP?"
 features:
   - title: Fast
     icon: fa-bolt
-    content: mainfeatures/mainfeature_monitor.markdown
+    #content: mainfeatures/mainfeature_monitor.markdown
+    content: "Automatic temporary Cloud credentials generation and rotation"
 
   - title: Secure
     icon: fa-lock-alt
-    content: mainfeatures/mainfeature_code.markdown
+    #content: mainfeatures/mainfeature_code.markdown
+    content: "Automatic temporary Cloud credentials generation and rotation"
 
-  - title: Open-source
-    icon: fa-github
-    content: mainfeatures/mainfeature_github.markdown
+  - title: Centralized
+    icon: fa-box
+    #content: mainfeatures/mainfeature_github.markdown
+    content: "Automatic temporary Cloud credentials generation and rotation"
 
+  - title: Flexible
+    icon: fa-flux-capacitor
+    #content: mainfeatures/mainfeature_github.markdown
+    content: "Automatic temporary Cloud credentials generation and rotation"
+numbers: 
+  - number:
+    title: "170<br>ISSUES"
+    subtitle: 
+
+  - number:
+    title: "70K<br>HOURS"
+    subtitle: Weekly usage
+
+  - number:
+    title: "780<br>STARS"
+    subtitle: 

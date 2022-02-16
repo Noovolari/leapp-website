@@ -11,9 +11,12 @@ layout: compress
         {% include navbar.html %}
         {% include hero-unit.html %}
         {% include main-features.html %}
-        {% include tweet.html %}
-        {% include sponsors.html %}
-        {% include features.html %} 
+        {% comment %}
+            {% include tweet.html %}
+            {% include sponsors.html %}
+            {% include features.html %} 
+        {% endcomment %}
+        {% include steps.html %} 
         {% include plans.html %} 
         {% include footer.html %}
     </body>

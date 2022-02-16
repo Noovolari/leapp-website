@@ -38,7 +38,7 @@
 
             &.leapp {
                 display: none;
-                background-color: $blue;
+                background-color: $violet;
 
                 @include breakpoint('md') {
                     display: flex;

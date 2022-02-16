@@ -27,7 +27,7 @@ footer {
         padding-bottom: $global-padding-default;
 
         h2 { color: $turquoise; padding: 10px 0 0; font-size: 35px; }
-        a:link, a:visited { display: inline-block; background: $turquoise; color: $blue; margin: auto; border: 0; }
+        a:link, a:visited { display: inline-block; background: $turquoise; color: $violet; margin: auto; border: 0; }
         a:hover { color: $white; }
 
         @include breakpoint('md') {

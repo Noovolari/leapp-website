@@ -1,5 +1,5 @@
 ﻿.blue {
-    color: $blue;
+    color: $violet;
 }
 
 .white {
@@ -24,6 +24,14 @@
 
 .text-center {
     text-align: center !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
 }
 
 .bg-white {
@@ -74,6 +82,18 @@
     margin-right: 0 !important;
 }
 
+.mr-1 {
+    margin-right: 1.111rem !important;
+}
+
+.mr-2 {
+    margin-right: 2.222rem !important;
+}
+
+.mr-3 {
+    margin-right: 3.333rem !important;
+}
+
 .mb-0 {
     margin-bottom: 0 !important;
 }
@@ -114,8 +134,20 @@
     padding-right: 0 !important;
 }
 
-.pt-2 {
-    padding-top: 2.222rem !important;
+.pr-1 {
+    padding-top: 1.111rem !important;
+}
+
+.pr-2 {
+    padding-right: 2.222rem !important;
+}
+
+.pr-3 {
+    padding-right: 3.333rem !important;
+}
+
+.pt-4 {
+    padding-right: 4.444rem !important;
 }
 
 .pb-2 {
@@ -132,6 +164,30 @@
 
 .pt-large {
     padding-top: $global-padding-large;
+}
+
+.fs-1 {
+    font-size: 2.5rem !important;
+}
+
+.fs-2 {
+    font-size: 2rem !important;
+}
+
+.fs-3 {
+    font-size: 1.75rem !important;
+}
+
+.fs-4 {
+    font-size: 1.5rem !important;
+}
+
+.fs-5 {
+    font-size: 1.25rem !important;
+}
+
+.fs-6 {
+    font-size: 1rem !important;
 }
 
 .square {
@@ -156,6 +212,10 @@
 
 .h-auto {
     height: auto;
+}
+
+.w-auto {
+    width: auto;
 }
 
 .mw-100 {
@@ -206,7 +266,7 @@
     display: block !important;
 }
 
-.d-i-block {
+.d-inline-block {
     display: inline-block !important;
 }
 
@@ -242,6 +302,11 @@
     @include breakpoint('md') {
         display: none;
     }
+}
+
+.space-beetween {
+    @extend %flex;
+    justify-content: space-between;
 }
 
 .desktop {

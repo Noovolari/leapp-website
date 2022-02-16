@@ -4,7 +4,7 @@
     z-index: 999;
     width: 100%;
     border-bottom: 1px solid #575757;
-    background-color: $blue;
+    background-color: $violet;
 
     #topbar {
         @extend %flex;
@@ -52,10 +52,10 @@
                 display: block;
                 margin-right: 10px;
 
-                @include breakpoint('md') {
+                /* @include breakpoint('md') {
                     width: auto;
                     height: auto;
-                }
+                } */
             }
         }
 
@@ -119,13 +119,15 @@
         }
 
         #new {
-            background-color: $turquoise;
+            position: absolute;
+            margin-top: -7px;
+            right: -30px;
+            background-color: $turquoise-light;
             color: $white;
             @include border-radius(5px);
             display: inline-block;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
-            margin-left: 2px;
             padding: 2px 5px;
         }
 

@@ -1,19 +1,24 @@
 /** Macro Features */
 #main-features {
-    text-align: center;
+
+    .col {
+        width: 50%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 
     .card-holder {
         @include breakpoint('md') {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         .card {
-            text-align: center;
             padding-bottom: $global-padding-default;
 
             @include breakpoint('md') {
-                width: 30%;
+                width: 50%;
             }
             a {
                 color: $text_color;
@@ -24,7 +29,7 @@
 
     i {
         @include border-radius(10px);
-        background: $turquoise;
+        background: $violet;
         color: $white;
         font-size: 25px;
         width: 68px;
@@ -36,9 +41,9 @@
     }
 
     h3 {
-        margin: 1.750rem;
+        margin: 1.250rem 0;
         font-weight: 700;
-        font-size: 1.750rem;
+        font-size: 1.250rem;
         
         @include breakpoint('md') {
             line-height: 1.2;
@@ -50,5 +55,9 @@
         font-weight: 300;
         color: $text_color;
         padding: 0 12%;
+    }
+
+    .cta {
+        width: 20%;
     }
 }

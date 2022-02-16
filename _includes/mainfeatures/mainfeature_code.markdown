@@ -1,1 +1,0 @@
-Automatic temporary Cloud credentials generation and rotation

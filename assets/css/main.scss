@@ -10,6 +10,8 @@
 @import "partials/hero-unit";
 @import "partials/main-features";
 @import "partials/features";
+@import "partials/steps";
+@import "partials/opensource";
 @import "partials/key-features";
 @import "partials/faq";
 @import "partials/get-started";
@@ -27,7 +29,7 @@ blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
 body {
-    font: 400 16px/1.5 "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $blue;
+    font: 400 16px/1.5 "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $violet;
     -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
     min-height: 100vh; flex-direction: column;    
 }
@@ -60,9 +62,7 @@ li > ul, li > ol { margin-bottom: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 /** Links */
-a { color: $turquoise; text-decoration: none; cursor: pointer; }
-a:visited { color: $turquoise; }
-a:hover { color: $turquoise; }
+a { text-decoration: none; cursor: pointer; }
 
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid $grey; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
@@ -78,22 +78,37 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .rounded { border-radius: .625rem !important; }
 
 /** Buttons */
-.btn, .btn-outline-primary { border-radius: 5px; transition: all 0.3s ease; cursor: pointer; padding: 5px 15px; }
-.btn { color: $blue !important; background: $turquoise; }
-.btn:hover { color: $white; }
+.btn { transition: all 0.3s ease; cursor: pointer; padding: 5px 50px; }
 .btn-lg { padding: 1.1rem 2.25rem; font-size: 24px; line-height: 1.5;  }
-.btn-outline-primary { color: $turquoise; border: 2px solid $turquoise; }
-.btn-outline-primary:hover { color: $white; background-color: $turquoise; border-color: $turquoise; }
-.btn-secondary { color: $turquoise; background: $white; }
-.btn-secondary:hover { color: $turquoise; opacity: 0.9; }
+.btn-outline-primary { color: $white !important; border: 2px solid $white; }
+.btn-outline-primary:hover { color: $white !important; background-color: $violet; border-color: $violet; }
+.btn-secondary { color: $violet; background: $white; }
+.btn-secondary:hover { opacity: 0.9; }
+.btn-third { color: $white; background: $violet; }
 
-.section-title {
-    color: $blue;
-    
-    @include breakpoint('md') {
-        font-size: 40px;
+section { 
+    .dark {
+        background-color: $violet;
     }
-    &.mgb {
-        margin-bottom: $global-padding-large;
+    .section-subtitle {
+        color: $violet;
+        
+        @include breakpoint('md') {
+            font-size: 25px;
+        }
+        &.mgb {
+            margin-bottom: $global-padding-mid;
+        }
+    }
+    .section-title {
+        color: $violet;
+        
+        @include breakpoint('md') {
+            font-size: 40px;
+        }
+        &.mgb {
+            margin-bottom: $global-padding-large;
+        }
     }
 }
+

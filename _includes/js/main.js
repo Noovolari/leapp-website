@@ -18,17 +18,19 @@
                 downloadContent: $("#download-content"),
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
-                gitHubReleases: "https://github.com/Noovolari/leapp/releases/"
+                gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
+                steps: $("#steps-navigation a")
             },
             init: function () {
 
                 this._hamburger();
-                if (this.elements.downloadAction.length != 0) {
+                /* if (this.elements.downloadAction.length != 0) {
                     this._download();
-                }
+                } */
                 this._slick();
                 this._anchor();
                 this._accordion();
+                this._steps();
                 this._formValidate();
                 if (this.elements.releases.length > 0) {
                     this._releases();
@@ -122,15 +124,25 @@
                     easing: "linear"
                 });
             },
-            _anchor: function () {
+            _anchor: function (elm) {
                 var _self = this;
                 var hash = $(location).attr('hash');
+                if(elm) hash = elm;
 
                 if (hash) {
                     window.scrollTo(0, 0);
                     var lastElmPos = $(hash).position().top - $("#navbar-container").outerHeight();
                     _self._scrollTo(lastElmPos);
                 }
+            },
+            _steps: function () {
+                var _self = this;
+                
+                this.elements.steps.on("click", function (e) {
+                    e.preventDefault();
+                    var elm = $(this).attr("href");
+                    _self._anchor(elm);
+                });
             },
             _accordion: function () {
                 this.elements.accordion.on("click", ".accordion-header", function () {
