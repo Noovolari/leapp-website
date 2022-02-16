@@ -130,6 +130,24 @@
         margin: 4.0rem 0;
     }
 
+    #hero-button {
+        @include breakpoint('md') {
+            display: flex;
+        }
+
+        #hero-join {
+            display: inline-block;
+
+            @include breakpoint('md') {
+                margin-right: 2.222rem;
+            }
+        }
+
+        #hero-getarted {
+            display: inline-block;
+        }
+    }
+
     .fade-up {
         width: 100%;
         margin: 0 auto;
@@ -163,7 +181,7 @@
     text-align: center;
     width: 300px;
 
-    @include breakpoint('0','md') {
+    @include breakpoint('0', 'md') {
         margin-bottom: $global-padding-mid;
     }
 }

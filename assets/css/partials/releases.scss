@@ -1,6 +1,10 @@
 #releases-content {
     min-height: 150px;
 
+    a {
+        color: $turquoise;
+    }
+
     >p {
         margin-bottom: $global-padding-large;
     }

@@ -2,7 +2,7 @@
 #steps {
     background: $violet;
 
-    #steps-navigation {
+    .steps-navigation {
         a {
             opacity: 0.3;
             color: $white;
@@ -28,7 +28,7 @@
     }
 
     .step {
-        align-items: center;
+        /* align-items: center; */
 
         @include breakpoint('md') {
             &.reverse {

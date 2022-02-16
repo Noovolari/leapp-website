@@ -82,7 +82,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .btn-lg { padding: 1.1rem 2.25rem; font-size: 24px; line-height: 1.5;  }
 .btn-outline-primary { color: $white !important; border: 2px solid $white; }
 .btn-outline-primary:hover { color: $white !important; background-color: $violet; border-color: $violet; }
-.btn-secondary { color: $violet; background: $white; }
+.btn-secondary { color: $violet; background: $white; border: 2px solid $white; }
 .btn-secondary:hover { opacity: 0.9; }
 .btn-third { color: $white; background: $violet; }
 

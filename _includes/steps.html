@@ -4,14 +4,10 @@
             <h2 class="section-title white">{{site.data.steps.title}}</h2>
         {% endif %}
         <div class="steps-holder">
-            <div id="steps-navigation" class="mb-3">
-                <a href="#step1" class="active d-inline-block pr-2 fs-4">STEP 1</a>
-                <a href="#step2" class="d-inline-block pr-2 fs-4">STEP 2</a>
-                <a href="#step3" class="d-inline-block pr-2 fs-4">STEP 3</a>
-            </div>
-
             {% for step in site.data.steps.step %}
                 {% capture c %}{% cycle 'reverse', '' %}{% endcapture %}
+                {% assign current = 'active' %}
+                
                 <div class="step space-beetween mb-3 {{c}}" id="step{{forloop.index}}">
                     <div class="col asset">
                         {% if step.video | strip_newlines != "" %}
@@ -26,6 +22,12 @@
                         {% endif %}
                     </div>
                     <div class="col content">
+                        <div class="steps-navigation mb-5">
+                            <a href="#step1" class="{% if forloop.index == 1 %} {{current}} {% endif %} d-inline-block pr-2 fs-4">STEP 1</a>
+                            <a href="#step2" class="{% if forloop.index == 2 %} {{current}} {% endif %}d-inline-block pr-2 fs-4">STEP 2</a>
+                            <a href="#step3" class="{% if forloop.index == 3 %} {{current}} {% endif %}d-inline-block pr-2 fs-4">STEP 3</a>
+                        </div>
+
                         <h2>{{ step.title }}</h2>
                         {{step.content}}
                     </div>

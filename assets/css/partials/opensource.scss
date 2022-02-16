@@ -5,10 +5,12 @@
     color: $white;
     @include border-radius(20px);
 
-    .col {
-        width: 50%; 
-        padding: 0 40px;
-        box-sizing: border-box;
+    @include breakpoint('md') {
+        .col {
+            width: 50%;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
     }
 
     .numbers-holder {
@@ -18,12 +20,14 @@
             justify-content: space-between;
             flex-wrap: wrap;
         }
+
         .number {
             padding-bottom: $global-padding-default;
 
             @include breakpoint('md') {
                 width: 50%;
             }
+
             a {
                 color: $text_color;
                 text-decoration: underline;
@@ -32,9 +36,14 @@
     }
 
     #octodex {
-        position: absolute;
-        bottom: 0;
-        right: -35px;
-        width: 300px;
+        display: none;
+
+        @include breakpoint('md') {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: -35px;
+            width: 300px;
+        }
     }
 }
