@@ -1,0 +1,47 @@
+#contributor {
+    .title {
+        font-weight: 700;
+        color: $violet-light;
+    }
+
+    .subtitle {
+        color: $violet-light;
+    }
+
+    #contributor-wrapper {
+        @include breakpoint('md') {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        .contributor {
+            padding: $global-padding-mid;
+            text-align: center;
+            margin: $global-padding-default 0;
+            @include box-shadow();
+            @include border-radius(10px);
+            
+            @include breakpoint('md') {
+                width: 30%;
+                margin: $global-padding-small;
+            }
+
+            .contributor-title {
+                color: $white;
+            }
+
+            .contributor-icon {
+                font-size: 70px;
+                line-height: 80px;
+                margin-bottom: $global-padding-small;
+                color: $white;
+            }
+
+            .contributor-subtitle {
+                color: $white;
+            }
+        }
+    }
+
+}

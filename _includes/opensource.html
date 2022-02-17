@@ -1,0 +1,27 @@
+<section>
+    <div class="container">
+
+        <div id="opensource" class="mb-3 position-relative"> 
+            <div class="col">
+                <div class="fs-3 mb-3 text-uppercase">Open source</div>
+                <div class="fs-1 mb-1 text-uppercase"><strong>NOTHING GOOD IS BUILT ALONE</strong></div>
+                <div class="mb-3">How Leapp help you in solving your problem with the correct copyright.</div>
+                <a href="{{site.github_url}}" class="btn btn-secondary d-inline-block mt-2 mb-2 fs-5">Browse on GitHub</a>
+            </div>
+            <div class="col">
+                <div class="numbers-holder">
+                    {% for item in site.data.main_features.numbers %}
+                    <div class="number text-center">
+                        <h3 class="fs-1">{{ item.title }}</h3>
+                        {% if item.subtitle != nil %}
+                            <div class="fs-5">{{ item.subtitle }}</div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/octodex.png" alt="Octodex" width="1" height="1" class="w-auto h-auto" id="octodex"/>
+            </div>
+        </div>
+        
+    </div>
+</section>

@@ -1,16 +1,21 @@
 <footer>
     <div class="container">
         <div class="footer-cta">
-            <h2>{{site.data.footer.cta_text}}</h2>
+            <!-- <h2>{{site.data.footer.cta_text}}</h2> -->
+            <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48"/></a>
+            <a href="{{site.get_started}}" class="btn btn-secondary d-inline-block fs-5" id="hero-gestarted">Get Started</a>
         </div>
         <hr>
         <ul>
             <li>
-                <span>&copy; 2020 Noovolari, All rights reserved. | Powered by </span>
-                <a href="https://www.besharp.it" target="_blank" rel="noopener"><img src="{{ site.url }}{{site.baseurl}}/assets/img/besharp.png" class="footer-besharp" width="68" height="28" alt="beSharp"></span></li></a>
+                <span>&copy; 2022 Noovolari, All rights reserved. | Powered py </span>
+                <a href="https://www.besharp.it" target="_blank" rel="noopener" class="footer-besharp" >
+                    <img src="{{ site.url }}{{site.baseurl}}/assets/img/besharp.svg" width="68" height="28" alt="beSharp">
+                </a>
+            </li>
             <li>
-                <a title="contacts" href="{{site.data.footer.contacts_url}}">Contacts</a>
-                <a title="Privacy Policy" href="{{site.data.footer.privacy_url}}">Privacy Policy</a>
+                <a title="contacts" href="{{site.data.footer.contacts_url}}" class="pr-1">Contacts</a>
+                <a title="Privacy Policy" href="{{site.data.footer.privacy_url}}" class="pr-1">Privacy Policy</a>
                 <a title="Leapp GitHub" href="{{site.github_url}}" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
             </li>
         </ul>

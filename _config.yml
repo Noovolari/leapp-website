@@ -28,6 +28,7 @@ get_started: 'https://docs.leapp.cloud/installation/install-leapp/'
 facebook_url: '#'
 twitter_url: '#'
 linkedin_url: '#'
+slack: 'https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q'
 
 sass:
   sass_dir: assets/css

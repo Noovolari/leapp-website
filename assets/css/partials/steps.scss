@@ -1,13 +1,14 @@
 /** Features */
 #steps {
-    background: $violet;
-
+    /* background: $violet-dark; */
+    background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
+    
     .steps-navigation {
         a {
             opacity: 0.3;
             color: $white;
-    
-            &:hover, 
+
+            &:hover,
             &.active {
                 opacity: 1;
             }
@@ -29,34 +30,69 @@
 
     .step {
         /* align-items: center; */
-
-        @include breakpoint('md') {
-            &.reverse {
-                flex-direction: row-reverse;
-
-                .asset {
-                    padding-right: 0;
-                }
-                .content {
-                    padding-left: 0;
-                }
+        .image {
+            img {
+                width: 100%;
             }
         }
 
-        .col {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        
-        .video {
-            width: 100%;
-            margin-bottom: $global-padding-default;
+        @include breakpoint('md') {
+            -webkit-display: flex;
+            -moz-display: flex;
+            -ms-display: flex;
+            -o-display: flex;
+            display: flex;
+            justify-content: space-between;
+            height: 600px;
+            position: relative;
 
-            @include breakpoint('md') {
-                width: calc(66.67% - 40px);
-                padding: 0 20px;
-                display: flex;
+            .col {
+                width: 50%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .image {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    left: -200px;
+                    right: auto;
+                    display: block;
+                    max-height: 600px;
+                }
+            }
+
+            &.reverse {
+                flex-direction: row-reverse;
+
+                .content {
+                    padding-left: 0;
+                }
+
+                .image {
+                    img {
+                        right: -200px;
+                        left: auto;
+                    }
+                }
+            }
+            
+        }
+
+        .asset {
+            padding: 0;
+
+            .video {
+                width: 100%;
+                margin-bottom: $global-padding-default;
+
+                @include breakpoint('md') {
+                    width: calc(66.67% - 40px);
+                    padding: 0 20px;
+                    display: flex;
+                }
             }
         }
 

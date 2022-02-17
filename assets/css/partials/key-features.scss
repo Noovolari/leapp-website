@@ -25,7 +25,7 @@
             .far,
             .fas {
                 display: block;
-                color: $turquoise;
+                color: $violet-light;
                 font-size: 35px;
                 margin-bottom: $global-padding-default;
             }
@@ -38,7 +38,7 @@
 
             &.leapp {
                 display: none;
-                background-color: $violet;
+                background-color: $violet-dark;
 
                 @include breakpoint('md') {
                     display: flex;

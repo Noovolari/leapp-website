@@ -2,7 +2,7 @@
     min-height: 150px;
 
     a {
-        color: $turquoise;
+        color: $violet-light;
     }
 
     >p {
@@ -23,7 +23,7 @@
         background-color: $orange;
         box-sizing: border-box;
         @include border-radius(10px);
-        color: $violet;
+        color: $violet-dark;
         display: inline-block;
         font-size: 20px;
         font-weight: bold;
@@ -47,9 +47,9 @@
             margin: 10px 10px 10px 0;
 
             a {
-                background-color: $turquoise;
+                background-color: $violet-light;
                 @include border-radius(5px);
-                color: $violet;
+                color: $violet-dark;
                 display: inline-block;
                 font-size: 22px;
                 padding: 5px 15px;

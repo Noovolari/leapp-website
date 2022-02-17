@@ -25,6 +25,14 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, $opacity);
 }
 
+@mixin linear-gradient($color1, $color2) {
+    background: $color1;
+    background: -moz-linear-gradient(90deg, $color1 0%, $color2 100%);
+    background: -webkit-linear-gradient(90deg, $color1 0%, $color2 100%);
+    background: linear-gradient(90deg, $color1 0%, $color2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color1", endColorstr="$color2", GradientType=1);
+}
+
 %flex {
     -webkit-display: flex;
     -moz-display: flex;

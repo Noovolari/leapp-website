@@ -1,11 +1,14 @@
 /** Waved Quote */
 #opensource {
-    background-color: $violet;
+    /* background-color: $violet-dark; */
+    background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
     padding: $global-padding-mid;
     color: $white;
     @include border-radius(20px);
 
     @include breakpoint('md') {
+        display: flex;
+
         .col {
             width: 50%;
             padding: 0 40px;

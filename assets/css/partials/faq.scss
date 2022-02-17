@@ -8,7 +8,7 @@ ul.accordion {
         color: $white;
         @extend %flex;
         align-items: center;
-        background-color: $violet;
+        background-color: $violet-dark;
         margin-bottom: 10px;
         padding: $global-padding-default;
         position: relative;
@@ -25,11 +25,11 @@ ul.accordion {
 
             &.fa-plus {
                 background-color: $orange;
-                color: $violet;
+                color: $violet-dark;
             }
 
             &.fa-minus {
-                background-color: $turquoise;
+                background-color: $violet-light;
                 color: $white;
             }
         }
@@ -40,7 +40,7 @@ ul.accordion {
         padding: $global-padding-default;
         transition: height 2s;
         background-color: $white;
-        border: 1px solid $violet;
+        border: 1px solid $violet-dark;
         @include border-radius(5px);
         margin-bottom: 30px;
     }

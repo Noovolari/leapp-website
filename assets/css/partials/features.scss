@@ -1,6 +1,6 @@
 /** Features */
 #features {
-    background: $violet;
+    background: $violet-dark;
 
     h3 {
         color: $white;
@@ -69,7 +69,7 @@
             font-size: 30px;
             font-weight: 600;
             line-height: 1.2;
-            color: $turquoise;
+            color: $violet-light;
         }
 
         p {
@@ -82,7 +82,7 @@
 
         p em {
             font-style: normal;
-            color: $turquoise;
+            color: $violet-light;
             font-weight: bold;
         }
 

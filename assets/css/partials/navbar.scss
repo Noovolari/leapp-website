@@ -4,7 +4,7 @@
     z-index: 999;
     width: 100%;
     border-bottom: 1px solid #575757;
-    background-color: $violet;
+    background-color: $violet-dark;
 
     #topbar {
         @extend %flex;
@@ -90,7 +90,7 @@
 
                 li {
                     padding: 10px 0;
-                    border-bottom: 1px solid $turquoise;
+                    border-bottom: 1px solid $violet-light;
 
                     &:last-child {
                         border: 0;
@@ -109,12 +109,12 @@
         }
 
         a:hover {
-            color: $turquoise;
+            color: $violet-light;
         }
 
         i {
             font-size: 1.563rem;
-            color: $turquoise;
+            color: $violet-light;
             margin-right: 10px;
         }
 

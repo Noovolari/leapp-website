@@ -1,6 +1,6 @@
-/** Footer */
 footer { 
-    background: $black; 
+    /* background: $black; */ 
+    background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
     color: $white;
     text-align: center;
 
@@ -9,34 +9,41 @@ footer {
     }
 
     ul { 
-        padding-left: 0; margin-bottom: 0; list-style: none; align-items: center; justify-content: space-between; 
+        padding-left: 0; margin-bottom: 0; list-style: none;
 
         @include breakpoint('md') {
+            align-items: center;
+            justify-content: space-between; 
             display: flex;
             flex-wrap: wrap; 
         }
         @include breakpoint('0','md') {
             span { display: block; }
         }
-        a:link, a:visited { color: $white; display: inline-block; margin: 0 0 0 20px; }    
+
+        li { position: relative; }
+        a:link, a:visited { color: $white; display: inline-block; }    
     }
     
     .footer-cta { 
-        overflow: hidden;
-        text-align: center;
-        padding-bottom: $global-padding-default;
-
-        h2 { color: $turquoise; padding: 10px 0 0; font-size: 35px; }
-        a:link, a:visited { display: inline-block; background: $turquoise; color: $violet; margin: auto; border: 0; }
-        a:hover { color: $white; }
-
         @include breakpoint('md') {
-            text-align: left;
+            display: flex;
+            justify-content: space-between; 
+        }
 
-            h2 { float: left; }
-            a:link, a:visited { float: right; width: auto; }
+        a:nth-child(2){
+            padding-top: 10px;
         }
     }
-    hr { display: block; height: 1px; background: $turquoise; border: 0; margin: $global-padding-default 0; }
-    .footer-besharp { margin: 10px 0 10px; }
+    hr { display: block; height: 1px; background: $white; border: 0; margin: $global-padding-default 0; }
+    .footer-besharp { 
+        margin: 20px 0;
+        display: inline-block;
+        @include breakpoint('md') {
+            position: absolute; 
+            top: 0; 
+            right: -80px; 
+            margin: 0;
+        }
+    }
 }

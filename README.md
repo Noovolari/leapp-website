@@ -85,11 +85,12 @@ Layouts are used to define **how a page is shown** in the site: they are linked 
 <html>
     {% include header.html %}
     <body>
+        {% include tagmanagerscript.html %}
         {% include navbar.html %}
         {% include hero-unit.html %}
         {% include main-features.html %}
-        {% include quote.html %}
-        {% include features.html %}
+        {% include steps.html %} 
+        {% include contributor.html %} 
         {% include footer.html %}
     </body>
 </html>

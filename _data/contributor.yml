@@ -1,0 +1,29 @@
+title: JOIN THE COMMUNITY
+subtitle:  "Become a contributor"
+contributors:
+  - contributor_title: GitHub
+    contributor_content: "How Leapp help you in solving your problem with the correct copyright."
+    contributor_download_label: Start contributing
+    contributor_download_url: https://github.com/Noovolari/leapp
+    contributor_download_target: target="_blank" rel="noopener"
+    contributor_icon: fa-github
+    contributor_color_1: "#2C2349"
+    contributor_color_2: "#584591"
+
+  - contributor_title: Slack
+    contributor_content: "How Leapp help you in solving your problem with the correct copyright."
+    contributor_download_label: Get Started
+    contributor_download_url: https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q
+    contributor_download_target: 
+    contributor_icon: fa-slack
+    contributor_color_1: "#55706C"
+    contributor_color_2: "#AADFD8"
+    
+  - contributor_title: Roadmap
+    contributor_content: "How Leapp help you in solving your problem with the correct copyright."
+    contributor_download_label: Get Started
+    contributor_download_url: https://docs.leapp.cloud/roadmap
+    contributor_download_target: 
+    contributor_icon: fa-map-marked
+    contributor_color_1: "#2B5975"
+    contributor_color_2: "#56B2E9"

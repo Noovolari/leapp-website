@@ -1,6 +1,7 @@
 /** Hero unit */
 #hero-unit {
-    background: $violet;
+    /* background: $violet-dark; */
+    background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
     padding-top: 130px;
 
     @include breakpoint('md') {
@@ -83,7 +84,7 @@
             }
 
             padding-bottom: $global-padding-default;
-            border-bottom: 1px solid $turquoise;
+            border-bottom: 1px solid $violet-light;
             margin-bottom: $global-padding-default;
         }
 
@@ -245,7 +246,7 @@
         background-color: $grey-f5;
         border: 1px solid $grey-cc;
         @include border-radius(5px);
-        color: $violet;
+        color: $violet-dark;
         position: absolute;
         top: 46px;
         width: 100%;
@@ -271,7 +272,7 @@
 
                         a:link,
                         a:visited {
-                            color: $violet;
+                            color: $violet-dark;
                         }
                     }
                 }

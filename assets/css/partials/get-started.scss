@@ -1,6 +1,6 @@
 /** Hero unit */
 #get-started {
-    background: $violet;
+    background: $violet-dark;
 
     fieldset {
         padding: 0;
@@ -34,12 +34,12 @@
                 }
 
                 span {
-                    color: $turquoise;
+                    color: $violet-light;
                 }
             }
 
             .subtitle {
-                color: $turquoise;
+                color: $violet-light;
                 font-size: 1.25rem;
                 font-weight: bold;
             }

@@ -19,9 +19,7 @@
 @import "partials/slider";
 @import "partials/releases";
 @import "partials/sponsors";
-// @import "partials/quote";
-// @import "partials/docs";
-@import "partials/plans";
+@import "partials/contributor";
 
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p,
@@ -29,7 +27,7 @@ blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
 body {
-    font: 400 16px/1.5 "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $violet;
+    font: 400 16px/1.5 "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $violet-dark;
     -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
     min-height: 100vh; flex-direction: column;    
 }
@@ -47,7 +45,7 @@ section, .content { width: 100%; display: block; margin: 0; padding: 0; }
 }
 
 /** Images */
-img { max-width: 100%; vertical-align: middle; }
+/* img { max-width: 100%; vertical-align: middle; } */
 svg { overflow: hidden; vertical-align: middle; }
 
 /** Figures */
@@ -81,17 +79,17 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .btn { transition: all 0.3s ease; cursor: pointer; padding: 5px 50px; }
 .btn-lg { padding: 1.1rem 2.25rem; font-size: 24px; line-height: 1.5;  }
 .btn-outline-primary { color: $white !important; border: 2px solid $white; }
-.btn-outline-primary:hover { color: $white !important; background-color: $violet; border-color: $violet; }
-.btn-secondary { color: $violet; background: $white; border: 2px solid $white; }
+.btn-outline-primary:hover { color: $white !important; background-color: $violet-dark; border-color: $violet-dark; }
+.btn-secondary { color: $violet-dark; background: $white; border: 2px solid $white; }
 .btn-secondary:hover { opacity: 0.9; }
-.btn-third { color: $white; background: $violet; }
+.btn-third { color: $white; background: $violet-dark; }
 
 section { 
     .dark {
-        background-color: $violet;
+        background-color: $violet-dark;
     }
     .section-subtitle {
-        color: $violet;
+        color: $violet-dark;
         
         @include breakpoint('md') {
             font-size: 25px;
@@ -101,7 +99,7 @@ section {
         }
     }
     .section-title {
-        color: $violet;
+        color: $violet-dark;
         
         @include breakpoint('md') {
             font-size: 40px;
