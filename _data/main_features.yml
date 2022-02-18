@@ -1,24 +1,24 @@
 title: "WHY DEVELOPERS <img src='/assets/img/heart.png' class='d-inline-block'> LEAPP?"
 features:
-  - title: Fast
+  - title: Lightning fast
     icon: fa-bolt
     #content: mainfeatures/mainfeature_monitor.markdown
-    content: "Automatic temporary Cloud credentials generation and rotation"
+    content: "Cloud credentials available in a click."
 
-  - title: Secure
+  - title: Safe2
     icon: fa-lock-alt
     #content: mainfeatures/mainfeature_code.markdown
-    content: "Automatic temporary Cloud credentials generation and rotation"
+    content: "Data stored locally encrypted in your System Vault."
 
-  - title: Centralized
+  - title: All in one place
     icon: fa-box
     #content: mainfeatures/mainfeature_github.markdown
-    content: "Automatic temporary Cloud credentials generation and rotation"
+    content: "Work with your Cloud Identities from a single place."
 
-  - title: Flexible
+  - title: Fire and forget
     icon: fa-flux-capacitor
     #content: mainfeatures/mainfeature_github.markdown
-    content: "Automatic temporary Cloud credentials generation and rotation"
+    content: "Automatic temporary Cloud credentials generation and rotation."
 numbers: 
   - number:
     title: "170<br>ISSUES"

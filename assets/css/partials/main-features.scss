@@ -34,10 +34,10 @@
     }
 
     i {
-        @include border-radius(10px);
-        /* background: $violet-dark; */
-        background-image: radial-gradient(farthest-corner at 50% 50%, $violet-light 0%, $violet-dark 70%);
-        color: $white;
+        @include border-radius(3px);
+        background: $violet-dark;
+        /* background-image: radial-gradient(farthest-corner at 50% 50%, $violet-light 0%, $violet-dark 70%); */
+        color: $grey;
         font-size: 25px;
         width: 68px;
         height: 68px;

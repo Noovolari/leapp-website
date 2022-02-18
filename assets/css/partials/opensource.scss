@@ -16,6 +16,14 @@
         }
     }
 
+    .browse {
+        display: block;
+        text-align: center;
+        @include breakpoint('md') {
+            display: inline-block;
+        }
+    }
+
     .numbers-holder {
         @include breakpoint('md') {
             display: flex;

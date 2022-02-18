@@ -27,7 +27,7 @@ blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
 body {
-    font: 400 16px/1.5 "Lato", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $violet-dark;
+    font: 400 16px/1.5 "Montserrat", sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $violet-dark;
     -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
     min-height: 100vh; flex-direction: column;    
 }
@@ -76,18 +76,24 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .rounded { border-radius: .625rem !important; }
 
 /** Buttons */
-.btn { transition: all 0.3s ease; cursor: pointer; padding: 5px 50px; }
+.btn { transition: all 0.3s ease; cursor: pointer; padding: 10px 50px; }
 .btn-lg { padding: 1.1rem 2.25rem; font-size: 24px; line-height: 1.5;  }
 .btn-outline-primary { color: $white !important; border: 2px solid $white; }
-.btn-outline-primary:hover { color: $white !important; background-color: $violet-dark; border-color: $violet-dark; }
+.btn-outline-primary:hover { color: $white !important; background-color: $violet-dark; opacity: 0.7; }
+.btn-outline-secondary { color: $blue !important; border: 2px solid $blue; }
+.btn-outline-secondary:hover { color: $blue !important; opacity: 0.7; }
 .btn-secondary { color: $violet-dark; background: $white; border: 2px solid $white; }
-.btn-secondary:hover { opacity: 0.9; }
+.btn-secondary:hover { opacity: 0.7; }
 .btn-third { color: $white; background: $violet-dark; }
 
 section { 
-    .dark {
+    &.dark {
         background-color: $violet-dark;
     }
+    &.light {
+        background-color: $grey;
+    }
+
     .section-subtitle {
         color: $violet-dark;
         

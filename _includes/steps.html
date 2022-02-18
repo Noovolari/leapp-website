@@ -1,4 +1,4 @@
-<section id="steps" class="dark white ovh">
+<section id="steps" class="white ovh">
     <div class="container">
         {% if site.data.steps.title != ""  %}
             <h2 class="section-title white">{{site.data.steps.title}}</h2>
@@ -6,6 +6,8 @@
         <div class="steps-holder">
             {% for step in site.data.steps.step %}
                 {% capture c %}{% cycle 'reverse', '' %}{% endcapture %}
+
+                {% assign indice = forloop.index %}
                 {% assign current = 'active' %}
                 
                 <div class="step mb-3 {{c}}" id="step{{forloop.index}}">
@@ -23,11 +25,10 @@
                     </div>
                     <div class="col content">
                         <div class="steps-navigation mt-3 mb-5">
-                            <a href="#step1" class="{% if forloop.index == 1 %} {{current}} {% endif %} d-inline-block pr-2 fs-4">STEP 1</a>
-                            <a href="#step2" class="{% if forloop.index == 2 %} {{current}} {% endif %}d-inline-block pr-2 fs-4">STEP 2</a>
-                            <a href="#step3" class="{% if forloop.index == 3 %} {{current}} {% endif %}d-inline-block pr-2 fs-4">STEP 3</a>
+                            {% for i in (1..3) %}
+                                <a href="#step{{i}}" class="{% if indice == i %} {{current}} {% endif %} d-inline-block pr-2 fs-5">STEP {{i}}</a>
+                            {% endfor %}                            
                         </div>
-
                         <h2>{{ step.title }}</h2>
                         {{step.content}}
                     </div>

@@ -2,7 +2,7 @@ title: JOIN THE COMMUNITY
 subtitle:  "Become a contributor"
 contributors:
   - contributor_title: GitHub
-    contributor_content: "How Leapp help you in solving your problem with the correct copyright."
+    contributor_content: "Open issues and PRs, and vote on the enanchement that matter the most to you!"
     contributor_download_label: Start contributing
     contributor_download_url: https://github.com/Noovolari/leapp
     contributor_download_target: target="_blank" rel="noopener"
@@ -11,8 +11,8 @@ contributors:
     contributor_color_2: "#584591"
 
   - contributor_title: Slack
-    contributor_content: "How Leapp help you in solving your problem with the correct copyright."
-    contributor_download_label: Get Started
+    contributor_content: "Join us on our team chat<br>and ask questions!"
+    contributor_download_label: Join the discussion
     contributor_download_url: https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q
     contributor_download_target: 
     contributor_icon: fa-slack
@@ -20,9 +20,9 @@ contributors:
     contributor_color_2: "#AADFD8"
     
   - contributor_title: Roadmap
-    contributor_content: "How Leapp help you in solving your problem with the correct copyright."
-    contributor_download_label: Get Started
-    contributor_download_url: https://docs.leapp.cloud/roadmap
+    contributor_content: "Check what<br>we are working on."
+    contributor_download_label: Submit your idea
+    contributor_download_url: 'https://docs.leapp.cloud/roadmap'
     contributor_download_target: 
     contributor_icon: fa-map-marked
     contributor_color_1: "#2B5975"

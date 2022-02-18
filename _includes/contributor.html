@@ -1,11 +1,12 @@
-<section id="contributor">
+<section id="contributor" class="light">
     <div class="container">
         <h3 class="subtitle fs-4">{{site.data.contributor.subtitle}}</h3>
         <h2 class="title mb-3 fs-3">{{site.data.contributor.title}}</h2>
 
         <div id="contributor-wrapper">
             {% for c in site.data.contributor.contributors %}
-                <div class="contributor {% if forloop.first %} orange {% endif %}" style="background: linear-gradient(0deg, {{c.contributor_color_1}} 0%, {{c.contributor_color_2}} 100%);">
+                <!-- <div class="contributor" style="background: linear-gradient(0deg, {{c.contributor_color_1}} 0%, {{c.contributor_color_2}} 100%);"> -->
+                <div class="contributor" style="background: {{c.contributor_color_2}};">
                     <div class="contributor-title fs-3">{{c.contributor_title}}</div>
                     <div class="contributor-icon"><i class="fa {{ c.contributor_icon }}"></i></div>
                     <div class="contributor-subtitle">{{c.contributor_content}}</div>
@@ -16,8 +17,8 @@
                         {% endfor %}
                     </ul>
                     
-                    <a href="{{c.contributor_download_ur}}" class="btn btn-secondary d-inline-block mt-2 fs-5" {{c.contributor_download_target}}>
-                        {{c.contributor_download_label}} - {{c.contributor_download_ur}}
+                    <a href="{{c.contributor_download_url}}" class="btn btn-secondary d-inline-block mt-2" {{c.contributor_download_target}}>
+                        {{c.contributor_download_label}}
                     </a>
                 </div>
             {% endfor %}
