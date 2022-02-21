@@ -11,7 +11,7 @@ contributors:
     contributor_color_2: "#584591"
 
   - contributor_title: Slack
-    contributor_content: "Join us on our team chat<br>and ask questions!"
+    contributor_content: "Join us on our team chat<br>and ask questions!<br>&nbsp;"
     contributor_download_label: Join the discussion
     contributor_download_url: https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q
     contributor_download_target: 
@@ -20,7 +20,7 @@ contributors:
     contributor_color_2: "#AADFD8"
     
   - contributor_title: Roadmap
-    contributor_content: "Check what<br>we are working on."
+    contributor_content: "Check what<br>we are working on.<br>&nbsp;"
     contributor_download_label: Submit your idea
     contributor_download_url: 'https://docs.leapp.cloud/roadmap'
     contributor_download_target: 

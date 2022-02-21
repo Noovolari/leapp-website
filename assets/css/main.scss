@@ -55,12 +55,14 @@ figcaption { font-size: 14px; }
 /** Lists */
 ul, ol { margin: 0; }
 li > ul, li > ol { margin-bottom: 0; }
+ul ul { margin-left: 20px; }
 
 /** Headings */
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 /** Links */
-a { text-decoration: none; cursor: pointer; }
+a { text-decoration: none; cursor: pointer!important; color: #4DA7DE; }
+a:hover, a:visited { color: #4DA7DE; }
 
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid $grey; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
@@ -80,9 +82,9 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .btn-lg { padding: 1.1rem 2.25rem; font-size: 24px; line-height: 1.5;  }
 .btn-outline-primary { color: $white !important; border: 2px solid $white; }
 .btn-outline-primary:hover { color: $white !important; background-color: $violet-dark; opacity: 0.7; }
-.btn-outline-secondary { color: $blue !important; border: 2px solid $blue; }
+.btn-outline-secondary { color: $blue !important; border: 2px solid $blue; background: transparent; }
 .btn-outline-secondary:hover { color: $blue !important; opacity: 0.7; }
-.btn-secondary { color: $violet-dark; background: $white; border: 2px solid $white; }
+.btn-secondary { color: $violet-dark!important; background: $white; border: 2px solid $white; }
 .btn-secondary:hover { opacity: 0.7; }
 .btn-third { color: $white; background: $violet-dark; }
 

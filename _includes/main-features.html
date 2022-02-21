@@ -9,8 +9,10 @@
                     {% for item in site.data.main_features.features %}
                         <div class="card">
                             <i class="fa {{item.icon}}"></i>
-                            <h3>{{ item.title }}</h3>
-                            {{ item.content }}
+                            <div>
+                                <h3>{{ item.title }}</h3>
+                                {{ item.content }}
+                            </div>
                         </div>
                     {% endfor %}
                 </div>

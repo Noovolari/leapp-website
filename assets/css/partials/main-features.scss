@@ -19,9 +19,10 @@
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin-top: $global-padding-intermediate;
         }
         .card {
-            padding-bottom: $global-padding-default;
+            padding-bottom: $global-padding-mid;
 
             @include breakpoint('md') {
                 width: 50%;
@@ -29,6 +30,9 @@
             a {
                 color: $text_color;
                 text-decoration: underline;
+            }
+            div {
+                width: 60%;
             }
         }
     }

@@ -29,7 +29,11 @@ footer {
         li {
             position: relative;
         }
-
+        a.logo-besharp {
+            margin-left: 10px;
+            position: relative;
+            top: 9px;
+        }
         a:link,
         a:visited {
             color: $white;
@@ -39,10 +43,11 @@ footer {
 
     hr {
         display: block;
-        height: 1px;
-        background: $white;
-        border: 0;
-        margin: $global-padding-default 0;
+        background: #fff0;
+        margin: 20px 0;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #52488D;
     }
 
     .footer-cta {

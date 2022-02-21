@@ -16,6 +16,9 @@
         }
 
         .contributor {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             max-width: 250px;
             padding: $global-padding-mid;
             text-align: center;
@@ -43,6 +46,10 @@
 
             .contributor-subtitle {
                 color: $white;
+            }
+
+            .contributor-button {
+                padding: 10px 45px;
             }
         }
     }

@@ -38,7 +38,6 @@ ul.accordion {
     .accordion-content {
         display: none;
         padding: $global-padding-default;
-        transition: height 2s;
         background-color: $white;
         border: 1px solid $violet-dark;
         @include border-radius(5px);

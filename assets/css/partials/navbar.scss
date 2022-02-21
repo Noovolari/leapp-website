@@ -51,11 +51,6 @@
             #logo {
                 display: block;
                 margin-right: 10px;
-
-                /* @include breakpoint('md') {
-                    width: auto;
-                    height: auto;
-                } */
             }
         }
 
@@ -119,13 +114,12 @@
         }
 
         #new {
-            display: none;
             position: absolute;
             margin-top: -7px;
             right: -30px;
-            background-color: $turquoise-light;
-            color: $white;
-            @include border-radius(5px);
+            background-color: $leapp-blue-dark;
+            color: $violet-dark;
+            @include border-radius(10px);
             display: inline-block;
             font-size: 12px;
             font-weight: 700;

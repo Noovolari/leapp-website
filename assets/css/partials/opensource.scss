@@ -13,6 +13,13 @@
             width: 50%;
             padding: 0 40px;
             box-sizing: border-box;
+
+            .subtitle-mod {
+                font-size: 24px!important;
+            }
+            .title-mod {
+                margin-bottom: 50px!important;
+            }
         }
     }
 
@@ -44,7 +51,13 @@
                 color: $text_color;
                 text-decoration: underline;
             }
+
+            h3 {
+                margin: 0;
+            }
         }
+
+
     }
 
     #octodex {
