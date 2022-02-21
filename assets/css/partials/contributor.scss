@@ -16,12 +16,13 @@
         }
 
         .contributor {
+            max-width: 250px;
             padding: $global-padding-mid;
             text-align: center;
             margin: $global-padding-default 0;
             @include box-shadow();
             @include border-radius(10px);
-            
+
             @include breakpoint('md') {
                 width: 30%;
                 margin: $global-padding-default;
@@ -29,6 +30,8 @@
 
             .contributor-title {
                 color: $white;
+                padding-bottom: 20px;
+                font-weight: 600;
             }
 
             .contributor-icon {

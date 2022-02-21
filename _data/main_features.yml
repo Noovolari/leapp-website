@@ -5,7 +5,7 @@ features:
     #content: mainfeatures/mainfeature_monitor.markdown
     content: "Cloud credentials available in a click."
 
-  - title: Safe2
+  - title: Safe²
     icon: fa-lock-alt
     #content: mainfeatures/mainfeature_code.markdown
     content: "Data stored locally encrypted in your System Vault."
@@ -19,15 +19,15 @@ features:
     icon: fa-flux-capacitor
     #content: mainfeatures/mainfeature_github.markdown
     content: "Automatic temporary Cloud credentials generation and rotation."
-numbers: 
+numbers:
   - number:
-    title: "170<br>ISSUES"
-    subtitle: 
+    title: "170"
+    subtitle: Issues
 
   - number:
-    title: "70K<br>HOURS"
-    subtitle: Weekly usage
+    title: "70K"
+    subtitle: Hours Weekly usage
 
   - number:
-    title: "780<br>STARS"
-    subtitle: 
+    title: "780"
+    subtitle: Stars

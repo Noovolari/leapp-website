@@ -1,9 +1,9 @@
 <section class="light">
     <div class="container">
 
-        <div id="opensource" class="mb-3 position-relative"> 
+        <div id="opensource" class="mb-3 position-relative">
             <div class="col">
-                <div class="fs-3 mb-3 text-uppercase">Open source</div>
+                <div class="fs-3 mb-3 text-uppercase subtitle-mod">Open source</div>
                 <div class="fs-1 mb-1 text-uppercase"><strong>NOTHING GOOD IS BUILT ALONE</strong></div>
                 <div class="mb-3">Have some great idea on what to build next? Let’s do it together!</div>
                 <a href="{{site.github_url}}" class="btn btn-secondary mt-2 mb-2 browse">Jump to GitHub</a>
@@ -12,7 +12,7 @@
                 <div class="numbers-holder">
                     {% for item in site.data.main_features.numbers %}
                     <div class="number text-center">
-                        <h3 class="fs-1">{{ item.title }}</h3>
+                        <h3 class="fs-1-bold">{{ item.title }}</h3>
                         {% if item.subtitle != nil %}
                             <div class="fs-5">{{ item.subtitle }}</div>
                         {% endif %}
@@ -22,6 +22,6 @@
                 <img src="{{site.url}}{{site.baseurl}}/assets/img/octodex.png" alt="Octodex" width="1" height="1" class="w-auto h-auto" id="octodex"/>
             </div>
         </div>
-        
+
     </div>
 </section>

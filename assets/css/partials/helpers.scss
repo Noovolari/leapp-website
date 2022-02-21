@@ -180,6 +180,11 @@
     line-height: 2.5rem !important;
 }
 
+.fs-1-bold {
+    font-size: 3.5rem !important;
+    font-weight: 600;
+}
+
 .fs-2 {
     font-size: 2rem !important;
     line-height: 2rem !important;
@@ -331,4 +336,9 @@
         display: block;
     }
 
+}
+
+.steps {
+    font-size: 0.85rem!important;
+    font-weight: 600;
 }
