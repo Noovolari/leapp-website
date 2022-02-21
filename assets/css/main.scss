@@ -78,7 +78,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .rounded { border-radius: .625rem !important; }
 
 /** Buttons */
-.btn { transition: all 0.3s ease; cursor: pointer; padding: 10px 40px; font-weight: 600; text-decoration: none; }
+.btn { transition: all 0.3s ease; cursor: pointer; padding: 10px 40px; font-weight: 600; font-size: 16px; text-decoration: none; }
 .btn-lg { padding: 1.1rem 2.25rem; font-size: 24px; line-height: 1.5;  }
 .btn-outline-primary { color: $white !important; border: 2px solid $white; }
 .btn-outline-primary:hover { color: $white !important; background-color: $violet-dark; opacity: 0.7; }

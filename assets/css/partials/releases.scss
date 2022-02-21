@@ -2,7 +2,8 @@
     min-height: 150px;
 
     a {
-        color: $violet-light;
+        color: $leapp-blue-dark;
+        text-decoration: underline;
     }
 
     >p {
@@ -18,9 +19,15 @@
         display: none;
     }
 
-    h3 a,
-    .nolink {
-        background-color: $orange;
+    h2 {
+        position: relative;
+    }
+    h2 a:after {
+        content: 'Latest';
+        background-color: #93D2D1;
+        position: absolute;
+        left: 112px;
+        top: 6px;
         box-sizing: border-box;
         @include border-radius(10px);
         color: $violet-dark;
@@ -30,6 +37,21 @@
         letter-spacing: 1px;
         padding: 5px 20px;
         text-decoration: none;
+    }
+
+    h2 a, h3 a,
+    .nolink {
+        background-color: #93D2D1;
+        box-sizing: border-box;
+        @include border-radius(10px);
+        color: $violet-dark;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 5px 20px;
+        text-decoration: none;
+
     }
 
     .default-list {
@@ -47,12 +69,15 @@
             margin: 10px 10px 10px 0;
 
             a {
-                background-color: $violet-light;
+                background-color: $leapp-blue-dark;
+                text-decoration: none;
                 @include border-radius(5px);
                 color: $violet-dark;
                 display: inline-block;
-                font-size: 22px;
-                padding: 5px 15px;
+                font-size: 16px;
+                font-weight: bold;
+                height: 24px;
+                padding: 10px 40px;
             }
         }
     }

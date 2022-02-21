@@ -1,6 +1,10 @@
 /** Hero unit */
+
+
 #get-started {
     background: $violet-dark;
+
+    a { text-decoration: underline!important; }
 
     fieldset {
         padding: 0;
@@ -34,12 +38,12 @@
                 }
 
                 span {
-                    color: $violet-light;
+                    color: $leapp-blue-dark;
                 }
             }
 
             .subtitle {
-                color: $violet-light;
+                color: $leapp-blue-dark;
                 font-size: 1.25rem;
                 font-weight: bold;
             }
