@@ -80,11 +80,13 @@
 
         .hero-title {
             @include breakpoint('md') {
+                font-weight: 700;
+                line-height: 2.5rem;
                 font-size: 50px;
+                text-transform: uppercase;
             }
 
             padding-bottom: $global-padding-default;
-            border-bottom: 1px solid $violet-light;
             margin-bottom: $global-padding-default;
         }
 
