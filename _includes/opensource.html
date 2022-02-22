@@ -12,7 +12,7 @@
                 <div class="numbers-holder">
                     {% for item in site.data.main_features.numbers %}
                     <div class="number text-center">
-                        <h3 class="fs-1-bold">{{ item.title }}</h3>
+                        <h3 id ="{{ item.id }}" class="fs-1-bold">{{ item.title }}</h3>
                         {% if item.subtitle != nil %}
                             <div class="fs-5">{{ item.subtitle }}</div>
                         {% endif %}
