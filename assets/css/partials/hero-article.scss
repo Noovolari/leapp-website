@@ -1,0 +1,63 @@
+.hero-unit-center-container {
+  /* margin-top: 60px; */
+
+  @include breakpoint('md') {
+    display: flex;
+    justify-content: center;
+  }
+
+  .col {
+    color: $white;
+
+    @include breakpoint('0', 'md') {
+      padding-bottom: $global-padding-default;
+    }
+
+    @include breakpoint('md') {
+      width: 60%;
+    }
+
+    &.full {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 25px;
+      text-align: center;
+
+      @include breakpoint('md') {
+        font-size: 50px;
+      }
+
+      font-weight: 700;
+      line-height: 4rem;
+      margin-bottom: 45px;
+    }
+
+  }
+
+  .hero-title {
+    @include breakpoint('md') {
+      font-weight: 700;
+      line-height: 2.5rem;
+      font-size: 50px;
+      text-transform: uppercase;
+    }
+
+    padding-bottom: $global-padding-default;
+    margin-bottom: $global-padding-default;
+  }
+
+  .hero-content {
+    font-size: 20px;
+  }
+}
+
+.hero-center-image {
+  display: flex;
+  justify-content: center;
+
+  img {
+    margin-bottom: 40px;
+  }
+}
