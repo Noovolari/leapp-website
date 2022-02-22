@@ -22,12 +22,15 @@ features:
 numbers:
   - number:
     title: "170"
-    subtitle: Issues
+    subtitle: Open Issues
+    id: issues
 
   - number:
     title: "70K"
     subtitle: Hours Weekly usage
+    id: weekly_usage
 
   - number:
     title: "780"
     subtitle: Stars
+    id: stars

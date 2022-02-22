@@ -24,18 +24,29 @@
             init: function () {
 
                 this._hamburger();
-                /* if (this.elements.downloadAction.length != 0) {
-                    this._download();
-                } */
                 this._slick();
                 this._anchor();
                 this._accordion();
                 this._steps();
+                this._githubStats();
                 this._formValidate();
                 if (this.elements.releases.length > 0) {
                     this._releases();
                 }
 
+            },
+            _githubStats: function () {
+                $.getJSON("https://api.github.com/orgs/Noovolari/repos", (data) => {
+                   $(data).each((i, repo) => {
+                       if(repo.name === "leapp") {
+                           const stars = repo.stargazers_count;
+                           const issues = repo.open_issues_count;
+
+                           $('#stars').html(stars);
+                           $('#issues').html(issues);
+                       }
+                   });
+                });
             },
             _hamburger: function () {
                 var _self = this;
