@@ -32,5 +32,5 @@ numbers:
 
   - number:
     title: "170"
-    subtitle: Open Issues
+    subtitle: Issues
     id: issues

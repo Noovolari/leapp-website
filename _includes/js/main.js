@@ -36,14 +36,15 @@
 
             },
             _githubStats: function () {
+                $.getJSON("https://api.github.com/search/issues?q=repo:Noovolari/leapp%20is:issue", (data) => {
+                    const issues = data.total_count;
+                    $('#issues').html(issues);
+                });
                 $.getJSON("https://api.github.com/orgs/Noovolari/repos", (data) => {
                    $(data).each((i, repo) => {
                        if(repo.name === "leapp") {
                            const stars = repo.stargazers_count;
-                           const issues = repo.open_issues_count;
-
                            $('#stars').html(stars);
-                           $('#issues').html(issues);
                        }
                    });
                 });
