@@ -21,11 +21,6 @@ features:
     content: "Automatic temporary Cloud credentials generation and rotation."
 numbers:
   - number:
-    title: "170"
-    subtitle: Open Issues
-    id: issues
-
-  - number:
     title: "70K"
     subtitle: Hours Weekly usage
     id: weekly_usage
@@ -34,3 +29,8 @@ numbers:
     title: "780"
     subtitle: Stars
     id: stars
+
+  - number:
+    title: "170"
+    subtitle: Open Issues
+    id: issues

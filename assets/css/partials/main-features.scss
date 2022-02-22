@@ -2,6 +2,9 @@
 #main-features {
 
     .main-features-wrapper {
+        .col {
+            text-align: center;
+        }
         @include breakpoint('md') {
             display: flex;
             
@@ -9,6 +12,7 @@
                 width: 50%;
                 padding: 0 20px;
                 box-sizing: border-box;
+                text-align: left;
             }
         }
     }
@@ -24,15 +28,18 @@
         .card {
             padding-bottom: $global-padding-mid;
 
+            div {
+                width: 100%;
+            }
             @include breakpoint('md') {
                 width: 50%;
+                div {
+                    width: 60%;
+                }
             }
             a {
                 color: $text_color;
                 text-decoration: underline;
-            }
-            div {
-                width: 60%;
             }
         }
     }

@@ -115,8 +115,10 @@
 
         #new {
             position: absolute;
-            margin-top: -7px;
-            right: -30px;
+            margin-top: 0;
+            left: 88px;
+            top: 14px;
+            right: auto;
             background-color: $leapp-blue-dark;
             color: $violet-dark;
             @include border-radius(5px);
@@ -127,6 +129,10 @@
 
             @include breakpoint('md'){
                 display: block;
+                margin-top: -7px;
+                top: 0;
+                right: -30px;
+                left: auto;
             }
         }
 

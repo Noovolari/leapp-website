@@ -23,15 +23,15 @@
         position: relative;
     }
     h2 a:after {
+        display: none;
         content: 'Latest';
-        background-color: #93D2D1;
+        background-color: #436060;
         position: absolute;
         left: 112px;
         top: 6px;
         box-sizing: border-box;
         @include border-radius(10px);
         color: $violet-dark;
-        display: inline-block;
         font-size: 20px;
         font-weight: bold;
         letter-spacing: 1px;
@@ -41,7 +41,7 @@
 
     h2 a, h3 a,
     .nolink {
-        background-color: #93D2D1;
+        background-color: #436060;
         box-sizing: border-box;
         @include border-radius(10px);
         color: $violet-dark;
