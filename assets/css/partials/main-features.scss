@@ -1,5 +1,72 @@
 /** Macro Features */
 #main-features {
+    overflow: visible;
+
+    .container {
+        position: relative;
+        padding: 150px;
+    }
+    .callout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        background: #A4D6D5;
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        right: 20px;
+        top: -100px;
+
+        padding: 30px 60px;
+
+        .c-image {
+            color: #436060;
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+        .c-text {
+            color: #436060;
+            font-size: 20px;
+            width: 64%;
+        }
+        .c-link {
+            color: #436060;
+            font-size: 20px;
+            width: 16%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                color: #436060;
+                transition: opacity 0.2s ease;
+                cursor: pointer;
+                &:hover {
+                    color: #436060;
+                    opacity: 0.8;
+                }
+            }
+
+            .check-it-out {
+                display: inline-block;
+                margin-right: 30px;
+            }
+
+            img {
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
+
 
     .main-features-wrapper {
         .col {
