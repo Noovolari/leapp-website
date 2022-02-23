@@ -101,10 +101,6 @@ We wanted to celebrate this valuable cooperation in our symbology: Shapes and co
 
 By mixing everything together, we got the new logo.
 
-<div class="center-image"> 
-    <img width="1408" height="500" src="../assets/img/article/rebranding-03.png" alt="rebranding-03">
-</div>
-
 ## We are people, and we build with people.
 
 We are a team, and we are all developers.
