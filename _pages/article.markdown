@@ -101,10 +101,6 @@ We wanted to celebrate this valuable cooperation in our symbology: Shapes and co
 
 By mixing everything together, we got the new logo.
 
-<div class="center-image"> 
-    <img width="1408" height="500" src="../assets/img/article/rebranding-03.png" alt="rebranding-03">
-</div>
-
 ## We are people, and we build with people.
 
 We are a team, and we are all developers.
@@ -141,7 +137,7 @@ Interested in this? [Join the community](https://join.slack.com/t/noovolari/shar
 
 Also, we plan to release a **multi-team version** to **facilitate collaboration between professionals while meeting Governance needs.**
 
-## **We know it will not finish here**.
+## We know it will not finish here.
 
 We know that rebranding is not the end of the journey, but now, we're proud to say: we have something that fits!
 
