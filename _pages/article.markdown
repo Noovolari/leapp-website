@@ -137,7 +137,7 @@ Interested in this? [Join the community](https://join.slack.com/t/noovolari/shar
 
 Also, we plan to release a **multi-team version** to **facilitate collaboration between professionals while meeting Governance needs.**
 
-## **We know it will not finish here**.
+## We know it will not finish here.
 
 We know that rebranding is not the end of the journey, but now, we're proud to say: we have something that fits!
 
