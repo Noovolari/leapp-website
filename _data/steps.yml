@@ -1,7 +1,7 @@
 title: 
 step:
   - title: CONFIGURE
-    content: "<p>Pick your Cloud Provider to add a Leapp Session.</p><p>Choose from supported access methods or leverage your federated identity with SAML 2.0 compliant identity providers.</p><p>(GSuite, Okta, OneLogin supported).</p><p>Automatically provision your sessions from AWS Single Sign-On via Leapp Integration.</p>"
+    content: "<p>Pick your Cloud Provider to add a Leapp Session.</p><p>Choose from supported access methods or <b>leverage your federated identity with SAML 2.0</b> compliant identity providers.</p><p><small>(GSuite, Okta, OneLogin supported)</small>.</p><p>Automatically <b>provision your sessions from AWS Single Sign-On</b> via Leapp Integration.</p>"
     video: 
     autoplay: true
     controls: false
@@ -9,7 +9,7 @@ step:
     image: step1.png
 
   - title: CONNECT
-    content: "<p>Start your Session, and Leapp will automatically generate secure short-lived credentials for you.</p><p>All sensitive data are stored in your local System Vault and used only when needed to provide best-in-class security.</p> <p>Credentials will be cleaned on every Session stop.</p>"
+    content: "<p>Start your Session, and Leapp will <b>automatically generate secure short-lived credentials</b> for you.</p><p>All sensitive data are stored in your <b>local System Vault</b> and used only when needed to provide best-in-class security.</p> <p>Credentials will be cleaned on every Session stop.</p>"
     video: 
     autoplay: true
     controls: false
@@ -17,7 +17,7 @@ step:
     image: step2.png
 
   - title: OPERATE!
-    content: "<p>Leapp seamlessly works with any development tool (Terraform, CDK, Amplify, etc.)</p><p>Integrate Leapp with specific Cloud Services like we did with AWS System Manager Session Manager.</p><p>Start working right away with <strong>your cloud development stack</strong> of choice!</p>"
+    content: "<p>Leapp seamlessly works with any development tool (Terraform, CDK, Amplify, etc.)</p><p>Integrate Leapp with specific Cloud Services like we did with <b>AWS System Manager Session Manager</b>.</p><p>Start working right away with <strong>your cloud development stack</strong> of choice!</p>"
     video: 
     autoplay: true
     controls: false

@@ -21,8 +21,8 @@ features:
     content: "Automatic temporary Cloud credentials generation and rotation."
 numbers:
   - number:
-    title: "70K"
-    subtitle: Hours Weekly usage
+    title: "3K"
+    subtitle: Active Users
     id: weekly_usage
 
   - number:
@@ -32,5 +32,5 @@ numbers:
 
   - number:
     title: "170"
-    subtitle: Issues
+    subtitle: GitHub Issues
     id: issues

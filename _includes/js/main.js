@@ -1,8 +1,7 @@
 (function () {
     "use strict";
 
-    $(function () {
-        var leapp = {
+    window.leapp = {
             elements: {
                 html: $("html"),
                 hamburger: $("#hamburger"),
@@ -34,6 +33,21 @@
                     this._releases();
                 }
 
+            },
+            sendEvent: function(action, element) {
+                var videoTitle = $(element).data('title');
+                if (dataLayer && videoTitle) {
+                    dataLayer.push({
+                        'event': 'gtm.custom_event',
+                        'eventInfo': {
+                            'category': 'Video',
+                            'action': action,
+                            'label': element,
+                            'value': 0,
+                            'nonInteraction': false
+                        }
+                    });
+                }
             },
             _githubStats: function () {
                 $.getJSON("https://api.github.com/search/issues?q=repo:Noovolari/leapp%20is:issue", (data) => {
@@ -378,7 +392,5 @@
             }
         };
 
-        leapp.init();
-    });
-
+    leapp.init();
 })();

@@ -4,7 +4,7 @@ contributors:
   - contributor_title: GitHub
     contributor_content: "Open issues and PRs, and vote on the enanchement that matter the most to you!"
     contributor_download_label: Start contributing
-    contributor_download_url: https://github.com/Noovolari/leapp
+    contributor_download_url: https://github.com/Noovolari/leapp/CONTRIBUTING.md
     contributor_download_target: target="_blank" rel="noopener"
     contributor_icon: fa-github
     contributor_color_1: "#2C2349"
@@ -22,7 +22,7 @@ contributors:
   - contributor_title: Roadmap
     contributor_content: "Check what<br>we are working on.<br>&nbsp;"
     contributor_download_label: Submit your idea
-    contributor_download_url: 'https://docs.leapp.cloud/roadmap'
+    contributor_download_url: 'https://portal.productboard.com/vtc7td5yjfptmgdsxnoorwwr/tabs/4-in-progress'
     contributor_download_target: 
     contributor_icon: fa-map-marked
     contributor_color_1: "#2B5975"

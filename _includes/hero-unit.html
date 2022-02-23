@@ -1,6 +1,8 @@
 <section id="hero-unit" class="home ovh">
     <div class="container">
-        <video height="584" loop autoplay muted style="border-radius: 5px;" class="mobile m-auto mb-2 w-100 h-auto">
+        <video height="584"
+               onpause="leapp.sendEvent('Pause', this)" onplay="leapp.sendEvent('Play', this)" onended="leapp.sendEvent('Ended', this)"
+               autoplay muted style="border-radius: 5px;" data-title="home-page-video" class="mobile m-auto mb-2 w-100 h-auto">
             <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.image}}.webm" type="video/webm">
             <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.image}}.mp4" type="video/mp4">
             <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.image}}.mov" type="video/mov">
@@ -19,7 +21,9 @@
 
             </div>
             <div class="col text-center desktop">
-                <video height="584" loop autoplay muted style="border-radius: 5px">
+                <video height="584"
+                       onpause="leapp.sendEvent('Pause', this)" onplay="leapp.sendEvent('Play', this)" onended="leapp.sendEvent('Ended', this)"
+                       autoplay muted data-title="home-page-video" style="border-radius: 5px">
                     <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.image}}.webm" type="video/webm">
                     <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.image}}.mp4" type="video/mp4">
                     <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.image}}.mov" type="video/mov">
