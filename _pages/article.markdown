@@ -34,7 +34,7 @@ With all these in mind, we had big objectives. We wanted to step up on the way w
 A new captivating logo, a better-defined color scheme, a new copy for our website, and much more. **We** **love to build trust with transparency.**
 
 <div class="center-image"> 
-    <img src="../assets/img/article/rebranding-01.png" alt="rebranding-01">
+    <img width="1408" height="500" src="../assets/img/article/rebranding-01.png" alt="rebranding-01">
 </div>
 
 ## Leapp with a new Identity
@@ -72,7 +72,7 @@ Nonetheless, after days and nights of work, we managed to define a **magic form
 It may seem a bit pretentious, but let's dive deep!
 
 <div class="center-image"> 
-    <img src="../assets/img/article/rebranding-02.png" alt="rebranding-02">
+    <img width="1408" height="500" src="../assets/img/article/rebranding-02.png" alt="rebranding-02">
 </div>
 
 ### Allegory
@@ -102,7 +102,7 @@ We wanted to celebrate this valuable cooperation in our symbology: Shapes and co
 By mixing everything together, we got the new logo.
 
 <div class="center-image"> 
-    <img src="../assets/img/article/rebranding-03.png" alt="rebranding-03">
+    <img width="1408" height="500" src="../assets/img/article/rebranding-03.png" alt="rebranding-03">
 </div>
 
 ## We are people, and we build with people.
