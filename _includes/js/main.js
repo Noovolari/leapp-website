@@ -38,7 +38,7 @@
                 var videoTitle = $(element).data('title');
                 if (dataLayer && videoTitle) {
                     dataLayer.push({
-                        'event': 'gtm.custom_event',
+                        'event': 'main_video.event',
                         'eventInfo': {
                             'category': 'Video',
                             'action': action,
