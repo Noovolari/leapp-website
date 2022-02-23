@@ -34,19 +34,61 @@
                 }
 
             },
-            sendEvent: function(action, element) {
+            sendEvent: function(action, element, event) {
                 var videoTitle = $(element).data('title');
                 if (dataLayer && videoTitle) {
-                    dataLayer.push({
-                        'event': 'main_video.event',
-                        'eventInfo': {
-                            'category': 'Video',
-                            'action': action,
-                            'label': element,
-                            'value': 0,
-                            'nonInteraction': false
+                    if(action !== 'Progress') {
+                        dataLayer.push({
+                            'event': 'main_video.event',
+                            'eventInfo': {
+                                'category': 'Video',
+                                'action': action,
+                                'label': element,
+                                'value': 0,
+                                'nonInteraction': false
+                            }
+                        });
+                    } else {
+                        var totalLength = element.duration % 60;
+                        var percentageCompleted = (element.currentTime / totalLength) * 100;
+                        if(percentageCompleted >= 50 && !leapp.reached50) {
+                            leapp.reached50 = true;
+                            dataLayer.push({
+                                'event': 'main_video.event',
+                                'eventInfo': {
+                                    'category': 'Video',
+                                    'action': action,
+                                    'label': element,
+                                    'value': 50,
+                                    'nonInteraction': false
+                                }
+                            });
+                        } else if(percentageCompleted >= 75 && !leapp.reached75) {
+                            leapp.reached75 = true;
+                            dataLayer.push({
+                                'event': 'main_video.event',
+                                'eventInfo': {
+                                    'category': 'Video',
+                                    'action': action,
+                                    'label': element,
+                                    'value': 75,
+                                    'nonInteraction': false
+                                }
+                            });
+                        } else if(percentageCompleted >= 100 && !leapp.reached100) {
+                            leapp.reached100 = true;
+                            dataLayer.push({
+                                'event': 'main_video.event',
+                                'eventInfo': {
+                                    'category': 'Video',
+                                    'action': action,
+                                    'label': element,
+                                    'value': 100,
+                                    'nonInteraction': false
+                                }
+                            });
                         }
-                    });
+                    }
                 }
             },
             _githubStats: function () {
