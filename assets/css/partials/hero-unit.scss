@@ -4,6 +4,12 @@
     background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
     padding-top: 130px;
 
+    .container {
+        position: relative;
+        padding-bottom: 150px;
+    }
+
+
     @include breakpoint('md') {
         padding-top: 170px;
     }
