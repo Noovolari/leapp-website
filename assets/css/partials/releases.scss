@@ -41,10 +41,10 @@
 
     h2 a, h3 a,
     .nolink {
-        background-color: #436060;
+        color: #436060;
         box-sizing: border-box;
         @include border-radius(10px);
-        color: $violet-dark;
+        background-color: #73E0CF;
         display: inline-block;
         font-size: 20px;
         font-weight: bold;
