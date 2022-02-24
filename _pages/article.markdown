@@ -21,9 +21,9 @@ We wanted to make our strategy and vision clear to our community: **being part 
 
 <aside class="wide-section"> We are Noovolari and our ultimate goal is to create an ecosystem of interconnected tools to make life easier for cloud developers. </aside> 
 
-**We Are Noovolari**.
+**We Are Noovolari. [The company that makes leapp](https://medium.com/leapp-cloud/road-to-noovolari-89df7704e315)**.
 
-Even if all of you know us because of Leapp. **We create products** that aim to revolutionize **working in Complex MultiCloud environments**, allowing users to focus on growing their business.
+Even if all of you know us because of Leapp. **We create products** that aim to revolutionize **working in complex multiple cloud environments**, allowing users to focus on growing their business.
 
 We wanted to define a new image to **put our community and us on the same mindset.**
 
@@ -135,7 +135,7 @@ As we are growing, **Leapp is not only limited to the open-source version**.
 
 Interested in this? [Join the community](https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q) or [email us](mailto:info@noovolari.com?subject=Leapp Pro: Feedback and questions) to stay up to date!
 
-Also, we plan to release a **multi-team version** to **facilitate collaboration between professionals while meeting Governance needs.**
+Also, we plan to release a **team and multi-team version** to **facilitate collaboration between professionals while meeting Governance needs.**
 
 ## We know it will not finish here.
 
