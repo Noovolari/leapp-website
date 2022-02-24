@@ -2,7 +2,7 @@
 title: Rebranding as part of something bigger
 description: 
 permalink: /rebranding
-image: Leapp_Icon.png
+image: article/hero-article-main.png
 layout: article
 hero_content: hero-unit-article.html
 ---
