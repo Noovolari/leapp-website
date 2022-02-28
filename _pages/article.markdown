@@ -119,7 +119,7 @@ We want users to identify with our values. We want them to benefit from the proj
 
 There are many ways to be part of the community today:
 
-- [You can contribute to our repository](https://github.com/Noovolari/leapp/contributing.md).
+- [You can contribute to our repository](https://github.com/Noovolari/leapp/blob/master/CONTRIBUTING.md).
 - [You can give us feedback (issues)](https://github.com/Noovolari/leapp/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
 - You can simply let the dev world know how the project helped your daily work-life.
 
