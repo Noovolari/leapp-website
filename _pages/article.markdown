@@ -1,6 +1,6 @@
 ---
 title: Rebranding as part of something bigger
-description: 
+description: We wanted to make our strategy and vision clear to our community - being part of a bigger project, Noovolari.
 permalink: /rebranding
 image: article/hero-article-main.png
 layout: article

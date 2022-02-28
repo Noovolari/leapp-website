@@ -1,6 +1,6 @@
 ---
-title: Leapp - One step away from your Cloud
-description: Leapp grants to the users the generation of temporary credentials only for accessing the Cloud programmatically.
+title: Leapp - Make the switch, today.
+description: Manage your Cloud credentials locally and improve your workflow with the only open-source desktop app you’ll ever need.
 permalink: /
 image: Leapp_Icon.png
 layout: default

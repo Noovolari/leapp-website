@@ -1,6 +1,6 @@
 ---
 title: Leapp - Support
-description: Leapp grants to the users the generation of temporary credentials only for accessing the Cloud programmatically.
+description: Manage your Cloud credentials locally and improve your workflow with the only open-source desktop app you’ll ever need.
 permalink: /support
 layout: support
 hero_title: Enterprise Support

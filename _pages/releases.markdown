@@ -1,6 +1,6 @@
 ---
 title: Leapp - Releases
-description: Leapp grants to the users the generation of temporary credentials only for accessing the Cloud programmatically.
+description: Download Leapp | Manage your Cloud credentials locally and improve your workflow with the only open-source desktop app you’ll ever need.
 permalink: /releases
 layout: page
 hero_title: Releases

@@ -156,7 +156,7 @@
         box-sizing: border-box;
     }
 
-    h3 {
+    p.main-features-title {
         margin: 1.250rem 0;
         font-weight: 700;
         font-size: 1.250rem;
@@ -166,12 +166,11 @@
         }
     }
 
-    p {
-        font-size: 19px;
-        font-weight: 300;
-        color: $text_color;
-        padding: 0 12%;
+    h2.main-features-content {
+        font: 400 16px/1.5 "Montserrat", sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin-bottom: 0;
     }
+
 
     .cta {
         width: 150px;
