@@ -35,58 +35,91 @@
 
             },
             sendEvent: function(action, element, event) {
-                var videoTitle = $(element).data('title');
-                if (dataLayer && videoTitle) {
-                    if(action !== 'Progress') {
-                        dataLayer.push({
-                            'event': 'main_video.event',
-                            'eventInfo': {
-                                'category': 'Video',
-                                'action': action,
-                                'label': element,
+                if(action.indexOf('Download-From') > -1) {
+                    gtag('event', 'click.event', {
+                        'event_category' : 'Download Leapp',
+                        'event_label' : action,
+                        'value': 1,
+                        'nonInteraction': false
+                    });
+                } else {
+                    var videoTitle = $(element).data('title');
+                    if (dataLayer && videoTitle) {
+                        if(action !== 'Progress') {
+                            dataLayer.push({
+                                'event': 'main_video.event',
+                                'eventInfo': {
+                                    'category': 'Video',
+                                    'action': action,
+                                    'label': element,
+                                    'value': 0,
+                                    'nonInteraction': false
+                                }
+                            });
+                            gtag('event', 'main_video.event', {
+                                'event_category' : 'Video',
+                                'event_label' : action,
                                 'value': 0,
                                 'nonInteraction': false
-                            }
-                        });
-                    } else {
-                        var totalLength = element.duration % 60;
-                        var percentageCompleted = (element.currentTime / totalLength) * 100;
-                        if(percentageCompleted >= 50 && !leapp.reached50) {
-                            leapp.reached50 = true;
-                            dataLayer.push({
-                                'event': 'main_video.event',
-                                'eventInfo': {
-                                    'category': 'Video',
-                                    'action': action,
-                                    'label': element,
+                            });
+                        } else {
+                            var totalLength = element.duration % 60;
+                            var percentageCompleted = (element.currentTime / totalLength) * 100;
+                            if(percentageCompleted >= 50 && !leapp.reached50) {
+                                leapp.reached50 = true;
+                                dataLayer.push({
+                                    'event': 'main_video.event',
+                                    'eventInfo': {
+                                        'category': 'Video',
+                                        'action': action,
+                                        'label': element,
+                                        'value': 50,
+                                        'nonInteraction': false
+                                    }
+                                });
+                                gtag('event', 'main_video.event', {
+                                    'event_category' : 'Video',
+                                    'event_label' : action,
                                     'value': 50,
                                     'nonInteraction': false
-                                }
-                            });
-                        } else if(percentageCompleted >= 75 && !leapp.reached75) {
-                            leapp.reached75 = true;
-                            dataLayer.push({
-                                'event': 'main_video.event',
-                                'eventInfo': {
-                                    'category': 'Video',
-                                    'action': action,
-                                    'label': element,
+                                });
+                            } else if(percentageCompleted >= 75 && !leapp.reached75) {
+                                leapp.reached75 = true;
+                                dataLayer.push({
+                                    'event': 'main_video.event',
+                                    'eventInfo': {
+                                        'category': 'Video',
+                                        'action': action,
+                                        'label': element,
+                                        'value': 75,
+                                        'nonInteraction': false
+                                    }
+                                });
+                                gtag('event', 'main_video.event', {
+                                    'event_category' : 'Video',
+                                    'event_label' : action,
                                     'value': 75,
                                     'nonInteraction': false
-                                }
-                            });
-                        } else if(percentageCompleted >= 100 && !leapp.reached100) {
-                            leapp.reached100 = true;
-                            dataLayer.push({
-                                'event': 'main_video.event',
-                                'eventInfo': {
-                                    'category': 'Video',
-                                    'action': action,
-                                    'label': element,
+                                });
+                            } else if(percentageCompleted >= 100 && !leapp.reached100) {
+                                leapp.reached100 = true;
+                                dataLayer.push({
+                                    'event': 'main_video.event',
+                                    'eventInfo': {
+                                        'category': 'Video',
+                                        'action': action,
+                                        'label': element,
+                                        'value': 100,
+                                        'nonInteraction': false
+                                    }
+                                });
+                                gtag('event', 'main_video.event', {
+                                    'event_category' : 'Video',
+                                    'event_label' : action,
                                     'value': 100,
                                     'nonInteraction': false
-                                }
-                            });
+                                });
+                            }
                         }
                     }
                 }
