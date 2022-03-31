@@ -161,10 +161,15 @@
                         var urlLin = _self.elements.cfDistribution + '/latest/Leapp_' + version + '_amd64.deb';
                         var urlLinAppImage = _self.elements.cfDistribution + '/latest/Leapp-' + version + '.AppImage';
 
+                        var urlMacM1 = _self.elements.cfDistribution + '/latest/Leapp-' + version + '-mac-arm64.zip';
+
                         if (platform.indexOf('win') !== -1) {
                             content = '<a href="' + urlWin + '" class="download">Download Windows</a>';
                         } else if (platform.indexOf('mac') !== -1) {
-                            content += '<a href="' + urlMac + '" class="download">Download MacOs</a>';
+                            content += '<a href="' + urlMac + '" class="download">Download MacOs x64</a>';
+                            if(parseInt(version.split(".")[0]) >= 1 || parseInt(version.split(".")[1]) >= 11) {
+                                content += '<a href="' + urlMacM1 + '" class="download">Download MacOs arm64</a>';
+                            }
                         } else if (platform.indexOf('linux') !== -1) {
                             content = '<a href="' + urlLin + '" class="download">Download Linux</a>' +
                                       '';
@@ -173,6 +178,9 @@
                         }
 
                         _self.elements.downloadContent.find('a[data-os="mac"]').attr("href", urlMac);
+                        if(parseInt(version.split(".")[0]) >= 1 || parseInt(version.split(".")[1]) >= 11) {
+                            _self.elements.downloadContent.find('a[data-os="macM1"]').attr("href", urlMacM1);
+                        }
                         _self.elements.downloadContent.find('a[data-os="win"]').attr("href", urlWin);
                         _self.elements.downloadContent.find('a[data-os="linux"]').attr("href", urlLin);
                         _self.elements.downloadContent.find('a[data-os="linAppImage"]').attr("href", urlLinAppImage);
@@ -426,7 +434,10 @@
                                 var generatedDownloadURL = '<ul class="default-list">' + body + '</ul>';
                                 generatedDownloadURL += '<ul class="download-list">';
                                 generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-win.zip" data-os="win" data-version="' + rawVersion + '" class="download"><i class="fab fa-windows"></i> Download</a></li>';
-                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" data-os="mac" data-version="' + rawVersion + '" class="download"><i class="fab fa-apple"></i> Download</a></li>';
+                                generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac.zip" data-os="mac" data-version="' + rawVersion + '" class="download"><i class="fab fa-apple"></i> Download x64</a></li>';
+                                if(parseInt(rawVersion.split(".")[0]) >= 1 || parseInt(rawVersion.split(".")[1]) >= 11) {
+                                    generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '-mac-arm64.zip" data-os="mac" data-version="' + rawVersion + '" class="download"><i class="fab fa-apple"></i> Download arm64</a></li>';
+                                }
                                 generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp_' + rawVersion + '_amd64.deb" data-os="linux" data-version="' + rawVersion + '" class="download"><i class="fab fa-linux"></i> Download .deb</a></li>';
                                 generatedDownloadURL += '<li><a href="' + _self.elements.cfDistribution + '/' + folder + '/Leapp-' + rawVersion + '.AppImage" data-os="linux" data-version="' + rawVersion + '" class="download"><i class="fab fa-linux"></i> Download .AppImage</a></li>';
                                 generatedDownloadURL += '</ul>';
