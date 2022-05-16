@@ -1,0 +1,23 @@
+title-1: "GOODBYE, CONTEXT SWITCHING."
+title-2: "HELLO, TERMINAL."
+features:
+  - title: Your entire Leapp workflow
+    icon: fa-terminal
+    #content: mainfeatures/mainfeature_monitor.markdown
+    content: "Work with Sessions, Integrations and more."
+    link-message: "Check it out!"
+    link-url: "https://docs.leapp.cloud/latest/installation/install-leapp/"
+
+  - title: Script and customize
+    icon: fa-laptop-code
+    #content: mainfeatures/mainfeature_code.markdown
+    content: "Call the Leapp local API to script almost any action."
+    link-message: "Learn about CLI flags"
+    link-url: "https://docs.leapp.cloud/latest/cli/"
+
+  - title: We <3 community
+    icon: fa-commenting
+    #content: mainfeatures/mainfeature_github.markdown
+    content: "Leapp CLI is Open Source and waiting for your contributions."
+    link-message: "Contribute to the CLI"
+    link-url: "https://github.com/Noovolari/leapp/blob/master/CONTRIBUTING.md"

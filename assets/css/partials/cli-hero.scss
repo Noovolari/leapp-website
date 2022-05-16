@@ -66,6 +66,7 @@
 
   .view-all {
     a {
+      transition: all 0.2s ease;
       font-size: 20px;
       font-weight: 500;
       display: block;
@@ -76,6 +77,10 @@
       text-decoration: underline;
       text-underline-offset: 5px;
       margin-bottom: 50px;
+      &:hover {
+        transition: all 0.2s ease;
+        color: #4DA7DE;
+      }
     }
     margin-bottom: 50px;
   }
@@ -97,11 +102,11 @@
         border-style: solid;
         padding: 8px 20px;
         &:hover {
-          transition: all 0.3s ease-in-out;
+          transition: all 0.2s ease-in-out;
           cursor: pointer;
           background-image: unset;
-          border-color: #A4D6D5;
-          color: #A4D6D5;
+          border-color: #4DA7DE;
+          color: #4DA7DE;
         }
       }
     }
