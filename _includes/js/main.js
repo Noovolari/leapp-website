@@ -1,5 +1,9 @@
 (function () {
     "use strict";
+    var globalInterval;
+    var globalIntervalTerminal;
+    var steps = [];
+    var autoPlay = []
 
     window.leapp = {
             elements: {
@@ -18,7 +22,8 @@
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
                 gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
-                steps: $(".steps-navigation a")
+                steps: $(".steps-navigation a"),
+                terminalCommand: $(".terminal-command")
             },
             init: function () {
 
@@ -32,7 +37,8 @@
                 if (this.elements.releases.length > 0) {
                     this._releases();
                 }
-
+                this._terminalAnimation();
+                this._autoPlay();
             },
             sendEvent: function(action, element, event) {
                 if(action.indexOf('Download-From') > -1) {
@@ -475,6 +481,203 @@
 
                     }
                 });
+            },
+            _terminalAnimation: function () {
+
+                var keystrokeDelay = 50;
+
+                this.elements.terminalCommand.on('click autoplay-event', function (e) {
+                    e.preventDefault();
+                    clearInterval(globalInterval);
+                    clearInterval(globalIntervalTerminal);
+                    steps.forEach(step => clearInterval(step));
+                    if(e.type === 'click') {
+                        autoPlay.forEach(autoCommand => clearInterval(autoCommand));
+                    }
+                    $('#command-name').text(jQuery(this.children[0]).text());
+                    $('#command-description').text(jQuery(this.children[1]).text());
+                    var el = document.querySelector('#command-name');
+                    showCommand(e);
+                    typeAnimate(el, 'header', e.currentTarget.innerText);
+                    var commandSelect = e.currentTarget.children[0].className;
+                    if(commandSelect === 'leapp-start') {
+                        commandAnimateStart(e);
+                    }
+                    else if(commandSelect === 'leapp-stop') {
+                        commandAnimateStop(e);
+                    }
+                    else if(commandSelect === 'leapp-sync') {
+                        commandAnimateSync(e);
+                    }
+                    else if(commandSelect === 'leapp-generate') {
+                        commandAnimateGenerate(e);
+                    }
+                });
+
+                this.elements.terminalCommand.on()
+
+                function typeAnimate(el, context, originalText) {
+                    el.textContent = originalText;
+                    var chars = el.textContent.split('');
+                    el.textContent = '';
+                    var typeIndex = 1;
+                    if(context === 'header') {
+                        globalInterval = setInterval(function () {
+                            el.textContent = chars.slice(0, typeIndex++).join('');
+                            if (typeIndex > chars.length) {
+                                clearInterval(globalInterval);
+                                globalInterval = null;
+                            }
+                        }, keystrokeDelay);
+                    }
+                    else if(context === 'terminal') {
+                        globalIntervalTerminal = setInterval(function () {
+                            el.textContent = chars.slice(0, typeIndex++).join('');
+                            if (typeIndex > chars.length) {
+                                clearInterval(globalIntervalTerminal);
+                                globalIntervalTerminal = null;
+                            }
+                        }, keystrokeDelay);
+                    }
+                }
+
+                function commandAnimateStart(e) {
+                    var commandId = e.currentTarget.children[0].className;
+                    var c = document.querySelectorAll('.command-container.' + commandId);
+                    var root = c[0];
+                    root.children[3].classList.add('hidden-body');
+                    root.children[4].classList.add('hidden-body');
+                    root.children[3].children[2].innerHTML = '❯ AWS-federated-session';
+                    root.children[3].children[2].classList.add('cli-selected');
+                    root.children[3].children[4].innerHTML = '&nbsp;&nbsp;iam-role-session';
+                    root.children[3].children[4].classList.remove('cli-selected');
+                    root.children[3].children[6].innerHTML = '&nbsp;&nbsp;noovolari-sso-1';
+                    root.children[3].children[6].classList.remove('cli-selected');
+                    root.children[4].children[5].classList.add('hidden-body');
+
+                    typeAnimate(root.children[1], 'terminal', e.currentTarget.innerText);
+                    steps[0] = setTimeout(function () {
+                        root.children[3].classList.remove('hidden-body');
+                    }, 1400);
+                    steps[1] = setTimeout(function () {
+                        root.children[3].children[2].innerHTML = '&nbsp;&nbsp;AWS-federated-session';
+                        root.children[3].children[2].classList.remove('cli-selected');
+                        root.children[3].children[4].innerHTML = '❯ iam-role-session';
+                        root.children[3].children[4].classList.add('cli-selected');
+                    }, 2000);
+                    steps[2] = setTimeout(function () {
+                        root.children[3].children[4].innerHTML = '&nbsp;&nbsp;iam-role-session';
+                        root.children[3].children[4].classList.remove('cli-selected');
+                        root.children[3].children[6].innerHTML = '❯ noovolari-sso-1';
+                        root.children[3].children[6].classList.add('cli-selected');
+                    }, 2500);
+                    steps[3] = setTimeout(function () {
+                        root.children[3].classList.add('hidden-body');
+                        root.children[4].classList.remove('hidden-body');
+                    }, 3300);
+                    steps[4] = setTimeout(function (){
+                        root.children[4].children[5].classList.remove('hidden-body');
+                    }, 3800);
+                }
+
+                function commandAnimateStop(e){
+                    var commandId = e.currentTarget.children[0].className;
+                    var c = document.querySelectorAll('.command-container.' + commandId);
+                    var root = c[0];
+                    root.children[3].classList.add('hidden-body');
+                    root.children[4].classList.add('hidden-body');
+                    root.children[3].children[2].innerHTML = '❯ iam-role-session';
+                    root.children[3].children[2].classList.add('cli-selected');
+                    root.children[3].children[4].innerHTML = '&nbsp;&nbsp;noovolari-sso-1';
+                    root.children[3].children[4].classList.remove('cli-selected');
+                    root.children[4].children[5].classList.add('hidden-body');
+
+                    typeAnimate(root.children[1], 'terminal', e.currentTarget.innerText);
+                    steps[0] = setTimeout(function () {
+                        root.children[3].classList.remove('hidden-body');
+                    }, 1400);
+                    steps[1] = setTimeout(function () {
+                        root.children[3].children[2].innerHTML = '&nbsp;&nbsp;iam-role-session';
+                        root.children[3].children[2].classList.remove('cli-selected');
+                        root.children[3].children[4].innerHTML = '❯ noovolari-sso-1';
+                        root.children[3].children[4].classList.add('cli-selected');
+                    }, 2000);
+                    steps[3] = setTimeout(function () {
+                        root.children[3].classList.add('hidden-body');
+                        root.children[4].classList.remove('hidden-body');
+                    }, 2800);
+                    steps[4] = setTimeout(function (){
+                        root.children[4].children[5].classList.remove('hidden-body');
+                    }, 3600);
+                }
+
+                function commandAnimateSync(e){
+                    var commandId = e.currentTarget.children[0].className;
+                    var c = document.querySelectorAll('.command-container.' + commandId);
+                    var root = c[0];
+                    root.children[3].classList.add('hidden-body');
+                    root.children[4].classList.add('hidden-body');
+                    root.children[3].children[2].innerHTML = '❯ AWS Single Sign-On 1';
+                    root.children[3].children[2].classList.add('cli-selected');
+                    root.children[3].children[4].innerHTML = '&nbsp;&nbsp;AWS Single Sign-On 2';
+                    root.children[3].children[4].classList.remove('cli-selected');
+                    root.children[3].children[6].innerHTML = '&nbsp;&nbsp;Test SSO';
+                    root.children[3].children[6].classList.remove('cli-selected');
+                    root.children[4].children[5].classList.add('hidden-body');
+
+                    typeAnimate(root.children[1], 'terminal', e.currentTarget.innerText);
+                    steps[0] = setTimeout(function () {
+                        root.children[3].classList.remove('hidden-body');
+                    }, 1400);
+                    steps[1] = setTimeout(function () {
+                        root.children[3].children[2].innerHTML = '&nbsp;&nbsp;AWS Single Sign-On 1';
+                        root.children[3].children[2].classList.remove('cli-selected');
+                        root.children[3].children[4].innerHTML = '❯ AWS Single Sign-On 2';
+                        root.children[3].children[4].classList.add('cli-selected');
+                    }, 2000);
+                    steps[3] = setTimeout(function () {
+                        root.children[3].classList.add('hidden-body');
+                        root.children[4].classList.remove('hidden-body');
+                    }, 2800);
+                    steps[4] = setTimeout(function (){
+                        root.children[4].children[5].classList.remove('hidden-body');
+                    }, 3600);
+
+                }
+
+                function commandAnimateGenerate(e){
+                    var commandId = e.currentTarget.children[0].className;
+                    var c = document.querySelectorAll('.command-container.' + commandId);
+                    var root = c[0];
+                    root.children[3].classList.add('hidden-body');
+                    typeAnimate(root.children[1], 'terminal', 'leapp session generate 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d');
+                    steps[0] = setTimeout(function () {
+                        root.children[3].classList.remove('hidden-body');
+                        root.children[3].children[8].innerHTML = '&nbsp;&nbsp; \"Expiration\":\"' + new Date(Date.now() + (4 * 60 * 60 * 1000)).toISOString() + '\"';
+                    }, 3800);
+                }
+
+                function showCommand(e) {
+                    var c = document.querySelectorAll('.command-container');
+                    var commandId = e.currentTarget.children[0].className;
+                    c.forEach((el) => {
+                        el.classList.add('hidden-command');
+                        if(el.classList.contains(commandId)) {
+                            el.classList.toggle('hidden-command');
+                        }
+                    })
+                }
+            },
+            _autoPlay: function () {
+                var timeout = 0;
+                var commandsArray = document.getElementsByClassName('terminal-command');
+                for(var i = 0; i < commandsArray.length; i++) {
+                    autoPlay[i] = setTimeout(clickCommand.bind(null, i), timeout);
+                    timeout += 5500;
+                }
+                function clickCommand(i) {
+                    $(commandsArray[i]).trigger('autoplay-event');
+                }
             }
         };
 

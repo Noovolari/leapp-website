@@ -1,0 +1,71 @@
+command_list:
+
+  - command_id: leapp-start
+    command_name: "leapp session start"
+    command_description: "Start a Leapp session and generate short-lived credentials"
+    command_execution: "<span class=\"prompt\">$</span> <span>leapp session start</span><br>
+                        <div>
+                          <span class=\"cli-mark\">?</span> select a session (Use arrow keys)<br>
+                          <span class=\"cli-selected\">❯ AWS-federated-session</span><br>
+                          <span>&nbsp;&nbsp;iam-role-session</span><br>
+                          <span>&nbsp;&nbsp;noovolari-sso-1</span><br>
+                          <span>&nbsp;&nbsp;noovolari-sso-2</span><br>
+                        </div>
+                        <div class=\"hidden-body\">
+                          <span class=\"cli-mark\">? </span>
+                          <span style=\"font-weight: 600\">select a session </span>
+                          <span class=\"cli-selected\">noovolari-sso-1</span><br>
+                          <br>
+                          <span class=\"hidden-body\">&nbsp;&nbsp;session started</span><br>
+                        </div>"
+
+  - command_id: leapp-stop
+    command_name: "leapp session stop"
+    command_description: "Stop a Leapp session and remove credentials"
+    command_execution: "<span class=\"prompt\">$</span> <span>leapp session stop</span><br>
+                        <div>
+                          <span class=\"cli-mark\">?</span> select a session (Use arrow keys)<br>
+                          <span class=\"cli-selected\">❯ iam-role-session</span><br>
+                          <span>&nbsp;&nbsp;noovolari-sso-1</span><br>
+                        </div>
+                        <div class=\"hidden-body\">
+                          <span class=\"cli-mark\">? </span>
+                          <span style=\"font-weight: 600\">select a session </span>
+                          <span class=\"cli-selected\">noovolari-sso-1</span><br>
+                          <br>
+                          <span class=\"hidden-body\">&nbsp;&nbsp;session stopped</span><br>
+                        </div>"
+
+  - command_id: leapp-sync
+    command_name: "leapp integration sync"
+    command_description: "Synchronize SSO by pulling from the online configuration"
+    command_execution: "<span class=\"prompt\">$</span> <span>leapp integration sync</span><br>
+                        <div>
+                          <span class=\"cli-mark\">?</span> select an integration (Use arrow keys)<br>
+                          <span class=\"cli-selected\">❯ AWS Single Sign-On 1</span><br>
+                          <span>&nbsp;&nbsp;AWS Single Sign-On 2</span><br>
+                          <span>&nbsp;&nbsp;Test SSO</span><br>
+                        </div>
+                        <div class=\"hidden-body\">
+                          <span class=\"cli-mark\">? </span>
+                          <span style=\"font-weight: 600\">select an integration </span>
+                          <span class=\"cli-selected\">Aws Single Sign-On 2</span><br>
+                          <br>
+                          <span class=\"hidden-body\">
+                            <span>&nbsp;&nbsp;3 sessions added</span><br>
+                            <span>&nbsp;&nbsp;0 sessions removed</span><br>
+                          </span><br>
+                        </div>"
+
+  - command_id: leapp-generate
+    command_name: "leapp session generate"
+    command_description: "Generate a set of short-lived credentials"
+    command_execution: "<span class=\"prompt\">$</span> <span>leapp session generate 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d</span><br>
+                        <div class=\"hidden-body\">
+                          <span>&nbsp;&nbsp;{ </span><br>
+                          <span>&nbsp;&nbsp; \"Version\":1,</span><br>
+                          <span>&nbsp;&nbsp; \"AccessKeyId\":\"A****************\",</span><br>
+                          <span>&nbsp;&nbsp; \"SecretAccessKey\":\"6n2w**********...**********n4mE=\",</span><br>
+                          <span>&nbsp;&nbsp; \"Expiration\":\"2022-05-20T12:30:00.000Z\"</span><br>
+                          <span>&nbsp;&nbsp;} </span><br>
+                        </div>"

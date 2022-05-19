@@ -24,7 +24,7 @@
   .command-description {
     text-align: center;
     color: white;
-    font-size: 19px;
+    font-size: 17px;
     padding-bottom: 30px;
   }
 
@@ -33,23 +33,22 @@
     border-radius: 5px;
     align-items: center;
     align-content: center;
-    margin: auto;
     justify-content: center;
     z-index: 2;
-    background: #262525;
+    background: #212123;
     padding: 15px;
     right: 20px;
     left: 20px;
     max-width: 1000px;
-    height: 500px;
-    margin-bottom: 50px;
+    height: 440px;
+    margin: auto auto 40px;
     .traffic-ligths {
       display: inline-flex;
       column-gap: 7px;
       .red-light, .orange-light, .green-light {
         position: relative;
-        height: 15px;
-        width: 15px;
+        height: 13px;
+        width: 13px;
         border-radius: 40px;
       }
       .red-light {
@@ -68,7 +67,7 @@
     a {
       transition: all 0.2s ease;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 600;
       display: block;
       margin: auto;
       position: relative;
@@ -145,7 +144,7 @@
       font-size: 20px;
       color: #495F60;
       &:last-of-type {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
       }
     }
 
@@ -159,7 +158,7 @@
       margin-bottom: 5px;
       &:hover {
         transition: all 0.3s ease;
-        opacity: 0.8;
+        opacity: 0.7;
       }
     }
 
@@ -238,7 +237,7 @@
       color: #cbc7c7;
     }
     .brew, .docs {
-      width: 400px;
+      width: 405px;
       text-align: center;
       background-color: #212123;
       border-radius: 3px;
@@ -265,6 +264,12 @@
     }
     .brew {
       font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      i.fa-clone {
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        right: -10px;
+      }
     }
     .terminal-caret {
       margin-top: 0;
@@ -277,5 +282,41 @@
       font-size: unset;
       margin-bottom: 0;
     }
+  }
+
+  .terminal-content {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    color: whitesmoke;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  #command-name {
+    display: inline-block;
+  }
+
+  .command-type #command-name {
+    padding-right: 10px;
+    margin-right: -7px;
+  }
+
+  .command-type .blinking-caret {
+    border-right: 3px solid whitesmoke;
+    white-space: nowrap;
+    display: inline-block;
+    height: 31px;
+    position: relative;
+    top: 4px;
+    animation:
+            blink-caret .75s step-end infinite;
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: whitesmoke; }
+  }
+
+  .hidden-command {
+    display: none;
   }
 }
