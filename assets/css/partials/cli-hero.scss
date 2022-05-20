@@ -87,7 +87,7 @@
       transition: all 0.3s ease;
       font-weight: 600;
       background-color: #f4f4f6;
-      color: #495F60;
+      color: #354a4b;
       user-select: none;
       cursor: pointer;
       /*color: #1D1B25;*/
@@ -97,12 +97,9 @@
         transform: translate(1px, 1px);
         box-shadow: 4px 3px #888888;
       }*/
-      border: solid transparent;
       &:hover {
         transition: all 0.3s ease;
-        border: solid #262626;
-        background-color: transparent;
-        color: #262626;
+        opacity: 0.75;
       }
     }
 

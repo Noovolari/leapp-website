@@ -59,7 +59,7 @@ command_list:
 
   - command_id: leapp-generate
     command_name: "leapp session generate"
-    command_description: "Generate STS temporary credentials for the given Leapp AWS Session Id"
+    command_description: "Generate STS temporary credentials by passing a Leapp AWS Session Id"
     command_execution: "<span class=\"prompt\">$</span> <span>leapp session generate 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d</span><br>
                         <div class=\"hidden-body\">
                           <span>&nbsp;&nbsp;{ </span><br>

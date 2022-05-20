@@ -44,13 +44,13 @@
         border-radius: 40px;
       }
       .red-light {
-        background-color: red; /*#FC5753*/
+        background-color: red;
       }
       .orange-light {
-        background-color: darkorange; /*#FDBC40*/
+        background-color: darkorange;
       }
       .green-light {
-        background-color: greenyellow; /*#36C84Bb*/
+        background-color: #92de29;
       }
     }
   }
@@ -61,16 +61,15 @@
       font-size: 20px;
       font-weight: 600;
       display: block;
-      margin: auto;
       position: relative;
       text-align: center;
       color: whitesmoke;
       text-decoration: underline;
       text-underline-offset: 5px;
-      margin-bottom: 50px;
+      margin: auto auto 50px;
       &:hover {
         transition: all 0.2s ease;
-        color: #4DA7DE;
+        color: $leapp-blue-light;
       }
     }
     margin-bottom: 50px;
@@ -88,7 +87,7 @@
         color: whitesmoke;
         font-size: 16px;
         background-image: radial-gradient(#4E4486, #2A2549);
-        border-color: #977aea; /*bebebe*/
+        border-color: #977aea;
         border-radius: 10px;
         border-style: solid;
         padding: 8px 20px;
@@ -96,8 +95,8 @@
           transition: all 0.2s ease-in-out;
           cursor: pointer;
           background-image: unset;
-          border-color: #4DA7DE;
-          color: #4DA7DE;
+          border-color: $leapp-blue-light;
+          color: $leapp-blue-light;
         }
       }
     }
