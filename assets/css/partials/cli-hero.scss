@@ -61,7 +61,6 @@
 
     @include breakpoint('md') {
       padding: 30px 60px;
-      /*media queries*/
     }
   }
 
@@ -136,6 +135,65 @@
     a:hover {
       transition: all 0.2s ease;
       opacity: 0.7;
+    }
+  }
+
+  /* Media queries */
+
+  @media (max-width: 1150px) {
+    .callout {
+      width: 70%;
+      margin: 0 auto;
+      h1 {
+        font-size: 31px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      a {
+        font-size: 18px;
+      }
+    }
+
+    .docs {
+      font-size: 16px;
+    }
+
+    .install-cli {
+      display: initial;
+      color: red;
+      margin-bottom: 0;
+    }
+
+    .install-cli .brew, .install-cli .docs {
+      display: block;
+      margin: 0 auto 10px;
+    }
+  }
+
+  @media (max-width: 820px) {
+    padding-bottom: 40px!important;
+    .callout {
+      width: 90%;
+      margin: 0 auto;
+      a {
+        font-size: 16px;
+      }
+    }
+    h1 {
+      font-size: 28px!important;
+      line-height: 40px;
+    }
+    h3 {
+      font-size: 16px!important;
+    }
+    .docs, .brew {
+      width: 74%!important;
+      font-size: 15px;
+    }
+    .arrow {
+      top: 2px!important;
+      width: 23px;
     }
   }
 }
