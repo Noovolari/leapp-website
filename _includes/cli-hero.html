@@ -1,49 +1,16 @@
-<section id="cli-hero" class="ovh">
-    <div class="container">
-        <div class="callout">
-            <h1>Take Leapp to the command line</h1>
-            <h3>Leapp CLI brings Leapp to your terminal. Free and open source.</h3>
-            <div class="install-cli">
-                <span class="brew"><span class="terminal-caret">$&nbsp;</span>brew install Noovolari/brew/leapp-cli <i class="fa fa-clone"></i></span>
-                <a href="https://docs.leapp.cloud/latest/cli/"><span class="docs">Open CLI Documentation</span></a>
-            </div>
-            <a style="display: inline-block; position: relative; left: 50%; transform: translateX(-50%);" href="https://docs.leapp.cloud/latest/installation/install-leapp/#install-leapp-cli" target="_blank">
+<div id="cli-hero" class="container">
+    <div class="callout">
+        <h1>Take Leapp to the command line</h1>
+        <h3>Leapp CLI brings Leapp to your terminal. Free and open source.</h3>
+        <div class="install-cli">
+            <span class="brew"><span class="terminal-caret">$&nbsp;</span>brew install Noovolari/brew/leapp-cli</span>
+            <a class="docs-link" href="https://docs.leapp.cloud/latest/cli/"><span class="docs">Open CLI Documentation</span></a>
+        </div>
+        <div class="view-installation-instructions">
+            <a href="https://docs.leapp.cloud/latest/installation/install-leapp/#install-leapp-cli" target="_blank">
                 View installation instructions
                 <img class="arrow" src="{{site.url}}{{site.baseurl}}/assets/img/arrow-right.png" width="36">
             </a>
         </div>
     </div>
-    <div class="command-type">
-        <span class="dollar-sign">$</span>
-        <div id="command-name">leapp session start</div>
-        <span class="blinking-caret"></span>
-    </div>
-    <div class="command-description">
-        <span id="command-description">Start a Leapp session and generate short-lived credentials</span>
-    </div>
-    <div class="terminal-window">
-        <div class="traffic-ligths">
-            <div class="red-light"></div>
-            <div class="orange-light"></div>
-            <div class="green-light"></div>
-        </div>
-        <div class="terminal-content">
-            {% for item in site.data.cli_commands.command_list %}
-                <div class="command-container hidden-command {{item.command_id}}">{{item.command_execution}}</div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="command-list">
-        <ul>
-            {% for item in site.data.cli_commands.command_list %}
-                <li class="terminal-command">
-                    <span class="{{item.command_id}}">{{item.command_name}}</span>
-                    <div class="terminal-command-description" style="display: none">{{item.command_description}}</div>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <span class="view-all">
-        <a href="https://docs.leapp.cloud/latest/cli/" target="_blank">VIEW ALL LEAPP CLI COMMANDS</a>
-    </span>
-</section>
+</div>

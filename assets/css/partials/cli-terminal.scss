@@ -1,0 +1,164 @@
+#cli-terminal {
+  /* background: $violet-dark; */
+  background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
+  padding-top: 130px;
+
+  .command-type {
+    .dollar-sign {
+      color: #4DA7DE;
+    }
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    padding-bottom: 5px;
+  }
+
+  .command-description {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    padding-bottom: 30px;
+  }
+
+  .terminal-window {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 2;
+    background: #212123;
+    padding: 15px;
+    right: 20px;
+    left: 20px;
+    max-width: 1000px;
+    height: 430px;
+    margin: auto auto 40px;
+    .traffic-ligths {
+      display: inline-flex;
+      column-gap: 7px;
+      .red-light, .orange-light, .green-light {
+        position: relative;
+        height: 13px;
+        width: 13px;
+        border-radius: 40px;
+      }
+      .red-light {
+        background-color: red; /*#FC5753*/
+      }
+      .orange-light {
+        background-color: darkorange; /*#FDBC40*/
+      }
+      .green-light {
+        background-color: greenyellow; /*#36C84Bb*/
+      }
+    }
+  }
+
+  .view-all {
+    a {
+      transition: all 0.2s ease;
+      font-size: 20px;
+      font-weight: 600;
+      display: block;
+      margin: auto;
+      position: relative;
+      text-align: center;
+      color: whitesmoke;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      margin-bottom: 50px;
+      &:hover {
+        transition: all 0.2s ease;
+        color: #4DA7DE;
+      }
+    }
+    margin-bottom: 50px;
+  }
+
+  .command-list {
+    ul {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      list-style-type: none;
+      column-gap: 50px;
+      li {
+        transition: all 0.3s ease-in-out;
+        color: whitesmoke;
+        font-size: 16px;
+        background-image: radial-gradient(#4E4486, #2A2549);
+        border-color: #977aea; /*bebebe*/
+        border-radius: 10px;
+        border-style: solid;
+        padding: 8px 20px;
+        &:hover {
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          background-image: unset;
+          border-color: #4DA7DE;
+          color: #4DA7DE;
+        }
+      }
+    }
+    margin-bottom: 35px;
+  }
+
+  .arrow {
+    position: relative;
+    top: 5px;
+    margin-left: 15px;
+  }
+
+  .terminal-content {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    color: whitesmoke;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  #command-name {
+    display: inline-block;
+  }
+
+  .command-type #command-name {
+    padding-right: 10px;
+    margin-right: -7px;
+  }
+
+  .command-type .blinking-caret {
+    border-right: 3px solid whitesmoke;
+    white-space: nowrap;
+    display: inline-block;
+    height: 31px;
+    position: relative;
+    top: 4px;
+    animation:
+            blink-caret .75s step-end infinite;
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: whitesmoke; }
+  }
+
+  .hidden-command {
+    display: none;
+  }
+
+  .terminal-window {
+
+    .cli-mark {
+      color: #3EB730;
+      font-weight: 600;
+    }
+
+    .cli-selected {
+      color: #3DB2BE;
+    }
+
+    .hidden-body {
+      display: none;
+    }
+  }
+}

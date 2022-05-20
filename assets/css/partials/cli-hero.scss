@@ -1,121 +1,11 @@
 #cli-hero {
-  /* background: $violet-dark; */
-  background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
-  padding-top: 130px;
 
-  .container {
+  &.container {
     position: relative;
     padding-bottom: 50px;
     @include breakpoint('md') {
       padding-bottom: 50px;
     }
-  }
-
-  .command-type {
-    .dollar-sign {
-      color: #4DA7DE;
-    }
-    text-align: center;
-    color: white;
-    font-size: 32px;
-    padding-bottom: 5px;
-  }
-
-  .command-description {
-    text-align: center;
-    color: white;
-    font-size: 17px;
-    padding-bottom: 30px;
-  }
-
-  .terminal-window {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    border-radius: 5px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    z-index: 2;
-    background: #212123;
-    padding: 15px;
-    right: 20px;
-    left: 20px;
-    max-width: 1000px;
-    height: 440px;
-    margin: auto auto 40px;
-    .traffic-ligths {
-      display: inline-flex;
-      column-gap: 7px;
-      .red-light, .orange-light, .green-light {
-        position: relative;
-        height: 13px;
-        width: 13px;
-        border-radius: 40px;
-      }
-      .red-light {
-        background-color: red; /*#FC5753*/
-      }
-      .orange-light {
-        background-color: darkorange; /*#FDBC40*/
-      }
-      .green-light {
-        background-color: greenyellow; /*#36C84Bb*/
-      }
-    }
-  }
-
-  .view-all {
-    a {
-      transition: all 0.2s ease;
-      font-size: 20px;
-      font-weight: 600;
-      display: block;
-      margin: auto;
-      position: relative;
-      text-align: center;
-      color: whitesmoke;
-      text-decoration: underline;
-      text-underline-offset: 5px;
-      margin-bottom: 50px;
-      &:hover {
-        transition: all 0.2s ease;
-        color: #4DA7DE;
-      }
-    }
-    margin-bottom: 50px;
-  }
-
-  .command-list {
-    ul {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      list-style-type: none;
-      column-gap: 50px;
-      li {
-        transition: all 0.3s ease-in-out;
-        color: whitesmoke;
-        font-size: 16px;
-        background-image: radial-gradient(#4E4486, #2A2549);
-        border-color: #977aea; /*bebebe*/
-        border-radius: 10px;
-        border-style: solid;
-        padding: 8px 20px;
-        &:hover {
-          transition: all 0.2s ease-in-out;
-          cursor: pointer;
-          background-image: unset;
-          border-color: #4DA7DE;
-          color: #4DA7DE;
-        }
-      }
-    }
-    margin-bottom: 35px;
-  }
-
-  .arrow {
-    position: relative;
-    top: 5px;
-    margin-left: 15px;
   }
 
   .callout {
@@ -144,7 +34,7 @@
       font-size: 20px;
       color: #495F60;
       &:last-of-type {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
     }
 
@@ -156,42 +46,9 @@
       font-size: 20px;
       color: #495F60;
       margin-bottom: 5px;
-      &:hover {
-        transition: all 0.3s ease;
-        opacity: 0.7;
-      }
-    }
 
-    .c-text {
-      color: #436060;
-      font-size: 15px;
-      width: 90%;
-      margin-left: 15px;
-    }
-
-    .c-link {
-      color: #436060;
-      font-size: 16px;
-      width: 16%;
-      display: flex;
-      flex-direction: row;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-
-      a {
-        color: #436060;
-        transition: opacity 0.2s ease;
-        cursor: pointer;
-        &:hover {
-          color: #436060;
-          opacity: 0.8;
-        }
-      }
-
-      .check-it-out {
-        display: none;
-        margin-right: 30px;
+      &.docs-link {
+        margin-bottom: -5px;
       }
 
       img {
@@ -204,25 +61,7 @@
 
     @include breakpoint('md') {
       padding: 30px 60px;
-      .c-image {
-        img {
-          width: 150px;
-          height: 150px;
-        }
-      }
-      .c-text {
-        font-size: 25px;
-        width: 64%;
-      }
-      .c-link {
-        font-size: 20px;
-        width: 16%;
-
-        .check-it-out {
-          display: inline-block;
-          margin-right: 30px;
-        }
-      }
+      /*media queries*/
     }
   }
 
@@ -230,12 +69,12 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 25px;
+
     span {
-      margin-top: 10px;
-      margin-bottom: 10px;
       display: inline-block;
       color: #cbc7c7;
     }
+
     .brew, .docs {
       width: 405px;
       text-align: center;
@@ -243,25 +82,30 @@
       border-radius: 3px;
       padding: 10px 40px;
     }
+
     .docs {
       transition: all 0.3s ease;
       font-weight: 600;
       background-color: #f4f4f6;
-      /*color: #1D1B25;*/
       color: #495F60;
-      /*box-shadow: 5px 4px #888888;*/
       user-select: none;
       cursor: pointer;
+      /*color: #1D1B25;*/
+      /*box-shadow: 5px 4px #888888;*/
       /*&:hover {
         transition: all 0.1s ease;
         transform: translate(1px, 1px);
         box-shadow: 4px 3px #888888;
       }*/
+      border: solid transparent;
       &:hover {
         transition: all 0.3s ease;
-        opacity: 0.8;
+        border: solid #262626;
+        background-color: transparent;
+        color: #262626;
       }
     }
+
     .brew {
       font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
       i.fa-clone {
@@ -271,12 +115,14 @@
         right: -10px;
       }
     }
+
     .terminal-caret {
       margin-top: 0;
       margin-bottom: 0;
       user-select: none;
       color: #4DA7DE;
     }
+
     a {
       display: unset;
       font-size: unset;
@@ -284,39 +130,15 @@
     }
   }
 
-  .terminal-content {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    color: whitesmoke;
-    margin-left: 15px;
+  .view-installation-instructions {
     margin-top: 10px;
-  }
-
-  #command-name {
     display: inline-block;
-  }
-
-  .command-type #command-name {
-    padding-right: 10px;
-    margin-right: -7px;
-  }
-
-  .command-type .blinking-caret {
-    border-right: 3px solid whitesmoke;
-    white-space: nowrap;
-    display: inline-block;
-    height: 31px;
     position: relative;
-    top: 4px;
-    animation:
-            blink-caret .75s step-end infinite;
-  }
-
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: whitesmoke; }
-  }
-
-  .hidden-command {
-    display: none;
+    left: 50%; transform: translateX(-50%);
+    transition: all 0.2s ease;
+    a:hover {
+      transition: all 0.2s ease;
+      opacity: 0.7;
+    }
   }
 }

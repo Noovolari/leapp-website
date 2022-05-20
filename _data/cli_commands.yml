@@ -38,7 +38,7 @@ command_list:
 
   - command_id: leapp-sync
     command_name: "leapp integration sync"
-    command_description: "Synchronize SSO by pulling from the online configuration"
+    command_description: "Synchronize local integration-based sessions (e.g. SSO sessions) with remote ones"
     command_execution: "<span class=\"prompt\">$</span> <span>leapp integration sync</span><br>
                         <div>
                           <span class=\"cli-mark\">?</span> select an integration (Use arrow keys)<br>
@@ -59,7 +59,7 @@ command_list:
 
   - command_id: leapp-generate
     command_name: "leapp session generate"
-    command_description: "Generate a set of short-lived credentials"
+    command_description: "Generate STS temporary credentials for the given Leapp AWS Session Id"
     command_execution: "<span class=\"prompt\">$</span> <span>leapp session generate 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d</span><br>
                         <div class=\"hidden-body\">
                           <span>&nbsp;&nbsp;{ </span><br>
