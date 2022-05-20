@@ -17,7 +17,7 @@ step:
     image: step-2.png
 
   - title: OPERATE!
-    content: "<p>Leapp seamlessly works with any development tool (Terraform, CDK, Amplify, etc.)</p><p>Integrate Leapp with specific Cloud Services like we did with <b>AWS System Manager Session Manager</b>.</p><p>Start working right away with <strong>your cloud development stack</strong> of choice!</p>"
+    content: "<p>Leapp seamlessly works with any development tool (Terraform, CDK, Amplify, etc.)</p><p>Integrate Leapp with specific Cloud Services like we did with <b>AWS System Manager Session Manager</b>.</p><p>Start working right away with <strong>your cloud development stack</strong> of choice!</p><p>Want to script the usage of Leapp? Check out the <a class=\"cli-home-link\" href=\"/cli\">Leapp CLI.</a></p>"
     video: 
     autoplay: true
     controls: false

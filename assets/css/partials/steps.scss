@@ -110,5 +110,10 @@
             margin-bottom: 1rem;
         }
 
+        .col.content .cli-home-link {
+            color: unset;
+            font-weight: 600;
+            text-decoration: underline;
+        }
     }
 }
