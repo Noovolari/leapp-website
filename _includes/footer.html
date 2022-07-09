@@ -36,11 +36,15 @@
 {% capture marked %}
   {% include js/vendor/marked.min.js %}
 {% endcapture %}
+{% capture rating %}
+  {% include js/vendor/rating.min.js %}
+{% endcapture %}
 {% capture main %}
   {% include js/main.js %}
 {% endcapture %}
 <script async>{{ jquery }}</script>
 <script async>{{ slick }}</script>
 <script async>{{ formValidate }}</script>
+<script async>{{ rating }}</script>
 <script async>{{ marked }}</script>
 <script async>{{ main | uglify | strip }}</script>

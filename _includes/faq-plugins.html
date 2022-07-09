@@ -1,0 +1,31 @@
+<section id="faq-plugins" class="bg-grey">
+    <div class="container small">
+        <h2 class="section-title">{{site.data.faq-plugins.title}}</h2>
+        {% if site.data.faq-plugins.subtitle != null %}
+            <h3 class="mb-3">{{site.data.faq-plugins.subtitle}}</h3>
+        {% endif %}
+        {% if site.data.faq-plugins.topics.size > 0 %}
+            <div class="topics-wrapper">                
+                <ul class="accordion">
+                    {% for topic in site.data.faq-plugins.topics %}
+                        <li>
+                            <div class="accordion-header">
+                                {{topic.question}}
+                                <i class="fas fa-plus accordion-cta"></i>
+                            </div>
+                            <div class="accordion-content">{{topic.answer}}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="faq-plugins-chat">
+            <i class="fab fa-slack"></i>
+            <div>
+                Can't find an answer in our Knowledge Base?<br/>
+                Please <a href="https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q" class="underlined" target="_blank" rel="noopener">chat with us</a> if you have additional questions.
+            </div>
+        </div>
+    </div>
+</section>

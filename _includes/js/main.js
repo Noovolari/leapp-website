@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    window.leapp = {
+        window.leapp = {
             elements: {
                 html: $("html"),
                 hamburger: $("#hamburger"),
@@ -18,7 +18,9 @@
                 downloadLabel: $("#download-label"),
                 cfDistribution: "https://asset.noovolari.com",
                 gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
-                steps: $(".steps-navigation a")
+                pluginURL: "https://vv0r45fadf.execute-api.eu-west-1.amazonaws.com/api/api/v1/plugins",
+                steps: $(".steps-navigation a"),
+                listWrapper: $("#listwrapper")
             },
             init: function () {
 
@@ -29,6 +31,7 @@
                 this._steps();
                 this._githubStats();
                 this._formValidate();
+                this._listPlugin();
                 if (this.elements.releases.length > 0) {
                     this._releases();
                 }
@@ -430,6 +433,69 @@
                             .children(".download-list:not(:last-of-type)").hide();
 
                     }
+                });
+            },
+            _listPlugin: function () {
+                var _self = this;
+
+                if (this.elements.listWrapper.length > 0) {
+                    $.ajax({
+                        type: 'GET',
+                        url: _self.elements.pluginURL,
+                        success: function (response) {
+
+                            $(response).each((i, item) => {
+                                const title = item.title;
+                                const image = '/assets/img/plugins/plugin3.png';
+                                const author = item.author;
+                                const description = item.description;
+                                const pubdate = new Date(item.pubdate).toLocaleDateString();
+                                const updatedate = new Date(item.updatedate).toLocaleDateString();
+                                const uri = 'leapp://' + item.title;
+
+                                var template = "";
+                                
+                                template += '<div class="key-block">';
+                                template += '    <div class="image">';
+                                template += '        <img src="' + image + '" alt="' +  title + '" class="d-block m-auto mb-2">';
+                                template += '    </div>';
+                                template += '    <h4>' +  title + '</h4>';
+                                template += '    <div class="author mt-1"><strong>Autore:</strong> ' +  author + '</div>';
+                                template += '    <div class="pubdate"><strong>Data:</strong> ' +  pubdate + '</div>';
+                                template += '    <div class="updatedate mb-1"><strong>Aggiornato:</strong> ' +  updatedate + '</div>';
+                                template += '    <div class="content">';
+                                template +=         description;
+                                template += '        <a href="' +  uri + '" class="btn btn-outline-secondary d-inline-block mt-2 w-100 text-center">Open in Leapp</a>';
+                                template += '    </div>';
+                                template += '    <div class="my-rating mt-1" data-rating="' + i + '"></div>';
+                                template += '</div>';
+                                if(i == 2){
+                                    template += '<div class="break"></div>';
+                                }
+
+                                $('#listPlugins').removeClass('loading').append(template);
+                            });
+
+                            _self._rating();
+                        }
+                    });
+                }
+            },
+            _rating: function() {
+                $(".my-rating").starRating({
+                totalStars: 5,
+                emptyColor: 'lightgray',
+                hoverColor: 'salmon',
+                activeColor: 'cornflowerblue',
+                initialRating: 3,
+                strokeWidth: 0,
+                useGradient: false,
+                minRating: 1,
+                starSize: 20,
+                callback: function(currentRating, $el){
+                    alert('rated ', currentRating);
+                    console.log('DOM element ', $el);
+                }
                 });
             }
         };

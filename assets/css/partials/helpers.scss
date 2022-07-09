@@ -3,7 +3,7 @@
 }
 
 .white {
-    color: $white;
+    color: $white !important;
 }
 
 .turquoise {
@@ -118,9 +118,16 @@
     margin-bottom: 5.555rem !important;
 }
 
-
 .ml-0 {
     margin-left: 0 !important;
+}
+
+.ml-1 {
+    margin-left: 1.111rem !important;
+}
+
+.ml-2 {
+    margin-left: 2.222rem !important;
 }
 
 .p-0 {
@@ -228,6 +235,7 @@
 
 .w-100 {
     width: 100% !important;
+    box-sizing: border-box;
 }
 
 .h-auto {
@@ -339,10 +347,10 @@
 }
 
 .steps {
-    font-size: 0.85rem!important;
+    font-size: 0.85rem !important;
     font-weight: 600;
 }
 
 .btn {
-    border-radius: 5px!important;
+    border-radius: 5px !important;
 }

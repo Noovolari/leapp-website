@@ -1,0 +1,55 @@
+title: "Expand your Leapp experience!<br> Check out the 100+ free plugins."
+subtitle: "if you want to participate in this fantastic plugin follow the guide below."
+features:
+  - title: ECS Container Connection
+    author: Alessandro Gubbio
+    pubdate: 07/05/2022
+    updatedate: 07/05/2022
+    icon: fas fa-users-class
+    content: "Amet nostrud culpa anim voluptate magna aliquip adipisicing ipsum tempor."
+    image: plugin5.png
+    url: leapp://@sex-pomelo/sex-pomelo
+
+  - title: Prioritizing bug fixing
+    author: Alessio Gandolin
+    pubdate: 14/07/2021
+    updatedate: 14/07/2022
+    icon: fas fa-exclamation-circle
+    content: "Fugiat in nisi labore consectetur reprehenderit aliqua sint exercitation nisi commodo eu."
+    image: plugin3.png
+    url: leapp://gender-guess
+
+  - title: List S3 Bucket
+    author: Beatrice Bobbiani
+    pubdate: 20/01/2022
+    icon: fas fa-book
+    content: "Aliqua ipsum veniam aliqua excepteur ad culpa non ea esse dolor excepteur consequat."
+    image: plugin1.png
+    url: leapp://phub-dl
+
+  - title: Role List Resources
+    author: Daniele Papastro
+    pubdate: 20/01/2022
+    updatedate: 20/02/2022
+    icon: fas fa-eye
+    content: "Velit fugiat dolor anim ullamco ut irure eu sunt cupidatat sit irure elit in."
+    image: plugin2.png
+    url: leapp://retext-equality
+
+  - title: Custom sshuttle
+    author: Frank Nora
+    pubdate: 12/12/2021
+    updatedate: 18/12/2022
+    icon: fas fa-tools
+    content: "Laborum nulla et amet fugiat nulla."
+    image: plugin4.png
+    url: leapp://@octano/persona
+
+  - title: Sexotronic3k
+    author: Ferdinando Silvestri
+    pubdate: 13/11/2021
+    updatedate: 28/02/2022
+    icon: fas fa-users-class
+    content: "Amet nostrud culpa anim voluptate magna aliquip adipisicing ipsum tempor."
+    image: plugin6.png
+    url: leapp://raganork-pornhub-api
