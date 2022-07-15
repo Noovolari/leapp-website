@@ -26,18 +26,18 @@
                 terminalCommand: $(".terminal-command"),
             },
             init: function () {
-                this._githubStats();
                 this._hamburger();
                 this._slick();
                 this._anchor();
                 this._accordion();
                 this._steps();
                 this._formValidate();
-                if (this.elements.releases.length > 0) {
+                //if (this.elements.releases.length > 0) {
                     this._releases();
-                }
+                //}
                 this._terminalAnimation();
                 this._autoPlay();
+                this._githubStats();
             },
             sendEvent: function(action, element, event) {
                 if(action.indexOf('Download-From') > -1) {
@@ -385,7 +385,7 @@
                     type: "GET",
                     url: _self.elements.cfDistribution + "/CHANGELOG.md",
                     success: function (response) {
-
+                        console.log("ciao");
                         var rawVersion = "0.0.0";
                         var index = 1;
                         var downloadListCounter = 1;
