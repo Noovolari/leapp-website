@@ -3,9 +3,9 @@
     var globalInterval;
     var globalIntervalTerminal;
     var steps = [];
-    var autoPlay = []
+    var autoPlay = [];
 
-    window.leapp = window.leapp || {
+    window.leapp = {
             elements: {
                 html: $("html"),
                 hamburger: $("#hamburger"),
@@ -23,7 +23,7 @@
                 cfDistribution: "https://asset.noovolari.com",
                 gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
                 steps: $(".steps-navigation a"),
-                terminalCommand: $(".terminal-command")
+                terminalCommand: $(".terminal-command"),
             },
             init: function () {
                 this._githubStats();
@@ -512,8 +512,6 @@
                         commandAnimateGenerate(e);
                     }
                 });
-
-                this.elements.terminalCommand.on()
 
                 function typeAnimate(el, context, originalText) {
                     el.textContent = originalText;
