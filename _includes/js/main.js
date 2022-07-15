@@ -5,7 +5,7 @@
     var steps = [];
     var autoPlay = []
 
-    window.leapp = {
+    window.leapp = window.leapp || {
             elements: {
                 html: $("html"),
                 hamburger: $("#hamburger"),
