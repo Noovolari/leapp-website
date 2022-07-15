@@ -26,13 +26,12 @@
                 terminalCommand: $(".terminal-command")
             },
             init: function () {
-
+                this._githubStats();
                 this._hamburger();
                 this._slick();
                 this._anchor();
                 this._accordion();
                 this._steps();
-                this._githubStats();
                 this._formValidate();
                 if (this.elements.releases.length > 0) {
                     this._releases();
