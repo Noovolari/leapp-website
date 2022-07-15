@@ -32,9 +32,9 @@
                 this._accordion();
                 this._steps();
                 this._formValidate();
-                //if (this.elements.releases.length > 0) {
+                if (this.elements.releases.length > 0) {
                     this._releases();
-                //}
+                }
                 this._terminalAnimation();
                 this._autoPlay();
                 this._githubStats();
