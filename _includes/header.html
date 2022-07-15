@@ -57,4 +57,25 @@
     <!-- End Google Tag Manager -->
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    {% capture jquery %}
+    {% include js/vendor/jquery-3.5.1.min.js %}
+    {% endcapture %}
+    {% capture slick %}
+    {% include js/vendor/slick.min.js %}
+    {% endcapture %}
+    {% capture formValidate %}
+    {% include js/vendor/jquery.validate.min.js %}
+    {% endcapture %}
+    {% capture marked %}
+    {% include js/vendor/marked.min.js %}
+    {% endcapture %}
+    {% capture main %}
+    {% include js/main.js %}
+    {% endcapture %}
+    <script>{{ jquery }}</script>
+    <script>{{ slick }}</script>
+    <script>{{ formValidate }}</script>
+    <script>{{ marked }}</script>
+    <script>{{ main }}</script>
 </head>
