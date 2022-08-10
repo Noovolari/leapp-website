@@ -1,5 +1,7 @@
 ---
 noindex: true
+sitemap:
+  exclude: 'yes'
 ---
 
 User-agent: *
