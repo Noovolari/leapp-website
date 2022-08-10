@@ -1,4 +1,11 @@
 title: "WHY DEVELOPERS <img src='/assets/img/heart.png' class='d-inline-block'> LEAPP?"
+image: leapp-new.png
+cta_class: ""
+cta_label: "Install Leapp"
+cta_action: "https://docs.leapp.cloud/latest/installation/install-leapp/"
+cta_target: "target=\"_blank\""
+cta_id: "id=\"install-from-features\""
+cta_click: "onclick=\"leapp.sendEvent('Download-From-Features', this)\""
 features:
   - title: Lightning fast
     icon: fa-bolt

@@ -1,0 +1,25 @@
+title: 
+step:
+  - title: HIGH PRODUCTIVITY
+    content: "<ul><li>Leapp Team as source of true of IAM access</li><li>Onboard your developers faster</li><li>Fewer request  and easy to remove access to your Cloud</li></ul>"
+    video: 
+    autoplay: true
+    controls: false
+    muted: true
+    image: "/steps/step1-team.png"
+
+  - title: GREAT QUALITY
+    content: "<ul><li>20 minutes per day saved each time</li><li>Standardize access across TEAM</li></ul>"
+    video: 
+    autoplay: true
+    controls: false
+    muted: true
+    image: "/steps/step2-team.png"
+
+  - title: GOVERNANCE
+    content: "<ul><li>Visibility across all your cloud environment</li><li>Deveroper security compliance</li><li>Startization of cloud access across your team</li></ul>"
+    video: 
+    autoplay: true
+    controls: false
+    muted: true
+    image: "/steps/step3-team.png"

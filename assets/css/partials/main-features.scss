@@ -5,107 +5,33 @@
     .container {
         position: relative;
         padding-top: 100px;
+
         @include breakpoint('md') {
             padding-top: 200px;
         }
     }
+
     .callout {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content: space-between;
-        background: #A4D6D5;
         position: absolute;
-        z-index: 2;
         left: 20px;
         right: 20px;
-
-        padding: 15px;
-
-        .c-image {
-            color: #436060;
-            img {
-                width: 80px;
-                height: 80px;
-            }
-
-        }
-
-        .c-text {
-            color: #436060;
-            font-size: 15px;
-            width: 90%;
-            margin-left: 15px;
-        }
-
-        .c-link {
-            color: #436060;
-            font-size: 16px;
-            width: 16%;
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-
-            a {
-                color: #436060;
-                transition: opacity 0.2s ease;
-                cursor: pointer;
-                &:hover {
-                    color: #436060;
-                    opacity: 0.8;
-                }
-            }
-
-            .check-it-out {
-                display: none;
-                margin-right: 30px;
-            }
-
-            img {
-                position: relative;
-                top: 5px;
-            }
-        }
-
+        z-index: 2;
         top: -60px;
 
         @include breakpoint('md') {
             top: -100px;
             padding: 30px 60px;
-            .c-image {
-                img {
-                    width: 150px;
-                    height: 150px;
-                }
-            }
-            .c-text {
-                font-size: 25px;
-                width: 64%;
-            }
-            .c-link {
-                font-size: 20px;
-                width: 16%;
-
-                .check-it-out {
-                    display: inline-block;
-                    margin-right: 30px;
-                }
-            }
         }
     }
-
 
     .main-features-wrapper {
         .col {
             text-align: center;
         }
+
         @include breakpoint('md') {
             display: flex;
-            
+
             .col {
                 width: 50%;
                 padding: 0 20px;
@@ -123,18 +49,22 @@
             flex-wrap: wrap;
             margin-top: $global-padding-intermediate;
         }
+
         .card {
             padding-bottom: $global-padding-mid;
 
             div {
                 width: 100%;
             }
+
             @include breakpoint('md') {
                 width: 50%;
+
                 div {
                     width: 60%;
                 }
             }
+
             a {
                 color: $text_color;
                 text-decoration: underline;
@@ -160,7 +90,7 @@
         margin: 1.250rem 0;
         font-weight: 700;
         font-size: 1.250rem;
-        
+
         @include breakpoint('md') {
             line-height: 1.2;
         }
@@ -173,10 +103,11 @@
 
 
     .cta {
-        width: 150px;
+        width: 200px;
         margin: 0 auto -20px;
+
         @include breakpoint('md') {
-            margin-top: 2.222rem;
+            margin: 2.222rem auto;
         }
     }
 }

@@ -7,6 +7,7 @@
     .container {
         position: relative;
         padding-bottom: 100px;
+
         @include breakpoint('md') {
             padding-bottom: 150px;
         }
@@ -46,6 +47,27 @@
             align-content: center;
         }
 
+        &.centered {
+            display: block;
+
+            .col {
+                text-align: center;
+
+                @include breakpoint('md') {
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+        }
+
+        &.full {
+            display: block;
+
+            .col {
+                width: 100%;
+            }
+        }
+
         .col {
             color: $white;
 
@@ -57,19 +79,16 @@
                 width: 40%;
             }
 
-            &.full {
-                width: 100%;
-            }
-
             .title {
                 font-size: 25px;
+                line-height: 2.5rem;
 
                 @include breakpoint('md') {
                     font-size: 50px;
+                    line-height: 60px;
                 }
 
                 font-weight: 700;
-                line-height: 2.5rem;
                 margin-bottom: $global-padding-default;
             }
 
@@ -90,7 +109,7 @@
         .hero-title {
             @include breakpoint('md') {
                 font-weight: 700;
-                line-height: 2.5rem;
+                line-height: 60px;
                 font-size: 50px;
                 text-transform: uppercase;
             }
@@ -101,6 +120,12 @@
 
         .hero-content {
             font-size: 20px;
+        }
+
+        .hero-image {
+            display: block;
+            border: 1px solid red;
+            margin: auto;
         }
     }
 

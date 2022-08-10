@@ -1,27 +1,20 @@
 <section id="main-features" class="ovh light">
     <div class="container">
-        <div class="callout">
-            <div class="c-image">
-                <img src="{{site.url}}{{site.baseurl}}/assets/img/Leapp_Icon.png" alt="logo" title="logo" />
-            </div>
-            <div class="c-text">
-                <span>We are Noovolari. We make Leapp.<br>We completely rebranded ourselves.</span>
-            </div>
-            <div class="c-link">
-                <a href="/rebranding" target="_blank" id="rebranding_link">
-                    <span class="desktop check-it-out">Check it out!</span>
-                    <img src="{{site.url}}{{site.baseurl}}/assets/img/arrow-right.png" width="36">
-                </a>
-            </div>
+        <div class="callout {{page.callout_display}}">
+
+            {% if page.callout_content %}
+                {% include {{ page.callout_content }} %}
+            {% endif %}
+            
         </div>
 
-        <h2 class="section-subtitle text-center mgb">{{site.data.main_features.title}}</h2>
+        <h2 class="section-subtitle text-center mgb">{{site.data.features.[page.features_data].title}}</h2>
 
         <div class="main-features-wrapper">
-            <div class="col"><img src="{{site.url}}{{site.baseurl}}/assets/img/leapp-new.png" alt="Leapp" width="1" height="1" class="w-100 h-auto"/></div>
+            <div class="col"><img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.features.[page.features_data].image}}" alt="Leapp" width="1" height="1" class="w-100 h-auto"/></div>
             <div class="col">
                 <div class="card-holder">
-                    {% for item in site.data.main_features.features %}
+                    {% for item in site.data.features.[page.features_data].features %}
                         <div class="card">
                             <i class="fa {{item.icon}}"></i>
                             <div>
@@ -34,6 +27,8 @@
             </div>
         </div>
 
-        <a href="{{site.get_started}}" id ="install-from-features" target="_blank" class="btn btn-outline-secondary d-block text-center cta" onclick="leapp.sendEvent('Download-From-Features', this)">Install Leapp</a>
+        {% if {{site.data.features.[page.features_data].cta_label}} %}
+            <a href="{{site.data.features.[page.features_data].cta_action}}" {{site.data.features.[page.features_data].cta_id}} {{site.data.features.[page.features_data].cta_target}} class="btn btn-outline-secondary d-block text-center cta" {{site.data.features.[page.features_data].cta_click}}>{{site.data.features.[page.features_data].cta_label}}</a>
+        {% endif %}
     </div>
 </section>

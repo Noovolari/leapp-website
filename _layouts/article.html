@@ -5,16 +5,18 @@ layout: article
 <!DOCTYPE html>
 <html>
 {% include header.html %}
+
 <body>
-{% include tagmanagerscript.html %}
-{% include navbar.html %}
-{% include hero-article.html %}
+    {% include tagmanagerscript.html %}
+    {% include navbar.html %}
+    {% include hero-article.html %}
 
-<div class="article-container">
-    {{ content }}
-</div>
+    <div class="article-container">
+        {{ content }}
+    </div>
 
-{% include contributor.html %}
-{% include footer.html %}
+    {% include contributor.html %}
+    {% include footer.html %}
 </body>
+
 </html>

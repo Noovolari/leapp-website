@@ -1,10 +1,10 @@
 <section id="steps" class="white ovh">
     <div class="container">
-        {% if site.data.steps.title != ""  %}
-            <h2 class="section-title white">{{site.data.steps.title}}</h2>
+        {% if {{site.data.steps.[page.steps_data].title}} != ""  %}
+            <h2 class="section-title white">{{site.data.steps.[page.steps_data].title}}</h2>
         {% endif %}
         <div class="steps-holder">
-            {% for step in site.data.steps.step %}
+            {% for step in {{site.data.steps.[page.steps_data].step}} %}
                 {% capture c %}{% cycle 'reverse', '' %}{% endcapture %}
 
                 {% assign indice = forloop.index %}

@@ -1,26 +1,60 @@
+
+{% if site.data.opensource.[page.opensource_data].display == 1 %}
+    {% assign opClass = 'd-block text-center' %}
+{% endif %}
+
 <section class="light">
     <div class="container">
 
-        <div id="opensource" class="mb-3 position-relative">
-            <div class="col">
-                <div class="fs-3 mb-3 text-uppercase subtitle-mod">Open source</div>
-                <div class="fs-1 mb-1 text-uppercase title-mod"><strong>NOTHING GOOD IS BUILT ALONE</strong></div>
-                <div class="mb-3">Have some great idea on what to build next? Let’s do it together!</div>
-                <a href="{{site.github_url}}" class="btn btn-secondary mt-2 mb-2 browse">Jump to GitHub</a>
-            </div>
-            <div class="col">
-                <div class="numbers-holder">
-                    {% for item in site.data.main_features.numbers %}
-                    <div class="number text-center">
-                        <h3 id ="{{ item.id }}" class="fs-1-bold">{{ item.title }}</h3>
-                        {% if item.subtitle != nil %}
-                            <div class="fs-5">{{ item.subtitle }}</div>
-                        {% endif %}
+        <div id="opensource" class="mb-3 position-relative {{opClass}}">
+            {% if site.data.opensource.[page.opensource_data].display == 0   %}
+                <div class="col">
+            {% endif %}
+                {% if site.data.opensource.[page.opensource_data].display == 1 %}
+                    <div class="numbers-holder mb-3" style="flex-wrap:nowrap;">
+                        {% for item in site.data.opensource.[page.opensource_data].numbers %}
+                        <div class="number text-center">
+                            <h3 id ="{{ item.id }}" class="fs-1-bold">{{ item.title }}</h3>
+                            {% if item.subtitle != nil %}
+                                <div class="fs-5">{{ item.subtitle }}</div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                {% endif %}
+                {% if site.data.opensource.[page.opensource_data].category %}
+                    <div class="fs-3 mb-3 text-uppercase subtitle-mod">{{site.data.opensource.[page.opensource_data].category}}</div>
+                {% endif %}
+                {% if site.data.opensource.[page.opensource_data].title %}
+                    <div class="fs-1 mb-1 text-uppercase title-mod"><strong>{{site.data.opensource.[page.opensource_data].title}}</strong></div>
+                {% endif %}
+                {% if site.data.opensource.[page.opensource_data].text %}
+                    <div class="mb-3">{{site.data.opensource.[page.opensource_data].text}}</div>
+                {% endif %}
+                <a href="{{site.data.opensource.[page.opensource_data].cta.action}}" class="btn btn-secondary mt-2 mb-2 browse">{{site.data.opensource.[page.opensource_data].cta.label}}</a>
+            {% if site.data.opensource.[page.opensource_data].display == 0 %}
                 </div>
-                <img src="{{site.url}}{{site.baseurl}}/assets/img/octodex.png" alt="Octodex" width="1" height="1" class="w-auto h-auto" id="octodex"/>
+            {% endif %}
+
+            {% if site.data.opensource.[page.opensource_data].display == 0 %}
+                <div class="col">
+                    <div class="numbers-holder">
+                        {% for item in site.data.opensource.[page.opensource_data].numbers %}
+                        <div class="number text-center">
+                            <h3 id ="{{ item.id }}" class="fs-1-bold">{{ item.title }}</h3>
+                            {% if item.subtitle != nil %}
+                                <div class="fs-5">{{ item.subtitle }}</div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    {% if site.data.opensource.[page.opensource_data].image %}
+                        <img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.opensource.[page.opensource_data].image}}" alt="Octodex" width="1" height="1" class="w-auto h-auto" id="octodex"/>
+                    {% endif %}
             </div>
+            {% endif %}
+
         </div>
 
     </div>

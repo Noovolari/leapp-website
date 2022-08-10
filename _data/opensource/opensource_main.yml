@@ -1,0 +1,23 @@
+display: 0
+category: "Open source"
+title: "NOTHING GOOD IS BUILT ALONE"
+text: "Have some great idea on what to build next? Let's do it together!"
+image: octodex.png
+cta: 
+  label: "Jump to GitHub"
+  action: "https://github.com/Noovolari/leapp"
+numbers:
+  - number:
+    title: "3K"
+    subtitle: Active Users
+    id: weekly_usage
+
+  - number:
+    title: "780"
+    subtitle: Stars
+    id: stars
+
+  - number:
+    title: "170"
+    subtitle: GitHub Issues
+    id: issues
