@@ -31,7 +31,7 @@
                 {% if site.data.opensource.[page.opensource_data].text %}
                     <div class="mb-3">{{site.data.opensource.[page.opensource_data].text}}</div>
                 {% endif %}
-                <a href="{{site.data.opensource.[page.opensource_data].cta.action}}" class="btn btn-secondary mt-2 mb-2 browse">{{site.data.opensource.[page.opensource_data].cta.label}}</a>
+                <a href="{{site.data.opensource.[page.opensource_data].cta.action}}" class="btn btn-secondary mt-2 mb-2 browse {{site.data.opensource.[page.opensource_data].cta.class}}" data-action="{{site.data.opensource.[page.opensource_data].cta.data_action}}">{{site.data.opensource.[page.opensource_data].cta.label}}</a>
             {% if site.data.opensource.[page.opensource_data].display == 0 %}
                 </div>
             {% endif %}

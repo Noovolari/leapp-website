@@ -5,7 +5,9 @@ text: "You'll discover these quantitative findings and more in the report<br>cre
 image: 
 cta: 
   label: "Download the Leapp Team ROI report"
-  action: "#"
+  action: "javascript:void(0);"
+  data_action: "https://formspree.io/f/xwkzkodr"
+  class: "modal modal-button"
 numbers:
   - number:
     title: "2X"

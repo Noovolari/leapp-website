@@ -28,7 +28,15 @@
         </div>
 
         {% if {{site.data.features.[page.features_data].cta_label}} %}
-            <a href="{{site.data.features.[page.features_data].cta_action}}" {{site.data.features.[page.features_data].cta_id}} {{site.data.features.[page.features_data].cta_target}} class="btn btn-outline-secondary d-block text-center cta" {{site.data.features.[page.features_data].cta_click}}>{{site.data.features.[page.features_data].cta_label}}</a>
+            <a 
+                href="{{site.data.features.[page.features_data].cta_action}}" 
+                {{site.data.features.[page.features_data].cta_id}} 
+                {{site.data.features.[page.features_data].cta_target}} 
+                class="btn btn-outline-secondary d-block text-center cta {{site.data.opensource.[page.opensource_data].cta.class}}" 
+                data-action="{{site.data.opensource.[page.opensource_data].cta.data_action}}" 
+                {{site.data.features.[page.features_data].cta_click}}>
+                {{site.data.features.[page.features_data].cta_label}}
+            </a>
         {% endif %}
     </div>
 </section>

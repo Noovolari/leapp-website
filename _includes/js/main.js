@@ -24,6 +24,7 @@
             gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
             steps: $(".steps-navigation a"),
             terminalCommand: $(".terminal-command"),
+            modal: $(".modal")
         },
         init: function () {
             this._hamburger();
@@ -38,6 +39,9 @@
             this._terminalAnimation();
             this._autoPlay();
             this._githubStats();
+            if (this.elements.modal.length > 0) {
+                this._modal();
+            }
         },
         sendEvent: function (action, element, event) {
             if (action.indexOf('Download-From') > -1) {
@@ -672,6 +676,85 @@
             function clickCommand(i) {
                 $(commandsArray[i]).trigger('autoplay-event');
             }
+        },
+        _modal: function() {
+            $('.modal-button').on('click', function(){
+                var formTitle = $(this).html();
+                var formAction = $(this).attr('data-action');
+
+                $.confirm({
+                    useBootstrap: false,
+                    icon: 'fa fa-question-circle-o',
+                    theme: 'supervan',
+                    columnClass: 'small',
+                    closeIcon: true,
+                    animation: 'scale',
+                    type: 'blue',
+                    draggable: false,
+                    title: formTitle,
+                    content: '' +
+                        '<div class="leapp-form-wrapper">' + 
+                            '<form class="form-request" name="form-request" accept-charset="utf-8" action="' + formAction + '" method="post">' + 
+                                '<fieldset>' + 
+                                    '<label for="name">Full Name</label>' + 
+                                    '<input type="text" name="name" id="name" placeholder="First and Last" required="" class="mb-2">' + 
+                                    '<label for="email">Email Address</label>' + 
+                                    '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="">' + 
+                                '</fieldset>' + 
+                            '</form>' + 
+                        '</div>' + 
+                        '<p class="status mt-2"></p>',
+                    buttons: {
+                        send: {
+                            text: 'Submit',
+                            btnClass: 'btn-blue',
+                            action: function(){
+                                var self = this; 
+
+                                var input = this.$content.find('input[type="text"]');
+                                var formId = this.$content.find('form').attr("class");
+
+                                if(!input.val().trim()) {
+                                    $.alert({
+                                        title: "Error",
+                                        content: "Please don't keep fields empty.",
+                                        type: 'red',
+                                        boxWidth: '30%'
+                                    });
+                                    return false;
+                                }
+                                else {
+                                    var jqForm = this.$content.find("form");
+                                    var method = jqForm.attr("method");
+                                    var action = jqForm.attr("action");
+                                    var status = this.$content.find(".status");
+                                    var data = new FormData(jqForm[0]);
+                                    
+                                    fetch(action, {
+                                        method: method,
+                                        body: data,
+                                        headers: {
+                                            'Accept': 'application/json'
+                                        }
+                                    }).then(response => {
+                                        jqForm.trigger("reset");
+                                        status.fadeIn("fast").html("Thanks for your submission!");
+                                    }).catch(error => {
+                                        jqForm.trigger("reset");
+                                        status.fadeIn("fast").html("<span class='error'> Oops! There was a problem submitting your form.</span>");
+                                    });
+                                }
+                                
+                                setTimeout(function () {
+                                    self.close();
+                                }, 2000); 
+                                
+                                return false;
+                            }
+                        }
+                    }
+                });
+            });
         }
     };
 

@@ -2,7 +2,13 @@
     <div class="container">
         <div class="footer-cta">
             <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48"/></a>
-            <a href="{{site.get_started}}" class="btn btn-secondary d-inline-block" target="_blank" id="install-leapp-footer" onclick="leapp.sendEvent('Download-From-Footer', this)">Install Leapp</a>
+
+            {% if page.layout == 'team' %}
+                <a href="javascript:void(0);" class="btn btn-secondary d-inline-block modal modal-button" data-action="https://formspree.io/f/xlevenrr">Apply for early access</a>
+            {% else %}
+                <a href="{{site.get_started}}" class="btn btn-secondary d-inline-block" target="_blank" id="install-leapp-footer" onclick="leapp.sendEvent('Download-From-Footer', this)">Install Leapp</a>
+            {% endif %}
+
         </div>
         <hr>
         <ul>
@@ -34,11 +40,15 @@
 {% capture marked %}
 {% include js/vendor/marked.min.js %}
 {% endcapture %}
+{% capture confirm %}
+{% include js/vendor/jquery-confirm.min.js %}
+{% endcapture %}
 {% capture main %}
 {% include js/main.js %}
 {% endcapture %}
 <script>{{ jquery }}</script>
 <script>{{ slick }}</script>
 <script>{{ formValidate }}</script>
+<script>{{ confirm }}</script>
 <script>{{ marked }}</script>
 <script>{{ main }}</script>
