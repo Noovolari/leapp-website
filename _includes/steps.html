@@ -18,13 +18,13 @@
                             </div>
                         {% endif %}
                         {% if step.image | strip_newlines != "" %}
-                            <div class="image">
+                            <div class="image mb-3">
                                 <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.image}}" alt="Step {{forloop.index}}">
                             </div>
                         {% endif %}
                     </div>
                     <div class="col content">
-                        <div class="steps-navigation mt-3 mb-5">
+                        <div class="steps-navigation mb-5">
                             {% for i in (1..3) %}
                                 <a href="#step{{i}}" class="{% if indice == i %} {{current}} {% endif %} d-inline-block pr-2 fs-5 steps">STEP {{i}}</a>
                             {% endfor %}

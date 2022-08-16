@@ -19,9 +19,9 @@
                 </a>
             </li>
             <li>
-                <a title="contacts" href="{{site.data.footer.contacts_url}}" class="pr-1">Contacts</a>
-                <a title="Privacy Policy" href="{{site.data.footer.privacy_url}}" class="pr-1">Privacy Policy</a>
-                <a title="Leapp GitHub" href="{{site.github_url}}" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                {% for item in site.data.footer.page %}
+                    <a title="{{ item.title }}" href="{{ item.url }}" class="pr-1">{{ item.title }}</a>
+                {% endfor %}
             </li>
         </ul>
     </div>

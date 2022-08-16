@@ -1,7 +1,13 @@
 # Footer
-toc_url: '/terms'
-contacts_url: '/contacts'
-privacy_url: '/privacy'
+page: 
+  - title: 'Contacts'
+    url: '/contacts'
+
+  - title: 'Privacy Policy'
+    url: '/privacy'
+    
+  - title: 'Terms of use'
+    url: '/terms'
 
 # Call to Action
 cta_text: If it's ON, you are IN.

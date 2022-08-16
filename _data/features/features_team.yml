@@ -1,11 +1,12 @@
 title: "WHY TEAMS <img src='/assets/img/heart.png' class='d-inline-block'> LEAPP?"
 image: leapp-team.png
-cta_class: ""
+cta_class: "modal modal-button"
 cta_label: "Apply for early access"
 cta_action: "javascript:void(0);"
 cta_target: 
 cta_id: 
 cta_click: 
+cta_data_action: "https://formspree.io/f/xlevenrr" 
 features:
   - title: Keep control
     icon: fa-bolt

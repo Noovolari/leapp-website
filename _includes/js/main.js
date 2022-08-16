@@ -699,7 +699,9 @@
                                     '<label for="name">Full Name</label>' + 
                                     '<input type="text" name="name" id="name" placeholder="First and Last" required="" class="mb-2">' + 
                                     '<label for="email">Email Address</label>' + 
-                                    '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="">' + 
+                                    '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="" class="mb-2">' + 
+                                    '<input name="autorize" id="autorize" type="checkbox" value="1" required="">' + 
+                                    '<label for="autorize">Read and subscribe <a href="/terms" target="_blank">Terms of use</a></label>' + 
                                 '</fieldset>' + 
                             '</form>' + 
                         '</div>' + 
@@ -712,12 +714,24 @@
                                 var self = this; 
 
                                 var input = this.$content.find('input[type="text"]');
+                                var inputCheck = this.$content.find('input[type="checkbox"]');
                                 var formId = this.$content.find('form').attr("class");
+       
+                                console.log(inputCheck.is(':checked'));
 
                                 if(!input.val().trim()) {
                                     $.alert({
                                         title: "Error",
                                         content: "Please don't keep fields empty.",
+                                        type: 'red',
+                                        boxWidth: '30%'
+                                    });
+                                    return false;
+                                }
+                                else if( !inputCheck.is(':checked') ) {
+                                    $.alert({
+                                        title: "Error",
+                                        content: "Please accept cookie policy.",
                                         type: 'red',
                                         boxWidth: '30%'
                                     });
