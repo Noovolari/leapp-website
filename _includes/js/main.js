@@ -27,6 +27,7 @@
             modal: $(".modal")
         },
         init: function () {
+            this._navigation();
             this._hamburger();
             this._slick();
             this._anchor();
@@ -154,6 +155,16 @@
                 _self.elements.html.toggleClass("noscroll");
             });
         },
+        _navigation: function () {
+            this.elements.navigation.find("li").on({
+                mouseenter: function () {
+                    $(this).find(".submenu-wrapper").removeClass("d-none");
+                },
+                mouseleave: function () {
+                    $(this).find(".submenu-wrapper").addClass("d-none");
+                }
+            });
+        },
         _download: function () {
             var _self = this;
 
@@ -161,7 +172,7 @@
                 type: 'GET',
                 url: _self.elements.cfDistribution + "/latest/latest.yml",
                 success: function (response) {
-                    var version = response.split("\n")[0].substring(9);
+                    var version = response.xsplit("\n")[0].substring(9);
 
                     var content = "";
                     var platform = navigator.platform.toLowerCase();
@@ -700,8 +711,8 @@
                                     '<input type="text" name="name" id="name" placeholder="First and Last" required="" class="mb-2">' + 
                                     '<label for="email">Email Address</label>' + 
                                     '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="" class="mb-2">' + 
-                                    '<input name="autorize" id="autorize" type="checkbox" value="1" required="">' + 
-                                    '<label for="autorize">Read and subscribe <a href="/terms" target="_blank">Terms of use</a></label>' + 
+                                    '<input name="authorize" id="authorize" type="checkbox" value="1" required="">' + 
+                                    '<label for="authorize">Read and subscribe <a href="/privacy" target="_blank">Privacy Policy</a></label>' + 
                                 '</fieldset>' + 
                             '</form>' + 
                         '</div>' + 

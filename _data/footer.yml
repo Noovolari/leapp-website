@@ -2,12 +2,20 @@
 page: 
   - title: 'Contacts'
     url: '/contacts'
+    target: ''
 
   - title: 'Privacy Policy'
     url: '/privacy'
+    target: ''
     
-  - title: 'Terms of use'
+  - title: 'Cookie Policy'
     url: '/terms'
+    target: ''
+  
+  - title: '<i class="fab fa-github"></i>'
+    url: 'https://github.com/Noovolari/leapp'
+    target: 'target="_blank"'
+
 
 # Call to Action
 cta_text: If it's ON, you are IN.

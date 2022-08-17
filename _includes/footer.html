@@ -20,7 +20,7 @@
             </li>
             <li>
                 {% for item in site.data.footer.page %}
-                    <a title="{{ item.title }}" href="{{ item.url }}" class="pr-1">{{ item.title }}</a>
+                    <a href="{{ item.url }}" class="pr-1" {{ item.target }}>{{ item.title }}</a>
                 {% endfor %}
             </li>
         </ul>
