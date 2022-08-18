@@ -75,12 +75,12 @@
 
         #navigation {
             display: none;
-            
+
             @include breakpoint('md') {
                 display: flex !important;
                 align-items: center;
                 align-content: center;
-                
+
                 li {
                     padding: 30px 0;
                     margin: 0 15px;
@@ -103,10 +103,10 @@
             .submenu-wrapper {
                 background-color: $blue;
                 margin: 10px 0 0 40px;
-                
+
                 @include breakpoint('md') {
                     position: absolute;
-                    min-width: 400px;
+                    min-width: 100px;
                     margin-left: -30px;
                     padding: 30px;
                     display: flex;
