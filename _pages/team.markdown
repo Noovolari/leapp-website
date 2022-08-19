@@ -1,10 +1,10 @@
 ---
 title: Team
-description: Keep your team focused on what really matters
+description: Where Cloud access happens
 permalink: /team
 image: team.png
 layout: team
-hero_title: Keep your team focused on what really matters
+hero_title: Where Cloud access happens
 hero_content: 
 hero_image: team.png
 hero_position: centered
