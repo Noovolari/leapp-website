@@ -5,9 +5,9 @@ permalink: /team
 image: team.png
 layout: team
 hero_title: Where Cloud access happens
-hero_content: 
+hero_content: team-hero-content.html
 hero_image: team.png
-hero_position: centered
+hero_position: team-hero
 callout_display: d-block text-center
 callout_content: callout/callout-team.html
 features_data: features_team
