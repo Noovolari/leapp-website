@@ -13,16 +13,6 @@
         }
     }
 
-    .team-hero{
-        .media-hero {
-            width: 65% !important;
-
-            img {
-                border-radius: 5px;
-            }
-        }
-    }
-
     @include breakpoint('md') {
         padding-top: 140px;
     }

@@ -29,6 +29,45 @@ span.cursor.hidden {
   padding: 40px 20px 20px 20px!important;
 }
 
-.step-team {
-  height: 480px!important;
+
+
+.team-hero {
+    img {
+      border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+  .team-hero {
+    .media-hero {
+      width: 65%!important;
+
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+  .step-team {
+    height: 480px!important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .team-hero-content { width: 50%!important; }
+  .team-media-hero { width: 50%!important; }
+  .step-team {
+    height: 480px!important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team-hero-content { width: 100%!important; text-align: center; h1 {  font-weight: 600; font-size: 35px; } }
+  .team-media-hero { width: 100%!important; text-align: center; margin: 0 auto; img { text-align: center; } }
+  .team-subtitle {
+    margin-bottom: -40px!important;
+    margin-top: 40px!important;
+  }
+  .step-team {
+    height: initial!important;
+  }
 }
