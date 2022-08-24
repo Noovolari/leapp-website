@@ -1,12 +1,12 @@
 title: "WHY TEAMS <img src='/assets/img/heart.png' class='d-inline-block'> LEAPP?"
 image: leapp-team.png
 cta_class: "modal modal-button"
-cta_label: "Apply for early access"
+cta_label: "Get early access"
 cta_action: "javascript:void(0);"
-cta_target: 
-cta_id: 
-cta_click: 
-cta_data_action: "https://formspree.io/f/xlevenrr" 
+cta_target:
+cta_id:
+cta_click:
+cta_data_action: "https://formspree.io/f/xlevenrr"
 features:
   - title: Keep control
     icon: fa-bolt
@@ -18,11 +18,11 @@ features:
 
   - title: Super visibility
     icon: fa-box
-    content: "Who can access what” at a glance"
+    content: "Who can access what at a glance"
 
-  - title: Safe3
+  - title: Safe³
     icon: fa-flux-capacitor
-    content: "Everything stored in the server with a zero-knowledge encryption"
+    content: "Everything stored with a zero-knowledge encryption"
 numbers:
   - number:
     title: "3K"
