@@ -1,0 +1,34 @@
+<section id="steps" class="white ovh">
+    <div class="container" id="feature">
+        {% if {{site.data.steps.[page.steps_data].title}} != ""  %}
+            <h2 class="section-title white">{{site.data.steps.[page.steps_data].title}}</h2>
+        {% endif %}
+        <div class="steps-holder">
+            {% for step in {{site.data.steps.[page.steps_data].step}} %}
+                {% capture c %}{% cycle 'reverse', '' %}{% endcapture %}
+
+                {% assign indice = forloop.index %}
+                {% assign current = 'active' %}
+
+                <div class="step mb-3 {{c}}" id="step{{forloop.index}}">
+                    <div class="col asset">
+                        {% if step.video | strip_newlines != "" %}
+                            <div class="video">
+                                <video {% if step.controls == true %}controls="controls"{% endif %} {% if step.autoplay == true %}autoplay="autoplay"{% endif %} {% if step.muted == true %}muted="muted"{% endif %} loop="loop"><source src="{{site.url}}{{site.baseurl}}/assets/videos/{{step.video}}" type="video/mp4" /></video>
+                            </div>
+                        {% endif %}
+                        {% if step.image | strip_newlines != "" %}
+                            <div class="image mb-3">
+                                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.image}}" alt="Step {{forloop.index}}">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col content team-content">
+                        <h2>{{ step.title }}</h2>
+                        {{step.content}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

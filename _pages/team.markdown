@@ -1,10 +1,11 @@
 ---
 title: Team
-description: Where Cloud access happens
+description: Where Cloud happens
 permalink: /team
 image: team.png
 layout: team
-hero_title: Where Cloud access happens
+hero_title_1: Where
+hero_title_2: happens
 hero_content: team-hero-content.html
 hero_image: team.png
 hero_position: team-hero
