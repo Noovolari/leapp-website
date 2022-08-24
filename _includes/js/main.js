@@ -703,30 +703,30 @@
                     draggable: false,
                     title: formTitle,
                     content: '' +
-                        '<div class="leapp-form-wrapper">' + 
-                            '<form class="form-request" name="form-request" accept-charset="utf-8" action="' + formAction + '" method="post">' + 
-                                '<fieldset>' + 
-                                    '<label for="name">Full Name</label>' + 
-                                    '<input type="text" name="name" id="name" placeholder="First and Last" required="" class="mb-2">' + 
-                                    '<label for="email">Email Address</label>' + 
-                                    '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="" class="mb-2">' + 
-                                    '<input name="authorize" id="authorize" type="checkbox" value="1" required="">' + 
-                                    '<label for="authorize">Read and subscribe <a href="/privacy" target="_blank">Privacy Policy</a></label>' + 
-                                '</fieldset>' + 
-                            '</form>' + 
-                        '</div>' + 
+                        '<div class="leapp-form-wrapper">' +
+                            '<form class="form-request" name="form-request" accept-charset="utf-8" action="' + formAction + '" method="post">' +
+                                '<fieldset>' +
+                                    '<label for="name">Full Name</label>' +
+                                    '<input type="text" name="name" id="name" placeholder="First and Last" required="" class="mb-2">' +
+                                    '<label for="email">Email Address</label>' +
+                                    '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="" class="mb-2">' +
+                                    '<input name="authorize" id="authorize" type="checkbox" value="1" required="">' +
+                                    '<label for="authorize">Read and subscribe <a href="/privacy" target="_blank">Privacy Policy</a></label>' +
+                                '</fieldset>' +
+                            '</form>' +
+                        '</div>' +
                         '<p class="status mt-2"></p>',
                     buttons: {
                         send: {
                             text: 'Submit',
                             btnClass: 'btn-blue',
                             action: function(){
-                                var self = this; 
+                                var self = this;
 
                                 var input = this.$content.find('input[type="text"]');
                                 var inputCheck = this.$content.find('input[type="checkbox"]');
                                 var formId = this.$content.find('form').attr("class");
-       
+
                                 console.log(inputCheck.is(':checked'));
 
                                 if(!input.val().trim()) {
@@ -753,7 +753,7 @@
                                     var action = jqForm.attr("action");
                                     var status = this.$content.find(".status");
                                     var data = new FormData(jqForm[0]);
-                                    
+
                                     fetch(action, {
                                         method: method,
                                         body: data,
@@ -768,11 +768,11 @@
                                         status.fadeIn("fast").html("<span class='error'> Oops! There was a problem submitting your form.</span>");
                                     });
                                 }
-                                
+
                                 setTimeout(function () {
                                     self.close();
-                                }, 2000); 
-                                
+                                }, 2000);
+
                                 return false;
                             }
                         }
@@ -785,9 +785,9 @@
             if(typedTextSpan !== null) {
                 const cursorSpan = document.querySelector(".cursor");
                 const textArray = JSON.parse(typedTextSpan.dataset.array);
-                const typingDelay = 120;
-                const erasingDelay = 100;
-                const newTextDelay = 3000;
+                const typingDelay = 100;
+                const erasingDelay = 50;
+                const newTextDelay = 2200;
                 let textArrayIndex = 0;
                 let charIndex = 0;
 
