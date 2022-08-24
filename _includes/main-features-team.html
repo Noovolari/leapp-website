@@ -1,0 +1,42 @@
+<section id="main-features" class="ovh light">
+    <div class="container">
+        <div class="callout {{page.callout_display}}">
+
+            {% if page.callout_content %}
+                {% include {{ page.callout_content }} %}
+            {% endif %}
+            
+        </div>
+
+        <h2 class="section-subtitle text-center mgb team-subtitle">{{site.data.features.[page.features_data].title}}</h2>
+
+        <div class="main-features-wrapper">
+            <div class="col"><img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.features.[page.features_data].image}}" alt="Leapp" width="1" height="1" class="w-100 h-auto"/></div>
+            <div class="col">
+                <div class="card-holder">
+                    {% for item in site.data.features.[page.features_data].features %}
+                        <div class="card">
+                            <i class="fa {{item.icon}}"></i>
+                            <div>
+                                <p class="main-features-title">{{ item.title }}</p>
+                                <h2 class="main-features-content">{{ item.content }}</h2>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if {{site.data.features.[page.features_data].cta_label}} %}
+            <a 
+                href="{{site.data.features.[page.features_data].cta_action}}" 
+                {{site.data.features.[page.features_data].cta_id}} 
+                {{site.data.features.[page.features_data].cta_target}} 
+                class="btn btn-outline-secondary d-block text-center cta {{site.data.features.[page.features_data].cta_class}}" 
+                data-action="{{site.data.features.[page.features_data].cta_data_action}}" 
+                {{site.data.features.[page.features_data].cta_click}}>
+                {{site.data.features.[page.features_data].cta_label}}
+            </a>
+        {% endif %}
+    </div>
+</section>

@@ -2,14 +2,14 @@
     <div class="container">
 
         <div class="hero-unit-col-container {{page.hero_position}}">
-            <div class="col hero-content">
+            <div class="col hero-content team-hero-content">
                 <h1 class="hero-title">{{page.hero_title_1}}&nbsp;<span class="typed-text" data-array='{{site.data.team.claims | inspect}}'></span><span class="cursor"></span><br>{{page.hero_title_2}}</h1>
                 {% if page.hero_content %}
                     {% include {{ page.hero_content }} %}
                 {% endif %}
             </div>
             {% if page.hero_image != null %}
-                <div class="col media-hero">
+                <div class="col media-hero team-media-hero">
                     <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}" width="1" height="1" class="w-100 h-auto"/>
                 </div>
             {% endif %}
