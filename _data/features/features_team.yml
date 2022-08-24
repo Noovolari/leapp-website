@@ -9,19 +9,19 @@ cta_click:
 cta_data_action: "https://formspree.io/f/xlevenrr"
 features:
   - title: Keep control
-    icon: fa-bolt
+    icon: fa-landmark
     content: "A single place to manage your team access"
 
   - title: High productivity
-    icon: fa-lock-alt
+    icon: fa-laptop-code
     content: "Up to 20 minutes saved every day for each team member"
 
   - title: Super visibility
-    icon: fa-box
+    icon: fa-binoculars
     content: "Who can access what at a glance"
 
   - title: Safe³
-    icon: fa-flux-capacitor
+    icon: fa-shield-check
     content: "Everything stored with a zero-knowledge encryption"
 numbers:
   - number:
