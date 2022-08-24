@@ -71,3 +71,18 @@ span.cursor.hidden {
     height: initial!important;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .team-hero-content { width: 100%!important; text-align: center; h1 {  font-weight: 600; font-size: 35px; } p { font-size: 17px!important; }}
+  .team-media-hero { width: 100%!important; text-align: center; margin: 0 auto; img { text-align: center; } }
+  .team-subtitle {
+    margin-bottom: 0!important;
+    margin-top: 40px!important;
+  }
+  .step-team {
+    height: initial!important;
+  }
+  .callout strong {
+    font-size: 0.9rem!important;
+  }
+}
