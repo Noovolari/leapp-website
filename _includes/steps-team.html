@@ -1,3 +1,5 @@
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <section id="steps" class="white ovh">
     <div class="container" id="feature">
         {% if {{site.data.steps.[page.steps_data].title}} != ""  %}
@@ -10,7 +12,7 @@
                 {% assign indice = forloop.index %}
                 {% assign current = 'active' %}
 
-                <div class="step mb-3 {{c}}" id="step{{forloop.index}}">
+                <div class="step mb-3 {{c}} step-team" id="step{{forloop.index}}">
                     <div class="col asset">
                         {% if step.video | strip_newlines != "" %}
                             <div class="video">

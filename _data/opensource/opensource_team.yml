@@ -4,10 +4,8 @@ title:
 text: "You'll discover these quantitative findings and more in the report<br>created in collaboration with early adopters and users - on the benefits to Leapp Team"
 image:
 cta:
-  label: "Download the Leapp Team ROI report"
-  action: "javascript:void(0);"
-  data_action: "https://formspree.io/f/xwkzkodr"
-  class: "modal modal-button"
+  label: "Get the ROI report"
+  data_action: "Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/roi-report?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
 numbers:
   - number:
     title: "2X"
