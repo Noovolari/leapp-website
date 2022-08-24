@@ -1,6 +1,6 @@
 title:
 step:
-  - title: CENTRALIZE IAM ACCESS
+  - title: CENTRALIZE IAM
     content: "<p>Manage your IAM access with Leapp as source of truth.</p><p><b>Speed up your on-boarding process</b> of your DevOps with a pre-configured version of Leapp.</p><p><b>Automatically provision</b> your company access centrally.</p>"
     video:
     autoplay: true
@@ -16,7 +16,7 @@ step:
     muted: true
     image: "steps/step2-team.png"
 
-  - title: GOVERN YOUR CLOUD SECURITY
+  - title: STEER YOUR CLOUD SECURITY
     content: "<p>Who can access what in the Cloud? Gain visibility across your Cloud environment.</p><p>One single way to access your Cloud environment, no matter different access methods.</p><p>No need to control your <b>Developer security compliance.</b> Let Leapp do it for you.</p>"
     video:
     autoplay: true

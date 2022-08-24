@@ -1,9 +1,9 @@
 display: 1
-category: 
-title: 
+category:
+title:
 text: "You'll discover these quantitative findings and more in the report<br>created in collaboration with early adopters and users - on the benefits to Leapp Team"
-image: 
-cta: 
+image:
+cta:
   label: "Download the Leapp Team ROI report"
   action: "javascript:void(0);"
   data_action: "https://formspree.io/f/xwkzkodr"
@@ -20,6 +20,6 @@ numbers:
     id: weekly_usage
 
   - number:
-    title: "4X"
-    subtitle: More effective visibility
+    title: "8X"
+    subtitle: Identity & Access visibility
     id: weekly_usage
