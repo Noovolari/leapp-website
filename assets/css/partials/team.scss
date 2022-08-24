@@ -77,12 +77,21 @@ span.cursor.hidden {
   .team-media-hero { width: 100%!important; text-align: center; margin: 0 auto; img { text-align: center; } }
   .team-subtitle {
     margin-bottom: 0!important;
-    margin-top: 40px!important;
+    margin-top: 80px!important;
   }
   .step-team {
     height: initial!important;
   }
   .callout strong {
     font-size: 0.9rem!important;
+  }
+  .jconfirm-box {
+    width: 100%!important;
+    padding: 0!important;
+    .leapp-form-wrapper {
+      padding: 20px!important;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+    }
   }
 }
