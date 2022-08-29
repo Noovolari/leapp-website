@@ -1,3 +1,10 @@
-<div id="releases-content">
+
+<div class="callout {{page.callout_display}}">
+    {% if page.callout_content %}
+    {% include {{ page.callout_content }} %}
+    {% endif %}
+</div>
+
+    <div id="releases-content">
     <img src="{{site.url}}{{site.baseurl}}/assets/img/loading.gif" alt="Releases loading..."/>
 </div>
