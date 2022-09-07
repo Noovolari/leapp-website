@@ -1,10 +1,18 @@
 title: You want to...
 subtitle: 
 topics:
-  - question: "Ho to upload a plugin?"
-    answer: "Consequat nisi adipisicing elit pariatur ullamco esse tempor eiusmod ullamco."
-  
-  - question: "How to authenticate a plugin?"
-    answer: "
-    <p>Velit ex mollit in dolore reprehenderit nostrud.</p>
-    "
+  - question: "Where to find the plugin template?"
+    answer: "You can find the plugin template to start coding your own in our <a href='https://github.com/Noovolari/leapp-plugin-template'>repository</a>."
+  - question: "How to find installed plugins on my machine?"
+    answer: "Open the option panel in Leapp Desktop App and go to the Plugin tab, click the folder icon in the top right corner of the tab, just under the search input."
+  - question: "How to install the plugin?"
+    answer: "Click the download button in one of the cards, the system will ask to open the file with Leapp, click 'yes' and wait for the installation to finish. You can also insert the plugin name in Leapp Desktop App in the Plugin tab."
+
+  - question: "How to delete a plugin?"
+    answer: "Remove the plugin folder from your plugins folder; see 'How to find installed plugins on my machine' to open the plugins folder."
+
+  - question: "How to use a plugin?"
+    answer: "Plugins are located in the contextual menu of each session that is compatible with the specified plugin. Right-click and search for the 'plugins' menu item."
+
+  - question: "How to contribute with my own plugin?"
+    answer: "Go to the plugin template <a href='https://github.com/Noovolari/leapp-plugin-template'>repository</a>, clone the repository, fill the appropriated properties in the package.json, add your plugin icon.png, and finally follow our README.md for a complete tutorial and guide on how to build your very own plugin!"

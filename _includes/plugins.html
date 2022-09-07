@@ -1,7 +1,6 @@
 <section id="listwrapper">
     <div class="container small">
 
-        
         <h2 class="section-title">{{site.data.plugins_data.title}}</h2>
         {% if site.data.plugins_data.subtitle != null %}
         <h3 class="mb-3">{{site.data.plugins_data.subtitle}}</h3>
@@ -9,32 +8,6 @@
 
         <div id="listPlugins" class="key-block-wrapper loading"></div>
 
-        {% if site.data.plugins_data.features.size > 0 %}
-            <div class="key-block-wrapper d-none">
-                {% for item in site.data.plugins_data.features %}
-                    <div class="key-block">
-                        <!-- <i class="{{item.icon}}"></i> -->
-                        {% if item.image | strip_newlines != "" %}
-                            <div class="image">
-                                <img src="{{site.url}}{{site.baseurl}}/assets/img/plugins/{{item.image}}" alt="Step {{forloop.index}}" class="d-block m-auto mb-2">
-                            </div>
-                        {% endif %}
-                        <h4>{{ item.title }}</h4>
-                        <div class="author mt-1"><strong>Autore:</strong> {{item.author}}</div>
-                        <div class="pubdate"><strong>Data:</strong> {{item.pubdate}}</div>
-                        <div class="updatedate mb-1"><strong>Aggiornato:</strong> {{item.updatedate}}</div>
-                        <div class="content">
-                            {{item.content}}
-                            <a href="{{item.url}}" class="btn btn-outline-secondary d-inline-block mt-2 w-100 text-center">Open in Leapp</a>
-                        </div>
-                        <div class="my-rating mt-1" data-rating="{{forloop.index}}"></div>
-                    </div>
-                    {% if forloop.index == 3 %}
-                        <div class="break"></div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        {% endif %}
     </div>
     <div class="container-dark">
         <div class="container small">

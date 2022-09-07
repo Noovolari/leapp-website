@@ -437,65 +437,53 @@
             },
             _listPlugin: function () {
                 var _self = this;
-
-                if (this.elements.listWrapper.length > 0) {
-                    $.ajax({
-                        type: 'GET',
-                        url: _self.elements.pluginURL,
-                        success: function (response) {
-
-                            $(response).each((i, item) => {
-                                const title = item.title;
-                                const image = '/assets/img/plugins/plugin3.png';
-                                const author = item.author;
-                                const description = item.description;
-                                const pubdate = new Date(item.pubdate).toLocaleDateString();
-                                const updatedate = new Date(item.updatedate).toLocaleDateString();
-                                const uri = 'leapp://' + item.title;
-
-                                var template = "";
-                                
-                                template += '<div class="key-block">';
-                                template += '    <div class="image">';
-                                template += '        <img src="' + image + '" alt="' +  title + '" class="d-block m-auto mb-2">';
-                                template += '    </div>';
-                                template += '    <h4>' +  title + '</h4>';
-                                template += '    <div class="author mt-1"><strong>Autore:</strong> ' +  author + '</div>';
-                                template += '    <div class="pubdate"><strong>Data:</strong> ' +  pubdate + '</div>';
-                                template += '    <div class="updatedate mb-1"><strong>Aggiornato:</strong> ' +  updatedate + '</div>';
-                                template += '    <div class="content">';
-                                template +=         description;
-                                template += '        <a href="' +  uri + '" class="btn btn-outline-secondary d-inline-block mt-2 w-100 text-center">Open in Leapp</a>';
-                                template += '    </div>';
-                                template += '    <div class="my-rating mt-1" data-rating="' + i + '"></div>';
-                                template += '</div>';
-                                if(i == 2){
-                                    template += '<div class="break"></div>';
-                                }
-
-                                $('#listPlugins').removeClass('loading').append(template);
-                            });
-
-                            _self._rating();
+                $.ajax({
+                    type: 'GET',
+                    url:'https://pz9d4kojai.execute-api.eu-west-1.amazonaws.com/api/list-plugin',
+                    success: function (response) {
+                        function imageExists(image_url){
+                            const http = new XMLHttpRequest();
+                            http.open('HEAD', image_url, false);
+                            http.send();
+                            return http.status != 404;
                         }
-                    });
-                }
-            },
-            _rating: function() {
-                $(".my-rating").starRating({
-                totalStars: 5,
-                emptyColor: 'lightgray',
-                hoverColor: 'salmon',
-                activeColor: 'cornflowerblue',
-                initialRating: 3,
-                strokeWidth: 0,
-                useGradient: false,
-                minRating: 1,
-                starSize: 20,
-                callback: function(currentRating, $el){
-                    alert('rated ', currentRating);
-                    console.log('DOM element ', $el);
-                }
+
+                        $(response).each((i, item) => {
+                            const title = item.name;
+                            const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : '/assets/img/plugins/plugin3.png';
+                            const author = item.author;
+                            const description = item.description;
+                            const pubdate = item.date;
+                            const version = item.version;
+                            const githubUrl = item.repositoryUrl;
+                            const weeklyDownloads = item.weeklyDownloads;
+                            const uri = 'leapp://' + item.name;
+
+                            var template = "";
+
+                            template += '<div class="key-block">';
+                            template += '    <div class="image-plugin">';
+                            template += '        <img src="' + image + '" alt="' +  title + '" class="d-block m-auto mb-2">';
+                            template += '    </div>';
+                            template += '    <h4>' +  title + '</h4>';
+                            template += '    <div class="author mt-1"><strong>Autore:</strong> ' +  author + '</div>';
+                            template += '    <div class="pubdate"><strong>Data:</strong> ' +  pubdate + '</div>';
+                            template += '    <div class="updatedate mb-1"><strong>Version:</strong> ' +  version + '</div>';
+                            template += '    <div class="updatedate mb-1"><strong><i class="fa fa-github"></i></strong> ' +  githubUrl + '</div>';
+                            template += '    <div class="updatedate mb-1"><strong><i class="fa fa-code-branch"></i></strong> ' +  weeklyDownloads + '</div>';
+                            template += '    <div class="content">';
+                            template +=         description;
+                            template += '        <a href="' +  uri + '" class="btn btn-outline-secondary d-inline-block mt-2 w-100 text-center">Open in Leapp</a>';
+                            template += '    </div>';
+                            template += '    <div class="my-rating mt-1" data-rating="' + i + '"></div>';
+                            template += '</div>';
+                            if(i === 2){
+                                template += '<div class="break"></div>';
+                            }
+
+                            $('#listPlugins').removeClass('loading').append(template);
+                        });
+                    }
                 });
             }
         };
