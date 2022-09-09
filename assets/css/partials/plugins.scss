@@ -1,7 +1,7 @@
 i.fa-search {
   position: relative;
-  right: 285px;
-  top: 1px;
+  right: 340px;
+  top: -2px;
   transform: rotate(90deg);
   width: 20px;
   height: 20px;
@@ -12,14 +12,16 @@ i.fa-search {
 }
 
 .search-button-input-box {
-  width: 250px;
-  height: 25px;
+  width: 300px;
+  height: 35px;
   border-color: rgba(0,0,0,0.1);
   border-width: 1px;
   border-radius: 4px;
   padding-left: 40px;
   outline: none;
+  font-size: 15px;
   &::placeholder {
+    text-align: left;
     opacity: 0.6;
   }
   &:focus {
@@ -40,6 +42,7 @@ i.fa-search {
 
 .search-container {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .plugin-container {
@@ -139,7 +142,7 @@ i.fa-search {
   color: #080B38 !important;
   border: 1px solid #080B38;
   background: transparent;
-  width: 50%;
+  width: 35%;
   position: relative;
   margin: auto auto 20px;
   transition: 0.3s;
@@ -156,6 +159,11 @@ i.fa-search {
 
     transition: 0s
   }
+}
+
+.hero-plugin-button {
+  width: 250px;
+  margin: 40px auto auto;
 }
 
 .no-plugins-found {

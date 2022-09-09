@@ -452,7 +452,7 @@
                             if(response.length > 0) {
                                 $(response).each((_, item) => {
                                     const title = escapeSpecialCharacters(item.name);
-                                    const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png?set=set3`;
+                                    const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png`;
                                     const author = escapeSpecialCharacters(item.author);
                                     const description = escapeSpecialCharacters(item.description);
                                     const pubdate = escapeSpecialCharacters(new Date(item.date).toLocaleDateString());
