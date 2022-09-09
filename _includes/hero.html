@@ -8,8 +8,8 @@
                     {% include {{ page.hero_content }} %}
                 {% endif %}
             </div>
-            <div class="col">
-                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}" class="{{page.hero_class}}"/>
+            <div class="col {{page.hero_class}}">
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}"/>
             </div>
         </div>
 

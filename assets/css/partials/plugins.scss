@@ -31,9 +31,11 @@ i.fa-search {
 }
 
 .plugin-hero-image {
-  width: 1195px;
-  position: relative;
-  right: 40%;
+  img {
+    width: 1195px;
+    position: relative;
+    right: 40%;
+  }
 }
 
 .plugin-hero-container {
