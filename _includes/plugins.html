@@ -5,45 +5,18 @@
         {% if site.data.plugins_data.subtitle != null %}
         <h3 class="mb-3">{{site.data.plugins_data.subtitle}}</h3>
         {% endif %}
-
+        <div>
+            <input type="text" placeholder="Search Leapp plugins..." class="search-button-input-box">
+                <button type="submit" class="search-button">
+                    <i class="fal fa-search"></i>
+                </button>
+        </div>
         <div id="listPlugins" class="key-block-wrapper loading"></div>
 
     </div>
     <div class="container-dark">
         <div class="container small">
-            
-            <h2 class="section-title white">Want to contribute with your own plugin?</h2>
-            <h3 class="mb-2 white">Drag you .zip file here.</h3>
-            
-            <div class="dropzone-wrapper">
-                <div class="col sx">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Accusantium impedit distinctio at repellat maiores sint soluta deserunt eligendi, aspernatur magnam deleniti ut vitae in qui exercitationem cupiditate reprehenderit similique.</p>
-                    <ol class="ml-1">
-                        <li>Occaecat reprehenderit commodo tempor excepteur sint occaecat.</li>
-                        <li>Veniam culpa consectetur aute dolore ea.</li>
-                        <li>Est do nisi do est quis consequat.</li>
-                        <li>Ex enim incididunt consectetur est ex et.</li>
-                    </ol>
-                </div>
-                <div class="col dx">
-                    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-                    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
-                    <form action="{{site.baseurl}}/assets/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
-                    <!-- <input type="file" name="file" class="mb-5"/> -->
-                    <script>
-                        // Note that the name "myDropzone" is the camelized
-                        // id of the form.
-                        Dropzone.options.myDropzone = {
-                            accept: function(file, done) {
-                            if (file.nameitems.includes(".zip")) {
-                                done("Naha, you don't.");
-                            }
-                            else { done(); }
-                            }
-                        };
-                    </script>
-                </div>
-            </div>
+
 
         </div>
     </div>

@@ -1,0 +1,29 @@
+.search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: -33px;
+  width: 250px;
+  height: 25px;
+  & i.fa-search {
+    position: relative;
+    right: 370px;
+    top: -4px;
+    transform: rotate(90deg);
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+}
+
+.search-button-input-box {
+  width: 250px;
+  height: 25px;
+  border-color: rgba(0,0,0,0.1);
+  border-width: 1px;
+  border-radius: 4px;
+  padding-left: 40px;
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
