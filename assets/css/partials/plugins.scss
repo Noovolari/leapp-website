@@ -1,18 +1,13 @@
-.search-button {
-  background: transparent;
-  border: none;
-  outline: none;
-  margin-left: -33px;
-  width: 250px;
-  height: 25px;
-  & i.fa-search {
-    position: relative;
-    right: 370px;
-    top: -4px;
-    transform: rotate(90deg);
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
+i.fa-search {
+  position: relative;
+  right: 285px;
+  top: 1px;
+  transform: rotate(90deg);
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -23,7 +18,147 @@
   border-width: 1px;
   border-radius: 4px;
   padding-left: 40px;
+  outline: none;
   &::placeholder {
     opacity: 0.6;
   }
+  &:focus {
+    border-style: solid;
+    border-color: #4b4b4b;
+  }
+}
+
+.plugin-hero-image {
+  width: 1195px;
+  position: relative;
+  right: 40%;
+}
+
+.plugin-hero-container {
+  padding-bottom: 50px!important;
+}
+
+.search-container {
+  margin-bottom: 40px;
+}
+
+.plugin-container {
+  max-width: 1500px!important;
+}
+
+.plugin-flex-container {
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  gap: 42px 42px;
+  justify-content: center;
+}
+
+.plugin-block {
+    padding: 15px 40px 5px 40px;
+    margin-bottom: $global-padding-default;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 440px!important;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('md') {
+      background-color: $grey-fa;
+      box-sizing: border-box;
+      margin: 0 0 0 0;
+      width: 30%;
+    }
+
+    .plugin-stats-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      color: #6b6b6b;
+
+      .fal {
+        margin-right: 10px;
+      }
+    }
+    .author {
+      text-align: center;
+      text-decoration: underline;
+      color: #8f8f8f;
+    }
+
+    .description {
+      margin: 22px 0 22px 0;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &.leapp {
+      display: none;
+      background-color: $violet-dark;
+
+      @include breakpoint('md') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+}
+
+.image-plugin {
+  margin-bottom: 10px!important;
+  img {
+    height: 80px;
+  }
+}
+
+.container-plugin-hero-bottom {
+  max-width:1240px!important;
+}
+
+.col-plugin-hero-bottom {
+  width: 40%!important;
+}
+
+#opensource #octoplugins {
+  display:block;
+  position:absolute;
+  bottom:0;
+  right: 0!important;
+  width: 500px!important;
+}
+
+.plugin-install-button {
+  color: #080B38 !important;
+  border: 1px solid #080B38;
+  background: transparent;
+  width: 50%;
+  position: relative;
+  margin: auto auto 20px;
+  transition: 0.3s;
+  &:hover {
+    background-color: $blue;
+    color: $grey!important;
+  }
+  &:after {
+
+    transition: all 0.8s
+  }
+
+  &:active:after {
+
+    transition: 0s
+  }
+}
+
+.no-plugins-found {
+  font-size: 20px;
+  margin: 70px;
 }

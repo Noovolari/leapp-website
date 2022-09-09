@@ -437,56 +437,80 @@
             },
             _listPlugin: function () {
                 var _self = this;
-                $.ajax({
-                    type: 'GET',
-                    url:'https://pz9d4kojai.execute-api.eu-west-1.amazonaws.com/api/list-plugin',
-                    success: function (response) {
-                        function imageExists(image_url){
-                            const http = new XMLHttpRequest();
-                            http.open('HEAD', image_url, false);
-                            http.send();
-                            return http.status != 404;
-                        }
-
-                        $(response).each((i, item) => {
-                            const title = item.name;
-                            const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : '/assets/img/plugins/plugin3.png';
-                            const author = item.author;
-                            const description = item.description;
-                            const pubdate = item.date;
-                            const version = item.version;
-                            const githubUrl = item.repositoryUrl;
-                            const weeklyDownloads = item.weeklyDownloads;
-                            const uri = 'leapp://' + item.name;
-
-                            var template = "";
-
-                            template += '<div class="key-block">';
-                            template += '    <div class="image-plugin">';
-                            template += '        <img src="' + image + '" alt="' +  title + '" class="d-block m-auto mb-2">';
-                            template += '    </div>';
-                            template += '    <h4>' +  title + '</h4>';
-                            template += '    <div class="author mt-1"><strong>Autore:</strong> ' +  author + '</div>';
-                            template += '    <div class="pubdate"><strong>Data:</strong> ' +  pubdate + '</div>';
-                            template += '    <div class="updatedate mb-1"><strong>Version:</strong> ' +  version + '</div>';
-                            template += '    <div class="updatedate mb-1"><strong><i class="fa fa-github"></i></strong> ' +  githubUrl + '</div>';
-                            template += '    <div class="updatedate mb-1"><strong><i class="fa fa-code-branch"></i></strong> ' +  weeklyDownloads + '</div>';
-                            template += '    <div class="content">';
-                            template +=         description;
-                            template += '        <a href="' +  uri + '" class="btn btn-outline-secondary d-inline-block mt-2 w-100 text-center">Open in Leapp</a>';
-                            template += '    </div>';
-                            template += '    <div class="my-rating mt-1" data-rating="' + i + '"></div>';
-                            template += '</div>';
-                            if(i === 2){
-                                template += '<div class="break"></div>';
+                const runQuery = (query) =>{
+                    $('#listPlugins').empty().addClass('loading');
+                    $.ajax({
+                        type: 'GET',
+                        url:`https://pz9d4kojai.execute-api.eu-west-1.amazonaws.com/api/list-plugin${query ? "?q=" + query : ""}`,
+                        success: function (response) {
+                            function imageExists(image_url){
+                                const http = new XMLHttpRequest();
+                                http.open('HEAD', image_url, false);
+                                http.send();
+                                return http.status != 404;
                             }
+                            if(response.length > 0) {
+                                $(response).each((_, item) => {
+                                    const title = escapeSpecialCharacters(item.name);
+                                    const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png?set=set3`;
+                                    const author = escapeSpecialCharacters(item.author);
+                                    const description = escapeSpecialCharacters(item.description);
+                                    const pubdate = escapeSpecialCharacters(new Date(item.date).toLocaleDateString());
+                                    const version = escapeSpecialCharacters(item.version);
+                                    const githubUrl = escapeSpecialCharacters(item.repositoryUrl);
+                                    const weeklyDownloads = item.weeklyDownloads;
+                                    const uri = 'leapp://' + item.name;
 
-                            $('#listPlugins').removeClass('loading').append(template);
-                        });
+                                    const template =
+                                        `<div class="plugin-block">
+                                    <div class="image-plugin">
+                                        <img src="${image}" alt="${title}" class="d-block m-auto">
+                                    </div>
+                                    <h4>${title}</h4>
+                                    <div class="author mt-1">${author}</div>
+                                    <div class="description">${description}</div>
+                                    <a href="${uri}" class="btn d-inline-block text-center plugin-install-button">Install</a>
+                                    <div class="plugin-stats-container">
+                                        <div class="version mb-1"><i class="fal fa-code-branch"></i>${version}</div>
+                                        <div class="downloads mb-1"><i class="fal fa-download"></i>${weeklyDownloads}</div>
+                                        <div class="pubdate"><i class="fal fa-clock"></i></i>${pubdate}</div>
+                                    </div>
+                                </div>`;
+
+                                    $('#listPlugins').removeClass('loading').append(template);
+                                });
+                            } else {
+                                $('#listPlugins').removeClass('loading').append("<div class='no-plugins-found'>No plugins found.</div>");
+                            }
+                        }
+                    });
+                };
+                runQuery();
+                document.getElementById("plugin-query-input").addEventListener("keydown", (event) => {
+                    if(event.code === "Enter") {
+                        const query = document.getElementById("plugin-query-input").value;
+                        runQuery(query);
                     }
                 });
-            }
+                document.getElementById("plugin-query-button").addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const query = document.getElementById("plugin-query-input").value;
+                    runQuery(query);
+                    return false;
+                });
+            },
         };
 
+    function escapeSpecialCharacters (unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     leapp.init();
+
+
 })();

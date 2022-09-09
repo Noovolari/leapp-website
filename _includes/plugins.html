@@ -1,24 +1,15 @@
 <section id="listwrapper">
-    <div class="container small">
+    <div class="container small plugin-container">
 
         <h2 class="section-title">{{site.data.plugins_data.title}}</h2>
         {% if site.data.plugins_data.subtitle != null %}
         <h3 class="mb-3">{{site.data.plugins_data.subtitle}}</h3>
         {% endif %}
-        <div>
-            <input type="text" placeholder="Search Leapp plugins..." class="search-button-input-box">
-                <button type="submit" class="search-button">
-                    <i class="fal fa-search"></i>
-                </button>
+        <div class="search-container">
+            <input id="plugin-query-input" type="text" placeholder="Search Leapp plugins..." class="search-button-input-box">
+            <i id="plugin-query-button" class="fal fa-search"></i>
         </div>
-        <div id="listPlugins" class="key-block-wrapper loading"></div>
-
-    </div>
-    <div class="container-dark">
-        <div class="container small">
-
-
-        </div>
+        <div id="listPlugins" class="plugin-flex-container loading"></div>
     </div>
 </section>
 

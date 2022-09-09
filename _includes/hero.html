@@ -1,5 +1,5 @@
 <section id="hero-unit">
-    <div class="container">
+    <div class="container {{page.hero_container_class}}">
 
         <div class="hero-unit-col-container">
             <div class="col hero-content">
@@ -9,7 +9,7 @@
                 {% endif %}
             </div>
             <div class="col">
-                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}"/>
+                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}" class="{{page.hero_class}}"/>
             </div>
         </div>
 
