@@ -3,7 +3,7 @@
 }
 
 .white {
-    color: $white;
+    color: $white!important;
 }
 
 .turquoise {
@@ -120,6 +120,14 @@
 
 .ml-0 {
     margin-left: 0 !important;
+}
+
+.ml-1 {
+    margin-left: 1.111rem !important;
+}
+
+.ml-2 {
+    margin-left: 2.222rem !important;
 }
 
 .p-0 {

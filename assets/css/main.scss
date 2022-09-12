@@ -29,6 +29,7 @@
 @import "partials/cli-main-features.scss";
 @import "partials/cli-install-container.scss";
 @import "partials/team.scss";
+@import "partials/plugins";
 
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p,
@@ -39,6 +40,7 @@ body {
     font: 400 16px/1.5 "Montserrat", sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: $violet-dark;
     -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal;
     min-height: 100vh; flex-direction: column;
+    overflow-x: hidden;
 }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
@@ -53,6 +55,13 @@ section, .content { width: 100%; display: block; margin: 0; padding: 0; }
     &.small { max-width: 1100px; }
 }
 .jc-bs3-container.container { max-width: 500px; }
+
+.container-dark {
+    background-color: #52488d;
+    background-image: url("../img/back-dark.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
 
 /** Images */
 /* img { max-width: 100%; vertical-align: middle; } */
@@ -131,6 +140,51 @@ section {
 
 html {
     background-color: $blue;
+}
+
+.dropzone-wrapper {
+    padding-bottom: 150px;
+    @include breakpoint('md') {
+        display: flex;
+
+        .col {
+            padding: 0 20px;
+            box-sizing: border-box;
+            text-align: left;
+
+            &.sx {
+                color: white;
+                padding-left: 0;
+                width: 70%;
+            }
+            &.dx {
+                width: 30%;
+            }
+        }
+    }
+    .dropzone {
+        background: rgba(255,255,255,.7);
+        border-radius: 20px;
+
+        &:hover {
+            background: white;
+        }
+    }
+}
+
+.loading {
+    min-height: 150px;
+    text-align: center;
+    margin-bottom: 50px;
+    background-image: url("../img/loading-leapp.gif");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.image-plugin {
+    img {
+        height: 96px;
+    }
 }
 
 .support-hero img {

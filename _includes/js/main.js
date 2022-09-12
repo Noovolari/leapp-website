@@ -20,9 +20,12 @@
             downloadAction: $("#download-action"),
             downloadContent: $("#download-content"),
             downloadLabel: $("#download-label"),
+            pluginPath: "/plugins",
             cfDistribution: "https://asset.noovolari.com",
             gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
+            pluginURL: "https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin",
             steps: $(".steps-navigation a"),
+            listWrapper: $("#listwrapper"),
             terminalCommand: $(".terminal-command"),
             modal: $(".modal")
         },
@@ -34,6 +37,9 @@
             this._accordion();
             this._steps();
             this._formValidate();
+            if(window.location.pathname === this.elements.pluginPath) {
+                this._listPlugin();
+            }
             if (this.elements.releases.length > 0) {
                 this._releases();
             }
@@ -826,8 +832,79 @@
                     if(textArray.length) setTimeout(type, newTextDelay + 250);
                 });
             }
+        },
+        _listPlugin: function () {
+            var _self = this;
+            const runQuery = (query) =>{
+                $('#listPlugins').empty().addClass('loading');
+                $.ajax({
+                    type: 'GET',
+                    url:`https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin${query ? "?q=" + query : ""}`,
+                    success: function (response) {
+                        function imageExists(image_url){
+                            const http = new XMLHttpRequest();
+                            http.open('HEAD', image_url, false);
+                            http.send();
+                            return http.status !== 404;
+                        }
+                        if(response.length > 0) {
+                            $(response).each((_, item) => {
+                                const title = escapeSpecialCharacters(item.name);
+                                const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png`;
+                                const author = escapeSpecialCharacters(item.author);
+                                const description = escapeSpecialCharacters(item.description);
+                                const pubdate = escapeSpecialCharacters(new Date(item.date).toLocaleDateString());
+                                const version = escapeSpecialCharacters(item.version);
+                                const githubUrl = escapeSpecialCharacters(item.repositoryUrl);
+                                const weeklyDownloads = item.weeklyDownloads;
+                                const uri = 'leapp://' + item.name;
+
+                                const template =
+                                    `<div class="plugin-block">
+                                    <div class="image-plugin">
+                                        <img src="${image}" alt="${title}" class="d-block m-auto">
+                                    </div>
+                                    <h4>${title}</h4>
+                                    <div class="author mt-1">${author}</div>
+                                    <div class="description">${description}</div>
+                                    <a href="${uri}" class="btn d-inline-block text-center plugin-install-button">Install</a>
+                                    <div class="plugin-stats-container">
+                                        <div class="version mb-1"><i class="fal fa-code-branch"></i>${version}</div>
+                                        <div class="downloads mb-1"><i class="fal fa-download"></i>${weeklyDownloads}</div>
+                                        <div class="pubdate"><i class="fal fa-clock"></i></i>${pubdate}</div>
+                                    </div>
+                                </div>`;
+
+                                $('#listPlugins').removeClass('loading').append(template);
+                            });
+                        } else {
+                            $('#listPlugins').removeClass('loading').append("<div class='no-plugins-found'>No plugins found.</div>");
+                        }
+                    }
+                });
+            };
+            runQuery();
+            document.getElementById("plugin-query-input").addEventListener("keydown", (event) => {
+                if(event.code === "Enter") {
+                    const query = document.getElementById("plugin-query-input").value;
+                    runQuery(query);
+                }
+            });
+            document.getElementById("plugin-query-button").addEventListener("click", (event) => {
+                event.preventDefault();
+                const query = document.getElementById("plugin-query-input").value;
+                runQuery(query);
+                return false;
+            });
         }
     };
-
+    function escapeSpecialCharacters (unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
     leapp.init();
 })();

@@ -60,3 +60,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+defaults:
+  - values:
+      hero_class: "default-hero"
