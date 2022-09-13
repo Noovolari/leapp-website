@@ -843,14 +843,14 @@
                     success: function (response) {
                         function imageExists(image_url){
                             const http = new XMLHttpRequest();
-                            http.open('HEAD', image_url, false);
+                            http.open('GET', image_url, false);
                             http.send();
-                            return http.status !== 404;
+                            return http.response !== "";
                         }
                         if(response.length > 0) {
                             $(response).each((_, item) => {
                                 const title = escapeSpecialCharacters(item.name);
-                                const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png`;
+                                const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png?meta`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png`;
                                 const author = escapeSpecialCharacters(item.author);
                                 const description = escapeSpecialCharacters(item.description);
                                 const pubdate = escapeSpecialCharacters(new Date(item.date).toLocaleDateString());
