@@ -80,17 +80,17 @@ i.fa-search {
   display: flex;
   align-content: flex-end;
   flex-wrap: wrap;
-  gap: 42px 42px;
+  gap: 30px 30px;
   justify-content: center;
 }
 
 .plugin-block {
-  padding: 15px 40px 5px 40px;
+  padding: 10px 25px 10px 25px;
   margin-bottom: $global-padding-default;
   border: 1px solid #aaa;
   border-radius: 4px;
-  width: 440px!important;
-  height: 440px;
+  width: 380px!important;
+  height: 380px;
   display: flex;
   flex-direction: column;
 
@@ -103,21 +103,31 @@ i.fa-search {
 
   .plugin-stats-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 130px auto auto;
     color: #6b6b6b;
-
+    font-size: 15px;
     .fal {
-      margin-right: 10px;
+      margin-right: 7px;
     }
+    a {
+      color: #6b6b6b;
+    }
+  }
+  .pubdate {
+    text-align: right;
   }
   .author {
     text-align: center;
     text-decoration: underline;
     color: #8f8f8f;
+    margin-top: 10px;
+    a {
+      color: #8f8f8f;
+    }
   }
 
   .description {
-    margin: 22px 0 22px 0;
+    margin: 20px 0 15px 0;
     flex-grow: 1;
     overflow: hidden;
   }
@@ -125,9 +135,13 @@ i.fa-search {
   h4 {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     text-align: center;
     text-transform: uppercase;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &.leapp {
@@ -145,7 +159,7 @@ i.fa-search {
 .image-plugin {
   margin-bottom: 10px!important;
   img {
-    height: 80px;
+    height: 80px!important;
   }
 }
 
@@ -175,9 +189,10 @@ i.fa-search {
   color: #080B38 !important;
   border: 1px solid #080B38;
   background: transparent;
+  padding: 7px 25px!important;
   width: 35%;
   position: relative;
-  margin: auto auto 20px;
+  margin: auto auto 10px;
   transition: 0.3s;
   &:hover {
     background-color: $blue;
@@ -205,4 +220,8 @@ i.fa-search {
 .no-plugins-found {
   font-size: 20px;
   margin: 70px;
+}
+
+.mb-plugin-card {
+  margin-bottom: 8px;
 }
