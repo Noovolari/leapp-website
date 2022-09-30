@@ -8,7 +8,7 @@ cta:
   action: "https://github.com/Noovolari/leapp"
 numbers:
   - number:
-    title: "3K"
+    title: "5K"
     subtitle: Active Users
     id: weekly_usage
 
