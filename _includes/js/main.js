@@ -842,15 +842,20 @@
                     url:`https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin${query ? "?q=" + query : ""}`,
                     success: function (response) {
                         function imageExists(image_url){
-                            var http = new XMLHttpRequest();
-                            http.open('HEAD', image_url, false);
-                            http.send();
-                            return http.status != 404;
+                            try {
+                                var http = new XMLHttpRequest();
+                                http.open('HEAD', image_url, false);
+                                http.onerror(() => false);
+                                http.send();
+                                return http.status !== 404;
+                            } catch(err) {
+                                return false;
+                            }
                         }
                         if(response.length > 0) {
                             $(response).each((_, item) => {
                                 const title = escapeSpecialCharacters(item.name);
-                                const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png?set=set3`;
+                                const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png?meta`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png?set=set3`;
                                 const author = escapeSpecialCharacters(item.author);
                                 const email = escapeSpecialCharacters(item.email);
                                 const description = escapeSpecialCharacters(item.description);
