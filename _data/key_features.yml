@@ -3,7 +3,7 @@ subtitle: "We offer an enterprise support plan including:"
 features:
   - title: Initial Setup
     icon: fas fa-book
-    content: "Get an initial assessment on your Cloud environment to verify that your access strategies are compliant with the full set of Leapp functionallities."
+    content: "Get an initial assessment on your Cloud environment to verify that your access strategies are compliant with the full set of Leapp functionalities."
 
   - title: Troubleshooting
     icon: fas fa-eye
