@@ -1,7 +1,8 @@
 name: Leapp Website Deploy and Sitemap Update
 
 on:
-  workflow_dispatch:
+  push:
+    branches: ["master"]
 
 permissions:
   contents: read
