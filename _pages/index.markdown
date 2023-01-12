@@ -1,5 +1,5 @@
 ---
-title: Make the switch, today.
+title: Noovolari Leapp
 description: Manage your Cloud credentials locally and improve your workflow with the only open-source desktop app you’ll ever need.
 permalink: /
 layout: default

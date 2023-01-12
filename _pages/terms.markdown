@@ -1,6 +1,6 @@
 ---
 title: Cookie Policy
-description: Terms | Manage your Cloud credentials locally and improve your workflow with the only open-source desktop app you’ll ever need.
+description: Leapp Cookie Policy page
 permalink: /terms
 image: Leapp_Icon.png
 layout: page

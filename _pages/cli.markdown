@@ -1,6 +1,6 @@
 ---
-title: CLI
-description: Download Leapp | Manage your Cloud credentials locally and improve your workflow with the only open-source desktop app you’ll ever need.
+title: Noovolari Leapp CLI
+description: A Leapp Extension for the Desktop App to manage your credentials with a CLI tool
 permalink: /cli
 layout: cli
 hero_title: CLI
