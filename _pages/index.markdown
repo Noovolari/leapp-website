@@ -12,4 +12,6 @@ sitemap:
     video:
         title: Leapp One-Minute Demo
         content: leapp-hero.mp4
+structured:
+    type: SoftwareApplication
 ---

@@ -9,4 +9,6 @@ callout_content: callout/callout-release.html
 callout_display: fixed
 hero_image: 
 hero_position: full
+structured:
+    type: FAQPage
 ---

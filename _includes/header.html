@@ -61,4 +61,8 @@
         window.leapp = window.leapp || {};
         leapp.sendEvent = () => {};
     </script>
+
+    <!-- Structured Data -->
+    {% if page.structured.type == "SoftwareApplication" %} {% include structured-data/software-application-sd.html %} {% endif %}
+    {% if page.structured.type == "FAQPage" %} {% include structured-data/faq-sd.html %}  {% endif %}
 </head>
