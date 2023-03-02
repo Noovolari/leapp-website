@@ -5,6 +5,8 @@ permalink: /rebranding
 image: article/hero-article-main.png
 layout: article
 hero_content: hero-unit-article.html
+sitemap:
+    priority: 0.3
 ---
 
 # Rebranding as part of something bigger

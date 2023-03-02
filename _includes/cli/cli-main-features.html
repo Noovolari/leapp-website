@@ -1,7 +1,7 @@
 <section id="cli-main-features" class="ovh light">
     <div class="container">
-        <h1 class="section-subtitle text-center">{{site.data.cli_main_features.title-1}}</h1>
-        <h1 class="section-subtitle text-center">{{site.data.cli_main_features.title-2}}</h1>
+        <h3 class="section-subtitle text-center">{{site.data.cli_main_features.title-1}}</h3>
+        <h3 class="section-subtitle text-center">{{site.data.cli_main_features.title-2}}</h3>
         <div class="main-features-wrapper">
             <div class="col">
                 <div class="card-holder">
@@ -27,7 +27,7 @@
                     {% for item in site.data.cli_main_features.features %}
                     <div class="main-features-link">
                         <a href="{{item.link-url}}">{{ item.link-message }}</a>
-                        <img class="arrow" src="{{site.url}}{{site.baseurl}}/assets/img/arrow-right.png" width="15">
+                        <img class="arrow" src="{{site.url}}{{site.baseurl}}/assets/img/arrow-right.png" width="15" alt="">
                     </div>
                     {% endfor %}
                 </div>

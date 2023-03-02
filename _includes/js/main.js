@@ -20,9 +20,12 @@
             downloadAction: $("#download-action"),
             downloadContent: $("#download-content"),
             downloadLabel: $("#download-label"),
+            pluginPath: "/plugins",
             cfDistribution: "https://asset.noovolari.com",
             gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
+            pluginURL: "https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin",
             steps: $(".steps-navigation a"),
+            listWrapper: $("#listwrapper"),
             terminalCommand: $(".terminal-command"),
             modal: $(".modal")
         },
@@ -34,6 +37,9 @@
             this._accordion();
             this._steps();
             this._formValidate();
+            if(window.location.pathname === this.elements.pluginPath) {
+                this._listPlugin();
+            }
             if (this.elements.releases.length > 0) {
                 this._releases();
             }
@@ -826,8 +832,139 @@
                     if(textArray.length) setTimeout(type, newTextDelay + 250);
                 });
             }
+        },
+        _listPlugin: function () {
+            var _self = this;
+            const runQuery = (query) =>{
+                $('#listPlugins').empty().addClass('loading');
+                $.ajax({
+                    type: 'GET',
+                    url:`https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin${query ? "?q=" + query : ""}`,
+                    success: function (response) {
+                        function imageExists(image_url){
+                            try {
+                                var http = new XMLHttpRequest();
+                                http.open('HEAD', image_url, false);
+                                http.onerror(() => false);
+                                http.send();
+                                return http.status !== 404;
+                            } catch(err) {
+                                return false;
+                            }
+                        }
+                        if(response.length > 0) {
+                            $(response).each((_, item) => {
+                                const title = escapeSpecialCharacters(item.name);
+                                const image = imageExists(`https://unpkg.com/${item.name}@latest/icon.png?meta`) ? `https://unpkg.com/${item.name}@latest/icon.png` : `https://robohash.org/${title}.png?set=set3`;
+                                const author = escapeSpecialCharacters(item.author);
+                                const email = escapeSpecialCharacters(item.email);
+                                const description = escapeSpecialCharacters(item.description);
+                                const pubdate = escapeSpecialCharacters(time_ago(new Date(item.date)));
+                                const version = escapeSpecialCharacters(item.version);
+                                const githubUrl = escapeSpecialCharacters(item.repositoryUrl);
+                                const weeklyDownloads = item.weeklyDownloads;
+                                const uri = 'leapp://' + item.name;
+
+                                const template =
+                                    `<div class="plugin-block">
+                                    <div class="image-plugin">
+                                        <img src="${image}" alt="${title}" class="d-block m-auto">
+                                    </div>
+                                    <h4>${title}</h4>
+                                    <div class="author">${email !== "" ? "<a href=mailto:" : ""}${email !== "" ? email + ">" : ""}${author}${email !== "" ? "</a>" : ""}</div>
+                                    <div class="description">${description}</div>
+                                    <a href="${uri}" class="btn d-inline-block text-center plugin-install-button">Install</a>
+                                    <div class="plugin-stats-container mb-plugin-card">
+                                        <div class="version"><i class="fal fa-code-branch"></i>${githubUrl !== "" ? "<a href=" : ""}${githubUrl !== "" ? githubUrl + " target=\"_blank\">" : ""}${version}${githubUrl !== "" ? "</a>" : ""}</div>
+                                        <div class="downloads"><i class="fal fa-download"></i>${weeklyDownloads}</div>
+                                        <div class="pubdate"><i class="fal fa-clock"></i></i><a href="https://www.npmjs.com/package/${title}" target="_blank">${pubdate}</a></div>
+                                    </div>
+                                </div>`;
+
+                                $('#listPlugins').removeClass('loading').append(template);
+                            });
+                        } else {
+                            $('#listPlugins').removeClass('loading').append("<div class='no-plugins-found'>No plugins found.</div>");
+                        }
+                    }
+                });
+            };
+            runQuery();
+            document.getElementById("plugin-query-input").addEventListener("keydown", (event) => {
+                if(event.code === "Enter") {
+                    var query = document.getElementById("plugin-query-input").value;
+                    if(query.trim() !== "") runQuery(query);
+                }
+            });
+            document.getElementById("plugin-query-button").addEventListener("click", (event) => {
+                event.preventDefault();
+                var query = document.getElementById("plugin-query-input").value;
+                if(query.trim() !== "") runQuery(query);
+                return false;
+            });
         }
     };
+    function escapeSpecialCharacters (unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+    function time_ago(time) {
+        switch (typeof time) {
+            case 'number':
+                break;
+            case 'string':
+                time = +new Date(time);
+                break;
+            case 'object':
+                if (time.constructor === Date) time = time.getTime();
+                break;
+            default:
+                time = +new Date();
+        }
+        var time_formats = [
+            [60, 'seconds', 1],
+            [120, '1 minute ago', '1 minute from now'],
+            [3600, 'minutes', 60],
+            [7200, '1 hour ago', '1 hour from now'],
+            [86400, 'hours', 3600],
+            [172800, 'Yesterday', 'Tomorrow'],
+            [604800, 'days', 86400],
+            [1209600, 'Last week', 'Next week'],
+            [2419200, 'weeks', 604800],
+            [4838400, 'Last month', 'Next month'],
+            [29030400, 'months', 2419200],
+            [58060800, 'Last year', 'Next year'],
+            [2903040000, 'years', 29030400],
+            [5806080000, 'Last century', 'Next century'],
+            [58060800000, 'centuries', 2903040000]
+        ];
+        var seconds = (+new Date() - time) / 1000,
+            token = 'ago',
+            list_choice = 1;
+
+        if (seconds == 0) {
+            return 'Just now'
+        }
+        if (seconds < 0) {
+            seconds = Math.abs(seconds);
+            token = 'from now';
+            list_choice = 2;
+        }
+        var i = 0,
+            format;
+        while (format = time_formats[i++])
+            if (seconds < format[0]) {
+                if (typeof format[2] == 'string')
+                    return format[list_choice];
+                else
+                    return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
+            }
+        return time;
+    }
 
     leapp.init();
 })();

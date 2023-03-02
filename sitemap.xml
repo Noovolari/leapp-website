@@ -5,7 +5,7 @@ sitemap:
   exclude: 'yes'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   {% for post in site.posts %}
     {% unless post.published == false %}
     <url>
@@ -50,6 +50,12 @@ sitemap:
         <priority>{{ page.sitemap.priority }}</priority>
       {% else %}
         <priority>0.9</priority>
+      {% endif %}
+      {% if page.sitemap.video.title %}
+      <video:video>
+        <video:title>{{ page.sitemap.video.title }}</video:title>
+        <video:content_loc>{{site.url}}{{site.baseurl}}/assets/videos/{{ page.sitemap.video.content }}</video:content_loc>
+      </video:video>
       {% endif %}
     </url>
     {% endunless %}
