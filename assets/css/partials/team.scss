@@ -29,8 +29,6 @@ span.cursor.hidden {
   padding: 40px 20px 20px 20px!important;
 }
 
-
-
 .team-hero {
     img {
       border-radius: 5px;
@@ -72,6 +70,23 @@ span.cursor.hidden {
   }
 }
 
+.jconfirm-box {
+  .leapp-form-wrapper {
+    fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: space-between;
+      .paired {
+        width: 49%;
+      }
+      .not-paired {
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 540px) {
   .team-hero-content { width: 100%!important; text-align: center; h1 {  font-weight: 600; font-size: 35px; } p { font-size: 17px!important; }}
   .team-media-hero { width: 100%!important; text-align: center; margin: 0 auto; img { text-align: center; } }
@@ -92,6 +107,19 @@ span.cursor.hidden {
       padding: 20px!important;
       border-radius: 0;
       -webkit-border-radius: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .jconfirm-box {
+    .leapp-form-wrapper {
+      padding: 20px!important;
+      fieldset {
+        .paired {
+          width: 100%;
+        }
+      }
     }
   }
 }

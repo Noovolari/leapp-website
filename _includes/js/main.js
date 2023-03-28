@@ -712,12 +712,26 @@
                         '<div class="leapp-form-wrapper">' +
                             '<form class="form-request" name="form-request" accept-charset="utf-8" action="' + formAction + '" method="post">' +
                                 '<fieldset>' +
-                                    '<label for="name">Full Name</label>' +
-                                    '<input type="text" name="name" id="name" placeholder="First and Last" required="" class="mb-2">' +
-                                    '<label for="email">Email Address</label>' +
-                                    '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="" class="mb-2">' +
-                                    '<input name="authorize" id="authorize" type="checkbox" value="1" required="">' +
-                                    '<label for="authorize">Read and subscribe <a href="/privacy" target="_blank">Privacy Policy</a></label>' +
+                                    '<div class="paired">' +
+                                        '<label for="first-name">First Name</label>' +
+                                        '<input type="text" name="first-name" id="first-name" placeholder="John" required="" class="mb-2">' +
+                                    '</div>' +
+                                    '<div class="paired">' +
+                                        '<label for="last-name">Last Name</label>' +
+                                        '<input type="text" name="last-name" id="last-name" placeholder="Doe" required="" class="mb-2">' +
+                                    '</div>' +
+                                    '<div class="paired">' +
+                                        '<label for="company">Company</label>' +
+                                        '<input type="text" name="company" id="company" placeholder="Acme Corporation" required="" class="mb-2">' +
+                                    '</div>' +
+                                    '<div class="paired">' +
+                                        '<label for="email">Company Email Address</label>' +
+                                        '<input type="email" name="email" id="email" placeholder="email@domain.tld" required="" class="mb-2">' +
+                                    '</div>' +
+                                    '<div class="not-paired">' +
+                                        '<input name="authorize" id="authorize" type="checkbox" value="1" required="">' +
+                                        '<label for="authorize">Read and subscribe <a href="/privacy" target="_blank">Privacy Policy</a></label>' +
+                                    '</div>' +
                                 '</fieldset>' +
                             '</form>' +
                         '</div>' +
