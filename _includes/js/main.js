@@ -419,7 +419,7 @@
                     renderer.heading = function (text, level, raw) {
                         if (!hide) {
                             var version = text.replace(/[\(\[].*?[\)\]]/g, '').replace("\">", "\">v");
-
+                            var versionDate = '';
                             versionNumber = parseInt(rawVersion.replace(/\./g, '').trim());
 
                             if (versionNumber === 50) {
@@ -433,6 +433,7 @@
                                 var context = "",
                                     prefix = "";
                                 rawVersion = raw.replace(/[\(\[].*?[\)\]]/g, '').trim();
+                                versionDate = text.substring(text.indexOf('(') + 1, text.indexOf('(') + 11);
                                 if (text.indexOf("href") === -1) {
                                     context = " class='nolink'";
                                     prefix = "v ";
@@ -442,8 +443,7 @@
                                 if (versionNumber === 0) {
                                     latestVersion = rawVersion;
                                 }
-
-                                return '</div><h' + level + context + '>' + prefix + version + '</h' + level + '><div class="release-wrapper" id="rw' + versionNumber + '">';
+                                return `</div><h${level}${context}>${prefix}${version}</h${level}${context}>&nbsp;<small>(${versionDate})</small><div class="release-wrapper" id="rw${versionNumber}">`;
                             }
                         } else {
                             return "";
