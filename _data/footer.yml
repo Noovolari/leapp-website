@@ -1,5 +1,5 @@
 # Footer
-page: 
+page:
   - title: 'Contacts'
     url: '/contacts'
     target: ''
@@ -7,14 +7,62 @@ page:
   - title: 'Privacy Policy'
     url: '/privacy'
     target: ''
-    
+
   - title: 'Cookie Policy'
     url: '/terms'
     target: ''
-  
+
   - title: '<i class="fab fa-github"></i>'
     url: 'https://github.com/Noovolari/leapp'
     target: 'target="_blank"'
+
+#TODO: remove useless and add href
+menu:
+  - title: "Leapp"
+    subcategories:
+      - subtitle: "Getting Started"
+        subhref: "#"
+      - subtitle: "Enterprise"
+        subhref: "#"
+      - subtitle: "Team"
+        subhref: "#"
+      - subtitle: "Pricing"
+        subhref: "#"
+      - subtitle: "Support"
+        subhref: "#"
+
+  - title: "Product"
+    subcategories:
+      - subtitle: "Cloud Access"
+        subhref: "#"
+      - subtitle: "Cloud Security"
+        subhref: "#"
+      - subtitle: "Cloud Automations"
+        subhref: "#"
+
+  - title: "Resources"
+    subcategories:
+      - subtitle: "Documentation"
+        subhref: "#"
+      - subtitle: "Changelog"
+        subhref: "#"
+      - subtitle: "Blog"
+        subhref: "#"
+      - subtitle: "Repository"
+        subhref: "#"
+      - subtitle: "Roadmap"
+        subhref: "#"
+
+  - title: "Company"
+    subcategories:
+      - subtitle: "About"
+        subhref: "#"
+      - subtitle: "Press Release"
+        subhref: "#"
+      - subtitle: "Careers"
+        subhref: "#"
+
+paragraph: 'The DecSecOps Access platform for accessing and improving Cloud experience.'
 
 
 # Call to Action

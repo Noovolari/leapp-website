@@ -1,9 +1,9 @@
 footer {
     /* background: $black; */
-    background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
+    background-image: radial-gradient(36.51% 46.22% at 50.52% -0.00%, #52488D 0%, #090810 100%);
+
     color: $white;
     text-align: center;
-
     @include breakpoint('md') {
         text-align: left;
     }
@@ -51,13 +51,17 @@ footer {
     }
 
     .footer-cta {
-        @include breakpoint('md') {
-            display: flex;
-            justify-content: space-between;
+        display: flex;
+        justify-content: start;
+        gap:30px;
+
+        .outer-left {
+            min-width: 300px;
+            width: 300px;
         }
 
         a {
-            display: block;
+            display: inline-block;
 
             &:nth-child(2) {
                 height: 24px;
@@ -76,6 +80,18 @@ footer {
                 top: 0;
                 right: -80px;
                 margin: 0;
+            }
+        }
+    }
+    .footer-menu {
+        ul {
+            display: flex;
+            position: relative;
+            align-items: initial;
+            gap: 30px;
+
+            ul {
+                margin-left:12px;
             }
         }
     }

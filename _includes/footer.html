@@ -1,22 +1,47 @@
 <footer>
     <div class="container">
         <div class="footer-cta">
-            <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48"/></a>
+            <div class="outer-left">
+                <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48"/></a>
+                <br>
+                <span>{{site.data.footer.paragraph}}</span>
+                <br>
+                <b>Talk to us at: <a href="mailto:sales@noovolari.com">sales@noovolari.com</a></b>
+            </div>
+            <div class="footer-menu">
+             <ul>
+                 {% for nav in site.data.footer.menu %}
+                     {% if nav.subcategories != null %}
+                     <li>
+                         <h4><b>{{ nav.title }}</b></h4>
+                         <ul style="display: block">
+                             {% for subcategory in nav.subcategories %}
+                             <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                             {% endfor %}
+                         </ul>
+                     </li>
+                     {% else %}
+                     <li>
+                         <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+                     </li>
+                     {% endif %}
+                 {% endfor %}
+             </ul>
+            </div>
 
+
+<!--
             {% if page.layout == 'team' %}
                 <a href="javascript:void(0);" class="btn btn-secondary d-inline-block modal modal-button" data-action="https://formspree.io/f/xlevenrr">Get early access</a>
             {% else %}
                 <a href="{{site.get_started}}" class="btn btn-secondary d-inline-block" target="_blank" id="install-leapp-footer" onclick="leapp.sendEvent('Download-From-Footer', this)">Install Leapp</a>
             {% endif %}
-
+-->
         </div>
         <hr>
         <ul>
             <li>
-                <span>&copy; 2022 Noovolari, All rights reserved. | Powered by </span>
-                <a href="https://www.besharp.it" target="_blank" rel="noopener" class="logo-besharp" >
-                    <img src="{{ site.url }}{{site.baseurl}}/assets/img/besharp.svg" width="68" height="28" alt="beSharp">
-                </a>
+                <span>&copy; 2023 Noovolari, All rights reserved.</span>
             </li>
             <li>
                 {% for item in site.data.footer.page %}
