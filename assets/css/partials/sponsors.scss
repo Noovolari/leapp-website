@@ -3,23 +3,22 @@ a { text-decoration: underline; }
 #sponsors {
   background-color: $white;
 
-  @include breakpoint('md') {
-    padding: 40px 0;
-  }
 
   .container-flex {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 80%;
+    justify-content: space-around;
+
     a {
-      flex: 1 0 20%;
       margin: 30px;
       text-align: center;
     }
   }
 
   .sponsor-image {
-    height: 70px;
+    width: 150px;
     filter: grayscale(1);
     transition: all 0.3s ease;
 

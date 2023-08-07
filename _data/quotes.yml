@@ -1,0 +1,16 @@
+quotes:
+  - author: 'Maciej Radzikowski'
+    authorRole: "Software Developer @ Merapar"
+    citation: "Leapp for accessing AWS is just great. Must-have for anyone working on multiple AWS accounts."
+    channel: "twitter"
+    quoteUrl: "https://twitter.com/radzikowski_m/status/1363060648566018054"
+  - author: 'Sheldon Hull'
+    authorRole: "Senior Software Engineer (AWS/Go) @ Thycotic"
+    citation: "Leapp to me is simplification, so I can focus on other things there were more complicated instead of wrestling on with my credentials file"
+    channel: "youtube"
+    quoteUrl: "https://youtu.be/-Jn53731i7s?t=2055"
+  - author: 'Corcoran Smith'
+    authorRole: "Principal Architect @ StormReply UK"
+    citation: "We are having discussions internally here about making LEAPP the defacto standard when we go into clients because it's a THING OF BEAUTY, so the more in the loop we are, the better."
+    channel: "slack"
+
