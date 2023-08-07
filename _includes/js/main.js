@@ -37,6 +37,7 @@
             this._accordion();
             this._steps();
             this._formValidate();
+            this._blogData();
             if(window.location.pathname === this.elements.pluginPath) {
                 this._listPlugin();
             }
@@ -915,6 +916,41 @@
                 var query = document.getElementById("plugin-query-input").value;
                 if(query.trim() !== "") runQuery(query);
                 return false;
+            });
+        },
+
+        _blogData: function () {
+            $.ajax({
+                method : "POST",
+                type: "POST",
+                url: 'https://gql.hashnode.com/',
+                crossDomain: true,
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    'query': 'query Posts{\n    publication(host:"blog.leapp.cloud"){\n        posts(first:10){\n            edges{\n                node{\n                    title\n                    slug\n                  author\n{\n                     name\n                      }                   coverImage{\n                        url\n                    }\n                }\n            }\n        }\n    }\n}',
+                    'variables': {}
+                })
+            }).done(function(r) {
+                const articles = r.data.publication.posts.edges;
+                let template = "";
+                articles.forEach((r, index) => {
+                    if(index < 3) {
+                        let article = r.node;
+                        template +=
+                            `<div class="blog-post"><a title="${article.title}" href="https://blog.leapp.cloud/${article.slug}">
+                            <div>
+                                <img src="${article.coverImage.url}" alt="Cover of article: ${article.title}"/>
+                                <h5> ${article.title}</h5>
+                                <span>${article.author.name}</span>
+                            </div>
+                        </a></div>`;
+
+                    }
+                });
+                console.log(template);
+                $('.blog-container').empty().append(template);
+
             });
         }
     };

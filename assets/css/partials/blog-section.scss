@@ -1,0 +1,20 @@
+@import "variables";
+
+.blog-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+
+
+
+  .blog-post {
+    width: 350px;
+    position: relative;
+    img {
+      width:350px;
+    }
+  }
+
+}
