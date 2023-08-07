@@ -4,77 +4,33 @@
         <div class="container">
             <div id="logo-container">
                 <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48" id="logo"/></a>
-                <span>by Noovolari</span>
             </div>
             <a href="javascript:void(0);" id="hamburger">
                 <i class="fa fa-bars"></i>
             </a>
-            <div class="clearfix"></div>
             <ul id="navigation">
+                {% for nav in site.data.menu-header.menu %}
+                {% if nav.subcategories != null %}
                 <li>
-                    <a title="Developer OSS" href="#">Product</a>
-
+                    <a title="{{ nav.title }}" href="{{ nav.href }}"> {{ nav.title }}</a>
                     <div class="submenu-wrapper d-none">
                         <ul class="submenu">
-                            <li><a title="CLI" href="/cli">CLI</a></li>
-                            <li><a title="Features" href="/#feature">Features</a></li>
-                            <li><a title="Plugins" href="/plugins">Plugins</a></li>
-                        </ul>
-                        {% comment %}
-                        <div class="submenu-cta">
-                            <img src="http://0.0.0.0:4000/assets/img//steps/step3-team.png" alt="" class="d-block">
-                            <a href="#" class="btn btn-fourth d-block mt-1 text-center">Label cta</a>
-                        </div>
-                        {% endcomment %}
-                    </div>
-                </li>
-                <li>
-                    <a title="Resources" href="#">Resources</a>
-
-                    <div class="submenu-wrapper d-none">
-                        <ul class="submenu">
-                            <li><a title="Docs" href="{{site.latest}}" target="_blank">Docs</a></li>
-                            <li><a title="Releases" href="/releases">Releases</a></li>
-                            <li><a title="Blog" href="{{site.blog_url}}" target="_blank">Blog</a></li>
-                            <li><a title="GitHub" href="{{site.github_url}}" target="_blank">GitHub</a></li>
+                            {% for subcategory in nav.subcategories %}
+                            <li><a title="{{ subcategory.subtitle }}" href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </li>
+                {% else %}
                 <li>
-                    <a title="Community" href="#">Community</a>
-
-                    <div class="submenu-wrapper d-none">
-                        <ul class="submenu">
-                            <li><a title="Roadmap" target="_blank" rel='noopener' href="{{site.github_roadmap_url}}">Roadmap</a></li>
-                            <li><a title="Slack Community" target="_blank" rel='noopener' href="{{site.slack}}">Slack Community</a></li>
-                        </ul>
-                    </div>
+                    <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
                 </li>
-                <li>
-                    <a title="Company" href="#">Company</a>
-
-                    <div class="submenu-wrapper d-none">
-                        <ul class="submenu">
-                            {% comment %}
-                            <li><a title="News" rel='noopener' href="#">News</a></li>
-                            {% endcomment %}
-
-                            <li><a title="Contacts" rel='noopener' href="/contacts">Contacts</a></li>
-                            <li><a title="About Us" rel='noopener' href="https://noovolari.com">About Us</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a title="Company" href="#">Plans</a>
-
-                    <div class="submenu-wrapper d-none">
-                        <ul class="submenu">
-                            <li><a title="Team" rel='noopener' href="/team">Team<div id="new">NEW</div></a></li>
-                            <li class="position-relative"><a title="Company Support" href="/support">Company Support</a> </li>
-                        </ul>
-                    </div>gi
-                </li>
+                {% endif %}
+                {% endfor %}
             </ul>
+            <div id="cta">
+                <a title="{{site.data.menu-header.cta.title}}" href="{{site.data.menu-header.cta.href}}">{{site.data.menu-header.cta.title}}</a>
+            </div>
         </div>
     </nav>
 </section>

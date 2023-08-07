@@ -1,0 +1,50 @@
+menu:
+  - title: "Product"
+    subcategories:
+      - subtitle: "Cloud Access"
+        subhref: "#"
+      - subtitle: "Cloud Operations"
+        subhref: "#"
+      - subtitle: "Cloud Security"
+        subhref: "#"
+
+  - title: "Download"
+    subcategories:
+      - subtitle: "Desktop App"
+        subhref: "#"
+      - subtitle: "CLI"
+        subhref: "#"
+      - subtitle: "Browser Extension"
+        subhref: "#"
+
+  - title: "Solutions"
+    subcategories:
+      - subtitle: "Personal"
+        subhref: "#"
+      - subtitle: "Business"
+        subhref: "#"
+      - subtitle: "Enterprise"
+        subhref: "#"
+
+  - title: "Resources"
+    subcategories:
+      - subtitle: "Changelog"
+        subhref: "#"
+      - subtitle: "Documentation"
+        subhref: "#"
+      - subtitle: "Blog"
+        subhref: "#"
+      - subtitle: "Repository"
+        subhref: "#"
+      - subtitle: "Roadmap"
+        subhref: "#"
+      - subtitle: "Slack Community"
+        subhref: "#"
+  - title: "Pricing"
+    href: "#"
+  - title: "Docs"
+    href: "#"
+
+cta:
+  title: "Request a Demo"
+  href: "#"

@@ -4,7 +4,11 @@
     z-index: 999;
     width: 100%;
     border-bottom: 1px solid $grey-57;
-    background-color: $violet-dark;
+    background-color: #0B0B13;
+
+    ul {
+        list-style: none;
+    }
 
     #topbar {
         @extend %flex;
@@ -101,7 +105,7 @@
             }
 
             .submenu-wrapper {
-                background-color: $blue;
+                background-color: #0B0B13;
                 margin: 10px 0 0 40px;
 
                 @include breakpoint('md') {
@@ -184,6 +188,10 @@
                 display: none;
             }
         }
+    }
+
+    #cta a {
+        text-decoration: underline!important;
     }
 
 }
