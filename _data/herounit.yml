@@ -4,6 +4,10 @@ button: Download now for free!
 link: 'https://github.com/Noovolari/leapp/releases/latest'
 image: leapp-hero
 image_title: Leapp Header
-col_left_title: Make the switch, today.
-col_left_subtitle: "<p>Let Leapp manage your Cloud credentials locally.</p><p>Improve your workflow with the only open-source desktop app and CLI you’ll ever need.</p>"
+col_left_title: "<span class='pink'> Access</span>, <span class='yellow'>operate</span>, and <span class='green'>secure</span> IT."
+col_left_subtitle: "<p>Make developers at the center of your IAM automation and improve your Cloud Operation at scale.</p>"
 article_title: "Rebranding as part of <br> something bigger"
+primary_cta: "Install Leapp"
+primary_cta_url: "#"
+secondary_cta: "Request a Demo"
+secondary_cta_url: "#"

@@ -89,6 +89,34 @@
 
                 font-weight: 700;
                 margin-bottom: $global-padding-default;
+
+                span {
+                    text-decoration: underline;
+                    transition: color 0.4s ease;
+                    cursor: pointer;
+                }
+
+                span.pink {
+                    text-decoration-color: #FF6EEE;
+                }
+                span.yellow {
+                    text-decoration-color: #F8B240;
+                }
+                span.green {
+                    text-decoration-color: #2CAAA2;
+                }
+
+                span:hover.pink {
+                        color: #FF6EEE;
+                }
+
+                span:hover.yellow {
+                    color: #F8B240;
+                }
+                span:hover.green {
+                    color: #2CAAA2;
+                }
+
             }
 
             .subtitle {

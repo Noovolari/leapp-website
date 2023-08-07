@@ -33,6 +33,14 @@
       font-weight: 400;
       line-height: normal;
     }
+
+    p {
+      line-clamp: 3 ;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
 }
