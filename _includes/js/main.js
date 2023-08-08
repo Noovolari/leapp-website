@@ -928,7 +928,7 @@
                 dataType: 'json',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    'query': 'query Posts{\n    publication(host:"blog.leapp.cloud"){\n        posts(first:10){\n            edges{\n                node{\n                    title\n                  brief\n              slug\n                  author\n{\n                     name\n                      }                   coverImage{\n                        url\n                    }\n                }\n            }\n        }\n    }\n}',
+                    'query': 'query Posts{\n    publication(host:"blog.leapp.cloud"){\n        posts(first:10){\n            edges{\n                node{\n                    title\n                  brief\n              slug\n                  author\n{\n                     name\n                     profilePicture\n }                   coverImage{\n                        url\n                    }\n                }\n            }\n        }\n    }\n}',
                     'variables': {}
                 })
             }).done(function(r) {
@@ -943,13 +943,15 @@
                                 <img src="${article.coverImage.url}" alt="Cover of article: ${article.title}"/>
                                 <h5> ${article.title}</h5>
                                 <p>${article.brief}</p>
-                                <span>${article.author.name}</span>
+                                <div class="div-author">
+                                    <img class="author-image" src="${article.author.profilePicture}" alt="Profile picture of ${article.author.name}"/>
+                                    <span>${article.author.name}</span>
+                                </div>
                             </div>
                         </a></div>`;
 
                     }
                 });
-                console.log(template);
                 $('.blog-container').empty().append(template);
 
             });

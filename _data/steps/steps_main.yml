@@ -1,25 +1,34 @@
-title: 
+title:
 step:
-  - title: CONFIGURE
-    content: "<p>Pick your Cloud Provider to add a Leapp Session.</p><p>Choose from supported access methods or <b>leverage your federated identity with SAML 2.0</b> compliant identity providers.</p><p><small>(GSuite, Okta, OneLogin supported)</small>.</p><p>Automatically <b>provision your sessions from AWS Single Sign-On</b> via Leapp Integration.</p>"
-    video: 
+  - title: CENTRALIZE YOUR ACCESS
+    content: "<p>No matter the IAM access method, have a unique workflow to access the Cloud.</p><p>Okta, One Login, AWS SSO, Gsuite, and more included.</p>"
+    video:
     autoplay: true
     controls: false
     muted: true
-    image: "steps/step-1.png"
+    image: "steps/step1.svg"
+    avatar_image:
+    color: pink
+    step_url: "/cloud-access"
 
-  - title: CONNECT
-    content: "<p>Start your Session, and Leapp will <b>automatically generate secure short-lived credentials</b> for you.</p><p>All sensitive data are stored in your <b>local System Vault</b> and used only when needed to provide best-in-class security.</p> <p>Credentials will be cleaned on every Session stop.</p>"
-    video: 
+  - title: THERE'S AN AUTOMATION FOR THAT
+    content: "<p><b>Save more than 1 hour per day</b> by automating Access and your daily Cloud Workflow. Install your plugin, Access to the Web Console, and to EC2 instances in a click. </p>"
+    video:
     autoplay: true
     controls: false
     muted: true
-    image: "steps/step-2.png"
+    image: "steps/step2.svg"
+    avatar_image:
+    color: yellow
+    step_url: "/cloud-operations"
 
-  - title: OPERATE!
-    content: "<p>Leapp seamlessly works with any development tool (Terraform, CDK, Amplify, etc.)</p><p>Integrate Leapp with specific Cloud Services like we did with <b>AWS System Manager Session Manager</b>.</p><p>Start working right away with <strong>your cloud development stack</strong> of choice!</p><p>Want to script the usage of Leapp? Check out the <a class=\"cli-home-link\" href=\"/cli\">Leapp CLI.</a></p>"
-    video: 
+  - title: SECURITY POSTURE ENHANCED
+    content: "<p>Take a journey to the Zero trust approach to  IAM, starting from the Developers, to a whole company.</p><p>Generate short-lived credentials only and comply with the Cloud Provider's best practices.</p>"
+    video:
     autoplay: true
     controls: false
     muted: true
-    image: "steps/step-3.png"
+    image: "steps/step3.svg"
+    avatar_image:
+    color: green
+    step_url: "/cloud-security"

@@ -1,12 +1,12 @@
 /** Features */
 #steps {
     /* background: $violet-dark; */
-    background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);
-    
+    /*background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);*/
+
     .steps-navigation {
         a {
             opacity: 0.3;
-            color: $white;
+            color: #1D1B25;
 
             &:hover,
             &.active {
@@ -16,7 +16,7 @@
     }
 
     h3 {
-        color: $white;
+        color: #1D1B25;
         font-weight: 600;
         font-size: 35px;
         line-height: 1;
@@ -79,7 +79,7 @@
                     }
                 }
             }
-            
+
         }
 
         .asset {
@@ -102,6 +102,23 @@
             font-size: 35px;
             font-weight: 600;
             line-height: 1.2;
+        }
+        .pink{
+            color: #FF6EEE;
+        }
+        .yellow {
+            color: #FF9E00;
+        }
+        .green {
+            color: #2CAAA2;
+        }
+        .link-to-feature {
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            font-size: 21px;
+            text-decoration: underline;
         }
 
         ul {

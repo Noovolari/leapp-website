@@ -1,7 +1,7 @@
-<section id="steps" class="white ovh">
+<section id="steps" class="ovh">
     <div class="container" id="feature">
         {% if {{site.data.steps.[page.steps_data].title}} != ""  %}
-            <h2 class="section-title white">{{site.data.steps.[page.steps_data].title}}</h2>
+            <h2 class="section-title ">{{site.data.steps.[page.steps_data].title}}</h2>
         {% endif %}
         <div class="steps-holder">
             {% for step in {{site.data.steps.[page.steps_data].step}} %}
@@ -24,13 +24,9 @@
                         {% endif %}
                     </div>
                     <div class="col content">
-                        <div class="steps-navigation mb-5">
-                            {% for i in (1..3) %}
-                                <a href="#step{{i}}" class="{% if indice == i %} {{current}} {% endif %} d-inline-block pr-2 fs-5 steps">STEP {{i}}</a>
-                            {% endfor %}
-                        </div>
-                        <h2>{{ step.title }}</h2>
+                        <h2 class="{{step.color}}">{{ step.title }}</h2>
                         {{step.content}}
+                        <a class="link-to-feature {{step.color}}" href="{{site_url}}{{step.step_url}}"> Explore! <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             {% endfor %}

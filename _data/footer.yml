@@ -34,11 +34,11 @@ menu:
   - title: "Product"
     subcategories:
       - subtitle: "Cloud Access"
-        subhref: "#"
+        subhref: "/cloud-access"
       - subtitle: "Cloud Security"
-        subhref: "#"
-      - subtitle: "Cloud Automations"
-        subhref: "#"
+        subhref: "/cloud-security"
+      - subtitle: "Cloud Operations"
+        subhref: "/cloud-operations"
 
   - title: "Resources"
     subcategories:

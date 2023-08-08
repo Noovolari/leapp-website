@@ -41,6 +41,16 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
+    .author-image {
+      width: 50px;
+      border-radius: 50px;
+    }
+
+    .div-author {
+      display:flex;
+      align-items: center;
+    }
   }
 
 }
