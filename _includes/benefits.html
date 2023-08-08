@@ -1,0 +1,14 @@
+
+<div class="container benefits-container">
+    {% for benefit in site.data.benefits.[page.benefits_data].benefits %}
+    <div class="card-b">
+        <span class="b-title">{{benefit.title}}</span>
+        <p class="b-description">{{benefit.description}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% if site.data.benefits.[page.benefits_data].post_scriptum %}
+<p class="post-scriptum">{{site.data.benefits.[page.benefits_data].post_scriptum}}</p>
+{% endif %}

@@ -1,0 +1,48 @@
+@import "variables";
+
+.benefits-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15%;
+
+  .card-b {
+    border-radius: 28px;
+    background: rgba(113, 113, 113, 0.12);
+    padding: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 0;
+    width: 0;
+
+    .b-title {
+      color: #1D1B25;
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .b-description {
+      color: #717171;
+      text-align: center;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+.post-scriptum {
+  position: relative;
+  text-align: center;
+
+  color: #717171;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
