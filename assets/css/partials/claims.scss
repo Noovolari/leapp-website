@@ -1,0 +1,20 @@
+@import "variables";
+
+.claims-container{
+  color: #1D1B25;
+  text-align: center;
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .magic {
+    text-decoration: line-through;
+    color: #969696;
+  }
+  span.pink {
+    text-decoration-color: #FF6EEE;
+  }
+}

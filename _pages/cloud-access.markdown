@@ -10,6 +10,7 @@ steps_data: steps_main
 opensource_data: opensource_main
 hero_data: herounit_cloud_access
 benefits_data: benefits_cloud_access
+claim_feature_data: claim_feature_cloud_access
 sitemap:
     video:
         title: Leapp One-Minute Demo
