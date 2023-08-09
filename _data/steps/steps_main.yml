@@ -10,6 +10,7 @@ step:
     avatar_image: "illustrations/30.svg"
     color: pink
     step_url: "/cloud-access"
+    anchor: cloud-access
 
   - title: THERE'S AN AUTOMATION FOR THAT
     content: "<p><b>Save more than 1 hour per day</b> by automating Access and your daily Cloud Workflow. Install your plugin, Access to the Web Console, and to EC2 instances in a click. </p>"
@@ -21,6 +22,7 @@ step:
     avatar_image: "illustrations/32.svg"
     color: yellow
     step_url: "/cloud-operations"
+    anchor: cloud-operations
 
   - title: SECURITY POSTURE ENHANCED
     content: "<p>Take a journey to the Zero trust approach to  IAM, starting from the Developers, to a whole company.</p><p>Generate short-lived credentials only and comply with the Cloud Provider's best practices.</p>"
@@ -32,3 +34,4 @@ step:
     avatar_image: "illustrations/31.svg"
     color: green
     step_url: "/cloud-security"
+    anchor: cloud-security
