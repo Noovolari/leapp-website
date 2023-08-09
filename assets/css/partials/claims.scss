@@ -11,10 +11,14 @@
   }
 
   .magic {
+    transition: color 0.5s ease-in, text-decoration 1s ease-in;
+  }
+
+  .magic.activated {
     text-decoration: line-through;
     color: #969696;
   }
-  span.pink {
+  span.pink.activated {
     text-decoration-color: #FF6EEE;
   }
 }

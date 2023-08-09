@@ -38,6 +38,7 @@
             this._steps();
             this._formValidate();
             this._blogData();
+            this._addClaimScrollClass();
             if(window.location.pathname === this.elements.pluginPath) {
                 this._listPlugin();
             }
@@ -955,6 +956,22 @@
                 $('.blog-container').empty().append(template);
 
             });
+        },
+        _addClaimScrollClass: function () {
+
+            function isScrolledIntoView(elem, percentage) {
+                let windowScroll = $(window).scrollTop();
+                let windowHeight = $(window).height();
+                let elementPosition = $(elem).offset().top;
+                let inViewpost = windowScroll + (windowHeight*percentage);
+                return inViewpost >= elementPosition;
+            }
+
+            $(window).scroll(function () {
+                if(isScrolledIntoView($('.claims-container'),0.6)) {
+                    $('.magic').addClass("activated");
+                }
+            })
         }
     };
     function escapeSpecialCharacters (unsafe) {
