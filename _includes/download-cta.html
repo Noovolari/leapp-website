@@ -1,5 +1,10 @@
-<section id="download-{{page.slug}}">
+<section class="download-hero" id="download-{{page.slug}}">
     <div class="container">
+        <img class="avatar-image" src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}"/>
 
+        <div class="container cta-container">
+            <a href="{{site.data.herounit.[page.hero_data].secondary_cta_url}}" class="btn btn-outline-primary d-inline-block mt-2" id="hero-join">{{site.data.herounit.[page.hero_data].secondary_cta}}</a>
+
+        </div>
     </div>
 </section>
