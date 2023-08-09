@@ -1,0 +1,48 @@
+@import "variables";
+
+.enterprise-cta {
+  background: radial-gradient(50% 50% at 1.12% 50%, #52488D 0%, #090810 100%);
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    position: relative;
+    padding: 60px 20px;
+    color:white;
+    justify-content: flex-start;
+
+    .text {
+
+      .logo{
+        position:relative;
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        color: #FFF;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        position: absolute;
+        bottom: -30px;
+        left: 55px;
+      }
+
+      p {
+        width: 55%;
+      }
+
+    }
+  }
+
+  .fade-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}

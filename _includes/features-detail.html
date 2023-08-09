@@ -1,0 +1,28 @@
+<section id="features-detail">
+    <div class="container feature">
+        <div>
+            <h2 class="section-title {{site.data.features_detail.[page.features_detail_data].color}}">{{site.data.features_detail.[page.features_detail_data].title}}</h2>
+            <div class="feature-holder">
+                {% for feature in {{site.data.features_detail.[page.features_detail_data].features}} %}
+                <div class="feature ">
+                    <div class="col content">
+                        <div class="content-text">
+                            <div class="f-icon {{site.data.features_detail.[page.features_detail_data].color}}">
+                                <i class="fa {{feature.icon}} "></i>
+                            </div>
+                            {{ feature.content }}
+                        </div>
+                        <a class="link-to-feature {{site.data.features_detail.[page.features_detail_data].color}}" href="{{site_url}}{{feature.step_url}}"> {{feature.cta_text}} <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col asset">
+            <div class="image mb-3">
+                <img class="feature-image" src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.features_detail.[page.features_detail_data].image}}" alt="{{site.data.features_detail.[page.features_detail_data].title}}">
+                <img class="avatar" src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.features_detail.[page.features_detail_data].avatar}}" alt="{{site.data.features_detail.[page.features_detail_data].title}}">
+            </div>
+        </div>
+    </div>
+</section>

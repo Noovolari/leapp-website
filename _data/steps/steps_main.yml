@@ -7,7 +7,7 @@ step:
     controls: false
     muted: true
     image: "steps/step1.svg"
-    avatar_image:
+    avatar_image: "illustrations/30.svg"
     color: pink
     step_url: "/cloud-access"
 
@@ -18,7 +18,7 @@ step:
     controls: false
     muted: true
     image: "steps/step2.svg"
-    avatar_image:
+    avatar_image: "illustrations/32.svg"
     color: yellow
     step_url: "/cloud-operations"
 
@@ -29,6 +29,6 @@ step:
     controls: false
     muted: true
     image: "steps/step3.svg"
-    avatar_image:
+    avatar_image: "illustrations/31.svg"
     color: green
     step_url: "/cloud-security"

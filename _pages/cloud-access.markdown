@@ -6,6 +6,7 @@ layout: feature-page
 image: Leapp_Icon.png
 callout_content: callout/callout-home.html
 features_data: features_main
+features_detail_data: features_detail_cloud_access
 steps_data: steps_main
 opensource_data: opensource_main
 hero_data: herounit_cloud_access

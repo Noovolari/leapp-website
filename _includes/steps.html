@@ -11,6 +11,9 @@
                 {% assign current = 'active' %}
 
                 <div class="step mb-3 {{c}}" id="step{{forloop.index}}">
+                    <div class="avatar">
+                        <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.avatar_image}}"/>
+                    </div>
                     <div class="col asset">
                         {% if step.video | strip_newlines != "" %}
                             <div class="video">

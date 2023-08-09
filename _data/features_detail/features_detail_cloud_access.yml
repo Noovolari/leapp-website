@@ -1,0 +1,17 @@
+title: "UNIQUE FLOW FOR CREDENTIALS GENERATION"
+image: steps/step1.svg
+avatar: illustrations/30.svg
+color: pink
+features:
+  - icon: fa-bolt
+    content: "<p>Gsuite, Okta, OneLogin, are all supported. Generate credentials programmatically or for Web console access in a click.</p>"
+    cta_text: Explore!
+    cta_url: "#"
+  - icon: fa-lock-alt
+    content: "<p>Automatically provision your AWS Identity Center access from the App, and centralize all the available point of access.</p>"
+    cta_text: Explore!
+    cta_url: "#"
+  - icon: fa-box
+    content: "<p>Automatically provision your AWS Identity Center access from the App, and centralize all the available point of access.</p>"
+    cta_text: Explore!
+    cta_url: "#"
