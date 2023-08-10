@@ -5,6 +5,9 @@
  .hero-avatar {
   display: flex;
   justify-content: center;
+  .avatar-image {
+   width: 35%;
+  }
  }
 
  .cta-container {

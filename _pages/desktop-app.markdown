@@ -31,4 +31,6 @@ downloads:
         cta_url: https://asset.noovolari.com/latest/Leapp-deb.zip
       - cta_text: AppImage
         cta_url: https://asset.noovolari.com/latest/Leapp-appImage.zip
+image_main: "plugins.png"
+documentation_url: https://docs.leapp.cloud/latest/installation/install-leapp/
 ---

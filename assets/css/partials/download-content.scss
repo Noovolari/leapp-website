@@ -1,0 +1,21 @@
+/** Documentation */
+.download-content {
+ .container {
+  display: flex;
+  justify-content: center;
+
+  img {
+   width: 65%;
+  }
+ }
+ .docs{
+  padding: 0;
+  a {
+   color: #52488D!important;
+   font-size: 19px;
+   font-weight: 700;
+   text-decoration-line: underline;
+  }
+
+ }
+}

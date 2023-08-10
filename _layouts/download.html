@@ -10,6 +10,16 @@ layout: compress
         {% include tagmanagerscript.html %}
         {% include navbar.html %}
         {% include download-cta.html %}
+        {% if page.slug != "cli" %}
+            {% include download-content.html %}
+        {% else %}
+            {% include cli/cli-terminal.html %}
+        {% endif %}
+        {% if page.slug == "desktop-app" %}
+        {% include quotes.html %}
+        {% else %}
+        {% include blog-section.html %}
+        {% endif %}
         {% include footer.html %}
     </body>
 </html>
