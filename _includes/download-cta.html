@@ -1,10 +1,37 @@
+<!--suppress XmlDuplicatedId -->
 <section class="download-hero" id="download-{{page.slug}}">
-    <div class="container">
+    <div class="container hero-avatar">
         <img class="avatar-image" src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}"/>
+    </div>
+    <div class="container hero-title">
+        <h1>{{page.hero_title}}</h1>
+        <h2>{{page.hero_content}}</h2>
+    </div>
+    <div class="container cta-container">
+        {% for download in page.downloads%}
+            {% if download.subcategories %}
+                <div style="position: relative">
+                    <div class="btn d-inline-block download-btn open-sub-menu" id="{{download.slug}}">
+                        <i class="fa-brands {{download.cta_icon}} "></i>
+                        {{download.cta_text}}
+                    </div>
+                    <ul class="popup-menu" id="menu-{download.slug}">
+                        {% for item in download.subcategories %}
+                        <li>
+                            <a class="btn" href="{{item.cta_url}}" title="Download Leapp {{item.cta_text}}">
+                                {{item.cta_text}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% else %}
+                <a href="{{download.cta_url}}" class="btn d-inline-block download-btn" id="{{download.slug}}">
+                    <i class="fa-brands {{download.cta_icon}} "></i>
+                    {{download.cta_text}}
+                </a>
+        {% endif%}
 
-        <div class="container cta-container">
-            <a href="{{site.data.herounit.[page.hero_data].secondary_cta_url}}" class="btn btn-outline-primary d-inline-block mt-2" id="hero-join">{{site.data.herounit.[page.hero_data].secondary_cta}}</a>
-
-        </div>
+        {% endfor %}
     </div>
 </section>

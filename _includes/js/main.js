@@ -39,6 +39,7 @@
             this._formValidate();
             this._blogData();
             this._addClaimScrollClass();
+            this._openSubMenuDownload();
             if(window.location.pathname === this.elements.pluginPath) {
                 this._listPlugin();
             }
@@ -976,6 +977,16 @@
                     $('.magic').addClass("activated");
                 }
             })
+        },
+        _openSubMenuDownload: function () {
+            $('.open-sub-menu').on('click', function () {
+                let menu = $(this).parent().find( ".popup-menu" );
+                if(menu.hasClass("active")) {
+                    menu.removeClass("active");
+                } else {
+                    menu.addClass("active");
+                }
+            });
         }
     };
     function escapeSpecialCharacters (unsafe) {

@@ -11,14 +11,18 @@ downloads:
   - cta_text: Download for MacOS
     cta_url:
     cta_icon: fa-apple
+    slug: download-mac
     subcategories:
-      - cta_text: x64
+      - cta_text: MacOs x64
         cta_url: https://asset.noovolari.com/latest/Leapp-mac.zip
-      - cta_text: Arm64
+        slug: download-mac-x64
+      - cta_text: MacOs Arm64
         cta_url: https://asset.noovolari.com/latest/Leapp-arm-mac.zip
+        slug: download-mac-arm
   - cta_text: Download for Windows
     cta_url: https://asset.noovolari.com/latest/Leapp-windows.zip
     cta_icon: fa-windows
+    slug: download-mac-x64
   - cta_text: Download for Linux
     cta_url: 
     cta_icon: fa-linux

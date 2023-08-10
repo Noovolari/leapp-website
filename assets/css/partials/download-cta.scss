@@ -1,4 +1,73 @@
 /** Documentation */
 .download-hero {
  padding-top: 138px;
+
+ .hero-avatar {
+  display: flex;
+  justify-content: center;
+ }
+
+ .cta-container {
+  display:flex;
+  justify-content: space-evenly;
+ }
+
+ .download-btn {
+  border-radius: 5px;
+  background: #52488D;
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+ }
+
+ .hero-title {
+  text-align: center;
+  h1 {
+   color: #1D1B25;
+   font-size: 45px;
+   font-weight: 700;
+  }
+
+  h2 {
+   color: #717171;
+   font-size: 21px;
+   font-weight: 400;
+  }
+ }
+
+ .popup-menu {
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top:48px;
+  display: none;
+  transition: 0.3s ease-in;
+  width: -webkit-fill-available;
+
+  li {
+   list-style-type:none;
+   text-align: center;
+   display: grid;
+   a {
+    color: #1D1B25;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+   }
+   transition: 0.3s ease-in;
+  }
+
+  li:hover {
+   background: rgba(112, 112, 112, 0.15);
+  }
+
+ }
+
+ .popup-menu.active {
+  display: block;
+ }
+
 }
+
