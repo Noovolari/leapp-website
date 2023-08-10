@@ -5,7 +5,7 @@ permalink: /download/desktop-app
 layout: download
 hero_title: Leapp for Mac, Windows, and Linux
 hero_content:
-hero_image: /illustrations/34.svg
+hero_image: /illustrations/33.svg
 slug: desktop-app
 downloads:
   - cta_text: Download for MacOS

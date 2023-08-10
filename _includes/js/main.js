@@ -960,11 +960,15 @@
         _addClaimScrollClass: function () {
 
             function isScrolledIntoView(elem, percentage) {
-                let windowScroll = $(window).scrollTop();
-                let windowHeight = $(window).height();
-                let elementPosition = $(elem).offset().top;
-                let inViewpost = windowScroll + (windowHeight*percentage);
-                return inViewpost >= elementPosition;
+                if(elem.offset()) {
+                    console.log(elem);
+                    let windowScroll = $(window).scrollTop();
+                    let windowHeight = $(window).height();
+                    let elementPosition = $(elem).offset().top;
+                    let inViewpost = windowScroll + (windowHeight*percentage);
+                    return inViewpost >= elementPosition;
+                }
+               return false;
             }
 
             $(window).scroll(function () {
