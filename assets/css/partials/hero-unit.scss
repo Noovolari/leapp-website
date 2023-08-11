@@ -1,3 +1,4 @@
+@import "variables";
 /** Hero unit */
 #hero-unit {
     /* background: $violet-dark; */
@@ -90,31 +91,32 @@
                 font-weight: 700;
                 margin-bottom: $global-padding-default;
 
-                span {
-                    text-decoration: underline;
+                a {
+                    color: white!important;
+                    text-decoration: underline!important;
                     transition: color 0.4s ease;
                     cursor: pointer;
                 }
 
-                span.pink {
-                    text-decoration-color: #FF6EEE;
+                a.pink {
+                    text-decoration-color: #FF6EEE!important;
                 }
-                span.yellow {
-                    text-decoration-color: #F8B240;
+                a.yellow {
+                    text-decoration-color: #F8B240!important;
                 }
-                span.green {
-                    text-decoration-color: #2CAAA2;
-                }
-
-                span:hover.pink {
-                        color: #FF6EEE;
+                a.green {
+                    text-decoration-color: #2CAAA2!important;
                 }
 
-                span:hover.yellow {
-                    color: #F8B240;
+                a:hover.pink {
+                   color: #FF6EEE!important;
                 }
-                span:hover.green {
-                    color: #2CAAA2;
+
+                a:hover.yellow {
+                    color: #F8B240!important;
+                }
+                a:hover.green {
+                    color: #2CAAA2!important;
                 }
 
             }

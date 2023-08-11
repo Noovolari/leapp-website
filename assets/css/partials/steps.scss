@@ -4,6 +4,21 @@
     /* background: $violet-dark; */
     /*background-image: radial-gradient(farthest-corner at 50% 0, $violet-light 0%, $violet-dark 70%);*/
 
+    .anchor::before {
+        content: '';
+        display: block;
+        height:      75px;
+        margin-top: -75px;
+        visibility: hidden;
+    }
+
+    .anchor {
+        display: block;
+        position: relative;
+        top: -250px;
+        visibility: hidden;
+    }
+
     .steps-navigation {
         a {
             opacity: 0.3;
