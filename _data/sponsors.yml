@@ -20,3 +20,6 @@ company:
   - name: 'SpotOn'
     image: spoton.png
     url: "https://www.spoton.com"
+  - name: 'Sky'
+    image: sky.png
+    url: "https://www.sky.it"

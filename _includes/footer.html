@@ -16,13 +16,13 @@
                          <h4><b>{{ nav.title }}</b></h4>
                          <ul style="display: block">
                              {% for subcategory in nav.subcategories %}
-                             <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                             <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
                              {% endfor %}
                          </ul>
                      </li>
                      {% else %}
                      <li>
-                         <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+                         <a href="{{ nav.href }}">{{ nav.title }}</a>
                      </li>
                      {% endif %}
                  {% endfor %}

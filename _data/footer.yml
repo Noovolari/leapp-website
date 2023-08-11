@@ -21,15 +21,15 @@ menu:
   - title: "Leapp"
     subcategories:
       - subtitle: "Getting Started"
-        subhref: "#"
+        subhref: "https://docs.leapp.cloud/latest/installation/install-leapp/"
       - subtitle: "Enterprise"
-        subhref: "#"
-      - subtitle: "Team"
-        subhref: "#"
+        subhref: "/solutions/enterprise"
+      - subtitle: "Business"
+        subhref: "/solutions/business"
       - subtitle: "Pricing"
-        subhref: "#"
+        subhref: "/pricing"
       - subtitle: "Support"
-        subhref: "#"
+        subhref: "/support"
 
   - title: "Product"
     subcategories:
@@ -43,24 +43,24 @@ menu:
   - title: "Resources"
     subcategories:
       - subtitle: "Documentation"
-        subhref: "#"
+        subhref: "https://docs.leapp.cloud"
       - subtitle: "Changelog"
-        subhref: "#"
+        subhref: "/releases"
       - subtitle: "Blog"
-        subhref: "#"
+        subhref: "https://blog.leapp.cloud"
       - subtitle: "Repository"
-        subhref: "#"
+        subhref: "https://github.com/Noovolari/leapp"
       - subtitle: "Roadmap"
-        subhref: "#"
+        subhref: "https://roadmap.leapp.cloud/tabs/4-in-progress"
 
   - title: "Company"
     subcategories:
       - subtitle: "About"
-        subhref: "#"
+        subhref: "https://www.noovolari.com"
       - subtitle: "Press Release"
-        subhref: "#"
+        subhref: "https://blog.leapp.cloud/series/press-releases"
       - subtitle: "Careers"
-        subhref: "#"
+        subhref: "/careers"
 
 paragraph: 'The DecSecOps Access platform for accessing and improving Cloud experience.'
 

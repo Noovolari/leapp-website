@@ -1,7 +1,7 @@
 image: leapp-hero
 image_title: Leapp Header
 col_left_title: "Cloud Access. Centralised"
-col_left_subtitle: "Seamlessly access your AWS, and Azure access in the same way. All, in a single click."
+col_left_subtitle: "Connect to a EC2 instance or a Database, Open a terminal, or a AWS web Console directly from the App: Automate everything in Cloud with Leapp"
 primary_cta: "Install Leapp"
 primary_cta_url: "#"
 secondary_cta: "Request a Demo"

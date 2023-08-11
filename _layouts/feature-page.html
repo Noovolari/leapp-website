@@ -13,6 +13,9 @@ layout: compress
         {% include benefits.html %}
         {% include features-detail.html %}
         {% include claims.html %}
+        {% if page.permalink == "/cloud-operations" %}
+            {% include integrations.html %}
+        {% endif %}
         {% include enterprise.html %}
         {% include blog-section.html %}
         {% include footer.html %}

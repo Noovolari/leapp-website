@@ -1,0 +1,17 @@
+title: "YOUR CLOUD OPERATIONS IN A CLICK"
+image: steps/step2.svg
+avatar: illustrations/36.svg
+color: yellow
+features:
+  - icon: fa-rectangle-terminal
+    content: "SSH access to your instances using AWS IAM and Leapp. Automatically select the instance you want to connect."
+    cta_text: Explore!
+    cta_url: "https://docs.leapp.cloud/latest/built-in-features/aws-ec2-connect/"
+  - icon: fa-browsers
+    content: "Open any AWS Console you want at the same time, in a click, with only your local credentials. everything Leapp’s managed."
+    cta_text: Explore!
+    cta_url: "https://docs.leapp.cloud/latest/built-in-features/multi-console/"
+  - icon: fa-robot
+    content: "Create your own Cloud automation and create a Leapp plugin. Your Cloud operation automated in a click."
+    cta_text: Explore!
+    cta_url: "https://docs.leapp.cloud/latest/plugins/plugins-introduction/"

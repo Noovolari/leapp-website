@@ -20,7 +20,7 @@
             downloadAction: $("#download-action"),
             downloadContent: $("#download-content"),
             downloadLabel: $("#download-label"),
-            pluginPath: "/plugins",
+            pluginPath: "/cloud-operations",
             cfDistribution: "https://asset.noovolari.com",
             gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
             pluginURL: "https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin",
@@ -853,6 +853,7 @@
         _listPlugin: function () {
             var _self = this;
             const runQuery = (query) =>{
+                console.log($('#listPlugins'));
                 $('#listPlugins').empty().addClass('loading');
                 $.ajax({
                     type: 'GET',
@@ -962,7 +963,6 @@
 
             function isScrolledIntoView(elem, percentage) {
                 if(elem.offset()) {
-                    console.log(elem);
                     let windowScroll = $(window).scrollTop();
                     let windowHeight = $(window).height();
                     let elementPosition = $(elem).offset().top;
