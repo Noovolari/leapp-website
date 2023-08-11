@@ -1,7 +1,7 @@
 ---
 title: Team
 description: Where Cloud happens
-permalink: /team
+permalink: /solutions/business
 image: team.png
 layout: team
 hero_title_1: Where

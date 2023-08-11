@@ -1,0 +1,17 @@
+title: "SET YOUR CLOUD SECURITY STANDARDS"
+image: steps/step3.svg
+avatar: illustrations/31.svg
+color: green
+features:
+  - icon: fa-vault
+    content: "Save your long term credentials safely and generate a set of short-term credentials constantly rotated"
+    cta_text: Explore!
+    cta_url: "https://docs.leapp.cloud/latest/built-in-features/aws-ec2-connect/"
+  - icon: fa-handshake
+    content: "Comply with the Cloud Providers security standards to access the Cloud."
+    cta_text: Explore!
+    cta_url: "https://docs.leapp.cloud/latest/built-in-features/multi-console/"
+  - icon: fa-binary-lock
+    content: "Every data is stored securely in the System Vault, rely on end-to end encryption to share Leapp access Configurations."
+    cta_text: Explore!
+    cta_url: "https://docs.leapp.cloud/latest/plugins/plugins-introduction/"
