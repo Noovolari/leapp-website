@@ -1,0 +1,78 @@
+@import "variables";
+
+.closed-beta-form-modal {
+  .popup-menu {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.35);
+    position: fixed;
+    width: 40%;
+    top: 18%;
+    left: 30%;
+    display: none;
+    z-index: 9999;
+
+  }
+
+  .popup-menu.active {
+  display: flex;
+  }
+
+  .close-icon {
+    font-size: 22px;
+    padding: 30px;
+    color: black;
+    position: absolute;
+    right: 0px;
+    cursor:pointer;
+  }
+
+}
+
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-overlay.active {
+  display: initial;
+}
+
+.play-demo-icon {
+  position: absolute;
+  font-size: 1000%;
+  color: rgba(82, 72, 141, 0.76);
+  top: 30%;
+  left: 61%;
+  cursor:pointer;
+}
+
+.demo-video-modal {
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.35);
+  position: fixed;
+  width: 60%;
+  top: 18%;
+  left: 20%;
+  display: none;
+  z-index: 9999;
+  height: 75%;
+}
+
+.demo-video-modal.active {
+  display: flex;
+}
+
+.close-icon-2 {
+  position: absolute;
+  padding: 30px;
+  right: 0;
+  font-size: 24px;
+}

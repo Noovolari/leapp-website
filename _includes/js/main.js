@@ -979,6 +979,47 @@
             })
         },
         _openSubMenuDownload: function () {
+
+            function modalActions(triggerElement, modal, overlay, closeIcon) {
+                $(triggerElement).on('click', function () {
+                    let modalElement = $(modal);
+                    let overlayElement = $(overlay);
+                    console.log(overlay);
+                    if(modalElement.hasClass("active")) {
+                        modalElement.removeClass("active");
+                        overlayElement.removeClass("active");
+                    } else {
+                        modalElement.addClass("active");
+                        overlayElement.addClass("active");
+                    }
+                });
+
+                $(overlay).on('click', function() {
+                    let modalElement = $( modal);
+                    if(modalElement.hasClass("active")) {
+                        modalElement.removeClass("active");
+                        $(this).removeClass("active");
+                    }
+                });
+
+                $(closeIcon).on('click', function() {
+                    let modalElement = $(modal);
+                    let overlayElement = $(overlay);
+                    if(modalElement.hasClass("active")) {
+                        modalElement.removeClass("active");
+                        overlayElement.removeClass("active");
+                    } else {
+                        modalElement.addClass("active");
+                        overlayElement.addClass("active");
+                    }
+                });
+
+            }
+
+            modalActions($('#open-modal'), $( ".popup-menu" ), $('.modal-overlay'), $('.close-icon') );
+
+            modalActions($('.play-demo-icon'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
+
             $('.open-sub-menu').on('click', function () {
                 let menu = $(this).parent().find( ".popup-menu" );
                 if(menu.hasClass("active")) {
@@ -987,6 +1028,7 @@
                     menu.addClass("active");
                 }
             });
+
         }
     };
     function escapeSpecialCharacters (unsafe) {
