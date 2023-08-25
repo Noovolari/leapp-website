@@ -1,29 +1,29 @@
-title: JOIN THE COMMUNITY
-subtitle:  "Become a contributor"
+title: UNLOCK THE LEAPP POTENTIAL
+subtitle:  "Download our assets"
 contributors:
-  - contributor_title: GitHub
-    contributor_content: "Open issues and PRs, and vote on the enhancements that matter the most to you!"
-    contributor_download_label: Start contributing
-    contributor_download_url: https://github.com/Noovolari/leapp/blob/master/CONTRIBUTING.md
+  - contributor_title: Desktop App
+    contributor_content: "Available for MacOS, Windows and MAC"
+    contributor_download_label: Download the App
+    contributor_download_url: /download/desktop-app
     contributor_download_target: target="_blank" rel="noopener"
-    contributor_icon: fa-github
+    contributor_icon: fa-desktop
     contributor_color_1: "#2C2349"
     contributor_color_2: "#584591"
 
-  - contributor_title: Slack
-    contributor_content: "Join us on our team chat<br>and ask questions!<br>&nbsp;"
-    contributor_download_label: Join the discussion
-    contributor_download_url: https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q
-    contributor_download_target: 
-    contributor_icon: fa-slack
+  - contributor_title: CLI
+    contributor_content: "Automate your Leapp action from terminal<br>&nbsp;"
+    contributor_download_label: Download the CLI
+    contributor_download_url: /download/cli
+    contributor_download_target:
+    contributor_icon: fa-terminal
     contributor_color_1: "#55706C"
     contributor_color_2: "#AADFD8"
-    
-  - contributor_title: Roadmap
-    contributor_content: "Check what<br>we are working on.<br>&nbsp;"
-    contributor_download_label: Submit your idea
-    contributor_download_url: 'https://roadmap.leapp.cloud/tabs/4-in-progress'
-    contributor_download_target: 
-    contributor_icon: fa-map-marked
+
+  - contributor_title: Web Extension
+    contributor_content: "Manage access to web console thanks to the Extension"
+    contributor_download_label: Download the Extension
+    contributor_download_url: /download/browser-extension
+    contributor_download_target:
+    contributor_icon: fa-window-restore
     contributor_color_1: "#2B5975"
     contributor_color_2: "#56B2E9"

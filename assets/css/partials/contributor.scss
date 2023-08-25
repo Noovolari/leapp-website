@@ -3,13 +3,12 @@
         font-weight: 700;
         color: $violet-light;
         text-align: center;
-        @include breakpoint('md') { text-align: left; }
+
     }
 
     .subtitle {
         color: $violet-light;
         text-align: center;
-        @include breakpoint('md') { text-align: left; }
     }
 
     #contributor-wrapper {
