@@ -22,16 +22,16 @@ menu:
     subcategories:
       - subtitle: "Getting Started"
         subhref: "https://docs.leapp.cloud/latest/installation/install-leapp/"
-      - subtitle: "Enterprise"
-        subhref: "/solutions/enterprise"
-      - subtitle: "Business"
+      #- subtitle: "Enterprise"
+      #  subhref: "/solutions/enterprise"
+      - subtitle: "For Business"
         subhref: "/solutions/business"
-      - subtitle: "Pricing"
-        subhref: "/pricing"
+      #- subtitle: "Pricing"
+      #  subhref: "/pricing"
       - subtitle: "Support"
         subhref: "/support"
 
-  - title: "Product"
+  - title: "Use cases"
     subcategories:
       - subtitle: "Cloud Access"
         subhref: "/cloud-access"

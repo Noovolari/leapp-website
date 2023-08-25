@@ -8,7 +8,7 @@
             <a href="javascript:void(0);" id="hamburger">
                 <i class="fa fa-bars"></i>
             </a>
-            <ul id="navigation">
+            <ul id="navigation" class="navigation-subcategory">
                 {% for nav in site.data.menu-header.menu %}
                 {% if nav.subcategories != null %}
                 <li>
@@ -29,7 +29,28 @@
                 {% endfor %}
             </ul>
             <div id="cta">
-                <a title="{{site.data.menu-header.cta.title}}" href="{{site.data.menu-header.cta.href}}">{{site.data.menu-header.cta.title}}</a>
+                <a title="{{site.data.menu-header.cta.title}}" onclick="{{site.data.menu-header.cta.action}}">{{site.data.menu-header.cta.title}}</a>
+                <ul  class="navigation-subcategory">
+                    {% for nav in site.data.menu-header.cta %}
+                    {% if nav.subcategories != null %}
+                        <li>
+                            <a title="{{ nav.title }}" > {{ nav.title }}</a>
+                            <div class="submenu-wrapper d-none">
+                                <ul class="submenu">
+                                    {% for subcategory in nav.subcategories %}
+                                    <li><a title="{{ subcategory.subtitle }}" href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                    {% else %}
+                    <li>
+                        <a onclick="{{nav.action}}">{{ nav.title }}</a>
+                    </li>
+                    {% endif %}
+
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </nav>

@@ -6,12 +6,12 @@ features:
   - icon: fa-bolt
     content: "<p>Gsuite, Okta, OneLogin, are all supported. Generate credentials programmatically or for Web console access in a click.</p>"
     cta_text: Explore!
-    cta_url: "#"
+    cta_url: "https://docs.leapp.cloud/latest/configuring-session/configure-aws-iam-role-federated/"
   - icon: fa-lock-alt
-    content: "<p>Automatically provision your AWS Identity Center access from the App, and centralize all the available point of access.</p>"
+    content: "<p>Automatically provision your AWS Identity Center access from the App, and centralize all the available AWS roles.</p>"
     cta_text: Explore!
-    cta_url: "#"
+    cta_url: "https://docs.leapp.cloud/latest/configuring-integration/configure-aws-single-sign-on-integration/"
   - icon: fa-box
-    content: "<p>Automatically provision your AWS Identity Center access from the App, and centralize all the available point of access.</p>"
-    cta_text: Explore!
-    cta_url: "#"
+    content: "<p>Centralize your access configuration for your Company and get all the accounts and roles you can access in a click <a href='https://docs.leapp.cloud/latest/workspaces/' title='Leapp Workspaces definition'>with Leapp Workspaces.</a></p>"
+    cta_text: Try Leapp for business!
+    cta_url: "/solutions/business"

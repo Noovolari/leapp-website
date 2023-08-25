@@ -10,6 +10,7 @@
             html: $("html"),
             hamburger: $("#hamburger"),
             navigation: $("#navigation"),
+            cta: $("#cta .navigation-subcategory"),
             accordion: $(".accordion"),
             twSlider: $('#tweetSlider'),
             navAnchor: $("#navigation .anchor"),
@@ -20,7 +21,7 @@
             downloadAction: $("#download-action"),
             downloadContent: $("#download-content"),
             downloadLabel: $("#download-label"),
-            pluginPath: "/cloud-operations",
+            pluginPaths: ["/cloud-operations","/plugins"],
             cfDistribution: "https://asset.noovolari.com",
             gitHubReleases: "https://github.com/Noovolari/leapp/releases/",
             pluginURL: "https://d4ekrqc4eg.execute-api.eu-west-1.amazonaws.com/api/list-plugin",
@@ -40,7 +41,7 @@
             this._blogData();
             this._addClaimScrollClass();
             this._openSubMenuDownload();
-            if(window.location.pathname === this.elements.pluginPath) {
+            if(this.elements.pluginPaths.includes(window.location.pathname) ) {
                 this._listPlugin();
             }
             if (this.elements.releases.length > 0) {
@@ -167,6 +168,14 @@
         },
         _navigation: function () {
             this.elements.navigation.find("li").on({
+                mouseenter: function () {
+                    $(this).find(".submenu-wrapper").removeClass("d-none");
+                },
+                mouseleave: function () {
+                    $(this).find(".submenu-wrapper").addClass("d-none");
+                }
+            });
+            this.elements.cta.find("li").on({
                 mouseenter: function () {
                     $(this).find(".submenu-wrapper").removeClass("d-none");
                 },
@@ -1008,9 +1017,6 @@
                     if(modalElement.hasClass("active")) {
                         modalElement.removeClass("active");
                         overlayElement.removeClass("active");
-                    } else {
-                        modalElement.addClass("active");
-                        overlayElement.addClass("active");
                     }
                 });
 
@@ -1019,6 +1025,8 @@
             modalActions($('#open-modal'), $( ".popup-menu" ), $('.modal-overlay'), $('.close-icon') );
 
             modalActions($('.play-demo-icon'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
+
+            modalActions($('#play-demo-button'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
 
             $('.open-sub-menu').on('click', function () {
                 let menu = $(this).parent().find( ".popup-menu" );

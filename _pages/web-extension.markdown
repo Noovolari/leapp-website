@@ -17,5 +17,6 @@ downloads:
     cta_icon: fa-firefox
     slug: firefox
 image_main: "plugins.png"
+documentation_text: See the documentation!
 documentation_url: https://docs.leapp.cloud/latest/built-in-features/multi-console/
 ---

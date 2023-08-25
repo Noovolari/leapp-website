@@ -13,5 +13,5 @@ features:
     cta_url: "https://docs.leapp.cloud/latest/built-in-features/multi-console/"
   - icon: fa-binary-lock
     content: "Every data is stored securely in the System Vault, rely on end-to end encryption to share Leapp access Configurations."
-    cta_text: Explore!
+    cta_text: Try leapp for business!
     cta_url: "https://docs.leapp.cloud/latest/plugins/plugins-introduction/"

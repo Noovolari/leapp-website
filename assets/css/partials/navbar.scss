@@ -77,7 +77,7 @@
             }
         }
 
-        #navigation {
+        .navigation-subcategory {
             display: none;
 
             @include breakpoint('md') {
@@ -192,6 +192,7 @@
 
     #cta a {
         text-decoration: underline!important;
+        color:white;
     }
 
 }

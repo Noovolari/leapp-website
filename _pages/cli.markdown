@@ -16,6 +16,7 @@ downloads:
     cta_url: https://www.npmjs.com/package/@noovolari/leapp-cli
     cta_icon: 
     slug: cli-npm
-image_main: 
-documentation_url:
+image_main:
+documentation_text: See the documentation!
+documentation_url: https://docs.leapp.cloud
 ---

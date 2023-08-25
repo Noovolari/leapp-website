@@ -1,5 +1,5 @@
 menu:
-  - title: "Product"
+  - title: "Use Cases"
     subcategories:
       - subtitle: "Cloud Access"
         subhref: "/cloud-access"
@@ -17,15 +17,6 @@ menu:
       - subtitle: "Browser Extension"
         subhref: "/download/browser-extension"
 
-  - title: "Solutions"
-    subcategories:
-      - subtitle: "Personal"
-        subhref: "/solutions/personal"
-      - subtitle: "Business"
-        subhref: "/solutions/business"
-      - subtitle: "Enterprise"
-        subhref: "/solutions/enterprise"
-
   - title: "Resources"
     subcategories:
       - subtitle: "Changelog"
@@ -40,11 +31,24 @@ menu:
         subhref: "https://roadmap.leapp.cloud/tabs/4-in-progress"
       - subtitle: "Slack Community"
         subhref: "https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q"
-  - title: "Pricing"
-    href: "/pricing"
+  #- title: "Pricing"
+  #  href: "/pricing"
   - title: "Docs"
     href: "https://docs.leapp.cloud"
 
+  - title: "For Business"
+    href: "/solutions/business"
+
+
 cta:
-  title: "Request a Demo"
-  href: "#"
+  - title: "Request a Demo"
+    action: "Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/leapp-demo?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
+
+  - title: "Download"
+    subcategories:
+      - subtitle: "Desktop App"
+        subhref: "/download/desktop-app"
+      - subtitle: "CLI"
+        subhref: "/download/cli"
+      - subtitle: "Browser Extension"
+        subhref: "/download/browser-extension"

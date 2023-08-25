@@ -1,7 +1,7 @@
 title:
 step:
   - title: CENTRALIZE YOUR ACCESS
-    content: "<p>No matter the IAM access method, have a unique workflow to access the Cloud.</p><p>Okta, One Login, AWS SSO, Gsuite, and more included.</p>"
+    content: "<p><b>Have a unique workflow to access all your Cloud accounts</b>, no matter your IAM access method.</p><p>Okta, One Login, AWS SSO, Gsuite, and more included.</p>"
     video:
     autoplay: true
     controls: false
@@ -13,7 +13,7 @@ step:
     anchor: cloud-access
 
   - title: THERE'S AN AUTOMATION FOR THAT
-    content: "<p><b>Save more than 1 hour per day</b> by automating Access and your daily Cloud Workflow. Install your plugin, Access to the Web Console, and to EC2 instances in a click. </p>"
+    content: "<p><b>Save more than 1 hour per day</b> by automating Access and your daily Cloud Workflow.</p><p> Install your plugin, Access to the Web Console, and to EC2 instances in a click. </p>"
     video:
     autoplay: true
     controls: false
@@ -24,8 +24,9 @@ step:
     step_url: "/cloud-operations"
     anchor: cloud-operations
 
-  - title: SECURITY POSTURE ENHANCED
-    content: "<p>Take a journey to the Zero trust approach to  IAM, starting from the Developers, to a whole company.</p><p>Generate short-lived credentials only and comply with the Cloud Provider's best practices.</p>"
+  - title: IAM ZERO-TRUST AT SCALE
+    content: "<p><b>Start the journey into the IAM Zero-Trust approach</b>: from the developers’ daily operations to company-wide adoption.
+</p><p>Generate short-lived credentials only and comply with the Cloud Provider's best practices.</p>"
     video:
     autoplay: true
     controls: false
