@@ -1,12 +1,12 @@
 .u-card {
   display: flex;
-  flex-direction: row-reverse;
   background: #D9D9D9;
   border-radius: 15px;
-  justify-content: flex-end;
+  flex-wrap: wrap;
   position: relative;
   margin-bottom: 100px;
   margin-top: 40px;
+  width: 75%;;
 
   img {
     position: absolute;
@@ -15,8 +15,73 @@
     top: -11%;
   }
 
+  .section-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
   .u-content {
     padding: 40px;
     width: 40%;
+    padding-right: 50%;
   }
+
+  .section-title.pink {
+    color: #FF6EEE;
+  }
+  .section-title.yellow {
+    color:#FF9E00;
+  }
+  .section-title.green {
+    color: #2CAAA2;
+  }
+
+  a.pink {
+    color: #FF6EEE;
+  }
+  a.yellow {
+    color:#FF9E00;
+  }
+  a.green {
+    color: #2CAAA2;
+  }
+}
+
+.u-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.u-title {
+  margin-bottom: 60px;
+  h2 {
+    color: #1D1B25;
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  h2 a {
+    color: #1D1B25;
+    text-decoration:underline;
+    text-decoration-thickness: 6px;
+  }
+
+  h2 a.pink {
+    text-decoration-color: #FF6EEE;
+  }
+  h2 a.yellow {
+    text-decoration-color:#FF9E00;
+  }
+  h2 a.green {
+    text-decoration-color: #2CAAA2;
+  }
+
 }
