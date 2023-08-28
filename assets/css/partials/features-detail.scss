@@ -147,3 +147,15 @@
         }
     }
 }
+
+.features-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    a {
+        background: #52488D;
+        color:white!important;
+    }
+}
