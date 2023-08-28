@@ -1,14 +1,5 @@
 <section id="hero-unit" class="home ovh">
     <div class="container">
-        <video height="584"
-               onpause="leapp !== undefined ? leapp.sendEvent('Pause', this): ''" onplay="leapp !== undefined ? leapp.sendEvent('Play', this): ''" onended="leapp !== undefined ? leapp.sendEvent('Ended', this): ''" ontimeupdate="leapp !== undefined ? leapp.sendEvent('Progress', this): ''"
-               autoplay muted style="border-radius: 5px;" data-title="home-page-video" class="mobile m-auto mb-2 w-100 h-auto">
-            <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.[page.hero_data].image}}.mp4" type="video/mp4">
-            <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.[page.hero_data].image}}.webm" type="video/webm">
-            <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.[page.hero_data].image}}.mov" type="video/mov">
-            <img src="{{site.url}}{{site.baseurl}}/assets/img/first-frame.png" alt="video tag not supported" title="video tag not supported" />
-        </video>
-
         <div class="hero-unit-col-container">
             <div class="col">
                 <div class="title">{{site.data.herounit.[page.hero_data].col_left_title}}</div>
@@ -33,5 +24,13 @@
                 </video>
                 </div>
         </div>
+        <video height="584"
+               onpause="leapp !== undefined ? leapp.sendEvent('Pause', this): ''" onplay="leapp !== undefined ? leapp.sendEvent('Play', this): ''" onended="leapp !== undefined ? leapp.sendEvent('Ended', this): ''" ontimeupdate="leapp !== undefined ? leapp.sendEvent('Progress', this): ''"
+               autoplay muted style="border-radius: 5px;" data-title="home-page-video" class="mobile m-auto mb-2 w-100 h-auto">
+            <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.[page.hero_data].image}}.mp4" type="video/mp4">
+            <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.[page.hero_data].image}}.webm" type="video/webm">
+            <source src="{{site.url}}{{site.baseurl}}/assets/videos/{{site.data.herounit.[page.hero_data].image}}.mov" type="video/mov">
+            <img src="{{site.url}}{{site.baseurl}}/assets/img/first-frame.png" alt="video tag not supported" title="video tag not supported" />
+        </video>
     </div>
 </section>

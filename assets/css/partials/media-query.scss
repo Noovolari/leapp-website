@@ -1,0 +1,117 @@
+@media screen and (max-width: 1448px) {
+  .avatar {
+    display: none!important;
+  }
+
+  #hero-unit {
+    width: 100%!important;
+
+    .container {
+      width: 100%!important;
+    }
+
+    .hero-unit-col-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      height: auto!important;
+
+      *.col {
+        width: 100%;
+        padding: 40px;
+        margin: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+      }
+    }
+
+    #hero-button {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .enterprise-cta {
+    img { display: none; }
+    p, h4, .text {
+      text-align: center;
+      width: 100%!important;
+      left: 0!important;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #hero-unit {
+    *.col {
+      width: auto!important;
+      padding: 40px;
+      margin: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      text-align: center;
+    }
+
+    video {
+      width: calc(100% - 80px)!important;
+      max-width: 1000px!important;
+      margin: 0;
+      box-sizing: content-box;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #hero-unit {
+    .container {
+      padding: 20px 0!important;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  footer {
+    .footer-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .asset img { display: none!important; }
+  #steps {
+    padding-top: 0;
+    .step {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 711px) {
+  footer {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #sponsors .container-flex {
+    width: 100%!important;
+  }
+}
