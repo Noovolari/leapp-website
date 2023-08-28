@@ -8,15 +8,6 @@ menu:
       - subtitle: "Cloud Security"
         subhref: "/cloud-security"
 
-  - title: "Download"
-    subcategories:
-      - subtitle: "Desktop App"
-        subhref: "/download/desktop-app"
-      - subtitle: "CLI"
-        subhref: "/download/cli"
-      - subtitle: "Browser Extension"
-        subhref: "/download/browser-extension"
-
   - title: "Resources"
     subcategories:
       - subtitle: "Changelog"

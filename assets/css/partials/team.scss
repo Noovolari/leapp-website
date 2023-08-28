@@ -36,9 +36,11 @@ span.cursor.hidden {
 }
 
 @media screen and (min-width: 1281px) {
+  .team-hero-content { width: 100%!important; }
+  .team-media-hero { width: 100%!important; }
   .team-hero {
     .media-hero {
-      width: 65%!important;
+      width: 100%!important;
 
       img {
         border-radius: 5px;
@@ -51,8 +53,8 @@ span.cursor.hidden {
 }
 
 @media screen and (max-width: 1280px) {
-  .team-hero-content { width: 50%!important; }
-  .team-media-hero { width: 50%!important; }
+  .team-hero-content { width: 100%!important; }
+  .team-media-hero { width: 100%!important; }
   .step-team {
     height: 480px!important;
   }

@@ -1,4 +1,17 @@
 @media screen and (max-width: 1448px) {
+  .closed-beta-form-modal {
+    .popup-menu {
+      width: 60%!important;
+      left: 20%!important;
+
+      iframe {}
+    }
+  }
+  .play-demo-icon {
+    top: auto!important;
+    left: auto!important
+  }
+
   .avatar {
     display: none!important;
   }
@@ -19,8 +32,11 @@
       height: auto!important;
 
       *.col {
-        width: 100%;
-        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
         margin: 0;
         left: 0;
         right: 0;
@@ -46,6 +62,9 @@
       left: 0!important;
     }
   }
+  .u-card {
+    width: 85%!important;
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -62,7 +81,7 @@
     }
 
     video {
-      width: calc(100% - 80px)!important;
+      width: 100%!important;
       max-width: 1000px!important;
       margin: 0;
       box-sizing: content-box;
@@ -75,6 +94,19 @@
     .container {
       padding: 20px 0!important;
     }
+  }
+  .feature-image {
+    display: none;
+  }
+  .u-card img {
+    display: none;
+  }
+  .u-content {
+    width: 100%!important;
+    padding: 40px 20px!important;
+  }
+  .download-hero .cta-container {
+    gap: 20px;
   }
 }
 
@@ -89,12 +121,66 @@
   }
 }
 
+@media screen and (max-width: 912px) {
+  .benefits-container {
+    gap: 2%!important;
+    justify-content: stretch;
+    align-items: stretch;
+    .b-title {
+      font-size: 38px!important;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .benefits-container {
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 2%!important;
+    .b-title {
+      font-size: 30px!important;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .asset img { display: none!important; }
   #steps {
     padding-top: 0;
     .step {
       margin-top: 0;
+    }
+  }
+
+  .claims-container h2, .feature h2 {
+    font-size: 26px!important;
+    text-align: center;
+    width: 100%!important;
+  }
+
+  .u-card {
+    width: 95%!important;
+  }
+
+  #features-detail {
+    padding-top: 0!important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 2%;
+    .card-b {
+      margin: 20px;
+      width: calc(100% - 40px);
+    }
+
+    .b-title {
+      font-size: 30px!important;
     }
   }
 }
@@ -111,7 +197,23 @@
 }
 
 @media screen and (max-width: 540px) {
+  .download-hero .cta-container {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    div {
+      display: flex;
+      flex: 1;
+    }
+  }
   #sponsors .container-flex {
     width: 100%!important;
+  }
+  .u-content {
+    h2 {
+      font-size: 26px!important;
+    }
   }
 }
