@@ -188,11 +188,23 @@
                 display: none;
             }
         }
+
     }
 
-    #cta a {
-        text-decoration: underline!important;
-        color:white;
+    #cta {
+        a {
+            text-decoration: underline!important;
+            color:white;
+        }
+
+        .with-sub a {
+            text-decoration: none!important;
+        }
+
+        .with-sub > a {
+            color: #52A8DC;
+            font-weight: 700;
+        }
     }
 
 }

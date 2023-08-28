@@ -33,7 +33,7 @@
                 <ul  class="navigation-subcategory">
                     {% for nav in site.data.menu-header.cta %}
                     {% if nav.subcategories != null %}
-                        <li>
+                        <li class="with-sub">
                             <a title="{{ nav.title }}" > {{ nav.title }}</a>
                             <div class="submenu-wrapper d-none">
                                 <ul class="submenu">
