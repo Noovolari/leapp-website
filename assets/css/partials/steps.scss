@@ -178,3 +178,14 @@
 #steps.team {
     background-image: radial-gradient(farthest-corner at 50% 0, #52488D 0%, #080b38 70%);;
 }
+
+.cta-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        background: #52488D;
+        color:white!important;
+    }
+}

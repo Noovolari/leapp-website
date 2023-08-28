@@ -61,9 +61,7 @@ menu:
         subhref: "https://blog.leapp.cloud/series/press-releases"
       - subtitle: "Careers"
         subhref: "/careers"
-
-paragraph: 'The DecSecOps Access platform for accessing and improving Cloud experience.'
-
+paragraph: 'The DevSecOps Access platform for accessing and improving Cloud experience.'
 
 # Call to Action
 cta_text: If it's ON, you are IN.

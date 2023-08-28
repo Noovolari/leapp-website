@@ -11,15 +11,15 @@
           <h2>Wait you can also  <a href='#cloud-access' class='pink'> access</a>, and <a href='#cloud-operations' class='yellow'>operate</a> in your Cloud.</h2>
           {% endcase %}
       </div>
-      <div class="u-content">
+      <div class="u-container">
           {% for step in site.data.steps.steps_main.step}} %}
             {% if step.step_url != page.permalink %}
               <div class="u-card">
                   <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.image}}" title="{{step.title}}" alt="{{step.title}}">
                   <div class="u-content">
-                      <h2 class="section-title white"> {{step.title}}</h2>
+                      <h2 class="section-title {{step.color}}"> {{step.title}}</h2>
                       <p>{{step.content}}</p>
-                      <a href="{{step.step_url}}">EXPLORE!<i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="{{step.step_url}}" class="{{step.color}}">EXPLORE!<i class="fa-solid fa-arrow-right"></i></a>
                   </div>
               </div>
             {% endif %}
