@@ -12,7 +12,7 @@
                             </div>
                             {{ feature.content }}
                         </div>
-                        <a class="link-to-feature {{site.data.features_detail.[page.features_detail_data].color}}" href="{{site_url}}{{feature.step_url}}"> {{feature.cta_text}} <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="link-to-feature {{site.data.features_detail.[page.features_detail_data].color}}" href="{{feature.cta_url}}"> {{feature.cta_text}} <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 {% endfor %}
