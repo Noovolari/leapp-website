@@ -12,6 +12,6 @@ features:
     cta_text: Explore!
     cta_url: "https://docs.leapp.cloud/latest/built-in-features/multi-console/"
   - icon: fa-robot
-    content: "FRASE PER LEAPP BUSINESS COLLABORATION"
+    content: "Create and distribute your plugin to your team and manage them centrally"
     cta_text: Try Leapp for business!
-    cta_url: "https://docs.leapp.cloud/latest/plugins/plugins-introduction/"
+    cta_url: "/solutions/business"
