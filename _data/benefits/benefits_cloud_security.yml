@@ -5,4 +5,4 @@ benefits:
     description: On average, saved avoiding data breaches, due to credentials compromised or stolen*
   - title: 19%
     description: Of total data breaches attack come from credentials compromise.*
-post_scriptum: "* From a <a href='https://www.ibm.com/reports/data-breach'>2023 report by IBM</a>"
+post_scriptum: "* From a <a href='https://www.ibm.com/reports/data-breach' target='_blank'>2023 report by IBM</a>"
