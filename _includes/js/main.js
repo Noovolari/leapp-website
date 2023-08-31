@@ -1022,11 +1022,11 @@
 
             }
 
-            modalActions($('#open-modal'), $( ".popup-menu" ), $('.modal-overlay'), $('.close-icon') );
+            modalActions($('.open-modal'), $( ".popup-menu" ), $('.modal-overlay'), $('.close-icon') );
 
             modalActions($('.play-demo-icon'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
 
-            modalActions($('#play-demo-button'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
+            modalActions($('.play-demo-button'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
 
             $('.open-sub-menu').on('click', function () {
                 let menu = $(this).parent().find( ".popup-menu" );

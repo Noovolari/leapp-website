@@ -67,6 +67,16 @@
   }
 }
 
+@media screen and (max-width: 1086px) {
+  #navbar-container nav .nav-sub-link-button,
+  #navbar-container nav .sub-menu-fix {
+    font-size: 16px!important;
+    i {
+      font-size: 16px!important;
+    }
+  }
+}
+
 @media screen and (max-width: 1080px) {
   #hero-unit {
     *.col {

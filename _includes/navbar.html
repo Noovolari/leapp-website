@@ -15,7 +15,7 @@
                 {% for nav in site.data.menu-header.menu %}
                 {% if nav.subcategories != null %}
                 <li>
-                    <span class="nav-sub-link-button" title="{{ nav.title }}"> {{ nav.title }}</span>
+                    <span class="nav-sub-link-button" title="{{ nav.title }}"> {{ nav.title }} <i class="fa-regular fa-angle-down"></i></span>
                     <div class="submenu-wrapper d-none">
                         <ul class="submenu">
                             {% for subcategory in nav.subcategories %}
@@ -26,7 +26,7 @@
                 </li>
                 {% else %}
                 <li>
-                    <a href="{{ nav.href }}">{{ nav.title }}</a>
+                    <a class="sub-menu-fix" href="{{ nav.href }}">{{ nav.title }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
@@ -37,7 +37,7 @@
                     {% for nav in site.data.menu-header.cta %}
                     {% if nav.subcategories != null %}
                         <li class="with-sub">
-                            <a title="{{ nav.title }}" > {{ nav.title }}</a>
+                            <a class="sub-menu-fix" title="{{ nav.title }}" > {{ nav.title }} <i class="fa-regular fa-angle-down"></i></a>
                             <div class="submenu-wrapper d-none">
                                 <ul class="submenu">
                                     {% for subcategory in nav.subcategories %}

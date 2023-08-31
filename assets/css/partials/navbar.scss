@@ -175,9 +175,11 @@
         }
 
         i {
-            font-size: 1.563rem;
             color: $violet-light;
+            font-size: 21px;
             margin-right: 10px;
+            position: relative;
+            top: 3px;
         }
 
         #new {
