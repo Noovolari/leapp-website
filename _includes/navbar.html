@@ -1,3 +1,5 @@
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 <section id="navbar-container">
     {% include topbar.html %}
     <nav>
@@ -8,11 +10,12 @@
             <a href="javascript:void(0);" id="hamburger">
                 <i class="fa fa-bars"></i>
             </a>
+            <div class="clearfix"></div>
             <ul id="navigation" class="navigation-subcategory">
                 {% for nav in site.data.menu-header.menu %}
                 {% if nav.subcategories != null %}
                 <li>
-                    <a title="{{ nav.title }}" href="{{ nav.href }}"> {{ nav.title }}</a>
+                    <span class="nav-sub-link-button" title="{{ nav.title }}"> {{ nav.title }}</span>
                     <div class="submenu-wrapper d-none">
                         <ul class="submenu">
                             {% for subcategory in nav.subcategories %}
