@@ -59,8 +59,8 @@ menu:
         subhref: "https://www.noovolari.com"
       - subtitle: "Press Release"
         subhref: "https://blog.leapp.cloud/series/press-releases"
-      - subtitle: "Careers"
-        subhref: "/careers"
+      #- subtitle: "Careers"
+      #  subhref: "/careers"
 paragraph: 'The DevSecOps Access platform for accessing and improving Cloud experience.'
 
 # Call to Action
