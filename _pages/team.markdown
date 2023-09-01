@@ -1,6 +1,6 @@
 ---
 title: Team
-description: Where Cloud happens
+description: "Collaborate with your team to manage IAM and your Cloud Operations at scale."
 permalink: /solutions/business
 image: team.png
 layout: team

@@ -1,6 +1,6 @@
 ---
 title: Leapp - Plugins
-description: Leapp grants to the users the generation of temporary credentials only for accessing the Cloud programmatically.
+description: "Create your own Cloud automation and create a Leapp plugin. Check the list of all available Leapp plugins made by the community"
 permalink: /plugins
 layout: plugins
 hero_title: Leapp Plugin Hub
