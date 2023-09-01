@@ -5,6 +5,7 @@
 
         <div id="contributor-wrapper">
             {% for c in site.data.contributor.contributors %}
+            {% if c.contributor_download_url != page.permalink %}
                 <div class="contributor" style="background: linear-gradient(0deg, {{c.contributor_color_1}} 0%, {{c.contributor_color_2}} 100%);">
                     <h3 class="contributor-title fs-3">{{c.contributor_title}}</h3>
                     <div class="contributor-icon"><i class="fa {{ c.contributor_icon }}"></i></div>
@@ -20,6 +21,7 @@
                         {{c.contributor_download_label}}
                     </a>
                 </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
