@@ -27,8 +27,15 @@ menu:
   - title: "Docs"
     href: "https://docs.leapp.cloud"
 
-  - title: "For Business"
-    href: "/solutions/business"
+  - title: "Solutions"
+    subcategories:
+      - subtitle: "For Business"
+        subhref: "/solutions/business"
+      - subtitle: "Personal"
+        subhref: "/solutions/personal"
+
+  - title: "Pricing"
+    href: "/solutions/personal#pricing"
 
 
 cta:
