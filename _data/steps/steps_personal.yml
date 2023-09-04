@@ -1,0 +1,37 @@
+title:
+step:
+  - title: BACKUP YOUR ACCESS CONFIGURATION
+    content: "<p>Login securely on every device with Leapp.</p><p><b>Access to any Cloud account from any workstation, within a single click.</b></p>"
+    video:
+    autoplay: true
+    controls: false
+    muted: true
+    image: "steps/step1-personal.png"
+    avatar_image: "illustrations/30.svg"
+    color: pink
+    step_url: "https://docs.leapp.cloud/latest/leapp-pro/getting-started/sign-in/"
+    anchor: cloud-access
+
+  - title: YOUR LEAPP CONFIGURATION EVERYWHERE
+    content: "<p><b>Use your Cloud Operations on every workstation by logging into Leapp Pro.</b><p>Bring your configuration wherever you need.</p>"
+    video:
+    autoplay: true
+    controls: false
+    muted: true
+    image: "steps/step2-personal.png"
+    avatar_image: "illustrations/32.svg"
+    color: yellow
+    step_url: "https://docs.leapp.cloud/latest/leapp-pro/synchronization/"
+    anchor: cloud-operations
+
+  - title: PASSWORD PROTECTED ENVIRONMENT
+    content: "<p>Protect your environment with a login and encrypt your data with an <b>end-to-end encryption strategy.</b></p>"
+    video:
+    autoplay: true
+    controls: false
+    muted: true
+    image: "steps/step3-personal.png"
+    avatar_image: "illustrations/31.svg"
+    color: green
+    step_url: "https://docs.leapp.cloud/latest/leapp-pro/security-and-password/"
+    anchor: cloud-security

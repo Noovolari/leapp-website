@@ -1,0 +1,39 @@
+<section id="steps" class="ovh">
+    <div class="container" id="feature">
+        {% if {{site.data.steps.[page.steps_data].title}} != ""  %}
+            <h2 class="section-title ">{{site.data.steps.[page.steps_data].title}}</h2>
+        {% endif %}
+        <div class="steps-holder">
+            {% for step in {{site.data.steps.[page.steps_data].step}} %}
+                {% capture c %}{% cycle 'reverse', '' %}{% endcapture %}
+
+                {% assign indice = forloop.index %}
+                {% assign current = 'active' %}
+
+                <div class=" step mb-3 {{c}} step{{forloop.index}}" >
+                    <div class="anchor" id="{{step.anchor}}"></div>
+                    <div class="avatar">
+                        <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.avatar_image}}"/>
+                    </div>
+                    <div class="col asset">
+                        {% if step.video | strip_newlines != "" %}
+                            <div class="video">
+                                <video {% if step.controls == true %}controls="controls"{% endif %} {% if step.autoplay == true %}autoplay="autoplay"{% endif %} {% if step.muted == true %}muted="muted"{% endif %} loop="loop"><source src="{{site.url}}{{site.baseurl}}/assets/videos/{{step.video}}" type="video/mp4" /></video>
+                            </div>
+                        {% endif %}
+                        {% if step.image | strip_newlines != "" %}
+                            <div class="image mb-3">
+                                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{step.image}}" alt="Step {{forloop.index}}">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col content">
+                        <h2 class="{{step.color}}">{{ step.title }}</h2>
+                        {{step.content}}
+                        <a class="link-to-feature {{step.color}}" href="{{site_url}}{{step.step_url}}"> Explore! <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

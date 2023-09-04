@@ -99,6 +99,17 @@
   }
 }
 
+@media screen and (max-width: 1079px) {
+  .plans-group-container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .plan {
+      width: 40%;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #hero-unit {
     .container {
@@ -138,6 +149,23 @@
     align-items: stretch;
     .b-title {
       font-size: 38px!important;
+    }
+  }
+
+  .switch {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .plans-group-container {
+    gap: 10px;
+    margin: 40px 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .plan {
+      width: 40%;
     }
   }
 }
@@ -206,6 +234,19 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .plans-group-container {
+    gap: 10px;
+    margin: 40px 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .plan {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 540px) {
   .download-hero .cta-container {
     gap: 20px;
@@ -225,5 +266,13 @@
     h2 {
       font-size: 26px!important;
     }
+  }
+
+  .toggle-prices {
+    width: 100%;
+  }
+
+  .switch {
+    width: 100%;
   }
 }
