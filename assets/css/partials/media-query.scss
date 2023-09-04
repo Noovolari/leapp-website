@@ -67,12 +67,12 @@
   }
 }
 
-@media screen and (max-width: 1086px) {
+@media screen and (max-width: 1189px) {
   #navbar-container nav .nav-sub-link-button,
   #navbar-container nav .sub-menu-fix {
-    font-size: 16px!important;
+    font-size: 15px!important;
     i {
-      font-size: 16px!important;
+      font-size: 15px!important;
     }
   }
 }
@@ -95,6 +95,14 @@
       max-width: 1000px!important;
       margin: 0;
       box-sizing: content-box;
+    }
+  }
+
+  #navbar-container nav .nav-sub-link-button,
+  #navbar-container nav .sub-menu-fix {
+    font-size: 13px!important;
+    i {
+      font-size: 13px!important;
     }
   }
 }
