@@ -36,7 +36,7 @@
                 <ul  class="navigation-subcategory">
                     {% for nav in site.data.menu-header.cta %}
                     {% if nav.subcategories != null %}
-                        <li class="with-sub">
+                        <li class="with-sub {{nav.level}}">
                             <a class="sub-menu-fix" title="{{ nav.title }}" > {{ nav.title }} <i class="fa-regular fa-angle-down"></i></a>
                             <div class="submenu-wrapper d-none">
                                 <ul class="submenu">
@@ -46,9 +46,13 @@
                                 </ul>
                             </div>
                         </li>
-                    {% else %}
-                    <li>
+                    {% elsif nav.action %}
+                    <li class="{{nav.level}}">
                         <a onclick="{{nav.action}}">{{ nav.title }}</a>
+                    </li>
+                    {% else %}
+                    <li class="{{nav.level}}">
+                        <a href="{{nav.href}}">{{ nav.title }}</a>
                     </li>
                     {% endif %}
 

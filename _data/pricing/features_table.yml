@@ -1,0 +1,460 @@
+-
+  section: Key features
+  name: Users Limit
+  description: Total Members allowed
+  community: 1
+  pro: 1
+  business: Up to 50
+  enterprise: Unlimited
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Key features
+  name: Subscription Price
+  description: Cost per Member
+  community: $0
+  pro: $6
+  business: $12
+  enterprise: request a demo
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Key features
+  name: Hosting
+  description: Choose where your data and application is hosted
+  community: On-device
+  pro: Cloud
+  business: Cloud
+  enterprise: Cloud / Self-hosted
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Key features
+  name: Session Management
+  description: "Create and manage Leapp Sessions, with all the relevant information to let the dev connect to a cloud provider."
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Key features
+  name: App Lock
+  description: Protect your app with a password and auto-lock feature that activates after a period of inactivity
+  community: X
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Key features
+  name: Session Sharing
+  description: Grant or revoke access to Cloud accounts via Leapp Sessions management
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Key features
+  name: Temporary Access
+  description: Grant temporary access rights that auto-expire after a set time
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Key features
+  name: Access Requests & Approvals
+  description: Process requests and approvals for access rights of Leapp Sessions
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Key features
+  name: Multi-team Management
+  description: Structure teams for better management and fine-grained control over access rights.
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Key features
+  name: Audit Trails
+  description: "Maintain a secure, searchable record of all activity within Leapp for compliance purposes."
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Key features
+  name: Support and Documentation
+  description: Comprehensive documentation and support to assist users
+  community: Community
+  pro: Email
+  business: Business
+  enterprise: Enterprise
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Core App Features
+  name: Encrypted storage
+  description: Safeguard your data with secure on-device storage utilizing the OS system vault.
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Core App Features
+  name: Session Management
+  description: "Create and manage sessions, defining access to a specific account with a specified set of permissions"
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Core App Features
+  name: Supported Platforms for App & CLI
+  description: "Leapp comes with both a graphical user interface (GUI) app and a command line interface (CLI) tool, available on MacOS, Windows, and Linux."
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Core App Features
+  name: Browser Extension
+  description: Extend Leapp's capabilities to Chrome and Firefox with browser extensions
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Core App Features
+  name: Integrations
+  description: "Enhance Leapp's functionality by integrating with other access platforms and authentication protocols (e.g., AWS Identity Center, SAML, OIDC)."
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Core App Features
+  name: Flexible custom Operations
+  description: Build and implement your own plugins to tailor Leapp to your specific use-cases and requirements.
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Collaboration
+  name: Team Workspace
+  description: Dedicated workspaces for teams to manage and share access.
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Collaboration
+  name: Session Sharing
+  description: Grant or revoke access to Cloud accounts via Leapp Sessions management
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Collaboration
+  name: Temporary Access
+  description: Grant temporary access rights that auto-expire after a set time.
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Collaboration
+  name: Access Requests & Approvals
+  description: Process requests and approvals for access rights.
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Collaboration
+  name: Custom Approval Workflows
+  description: Define and customize your own workflows for requesting and approving access rights.
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Security
+  name: Login Security
+  description: Enhance security with password protection and TouchID login security measures.
+  community: X
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Security
+  name: Screen Lock
+  description: Automatically lock the app after a specified period of inactivity.
+  community: X
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Security
+  name: End-to-end encryption (E2EE)
+  description: Protect data both in transit and at rest with zero-knowledge end-to-end encryption. [Learn more](link)
+  community: X
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Security
+  name: Email Domain Verification
+  description: Verify email domains to ensure the integrity and security of user accounts.
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Security
+  name: Sigle Sign-on (SSO)
+  description: Streamline authentication processes with Single Sign-On capabilities.
+  community: X
+  pro: X
+  business: For Managers
+  enterprise: For Everyone
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Security
+  name: Multi-Factor Authentication (MFA)
+  description: Enhance security with multiple layers of authentication.
+  community: X
+  pro: X
+  business: For Managers
+  enterprise: For Everyone
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Security
+  name: IAM Health Scorecard
+  description: Assess IAM setup based on best practices and highlight areas for improvement.
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Security
+  name: User Provisioning (SCIM)
+  description: Automatically provision Members in and our of your Workspace with identity providers like Okta
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Security
+  name: Leapp-only Access
+  description: "Ensure all access to the cloud environment is exclusively managed and monitored through Leapp, preventing direct or bypassed access."
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Support
+  name: Help Center - Knowledge Base
+  description: Comprehensive knowledge base for self-service support and troubleshooting.
+  community: V
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Support
+  name: Email Support
+  description: Reach out to support via email for assistance and inquiries (Available during business hours).
+  community: X
+  pro: V
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Support
+  name: Premium Support
+  description: "Gain priority support with faster response times. Business: next business day (NBD) response. Enterprise: 4h response."
+  community: X
+  pro: X
+  business: $ (NBD)
+  enterprise: $ (4h)
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Support
+  name: Flexible Payment Option
+  description: Choose a payment plan that suits your organization's financial structure.
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Support
+  name: Onboarding Program
+  description: Receive guided onboarding to familiarize with Leapp's features and functionalities. [Learn more](link)
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Support
+  name: Customer Success Program
+  description: Engage with a customer success manager for personalized support and success planning. [Learn more](link)
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: FALSE
+  new: TRUE
+-
+  section: Support
+  name: IAM Strategy Consultation
+  description: "Engage with IAM experts to evaluate and enhance your access management strategies, tailored to your business needs."
+  community: X
+  pro: X
+  business: X
+  enterprise: $
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Administration & controls
+  name: Reporting & Analytics
+  description: "In-depth metrics related to access management to visualize, analyze, and optimize access metrics."
+  community: X
+  pro: Basic
+  business: Advanced
+  enterprise: Complete
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: Data Backup & Retention
+  description: Securely backup and retain data with the ability to restore to a previous point in time. Choose retention periods suitable for your organization's needs.
+  community: X
+  pro: X
+  business: 90-day
+  enterprise: 1-year
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: Activity Logging
+  description: "Log and monitor basic Members activity within Leapp, focused on real-time monitoring or short-term analysis."
+  community: X
+  pro: X
+  business: V
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: Audit Trails
+  description: "Maintain a secure, searchable record of all activity within Leapp, including change histories, geared towards compliance, forensic analysis, and long-term record-keeping."
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: Multi-team Management
+  description: Establish a structure within teams for better management and control over access rights.
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: SSO & MFA Configuration
+  description: Configure Single Sign-On and Multi-Factor Authentication settings for enhanced security.
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: Preferences & Plugin Governance
+  description: "Control over Members preferences and plugin installations, ensuring alignment with organizational policies by restricting modifications and enforcing approved plugins."
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE
+-
+  section: Administration & controls
+  name: ISO27001 and SOC2 compliant
+  description: "Leapp is not only certified but also empowers your organization to effortlessly adhere to industry standards such as ISO 27001, SOC2, and more."
+  community: X
+  pro: X
+  business: X
+  enterprise: V
+  coming_soon: TRUE
+  new: FALSE

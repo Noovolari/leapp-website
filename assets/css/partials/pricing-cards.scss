@@ -1,0 +1,222 @@
+#hero-unit.pricing-page {
+  background: #F4F4F6;
+
+  .container {
+    padding-bottom: 0;
+  }
+
+  h1 {
+    color: #1D1B25;
+    text-align: center;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: var(--Grey-text, #717171);
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.cards-pricing-container {
+
+  // COLORS:
+  .yellow {color: #D68F01}
+  .blue {color:#1A8CD2}
+  .red {color: #DE5349 }
+  .violet { color: #A34AD5;}
+
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:30px;
+
+  .pricing-card-highlight {
+    max-width: 320px;
+    width: 20% ;
+    height: fit-content;
+    padding: 10px;
+    background: transparent;
+    .highlight-text {
+      visibility: hidden;
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .pricing-card-highlight.true {
+    border-radius: 8px;
+    background: #02225F;
+    .highlight-text {
+      visibility: visible;
+    }
+  }
+
+  .pricing-card {
+
+    .hidden {
+      display: none;
+    }
+
+    .card-header {
+      border-radius: 8px 8px 0 0;
+      border-top: 2px solid #E4E3E3;
+      border-right: 2px solid #E4E3E3;
+      border-left: 2px solid #E4E3E3;
+
+      background: #FFF;
+
+      display: flex;
+      padding: 18px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      .icons-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+
+        .tier-icon {
+          font-size: 34px;
+        }
+        .tier-range-icon {
+          font-size: 16px;
+        }
+
+        .range-container {
+          color: #7F7E8F;
+          i { padding-right: 5px}
+        }
+
+      }
+
+      h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h4 {
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      padding: 30px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      border-radius: 0 0 8px 8px;
+      border: 2px solid #E4E3E3;
+      background: #F6F5F3;
+
+      .tier-price-icon {
+        font-size: 50px;
+      }
+
+      .pricing-container {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        align-self: stretch;
+
+        span {
+          color: rgba(0, 0, 0, 0.50);
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      .card-content-title {
+        color: #000;
+        font-size: 34px;
+        font-weight: 700;
+      }
+
+      .card-content-button {
+        display: flex;
+        padding: 17px 0;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 1px solid #000;
+        background: #FFF;
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .list-main {
+        margin-left: 24px;
+
+        li {
+          padding-bottom: 6px;
+        }
+      }
+    }
+  }
+}
+
+.pricing-switcher-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  input {display: none}
+  .pricing-switcher {
+    display: inline-flex;
+    padding: 5px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--Grey-text, #717171);
+    background: #FFF;
+
+
+
+    .toggle-item {
+      cursor: pointer;
+      display: flex;
+      padding: 0px 10px;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+      span {
+        color: var(--Grey-text, #717171);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 44.478px; /* 247.101% */
+        padding:0 4px ;
+        i {padding: 0 4px;}
+        .discount {
+          color: #EF1194;
+        }
+      }
+    }
+
+    .toggle-item.selected {
+      border: 1px solid #4DA7DE;
+      background: #F4F4F6;
+    }
+  }
+}

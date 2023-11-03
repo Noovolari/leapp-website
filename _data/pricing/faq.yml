@@ -1,0 +1,54 @@
+title: You may be thinking…
+subtitle:
+topics:
+  - question: "What is Leapp?"
+    answer: "<p>Leapp is a cloud access management solution designed to streamline and secure your cloud environment.</p>
+     <p>With Leapp, organizations can control who accesses what in their cloud setups, making it easier to comply with industry standards and regulations.</p>"
+
+  - question: "How do I get started?"
+    answer: "<p>To get started sign up on <a href='https://app.leapp.cloud'>app.leapp.cloud</a> and start your free trial. During the sign-up process, choose a password, name your team workspace and invite your team members.</p>
+     <p>Integrate with your cloud environments following the on-screen instructions in the Integrations section to start collaborating on access.
+    </p>"
+
+  - question: "Is there a trial period?"
+    answer: "
+    <p>Yes, there is a 14-day trial period during which you can access all features available.</p>
+    <p>You don't need to provide a credit card to start the trial. This period allows you to explore Leapp's functionalities and determine if it meets your cloud access management needs.</p>"
+
+  - question: "Can I change the team size?"
+    answer: "
+    <p>Yes, you can change your team size at any point during your subscription.</p>
+    <p>You’ll be charged a prorated fee for adding new users and a refund on your next payment for removing users.</p>
+    "
+
+  - question: "How much does Leapp cost?"
+    answer: "
+    <p>The Community plan is open-source and free of charge, the Pro plan costs $6 per user, and the Business plan is priced at $24 per user.</p>
+    <p>For Enterprise plan pricing, you can refer to our pricing page on the website or contact our sales team.</p>
+    "
+  - question: "What are the limits of each plan?"
+    answer: "
+  <p>The Community plan accommodates one user with on-device hosting. </p>
+  <p>The Pro plan also allows one user but includes cloud hosting and enhanced security features. </p>
+  <p>The Business plan extends the user limit to 50, with cloud hosting and features to speed up Identity and Access Management (IAM) operations. </p>
+  <p>The Enterprise plan is suited for larger organizations with no user limit, offering either cloud or self-hosted solutions, and providing features to handle compliance requirements.</p>
+  "
+  - question: "How does Leapp secure my data?"
+    answer: "
+  <p> Leapp uses End-to-End Encryption (E2EE) with a zero-knowledge approach, encrypting your data on your device before transmission and keeping it encrypted in transit and at rest on our servers. </p>
+  <p> Only you hold the decryption keys, ensuring only authorized access to sensitive data, with not even Leapp personnel able to access your data. </p>
+  <p> Besides E2EE, Leapp incorporates multi-factor authentication, encrypted storage, and strict access controls for robust data protection. </p>
+  "
+  - question: "What happens if the team administrator loses their password?"
+    answer: "
+  <p> Due to Leapp's zero-knowledge approach, no recovery procedures exist for a lost administrator password, as not even Leapp personnel can access the account. </p>
+  <p> We're developing recovery procedures while upholding our security standards. In such situations, contact our support team for guidance. </p>"
+  - question: "Is there special pricing or discounts for startups?"
+    answer: "
+  <p>We offer special pricing for eligible startups to help them manage their cloud access securely while growing their business. </p>
+  <p> Please <a href='mailto:sales@noovolari.com'>contact our sales team</a> to learn more about our startup pricing program and to see if your organization qualifies. </p>"
+  - question: "Do you offer students discounts?"
+    answer: "
+  <p> Yes, we offer discounts to university students on our Pro version, which is tailored to meet their needs. </p>
+  <p> TODO: To avail the discount, university students need to fill out a form using their university email. </p> 
+  <p> After verification of their university email, we will grant the discount and provide further information on how to access the discounted pricing. </p>"
