@@ -1,3 +1,31 @@
+#sponsors.pricing-page {
+  background: #F4F4F6;
+}
+
+.companies {
+
+  margin-top: 50px;
+  h4 {
+    color: #1D1B25;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-size: 56px;
+    color: #1D1B25;
+    display: flex;
+    justify-content: center;
+  }
+  a:hover {
+    color: #1D1B25;
+  }
+}
+
 #hero-unit.pricing-page {
   background: #F4F4F6;
 

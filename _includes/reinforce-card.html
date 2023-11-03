@@ -1,0 +1,18 @@
+<section class="companies">
+    <h4>See all features and compare plans</h4>
+    <a href="#comparison-features"><i class="fa-regular fa-angle-down"></i></a>
+
+    <div class="container-fluid pricing-page" id="sponsors">
+        <div class="container section-title">
+            <h4> Powering the best companies and teams, from solo consultant to established enterprises.</h4>
+        </div>
+        <div class="container container-flex sponsors-section no-margin">
+            {% for company in site.data.sponsors.company %}
+            <a href="{{company.url}}">
+                <img class="sponsor-image" src="{{site.baseurl}}/assets/img/trusted-by/{{ company.image }}" alt="sponsor-image">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
