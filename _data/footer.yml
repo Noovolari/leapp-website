@@ -27,7 +27,7 @@ menu:
       - subtitle: "For Business"
         subhref: "/solutions/business"
       - subtitle: "Pricing"
-        subhref: "/solutions/personal#pricing"
+        subhref: "/pricing"
       - subtitle: "Support"
         subhref: "/support"
 
