@@ -326,26 +326,6 @@
   new: FALSE
 -
   section: Security
-  name: IAM Health Scorecard
-  description: Assess IAM setup based on best practices and highlight areas for improvement.
-  community: X
-  pro: X
-  business: V
-  enterprise: V
-  coming_soon: TRUE
-  new: FALSE
--
-  section: Security
-  name: User Provisioning (SCIM)
-  description: Automatically provision Members in and our of your Workspace with identity providers like Okta
-  community: X
-  pro: X
-  business: X
-  enterprise: V
-  coming_soon: TRUE
-  new: FALSE
--
-  section: Security
   name: Leapp-only Access
   description: "Ensure all access to the cloud environment is exclusively managed and monitored through Leapp, preventing direct or bypassed access."
   community: X
@@ -432,16 +412,6 @@
   pro: Basic
   business: Advanced
   enterprise: Complete
-  coming_soon: TRUE
-  new: FALSE
--
-  section: Administration & controls
-  name: Data Backup & Retention
-  description: Securely backup and retain data with the ability to restore to a previous point in time. Choose retention periods suitable for your organization's needs.
-  community: X
-  pro: X
-  business: 90-day
-  enterprise: 1-year
   coming_soon: TRUE
   new: FALSE
 -
