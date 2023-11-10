@@ -39,6 +39,8 @@ menu:
         subhref: "/cloud-security"
       - subtitle: "Cloud Operations"
         subhref: "/cloud-operations"
+      - subtitle: "Plugins"
+        subhref: "/plugins"
 
   - title: "Resources"
     subcategories:

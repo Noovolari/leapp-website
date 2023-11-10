@@ -61,6 +61,12 @@
                         {% if feature.community == "V" %}
                             <i class="fa-solid fa-check"></i>
                         {% elsif feature.community == "X" %}
+                        {% elsif feature.community.provider %}
+                        <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                            {% for prv in feature.community.provider %}
+                            <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                            {% endfor %}
+                        </div>
                         {% else %}
                             {{feature.community}}
                         {% endif %}
@@ -69,6 +75,12 @@
                         {% if feature.pro == "V" %}
                         <i class="fa-solid fa-check"></i>
                         {% elsif feature.pro == "X" %}
+                        {% elsif feature.pro.provider %}
+                        <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                            {% for prv in feature.pro.provider %}
+                            <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                            {% endfor %}
+                        </div>
                         {% else %}
                         {{feature.pro}}
                         {% endif %}
@@ -76,16 +88,28 @@
                     </td>
                     <td class="highlight-ea">
                         {% if feature.business == "V" %}
-                        <i class="fa-solid fa-check"></i>
+                            <i class="fa-solid fa-check"></i>
                         {% elsif feature.business == "X" %}
+                        {% elsif feature.business.provider %}
+                            <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                                {% for prv in feature.business.provider %}
+                                    <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                                {% endfor %}
+                            </div>
                         {% else %}
-                        {{feature.business}}
+                         {{feature.business}}
                         {% endif %}
                     </td>
                     <td>
                         {% if feature.enterprise == "V" %}
                         <i class="fa-solid fa-check"></i>
                         {% elsif feature.enterprise == "X" %}
+                        {% elsif feature.enterprise.provider %}
+                        <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                            {% for prv in feature.enterprise.provider %}
+                            <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                            {% endfor %}
+                        </div>
                         {% else %}
                         {{feature.enterprise}}
                         {% endif %}

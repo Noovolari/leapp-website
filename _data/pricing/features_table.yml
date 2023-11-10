@@ -1,5 +1,51 @@
 -
   section: Key features
+  name: Cloud Provider supported
+  description: "Supported cloud provider for any platform: note that AWS, Azure, GCP and Alibaba Cloud are in every tier roadmap"
+  community:
+    provider:
+      - name: AWS
+        supported: TRUE
+      - name: Azure
+        supported: TRUE
+      - name: Alibaba
+        supported: FALSE
+      - name: GCP
+        supported: FALSE
+  pro:
+    provider:
+      - name: AWS
+        supported: TRUE
+      - name: Azure
+        supported: TRUE
+      - name: Alibaba
+        supported: FALSE
+      - name: GCP
+        supported: FALSE
+  business:
+    provider:
+      - name: AWS
+        supported: TRUE
+      - name: Azure
+        supported: FALSE
+      - name: Alibaba
+        supported: FALSE
+      - name: GCP
+        supported: FALSE
+  enterprise:
+    provider:
+      - name: AWS
+        supported: TRUE
+      - name: Azure
+        supported: FALSE
+      - name: Alibaba
+        supported: FALSE
+      - name: GCP
+        supported: FALSE
+  coming_soon: FALSE
+  new: FALSE
+-
+  section: Key features
   name: Users Limit
   description: Total Members allowed
   community: 1

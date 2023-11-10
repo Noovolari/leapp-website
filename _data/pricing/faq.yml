@@ -1,6 +1,12 @@
 title: You may be thinking…
 subtitle:
 topics:
+  - question: "What is the difference between Pro and Team?"
+    answer: "Leapp Team is the first company access solution based on Leapp. There is a central E2EE Portal in which you can centralize all your Access configuration and share Cloud access with your teammates."
+  - question: "What is the difference between Pro and Enterprise?"
+    answer: "Leapp Enterprise focus on compliance and governance of your Cloud Access with a complete focus on what your developers have done to comply with Standards and regulations, Like ISO27001 and SOC2 compliance."
+  - question: "What is a Member in Leapp Team?"
+    answer: "Every member of Leapp team have a complete managed Desktop App and CLI of Leapp. The configuration of each Client is company managed and centralized."
   - question: "What is Leapp?"
     answer: "<p>Leapp is a cloud access management solution designed to streamline and secure your cloud environment.</p>
      <p>With Leapp, organizations can control who accesses what in their cloud setups, making it easier to comply with industry standards and regulations.</p>"
@@ -21,11 +27,6 @@ topics:
     <p>You’ll be charged a prorated fee for adding new users and a refund on your next payment for removing users.</p>
     "
 
-  - question: "How much does Leapp cost?"
-    answer: "
-    <p>The Community plan is open-source and free of charge, the Pro plan costs $6 per user, and the Business plan is priced at $24 per user.</p>
-    <p>For Enterprise plan pricing, you can refer to our pricing page on the website or contact our sales team.</p>
-    "
   - question: "What are the limits of each plan?"
     answer: "
   <p>The Community plan accommodates one user with on-device hosting. </p>

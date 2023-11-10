@@ -31,7 +31,7 @@
                     {% if card.price_monthly %}
                         <h4 class="card-content-title price-value ">{{card.price_monthly}}</h4>
                         <h4 class="card-content-title price-value hidden">{{card.price_yearly}}</h4>
-                        {% if card.price_monthly and card.price_yearly %}
+                        {% if card.has_price %}
                             <span>Per User / Month <br>billed yearly</span>
                         {% endif %}
                     {% else %}

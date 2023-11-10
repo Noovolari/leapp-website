@@ -3,39 +3,42 @@
 <section id="navbar-container">
     {% include topbar.html %}
     <nav>
-        <div class="container">
-            <div id="logo-container">
-                <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48" id="logo"/></a>
-            </div>
-            <a href="javascript:void(0);" id="hamburger">
-                <i class="fa fa-bars"></i>
-            </a>
-            <div class="clearfix"></div>
-            <ul id="navigation" class="navigation-subcategory">
-                {% for nav in site.data.menu-header.menu %}
-                {% if nav.subcategories != null %}
-                <li>
-                    <span class="nav-sub-link-button" title="{{ nav.title }}"> {{ nav.title }} <i class="fa-regular fa-angle-down"></i></span>
-                    <div class="submenu-wrapper d-none">
-                        <ul class="submenu">
-                            {% for subcategory in nav.subcategories %}
-                            <li><a title="{{ subcategory.subtitle }}" href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </li>
-                {% else %}
-                <li>
-                    <a class="sub-menu-fix" href="{{ nav.href }}">{{ nav.title }}</a>
-                </li>
-                {% endif %}
-                {% endfor %}
-            </ul>
-            <div id="cta">
-                <a title="{{site.data.menu-header.cta.title}}" onclick="{{site.data.menu-header.cta.action}}">{{site.data.menu-header.cta.title}}</a>
-                <ul  class="navigation-subcategory">
-                    {% for nav in site.data.menu-header.cta %}
+        <div class="container-max">
+            <div class="left-menu">
+                <div id="logo-container">
+                    <a href="/"><img src="{{ site.url }}{{site.baseurl}}/assets/img/leapp.svg" alt="Leapp" width="150" height="48" id="logo"/></a>
+                </div>
+                <a href="javascript:void(0);" id="hamburger">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="clearfix"></div>
+                <ul id="navigation" class="navigation-subcategory">
+                    {% for nav in site.data.menu-header.menu %}
                     {% if nav.subcategories != null %}
+                    <li>
+                        <span class="nav-sub-link-button" title="{{ nav.title }}"> {{ nav.title }} <i class="fa-regular fa-angle-down"></i></span>
+                        <div class="submenu-wrapper d-none">
+                            <ul class="submenu">
+                                {% for subcategory in nav.subcategories %}
+                                <li><a title="{{ subcategory.subtitle }}" href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class="sub-menu-fix" href="{{ nav.href }}">{{ nav.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="right-menu">
+                <div id="cta">
+                    <a title="{{site.data.menu-header.cta.title}}" onclick="{{site.data.menu-header.cta.action}}">{{site.data.menu-header.cta.title}}</a>
+                    <ul  class="navigation-subcategory">
+                        {% for nav in site.data.menu-header.cta %}
+                        {% if nav.subcategories != null %}
                         <li class="with-sub {{nav.level}}">
                             <a class="sub-menu-fix" title="{{ nav.title }}" > {{ nav.title }} <i class="fa-regular fa-angle-down"></i></a>
                             <div class="submenu-wrapper d-none">
@@ -46,18 +49,19 @@
                                 </ul>
                             </div>
                         </li>
-                    {% elsif nav.action %}
-                    <li class="{{nav.level}}">
-                        <a onclick="{{nav.action}}">{{ nav.title }}</a>
-                    </li>
-                    {% else %}
-                    <li class="{{nav.level}}">
-                        <a href="{{nav.href}}">{{ nav.title }}</a>
-                    </li>
-                    {% endif %}
+                        {% elsif nav.action %}
+                        <li class="{{nav.level}}">
+                            <a onclick="{{nav.action}}">{{ nav.title }}</a>
+                        </li>
+                        {% else %}
+                        <li class="{{nav.level}}">
+                            <a href="{{nav.href}}">{{ nav.title }}</a>
+                        </li>
+                        {% endif %}
 
-                    {% endfor %}
-                </ul>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

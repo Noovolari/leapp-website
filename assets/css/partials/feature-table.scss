@@ -93,6 +93,15 @@
         tr:hover {
           background: rgba(113, 113, 113, 0.12);
         }
+
+        .provider-icon {
+          width: 28px;
+
+          &.false {
+            filter: grayscale(1);
+          }
+        }
+
       }
 
 
