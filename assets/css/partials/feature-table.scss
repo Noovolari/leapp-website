@@ -1,4 +1,5 @@
 #comparison-features {
+
   margin-top: 50px;
   .title {
     color: #1D1B25;
@@ -161,5 +162,22 @@
     }
 
 
+  }
+}
+
+
+/* Media queries */
+@media (max-width: 1280px) {
+  #comparison-features {
+    display: none;
+  }
+
+  .companies {
+    h4 { display: none}
+    .arrow-d {display: none}
+  }
+
+  #hero-unit.pricing-page h1 {
+    font-size: 40px;
   }
 }
