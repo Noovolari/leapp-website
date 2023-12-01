@@ -13,7 +13,18 @@
     {% include tagmanagerscript.html %}
     {% include navbar.html %}
     {% include hero-team.html %}
-    {% include main-features-team.html %}
+    {% if page.hero_image != null %}
+    <div class="col media-hero team-media-hero">
+        <span>See how to go from zero to Cloud in 3 minutes</span>
+        <i class="fa-solid fa-arrow-turn-right"></i>
+        <i class="fa-solid fa-circle-play hero-team-play-demo-icon"></i>
+        <img class="demo-video-image" src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}"/>
+        <div class="demo-video-modal">
+            <i class="fa-solid fa-x close-icon-2"></i>
+            <iframe src="https://www.loom.com/embed/acd7e4484a6f4af38f8e2865800b264a?sid=d23989d0-efb1-40cf-ab2c-cae32872c6e0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="width: 100%; height: 100%; border: none; margin: 0; padding: 0; display: block"></iframe>
+        </div>
+    </div>
+    {% endif %}
     {% include steps-team.html %}
     {% include opensource-team.html %}
     {% include footer.html %}

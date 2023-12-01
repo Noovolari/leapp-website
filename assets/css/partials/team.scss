@@ -39,6 +39,178 @@ span.cursor.hidden {
     }
 }
 
+.team-media-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  span {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .demo-video-image {
+    width: 50%;
+    padding-top: 10px;
+  }
+  .hero-team-play-demo-icon {
+    position: absolute;
+    font-size: 1000%;
+    color: rgba(82, 72, 141, 0.76);
+    top: 45%;
+    left: 50%;
+    margin-left: -80px;
+    cursor:pointer;
+  }
+  .fa-arrow-turn-right {
+    width: 15.999px;
+    height: 13.002px;
+    position: relative;
+    left: 200px;
+    top: 5px;
+    transform: rotate(135deg);
+    flex-shrink: 0;
+    color: #C925D1;
+  }
+}
+
+.team-hero-content {
+  .team-hero-content-container {
+    padding-right: 170px;
+  }
+}
+
+.hero-unit-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sign-up-form {
+  position: relative;
+  width: 100%;
+  max-width: 651px;
+  height: 602px;
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 215px;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .inner-content-container {
+    max-width: 260px;
+
+    .title {
+      color: #000;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 38px;
+      margin-bottom: 25px;
+      display: inline-block;
+    }
+
+    .field-name {
+      color: #1D1B25;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+
+    .field-description {
+      color: #717171;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    .form-control {
+      width: 100%;
+      box-sizing: border-box;
+      height: 48px;
+      border-radius: 5px;
+      border: 1px solid var(--Grey-text, #717171);
+      background: #FFF;
+      padding: 0 14px;
+      margin: 0;
+      font: 400 14px/1.5 "Montserrat", sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    button {
+      border-radius: 5px;
+      border: 1px solid var(--Grey-text, #717171);
+      background: #DE5349;
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      i.fa-spinner {
+        margin-left: 10px
+      }
+    }
+  }
+
+  .privacy-policy {
+    margin: 0 -80px;
+    color: #717171;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    align-self: center;
+
+    a {
+      color: #717171;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      text-decoration-line: underline !important;
+    }
+  }
+
+  .already-signed-up {
+    position: absolute;
+    bottom: 20px;
+    color: #717171;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    align-self: center;
+
+    a {
+      text-decoration-line: underline !important;
+      color: #584293;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+    }
+  }
+}
+
 @media screen and (min-width: 1281px) {
   .team-hero-content { width: 100%!important; }
   .team-media-hero { width: 100%!important; }
