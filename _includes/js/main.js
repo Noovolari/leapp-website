@@ -1026,6 +1026,8 @@
 
             modalActions($('.play-demo-icon'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
 
+            modalActions($('.hero-team-play-demo-icon'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
+
             modalActions($('.play-demo-button'), $( ".demo-video-modal" ), $('.modal-overlay'), $('.close-icon-2') );
 
             $('.open-sub-menu').on('click', function () {
