@@ -54,6 +54,7 @@
                 this._modal();
             }
             this._typingTheHappens();
+            this._scrollCarousel();
         },
         sendEvent: function (action, element, event) {
             if (action.indexOf('Download-From') > -1) {
@@ -811,6 +812,25 @@
                     }
                 });
             });
+        },
+        _scrollCarousel: function () {
+            const carouselWrapper = document.querySelector('.img-wrapper');
+            let carouselSlide = 1;
+            if (carouselWrapper !== null) {
+                setInterval(() => {
+                    $('.active-carousel').removeClass('active-carousel');
+                    if (carouselSlide > 2) {
+                        carouselWrapper.scrollLeft -= 1800;
+                        carouselSlide = 1;
+                    } else {
+                        carouselWrapper.scrollLeft += 900;
+                        carouselSlide++;
+                    }
+                    document.querySelector('#carousel-strip-' + carouselSlide).classList.add('active-carousel');
+                }, 5000)
+            } else {
+
+            }
         },
         _typingTheHappens: function() {
             const typedTextSpan = document.querySelector(".typed-text");

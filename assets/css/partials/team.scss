@@ -53,7 +53,7 @@ span.cursor.hidden {
     line-height: normal;
   }
   .demo-video-image {
-    width: 50%;
+    width: 45%;
     padding-top: 10px;
   }
   .hero-team-play-demo-icon {
@@ -215,6 +215,108 @@ span.cursor.hidden {
       font-style: normal;
       font-weight: 600;
       line-height: 20px;
+    }
+  }
+}
+
+.team-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .title {
+    color: #000;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+
+  .carousel-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .carousel-info-container {
+      width: 27%;
+      display: flex;
+      flex-direction: column;
+
+      .carousel-info {
+        display: flex;
+        flex-direction: row;
+
+        #carousel-strip-1, #carousel-strip-2, #carousel-strip-3 {
+          flex-shrink: 0;
+          width: 4px;
+          height: 127px;
+          background-color: #221446;
+          align-self: center;
+          transition: all 0.8s ease;
+
+          &.active-carousel {
+            width: 10px;
+            transition: all 0.8s ease;
+            background-color: #9747FF;
+          }
+
+          &.active-carousel + div > span:nth-child(1) {
+            transition: color 0.8s ease;
+            color: #9747FF!important;
+          }
+        }
+
+        .carousel-info-content {
+          display: flex;
+          flex-direction: column;
+          margin-left: 20px;
+
+          span:nth-child(1) {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            transition: color 0.8s ease;
+          }
+
+          span:nth-child(2) {
+            color: var(--Grey-text, #717171);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+
+    .img-wrapper {
+      width: 900px;
+      height: 563px;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+
+    img {
+      display: inline-block;
+      object-fit: fill;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+
+    span {
+      display: block;
     }
   }
 }
