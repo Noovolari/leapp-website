@@ -5,13 +5,13 @@ color: green
 features:
   - icon: fa-vault
     content: "Save your long term credentials safely and generate a set of short-term credentials constantly rotated"
-    cta_text: Explore!
+    cta_text: Read the Doc!
     cta_url: "https://docs.leapp.cloud/latest/security/credentials-generation/aws/"
   - icon: fa-handshake
     content: "Every data is stored securely in the System Vault, rely on end-to end encryption to share Leapp access Configurations."
-    cta_text: Explore!
+    cta_text: Read the Doc!
     cta_url: "https://docs.leapp.cloud/latest/security/system-vault/"
   - icon: fa-binary-lock
     content: "Comply with the Cloud Providers security standards to access the Cloud."
-    cta_text: Try leapp for business!
-    cta_url: "/solutions/business"
+    cta_text: Try leapp Team!
+    cta_url: "/solutions/team"

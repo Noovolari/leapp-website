@@ -42,7 +42,7 @@ cards:
       - "Email based support"
 
   - name: TEAM
-    description: For small companies and teams
+    description: For small companies and teams IAM access
     icon: fa-solid fa-users-between-lines
     # noinspection YAMLIncompatibleTypes
     number_people: 1-50
