@@ -1,28 +1,31 @@
 <section id="contributor" class="light">
     <div class="container">
-        <h3 class="subtitle fs-4">{{site.data.contributor.subtitle}}</h3>
-        <h2 class="title mb-3 fs-3">{{site.data.contributor.title}}</h2>
+        <h2 class="title mb-3 fs-3">SIMPLIFY YOUR CLOUD LOCALLY, FOR YOUR TEAM, OR AT SCALE</h2>
+        <div class="cards-pricing-container">
 
-        <div id="contributor-wrapper">
-            {% for c in site.data.contributor.contributors %}
-            {% if c.contributor_download_url != page.permalink %}
-                <div class="contributor" style="background: linear-gradient(0deg, {{c.contributor_color_1}} 0%, {{c.contributor_color_2}} 100%);">
-                    <h3 class="contributor-title fs-3">{{c.contributor_title}}</h3>
-                    <div class="contributor-icon"><i class="fa {{ c.contributor_icon }}"></i></div>
-                    <div class="contributor-subtitle">{{c.contributor_content}}</div>
+            {% for card in site.data.pricing.pricing_cards.cards %}
 
-                    <ul class="contributor-option">
-                        {% for elm in c.contributor_element %}
-                            <li>{{elm.label}}</li>
-                        {% endfor %}
-                    </ul>
-
-                    <a href="{{c.contributor_download_url}}" class="btn btn-secondary d-inline-block mt-2" {{c.contributor_download_target}}>
-                        {{c.contributor_download_label}}
-                    </a>
+            <div class="pricing-card-highlight {{card.highlighted}}">
+                <span class="highlight-text">EARLY ACCESS NOW</span>
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <div class="icons-container">
+                            <i class="tier-icon {{card.icon}}"></i>
+                            <span  class="range-container"><i class="tier-range-icon fa-regular fa-user"></i>{{card.number_people}}</span>
+                        </div>
+                        <h2 class="{{card.color}}">{{card.name}}</h2>
+                        <h4>{{card.description}}</h4>
+                    </div>
+                    <div class="card-content">
+                        <a href="{{card.cta_link}}" onclick="{{card.cta_action}}" class="card-content-button">{{card.cta}}</a>
+                    </div>
                 </div>
-            {% endif %}
+            </div>
+
             {% endfor %}
         </div>
+    </div>
+    <div style="display: flex; justify-content: center">
+        <a href="/pricing" style="background:initial; color:#000200!important;" class="btn btn-link d-inline-block " target="_blank" >Compare plans <i class="fa-solid fa-arrow-right" style="padding-right: 10px"></i></a>
     </div>
 </section>

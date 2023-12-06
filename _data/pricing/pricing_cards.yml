@@ -42,7 +42,7 @@ cards:
       - "Email based support"
 
   - name: TEAM
-    description: For small companies and teams to decentralize Cloud Access
+    description: For small companies and teams
     icon: fa-solid fa-users-between-lines
     # noinspection YAMLIncompatibleTypes
     number_people: 1-50
@@ -64,7 +64,7 @@ cards:
 
 
   - name: ENTERPRISE
-    description: For organization’s additional security, control, and support.
+    description: For organization’s additional security and control
     icon: fa-solid fa-buildings
     number_people: 50+
     price_monthly:
