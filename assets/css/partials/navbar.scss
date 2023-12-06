@@ -214,10 +214,6 @@
 
     #cta {
 
-        .second {
-            border-left: 1px solid white;
-            padding: 20px;
-        }
 
         .first a{
             color: #1D1B25;
@@ -236,6 +232,11 @@
             text-decoration: underline!important;
             color: white;
 
+        }
+
+        .third {
+            border-right: 1px solid white;
+            padding: 20px;
         }
 
         .with-sub a {
