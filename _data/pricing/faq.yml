@@ -29,8 +29,8 @@ topics:
 
   - question: "What are the limits of each plan?"
     answer: "
-  <p>The Community plan accommodates one user with on-device hosting. </p>
-  <p>The Pro plan also allows one user but includes cloud hosting and enhanced security features. </p>
+  <p>The Community edition accommodates one user with on-device hosting. </p>
+  <p>The Pro plan also allows one user but includes cloud hosting and Cloud Syncing across multiple devices security features. </p>
   <p>The Business plan extends the user limit to 50, with cloud hosting and features to speed up Identity and Access Management (IAM) operations. </p>
   <p>The Enterprise plan is suited for larger organizations with no user limit, offering either cloud or self-hosted solutions, and providing features to handle compliance requirements.</p>
   "
@@ -48,8 +48,8 @@ topics:
     answer: "
   <p>We offer special pricing for eligible startups to help them manage their cloud access securely while growing their business. </p>
   <p> Please <a href='mailto:sales@noovolari.com'>contact our sales team</a> to learn more about our startup pricing program and to see if your organization qualifies. </p>"
-  - question: "Do you offer students discounts?"
-    answer: "
-  <p> Yes, we offer discounts to university students on our Pro version, which is tailored to meet their needs. </p>
-  <p> TODO: To avail the discount, university students need to fill out a form using their university email. </p> 
-  <p> After verification of their university email, we will grant the discount and provide further information on how to access the discounted pricing. </p>"
+#  - question: "Do you offer students discounts?"
+#    answer: "
+#  <p> Yes, we offer discounts to university students on our Pro version, which is tailored to meet their needs. </p>
+#  <p> TODO: To avail the discount, university students need to fill out a form using their university email. </p>
+#  <p> After verification of their university email, we will grant the discount and provide further information on how to access the discounted pricing. </p>"

@@ -25,7 +25,7 @@ cards:
     description: For individual developers and freelancers
     icon: fa-solid fa-laptop
     number_people: 1
-    price_monthly: 4$
+    price_monthly: 5$
     price_yearly: 6$
     has_price: TRUE
     price_icon:

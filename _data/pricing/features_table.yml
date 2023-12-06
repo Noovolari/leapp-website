@@ -1,6 +1,6 @@
 -
   section: Key features
-  name: Cloud Provider supported
+  name: Supported Cloud Providers
   description: "Supported cloud provider for any platform: note that AWS, Azure, GCP and Alibaba Cloud are in every tier roadmap"
   community:
     provider:
@@ -52,16 +52,6 @@
   pro: 1
   business: Up to 50
   enterprise: Unlimited
-  coming_soon: FALSE
-  new: FALSE
--
-  section: Key features
-  name: Subscription Price
-  description: Cost per Member
-  community: $0
-  pro: $6
-  business: $12
-  enterprise: request a demo
   coming_soon: FALSE
   new: FALSE
 -
@@ -186,7 +176,7 @@
   new: FALSE
 -
   section: Core App Features
-  name: Browser Extension
+  name: Multiple webconsole
   description: Extend Leapp's capabilities to Chrome and Firefox with browser extensions
   community: V
   pro: V
@@ -206,7 +196,7 @@
   new: FALSE
 -
   section: Core App Features
-  name: Flexible custom Operations
+  name: Plugin System
   description: Build and implement your own plugins to tailor Leapp to your specific use-cases and requirements.
   community: V
   pro: V
@@ -306,7 +296,7 @@
   new: FALSE
 -
   section: Security
-  name: Sigle Sign-on (SSO)
+  name: Single Sign-on (SSO)
   description: Streamline authentication processes with Single Sign-On capabilities.
   community: X
   pro: X
@@ -411,7 +401,7 @@
   community: X
   pro: Basic
   business: Advanced
-  enterprise: Complete
+  enterprise: Full
   coming_soon: TRUE
   new: FALSE
 -
