@@ -355,3 +355,26 @@
         }
     }
 }
+
+.banner-layout {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+
+    .banner {
+        cursor:pointer;
+        justify-content: space-between;
+        position: relative;
+        display: flex;
+        width:60%;
+        min-width: 480px;
+        border-radius: 10px;
+        background: var(--Gradient-Banner, linear-gradient(90deg, #FF6EEE 0%, #9D6AF3 100%));
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 30px;
+        color:white;
+        align-items: center;
+    }
+}
