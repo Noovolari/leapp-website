@@ -4,12 +4,6 @@
 
 <body>
     <div class="modal-overlay"></div>
-    <section class="closed-beta-form-modal">
-        <div class="popup-menu" style="overflow-y: auto;">
-            <i class="fa-solid fa-x close-icon"></i>
-            <iframe class="airtable-embed" src="https://airtable.com/embed/appVgheOl6G2JIvur/shrZjPqES5guPFDRp?backgroundColor=redDusty" frameborder="0" onmousewheel="" width="100%" style="height: 90vh; background: transparent; border: 1px solid #ccc;"></iframe>
-        </div>
-    </section>
     {% include tagmanagerscript.html %}
     {% include navbar.html %}
     {% include hero-team.html %}
@@ -25,43 +19,8 @@
         </div>
     </div>
 
-    <div class="team-carousel">
-        <span class="title">Security that adapts to your business</span>
-        <div class="carousel-container">
-            <div class="carousel-info-container">
-                <div class="carousel-info">
-                    <div id="carousel-strip-1" class="active-carousel"></div>
-                    <div class="carousel-info-content">
-                        <span>Unlock Leapp and access in a click</span>
-                        <span>Protect your Cloud login with a lock screen. <br> Let Leapp generate your company credentials for you.</span>
-                    </div>
-                </div>
-                <div class="carousel-info">
-                    <div id="carousel-strip-2"></div>
-                    <div class="carousel-info-content">
-                        <span>Streamline provisioning</span>
-                        <span>Configure AWS Access to your developers to automate the Access request and approvals, and spend less time onboarding and offboarding.</span>
-                    </div>
-                </div>
-                <div class="carousel-info">
-                    <div id="carousel-strip-3"></div>
-                    <div class="carousel-info-content">
-                        <span>Centralize Cloud Access</span>
-                        <span>Create, Manage, and share Leapp Sessions centrally to govern how and where your employees use Leapp at scale</span>
-                    </div>
-                </div>
-            </div>
-            <div class="img-wrapper">
-                <img id="carousel-1" src="../assets/img/carousel-1.png" alt="">
-                <img id="carousel-2" src="../assets/img/carousel-2.png" alt="">
-                <img id="carousel-3" src="../assets/img/carousel-3.png" alt="">
-            </div>
-        </div>
-
-    </div>
+    {% include carousel-team.html %}
     {% endif %}
-    {% include steps-team.html %}
-    {% include opensource-team.html %}
     {% include footer.html %}
 </body>
 

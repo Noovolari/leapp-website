@@ -251,6 +251,7 @@ span.cursor.hidden {
       .carousel-info {
         display: flex;
         flex-direction: row;
+        cursor:pointer;
 
         #carousel-strip-1, #carousel-strip-2, #carousel-strip-3 {
           flex-shrink: 0;

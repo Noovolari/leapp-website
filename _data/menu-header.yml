@@ -22,15 +22,22 @@ menu:
         subhref: "https://roadmap.leapp.cloud/tabs/4-in-progress"
       - subtitle: "Slack Community"
         subhref: "https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q"
-  #- title: "Pricing"
-  #  href: "/pricing"
+  - title: "Download"
+    level: second
+    subcategories:
+      - subtitle: "Desktop App"
+        subhref: "/download/desktop-app"
+      - subtitle: "CLI"
+        subhref: "/download/cli"
+      - subtitle: "Browser Extension"
+        subhref: "/download/browser-extension"
   - title: "Docs"
     href: "https://docs.leapp.cloud"
 
   - title: "Solutions"
     subcategories:
-      - subtitle: "For Business"
-        subhref: "/solutions/business"
+      - subtitle: "Team"
+        subhref: "/solutions/team"
       - subtitle: "Personal"
         subhref: "/solutions/personal"
 
@@ -42,16 +49,6 @@ cta:
   - title: "Request a Demo"
     action: "Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/leapp-demo?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
     level: third
-
-  - title: "Download"
-    level: second
-    subcategories:
-      - subtitle: "Desktop App"
-        subhref: "/download/desktop-app"
-      - subtitle: "CLI"
-        subhref: "/download/cli"
-      - subtitle: "Browser Extension"
-        subhref: "/download/browser-extension"
   - title: "Try Leapp Team"
     href: https://app.leapp.cloud/register
     level: first
