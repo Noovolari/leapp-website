@@ -1,9 +1,10 @@
 @media screen and (max-width: 1448px) {
   .closed-beta-form-modal {
+    text-align: left;
     .popup-menu {
-      width: 60%!important;
-      left: 20%!important;
-
+      width: 100%!important;
+      left: 0!important;
+      margin-left: 0!important;
       iframe {}
     }
   }
