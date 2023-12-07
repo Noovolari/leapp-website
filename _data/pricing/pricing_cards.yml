@@ -30,7 +30,7 @@ cards:
     has_price: TRUE
     price_icon:
     color: blue
-    cta: Get Started
+    cta: Download the App
     cta_link: "/solutions/personal"
     highlighted: false
     features_header: "Everything in Community plus:"
@@ -51,7 +51,7 @@ cards:
     has_price: TRUE
     price_icon:
     color: red
-    cta: Get Started
+    cta: Get Started for FREE
     cta_link: /solutions/team
     highlighted: true
     features_header: "Everything in Pro plus:"

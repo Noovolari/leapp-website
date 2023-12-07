@@ -50,5 +50,5 @@ cta:
     action: "Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/leapp-demo?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
     level: third
   - title: "Try Leapp Team"
-    href: https://app.leapp.cloud/register
+    href: "solutions/team"
     level: first
