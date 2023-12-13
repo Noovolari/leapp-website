@@ -179,6 +179,12 @@ span.cursor.hidden {
     }
   }
 
+  .privacypolicy {
+    display: flex;
+    width: 100%;
+    margin: 0 20px;
+  }
+
   .privacy-policy {
     margin: 0 -80px;
     color: #717171;
@@ -187,6 +193,9 @@ span.cursor.hidden {
     font-weight: 500;
     line-height: 20px;
     align-self: center;
+    padding: 0 20px;
+    display: inline-block;
+    text-align: center;
 
     a {
       color: #717171;
