@@ -1,0 +1,125 @@
+<section id="comparison-features" class="container">
+    <h2 class="title">COMPARE OUR PLANS</h2>
+    <div class="table-content">
+        <table>
+            <colgroup>
+                <col span="3" />
+                <col class="highlight-ea" />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="z-index:99">   </th>
+                    <th>
+                        <h4 style="color: #D68F01">COMMUNITY</h4>
+                        <a href="https://github.com/Noovolari/leapp">Check Repository</a>
+                    </th>
+                    <th>
+                        <h4 style="color: #1A8CD2">PRO</h4>
+                        <a href="/solutions/pro">Download the App</a>
+                    </th>
+                    <th>
+                        <h4 style="color: #DE5349;">TEAM</h4>
+                        <a href="/solutions/team" class="early-access-cta">Get Started for FREE</a>
+                    </th>
+                    <th>
+                        <h4 style="color: #A34AD5;">ENTERPRISE</h4>
+                        <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/leapp-demo?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;">Contact Us</a>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            {% assign current_section = "" %}
+            {% for feature in site.data.pricing.features_table %}
+                {% if current_section != feature.section %}
+                {% assign current_section = feature.section %}
+                    <tr class="title-row">
+                        <td>{{current_section}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td class="name">
+                        <div>
+                            <span class="feature-name">{{feature.name}}</span>
+                            <span  class="tooltip" >{{feature.description}}</span>
+                            {% if feature.new %}
+                                <span class="new label"><i class="fa-regular fa-sparkles"></i></i>NEW</span>
+                            {% endif %}
+                            {% if feature.coming_soon  %}
+                            <span class="coming-soon label"><i class="fa-sharp fa-regular fa-fire"></i>COMING SOON</span>
+                            {% endif %}
+                        </div>
+                    </td>
+
+                    <td>
+                        {% if feature.community == "V" %}
+                            <i class="fa-solid fa-check"></i>
+                        {% elsif feature.community == "X" %}
+                        {% elsif feature.community.provider %}
+                        <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                            {% for prv in feature.community.provider %}
+                            <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{feature.community}}
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if feature.pro == "V" %}
+                        <i class="fa-solid fa-check"></i>
+                        {% elsif feature.pro == "X" %}
+                        {% elsif feature.pro.provider %}
+                        <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                            {% for prv in feature.pro.provider %}
+                            <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        {{feature.pro}}
+                        {% endif %}
+
+                    </td>
+                    <td class="highlight-ea">
+                        {% if feature.business == "V" %}
+                            <i class="fa-solid fa-check"></i>
+                        {% elsif feature.business == "X" %}
+                        {% elsif feature.business.provider %}
+                            <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                                {% for prv in feature.business.provider %}
+                                    <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                         {{feature.business}}
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if feature.enterprise == "V" %}
+                        <i class="fa-solid fa-check"></i>
+                        {% elsif feature.enterprise == "X" %}
+                        {% elsif feature.enterprise.provider %}
+                        <div style="display: flex; width: 100%; gap: 10px; justify-content: space-around;">
+                            {% for prv in feature.enterprise.provider %}
+                            <img class="provider-icon {{prv.supported}}" src="{{site.url}}{{site.baseurl}}/assets/img/cloud-providers/{{prv.name}}.png">
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        {{feature.enterprise}}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+

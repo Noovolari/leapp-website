@@ -24,10 +24,10 @@ menu:
         subhref: "https://docs.leapp.cloud/latest/installation/install-leapp/"
       - subtitle: "Personal"
         subhref: "/solutions/personal"
-      - subtitle: "For Business"
-        subhref: "/solutions/business"
+      - subtitle: "For Teams"
+        subhref: "/solutions/team"
       - subtitle: "Pricing"
-        subhref: "/solutions/personal#pricing"
+        subhref: "/pricing"
       - subtitle: "Support"
         subhref: "/support"
 
@@ -39,6 +39,8 @@ menu:
         subhref: "/cloud-security"
       - subtitle: "Cloud Operations"
         subhref: "/cloud-operations"
+      - subtitle: "Plugins"
+        subhref: "/plugins"
 
   - title: "Resources"
     subcategories:

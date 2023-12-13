@@ -1,7 +1,7 @@
 ---
 title: Team
 description: "Collaborate with your team to manage IAM and your Cloud Operations at scale."
-permalink: /solutions/business
+permalink: /solutions/team
 image: team.png
 layout: team
 hero_title_1: Where

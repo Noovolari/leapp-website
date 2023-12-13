@@ -1,0 +1,24 @@
+<section id="faq" class="bg-grey">
+    <div class="container small">
+        <h3 class="section-title">{{site.data.pricing.faq.title}}</h3>
+        {% if site.data.pricing.faq.subtitle != null %}
+            <h3 class="mb-3">{{site.data.pricing.faq.subtitle}}</h3>
+        {% endif %}
+        {% if site.data.pricing.faq.topics.size > 0 %}
+            <div class="topics-wrapper">
+                <ul class="accordion">
+                    {% for topic in site.data.pricing.faq.topics %}
+                        <li>
+                            <div class="accordion-header">
+                                {{topic.question}}
+                                <i class="fas fa-plus accordion-cta"></i>
+                            </div>
+                            <div class="accordion-content">{{topic.answer}}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+    </div>
+</section>

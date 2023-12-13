@@ -1,5 +1,14 @@
 <section id="hero-unit" class="home ovh">
     <div class="container">
+        <div class="banner-layout">
+            <a href="solutions/team">
+                <div class="banner">
+                    <i class="fa-solid fa-party-horn"></i>
+                    <span><b>Leapp Team</b> is now out! <span class="text-underline"><b>Try it for FREE!</b></span></span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
         <div class="hero-unit-col-container">
             <div class="col">
                 <div class="title">{{site.data.herounit.[page.hero_data].col_left_title}}</div>
@@ -7,7 +16,7 @@
 
                 <div id="hero-button">
                     {% if site.data.herounit.[page.hero_data].secondary_cta %}
-                        <a href="{{site.data.herounit.[page.hero_data].secondary_cta_url}}" class="btn btn-outline-primary d-inline-block mt-2" id="hero-join">{{site.data.herounit.[page.hero_data].secondary_cta}}</a>
+                        <a href="{{site.data.herounit.[page.hero_data].secondary_cta_url}}" class="btn btn-link d-inline-block mt-2" id="hero-join">{{site.data.herounit.[page.hero_data].secondary_cta}}</a>
                     {% endif %}
                     <a href="{{site.data.herounit.[page.hero_data].primary_cta_url}}" class="btn btn-secondary d-inline-block mt-2" target="_blank" id="download-from-hero" onclick="leapp?.sendEvent('Download-From-Hero', this)">{{site.data.herounit.[page.hero_data].primary_cta}}</a>
                 </div>

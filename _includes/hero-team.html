@@ -5,27 +5,30 @@
             <div class="col hero-content team-hero-content">
                 <h1 class="hero-title">{{page.hero_title_1}}&nbsp;<span class="typed-text" data-array='{{site.data.team.claims | inspect}}'></span><span class="cursor"></span><br>{{page.hero_title_2}}</h1>
                 {% if page.hero_content %}
-                {% include {{ page.hero_content }} %}
+                    {% include {{ page.hero_content }} %}
                 {% endif %}
             </div>
             {% if page.hero_image != null %}
-            <div class="col media-hero team-media-hero">
-                <i class="fa-solid fa-circle-play play-demo-icon"></i>
-                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.hero_image}}" alt="{{page.hero_title}}" width="1" height="1" class="w-100 h-auto"/>
-                <div class="demo-video-modal">
-                    <i class="fa-solid fa-x close-icon-2"></i>
-                    <iframe src="https://www.loom.com/embed/acd7e4484a6f4af38f8e2865800b264a?sid=d23989d0-efb1-40cf-ab2c-cae32872c6e0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="width: 100%; height: 100%; border: none; margin: 0; padding: 0; display: block"></iframe>
+                <div class="sign-up-form">
+                    <img src="../assets/img/leapp-logo.png" alt="leapp-logo">
+                    <div class="inner-content-container">
+                        <span class="title">Create your free account</span>
+                        <span class="field-name">Work email</span>
+                        <span class="field-description">Using your email make easier to invite teammates</span>
+                        <input id="team-sign-up" class="form-control" placeholder="Company email" required>
+                        <button type="submit" class="button primary"
+                                onclick="let value = encodeURIComponent(document.getElementById('team-sign-up').value);
+                                         window.open('http://app.leapp.cloud/register' + (value !== '' ? ('?email=' + value) : ''))">
+                            <span>Get started for FREE</span>
+                        </button>
+                    </div>
+                    <span class="privacy-policy">By joining you agree to Leapp’s
+    <a href="https://d3o59asa8udcq9.cloudfront.net/docs/Terms_and_conditions_SAAS.pdf">Terms</a> and
+    <a href="https://d3o59asa8udcq9.cloudfront.net/docs/Privacy_Policy_Noovolari.pdf">Privacy Policy</a></span>
+                    <span class="already-signed-up">Already have an account? <a href="https://app.leapp.cloud/sign-in">Sign In</a></span>
                 </div>
-            </div>
             {% endif %}
 
         </div>
-
-        <!-- <div class="hero-btn-holder">
-            <a title="Download Leapp" href="{{site.data.herounit.link}}" target="_blank" rel='noopener' class="btn-lg btn-outline-primary">{{site.data.herounit.button}}</a>
-        </div> -->
-        <!-- <div class="fade-up">
-            <img src="{{site.url}}{{site.baseurl}}/assets/img/{{site.data.herounit.image}}" alt="{{site.data.herounit.image_title}}" title="{{site.data.herounit.image_title}}" />
-        </div> -->
     </div>
 </section>

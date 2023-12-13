@@ -5,13 +5,13 @@ color: yellow
 features:
   - icon: fa-rectangle-terminal
     content: "SSH access to your instances using AWS IAM and Leapp. Select the instance you want to connect automatically."
-    cta_text: Explore!
+    cta_text: Read the Doc!
     cta_url: "https://docs.leapp.cloud/latest/built-in-features/aws-ec2-connect/"
   - icon: fa-browsers
     content: "Open any AWS Console you want at the same time, in a click, with only your local credentials. everything Leapp’s managed."
-    cta_text: Explore!
+    cta_text: Read the Doc!
     cta_url: "https://docs.leapp.cloud/latest/built-in-features/multi-console/"
   - icon: fa-robot
     content: "Create and distribute your plugin to your team and manage them centrally"
-    cta_text: Try Leapp for business!
-    cta_url: "/solutions/business"
+    cta_text: Try Leapp Team!
+    cta_url: "/solutions/team"

@@ -1,0 +1,52 @@
+<div class="pricing-switcher-container">
+    <div id="pricing" class="pricing-anchor"></div>
+    <input type="checkbox" checked>
+    <div class="pricing-switcher">
+        <div class="toggle-item"  onclick="$('.price-value').toggleClass('hidden'); $('.toggle-item').toggleClass('selected')">
+            <span >Monthly</span>
+        </div>
+        <div class="toggle-item selected"  onclick="$('.price-value').toggleClass('hidden'); $('.toggle-item').toggleClass('selected')">
+            <span >Yearly <span class="discount"><i class="fa-regular fa-tag"></i>Get 2 months free</span></span>
+        </div>
+    </div>
+</div>
+
+<div class="cards-pricing-container">
+
+    {% for card in site.data.pricing.pricing_cards.cards %}
+
+    <div class="pricing-card-highlight {{card.highlighted}}">
+        <span class="highlight-text">EARLY ACCESS NOW</span>
+        <div class="pricing-card">
+            <div class="card-header">
+                <div class="icons-container">
+                    <i class="tier-icon {{card.icon}}"></i>
+                    <span  class="range-container"><i class="tier-range-icon fa-regular fa-user"></i>{{card.number_people}}</span>
+                </div>
+                <h2 class="{{card.color}}">{{card.name}}</h2>
+                <h4>{{card.description}}</h4>
+            </div>
+            <div class="card-content">
+                <div class="pricing-container">
+                    {% if card.price_monthly %}
+                        <h4 class="card-content-title price-value ">{{card.price_monthly}}</h4>
+                        <h4 class="card-content-title price-value hidden">{{card.price_yearly}}</h4>
+                        {% if card.has_price %}
+                            <span>Per User / Month <br>billed yearly</span>
+                        {% endif %}
+                    {% else %}
+                        <i class="tier-price-icon {{card.price_icon}}"></i>
+                    {% endif %}
+                </div>
+                <a href="{{card.cta_link}}" onclick="{{card.cta_action}}" class="card-content-button">{{card.cta}}</a>
+                <ul class="list-main fa-ul">
+                    {% for feat in card.features%}
+                        <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{{feat}}</li>
+                    {% endfor%}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>

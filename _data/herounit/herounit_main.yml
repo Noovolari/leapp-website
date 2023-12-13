@@ -5,9 +5,9 @@ link: 'https://github.com/Noovolari/leapp/releases/latest'
 image: leapp-hero
 image_title: Leapp Header
 col_left_title: "<a href='#cloud-access' class='pink'> Access</a>, <a href='#cloud-operations' class='yellow'>operate</a>, and <a href='#cloud-security' class='green'>secure</a> your Cloud."
-col_left_subtitle: "<p>Start operating at scale in the Cloud with the first IAM-based desktop app.</p><p> Access multiple Cloud accounts securely with the best developer experience.</p>"
+col_left_subtitle: "<p>Start operating at scale in the Cloud with the first IAM-based desktop app.</p><p> Provide secure access to multiple company’s Cloud accounts with the best developer experience.</p>"
 article_title: "Rebranding as part of <br> something bigger"
-primary_cta: "Install Leapp"
-primary_cta_url: "/download/desktop-app"
-secondary_cta:
-secondary_cta_url:
+primary_cta: "Try Leapp Team"
+primary_cta_url: "/solutions/team"
+secondary_cta: "Download the App"
+secondary_cta_url: "/download/desktop-app"

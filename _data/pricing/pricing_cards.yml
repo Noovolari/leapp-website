@@ -1,0 +1,88 @@
+title:
+subtitle:
+cards:
+  - name: COMMUNITY
+    description: "For personal use. Open-source repository available"
+    icon: fa-brands fa-github
+    number_people: 1
+    price_monthly: FREE
+    price_yearly: FREE
+    has_price: FALSE
+    price_description:
+    price_icon:
+    color: yellow
+    cta: Check repository
+    cta_link: "https://github.com/Noovolari/leapp"
+    highlighted: false
+    features_header:
+    features:
+      - "On-device Data Storage"
+      - "1 device (Mac, Windows, or Linux)"
+      - "Unlimited Sessions and Integrations"
+      - "Community Support (Slack and GitHub)"
+
+  - name: PRO
+    description: For individual developers and freelancers
+    icon: fa-solid fa-laptop
+    number_people: 1
+    price_monthly: 5$
+    price_yearly: 6$
+    has_price: TRUE
+    price_icon:
+    color: blue
+    cta: Download the App
+    cta_link: "/solutions/personal"
+    highlighted: false
+    features_header: "Everything in Community plus:"
+    features:
+      - "Cloud Data Storage"
+      - "Zero-knowledge encryption"
+      - "Unlimited Syncronized devices"
+      - "TouchID & Password-protected account"
+      - "Email based support"
+
+  - name: TEAM
+    description: For small companies and teams IAM access
+    icon: fa-solid fa-users-between-lines
+    # noinspection YAMLIncompatibleTypes
+    number_people: 1-50
+    price_monthly: 10$ <span class="discounted">20</span>
+    price_yearly: 12$ <span class="discounted">24</span>
+    has_price: TRUE
+    price_icon:
+    color: red
+    cta: Get Started for FREE
+    cta_link: /solutions/team
+    highlighted: true
+    features_header: "Everything in Pro plus:"
+    features:
+      - "Dedicated team Workspace"
+      - "Sessions sharing with Teammates"
+      - "Just-in-time access"
+      - "Team access Request & Approvals"
+      - "Business email support"
+
+
+  - name: ENTERPRISE
+    description: For organization’s additional security and control
+    icon: fa-solid fa-buildings
+    number_people: 50+
+    price_monthly:
+    price_yearly:
+    has_price: FALSE
+    price_icon: fa-regular fa-comments
+    color: violet
+    cta: Contact Us
+    cta_link:
+    cta_action: "Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/leapp-demo?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
+    highlighted: false
+    features_header:
+    features:
+      - "Multi-team Management"
+      - "Cloud access only via Leapp"
+      - "External collaborator access"
+      - "Single Sign-on (SSO)"
+      - "Reporting & Analytics"
+      - "Audit Trails & Monitoring"
+      - "ISO27001 and SOC2 compliance"
+      - "Enterprise support"

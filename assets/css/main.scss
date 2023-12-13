@@ -40,6 +40,8 @@
 @import "partials/closed-beta-form-modal.scss";
 @import "partials/use-cases-section.scss";
 @import "partials/pricing.scss";
+@import "partials/pricing-cards.scss";
+@import "partials/feature-table.scss";
 @import "partials/media-query.scss";
 
 /** Reset some basic elements */
@@ -123,6 +125,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .btn-secondary:hover { opacity: 0.7; }
 .btn-third { color: $white; background: $violet-dark; }
 .btn-fourth { color: $white; background: $violet-light; }
+.btn-link {color: $white !important; text-decoration: underline}
 
 section {
     &.dark {
