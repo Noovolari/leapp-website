@@ -48,6 +48,9 @@ topics:
     answer: "
   <p>We offer special pricing for eligible startups to help them manage their cloud access securely while growing their business. </p>
   <p> Please <a href='mailto:sales@noovolari.com'>contact our sales team</a> to learn more about our startup pricing program and to see if your organization qualifies. </p>"
+  - question: "Do the displayed prices include or exclude taxes?"
+    answer: "
+  <p>The prices displayed on the Pricing page of Leapp website exclude taxes.</p>"
 #  - question: "Do you offer students discounts?"
 #    answer: "
 #  <p> Yes, we offer discounts to university students on our Pro version, which is tailored to meet their needs. </p>

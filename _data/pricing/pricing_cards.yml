@@ -25,8 +25,8 @@ cards:
     description: For individual developers and freelancers
     icon: fa-solid fa-laptop
     number_people: 1
-    price_monthly: 5$
-    price_yearly: 6$
+    price_monthly: 5€
+    price_yearly: 6€
     has_price: TRUE
     price_icon:
     color: blue
@@ -46,8 +46,8 @@ cards:
     icon: fa-solid fa-users-between-lines
     # noinspection YAMLIncompatibleTypes
     number_people: 1-50
-    price_monthly: 10$ <span class="discounted">20</span>
-    price_yearly: 12$ <span class="discounted">24</span>
+    price_monthly: 10€ <span class="discounted">20</span>
+    price_yearly: 12€ <span class="discounted">24</span>
     has_price: TRUE
     price_icon:
     color: red

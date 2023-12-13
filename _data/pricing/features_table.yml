@@ -350,8 +350,8 @@
   description: "Gain priority support with faster response times. Business: next business day (NBD) response. Enterprise: 4h response."
   community: X
   pro: X
-  business: $ (NBD)
-  enterprise: $ (4h)
+  business: € (NBD)
+  enterprise: € (4h)
   coming_soon: FALSE
   new: FALSE
 -
@@ -391,7 +391,7 @@
   community: X
   pro: X
   business: X
-  enterprise: $
+  enterprise: €
   coming_soon: FALSE
   new: FALSE
 -
