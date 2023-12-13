@@ -340,20 +340,7 @@ span.cursor.hidden {
     top: 35% !important;
   }
 
-  .carousel-container {
-    flex-direction: column!important;
-    .carousel-info-container {
-      width: 80% !important;
-      flex-direction: row!important;
-      margin-bottom: 30px;
-      .carousel-info {
-        flex: 1;
-      }
-      #carousel-strip-1, #carousel-strip-2, #carousel-strip-3 {
-        display: none!important;
-      }
-    }
-  }
+
 }
 
 @media screen and (min-width: 1281px) {
@@ -399,6 +386,7 @@ span.cursor.hidden {
   }
   .team-carousel .title {
     font-size: 25px;
+    padding: 0 10px;
   }
   .carousel-info-content {
     margin-left: 0!important;
@@ -410,7 +398,7 @@ span.cursor.hidden {
     flex-direction: column!important;
     .carousel-info-container {
       width: 85% !important;
-      flex-direction: row!important;
+      flex-direction: column!important;
       margin-bottom: 30px;
       .carousel-info {
         flex: 1;
