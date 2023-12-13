@@ -338,14 +338,14 @@
 
 .desktop {
     display: none;
-    video {
+    video, img {
         display: none;
     }
 
     @include breakpoint('md') {
         display: block;
 
-        video {
+        video, img {
             display: block;
         }
     }
