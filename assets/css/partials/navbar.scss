@@ -89,7 +89,7 @@
 
         #hamburger {
             float: right;
-            padding-top: 30px;
+            padding-top: 12px;
 
             @include breakpoint('md') {
                 display: none;

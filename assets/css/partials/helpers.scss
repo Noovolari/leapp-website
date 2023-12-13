@@ -338,9 +338,16 @@
 
 .desktop {
     display: none;
+    video {
+        display: none;
+    }
 
     @include breakpoint('md') {
         display: block;
+
+        video {
+            display: block;
+        }
     }
 
 }
