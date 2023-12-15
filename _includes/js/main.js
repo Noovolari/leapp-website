@@ -819,7 +819,7 @@
             if (carouselWrapper !== null) {
                 setInterval(() => {
                     $('.active-carousel').removeClass('active-carousel');
-                    if (carouselSlide > 2) {
+                    if (carouselSlide >= 3) {
                         carouselWrapper.scrollLeft -= 1800;
                         carouselSlide = 1;
                     } else {
@@ -834,10 +834,10 @@
                 const carouselWrapper = document.querySelector('.img-wrapper');
                 let id = $(this)[0].id;
                 id = id.replace('carousel-info-','');
-                console.log(id);
                 $('.active-carousel').removeClass('active-carousel');
                 $('#carousel-strip-'+id).addClass('active-carousel');
-                $(carouselWrapper).scrollLeft(600* (id-1))
+                $(carouselWrapper).scrollLeft(900 * (id-1));
+                carouselSlide = id;
             })
         },
         _typingTheHappens: function() {
