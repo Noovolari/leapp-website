@@ -22,14 +22,6 @@ menu:
     subcategories:
       - subtitle: "Getting Started"
         subhref: "https://docs.leapp.cloud/latest/installation/install-leapp/"
-      - subtitle: "Personal"
-        subhref: "/solutions/personal"
-      - subtitle: "For Teams"
-        subhref: "/solutions/team"
-      - subtitle: "Pricing"
-        subhref: "/pricing"
-      - subtitle: "Support"
-        subhref: "/support"
 
   - title: "Use cases"
     subcategories:
@@ -52,8 +44,6 @@ menu:
         subhref: "https://blog.leapp.cloud"
       - subtitle: "Repository"
         subhref: "https://github.com/Noovolari/leapp"
-      - subtitle: "Roadmap"
-        subhref: "https://roadmap.leapp.cloud/tabs/4-in-progress"
 
   - title: "Company"
     subcategories:

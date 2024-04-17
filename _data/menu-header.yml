@@ -18,8 +18,6 @@ menu:
         subhref: "https://blog.leapp.cloud"
       - subtitle: "Repository"
         subhref: "https://github.com/Noovolari/leapp"
-      - subtitle: "Roadmap"
-        subhref: "https://roadmap.leapp.cloud/tabs/4-in-progress"
       - subtitle: "Slack Community"
         subhref: "https://join.slack.com/t/noovolari/shared_invite/zt-opn8q98k-HDZfpJ2_2U3RdTnN~u_B~Q"
   - title: "Download"
@@ -33,17 +31,6 @@ menu:
         subhref: "/download/browser-extension"
   - title: "Docs"
     href: "https://docs.leapp.cloud"
-
-  - title: "Solutions"
-    subcategories:
-      - subtitle: "Team"
-        subhref: "/solutions/team"
-      - subtitle: "Personal"
-        subhref: "/solutions/personal"
-
-  - title: "Pricing"
-    href: "/pricing"
-
 
 cta:
   - title: "Request a Demo"
