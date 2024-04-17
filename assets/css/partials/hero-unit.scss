@@ -29,7 +29,7 @@
                 position: relative;
                 display: flex;
                 justify-content: flex-start;
-                align-items: center;
+                align-items: flex-start;
                 align-content: center;
                 height: 600px;
                 text-align: initial;
@@ -43,7 +43,7 @@
         @include breakpoint('md') {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             align-content: center;
 
         }
@@ -377,5 +377,31 @@
         padding: 10px 30px;
         color:white;
         align-items: center;
+    }
+}
+
+.end-banner {
+    background-color: #aed5d4;
+    height: 254px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .end-banner-content {
+        width: 100%;
+        color: white;
+        background: none;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        .end-banner-button {
+            color: white;
+            background-color: #090c34;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+        }
     }
 }
