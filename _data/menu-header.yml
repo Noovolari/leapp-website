@@ -33,9 +33,6 @@ menu:
     href: "https://docs.leapp.cloud"
 
 cta:
-  - title: "Request a Demo"
-    action: "Calendly.initPopupWidget({url: 'https://calendly.com/noovolari/leapp-demo?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
-    level: third
-  - title: "Try Leapp Team"
+  - title: "Login to Leapp Team"
     href: "solutions/team"
     level: first
