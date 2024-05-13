@@ -13,5 +13,5 @@ features:
     cta_url: "https://docs.leapp.cloud/latest/configuring-integration/configure-aws-single-sign-on-integration/"
   - icon: fa-box
     content: "<p>Centralize your access configuration for your Company and get all the accounts and roles you can access in a click <a href='https://docs.leapp.cloud/latest/workspaces/' title='Leapp Workspaces definition'>with Leapp Workspaces.</a></p>"
-    cta_text: Try Leapp Team!
-    cta_url: "/solutions/team"
+    cta_text: Login to Leapp Team!
+    cta_url: "https://app.leapp.cloud"

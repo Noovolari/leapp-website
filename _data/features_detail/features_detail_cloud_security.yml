@@ -13,5 +13,5 @@ features:
     cta_url: "https://docs.leapp.cloud/latest/security/system-vault/"
   - icon: fa-binary-lock
     content: "Comply with the Cloud Providers security standards to access the Cloud."
-    cta_text: Try leapp Team!
-    cta_url: "/solutions/team"
+    cta_text: Login to Leapp Team!
+    cta_url: "https://app.leapp.cloud"
