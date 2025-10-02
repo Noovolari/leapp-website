@@ -14,9 +14,6 @@ company:
   - name: 'Nord Cloud'
     image: nordcloud.png
     url: "https://www.nordcloud.com"
-  - name: 'Slalom'
-    image: slalom-logo.png
-    url: "https://www.slalom.com"
   - name: 'SpotOn'
     image: spoton.png
     url: "https://www.spoton.com"
